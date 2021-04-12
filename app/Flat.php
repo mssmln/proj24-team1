@@ -24,11 +24,15 @@ class Flat extends Model
         'views'
     ];
 
+    public function services()
+    {
+        return $this->belongsToMany('App\Service');
+    }
+
     public function messages() 
     { 
         return $this->hasMany('App\Message'); 
     }
-
 
     public function user() 
     { 
@@ -41,7 +45,6 @@ class Flat extends Model
 
     } 
 
-    
     public function ads() 
     { 
         return $this->hasMany('App\Ad');
