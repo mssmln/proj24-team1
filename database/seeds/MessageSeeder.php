@@ -15,6 +15,10 @@ class MessageSeeder extends Seeder
     {
         for($i=0; $i < 10; $i++){
             $newMessage = new Message();
+
+            $userMessage = count(Message::all()->toArray());
+            $newMessage->flat_id = rand(1, $userMessage);
+
             $newMessage->email = $faker->email();
             $newMessage->message = $faker->text();
             $newMessage->save();
