@@ -27,5 +27,23 @@ class Flat extends Model
     public function messagges() 
     { 
         return $this->hasMany('App\Message'); 
+    }
+
+
+    public function user() 
+    { 
+        return $this->belongsTo('App\User'); 
+    } 
+
+    public function images() 
+    { 
+        return $this->hasMany('App\Image'); 
+
+    } 
+
+    
+    public function ads() 
+    { 
+        return $this->hasMany('App\Ad');
     } 
 }
