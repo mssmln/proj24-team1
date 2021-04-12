@@ -23,4 +23,9 @@ class Flat extends Model
         'visibility',
         'views'
     ];
+
+    public function messagges() 
+    { 
+        return $this->hasMany('App\Message'); 
+    } 
 }
