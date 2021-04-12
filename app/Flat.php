@@ -24,7 +24,7 @@ class Flat extends Model
         'views'
     ];
 
-    public function messagges() 
+    public function messages() 
     { 
         return $this->hasMany('App\Message'); 
     }

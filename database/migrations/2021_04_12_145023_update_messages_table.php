@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateMessaggesTable extends Migration
+class UpdateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class UpdateMessaggesTable extends Migration
      */
     public function up()
     {
-        Schema::table('messagges', function (Blueprint $table) {
+        Schema::table('messages', function (Blueprint $table) {
             $table->foreignId('flat_id')->after('id')->nullable()->constrained(); 
         });
     }
@@ -25,7 +25,7 @@ class UpdateMessaggesTable extends Migration
      */
     public function down()
     {
-        Schema::table('messagges', function (Blueprint $table) {
+        Schema::table('messages', function (Blueprint $table) {
             $table->dropForeign(['flat_id']); 
             $table->dropColumn('flat_id'); 
         });
