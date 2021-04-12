@@ -23,4 +23,8 @@ class Flat extends Model
         'visibility',
         'views'
     ];
+
+    public function services(){
+        return $this->belongsToMany('App\Service');
+    }
 }

@@ -14,9 +14,11 @@ class CreateFlatServiceTable extends Migration
     public function up()
     {
         Schema::create('flat_service', function (Blueprint $table) {
-            $table->id();
-
-            $table->timestamps();
+            $table->unsignedBigInteger('flat_id');
+            $table->foreign('flat_id')->references('id')->on('flats');
+            $table->unsignedBigInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('services');
+            $table->primary(['flat_id', 'service_id']);
         });
     }
 

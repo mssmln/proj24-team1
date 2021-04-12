@@ -9,4 +9,8 @@ class Service extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function flats(){
+        return $this->belongsToMany('App\Flat');
+    }
 }
