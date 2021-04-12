@@ -24,7 +24,29 @@ class Flat extends Model
         'views'
     ];
 
-    public function services(){
+    public function services()
+    {
         return $this->belongsToMany('App\Service');
     }
+
+    public function messages() 
+    { 
+        return $this->hasMany('App\Message'); 
+    }
+
+    public function user() 
+    { 
+        return $this->belongsTo('App\User'); 
+    } 
+
+    public function images() 
+    { 
+        return $this->hasMany('App\Image'); 
+
+    } 
+
+    public function ads() 
+    { 
+        return $this->hasMany('App\Ad');
+    } 
 }

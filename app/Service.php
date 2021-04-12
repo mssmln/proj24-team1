@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    protected $fillable = [
-        'name'
-    ];
+    protected $fillable = ['name'];
 
-    public function flats(){
+    public function flats()
+    {
         return $this->belongsToMany('App\Flat');
     }
 }

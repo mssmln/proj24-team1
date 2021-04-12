@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     protected $fillable = [
-        'path'
+        'path','flat_id'
     ];
+
+    public function flat() 
+    { 
+        return $this->belongsTo('App\Flat'); 
+    } 
 }
