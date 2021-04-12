@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
             PlanSeeder::class,
             ImageSeeder::class,
             UserSeeder::class,
-            ServiceSeeder::class
+            ServiceSeeder::class,
+            MessageSeeder::class,
+            AdSeeder::class
         ]);
     }
 }
