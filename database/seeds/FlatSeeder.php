@@ -17,6 +17,7 @@ class FlatSeeder extends Seeder
         for ($i = 0; $i <= 10; $i++) {
             $newFlat = new Flat();
             $newFlat->title = $faker->sentence(6);
+            $newFlat->overview = $faker->text();
             $slug = Str::slug($newFlat->title);
             $sameSlug = Flat::where('slug', $slug)->first();
             $counter = 1;
