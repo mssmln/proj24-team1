@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 use App\Flat;
+use App\User;
 
 class FlatSeeder extends Seeder
 {
@@ -16,6 +17,10 @@ class FlatSeeder extends Seeder
     {
         for ($i = 0; $i <= 10; $i++) {
             $newFlat = new Flat();
+
+            // $userCount = count(User::all()->toArray());
+            // $newFlat->user_id = rand(1, $userCount);
+
             $newFlat->title = $faker->sentence(6);
             $newFlat->overview = $faker->text();
             $slug = Str::slug($newFlat->title);
