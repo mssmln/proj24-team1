@@ -34,4 +34,8 @@ class Flat extends Model
         return $this->hasMany('App\Image'); 
 
     } 
+    public function ads() 
+    { 
+        return $this->hasMany('App\Ad');
+    } 
 }
