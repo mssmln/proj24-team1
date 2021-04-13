@@ -41,6 +41,7 @@ questa è la create
             <label for="address">address</label>
             <input type="text" id="address" name="address" class="form-control">
         </div>
+        
         <!-- upload an img file  -->
         <div class="form-group">
             <label for="flat_img">choose flat_img</label>
@@ -51,20 +52,6 @@ questa è la create
         <label for="visibility">click to hide it </label>
         <input type="checkbox" id="visibility" name="visibility" value="0">
         <!-- / visibility -->
-
-
-
-        
-
-
-
-
-        <!-- upload an img file  -->
-        <!-- <div class="form-group">
-            <label for="img">choose img</label>
-            <input type="file" class="form-control-file" id="img" name="image">
-        </div> -->
-        <!-- / upload an img file  -->
         <!-- area dei servizi  -->
         @foreach($services as $service)
         <div class="form-group form-check">

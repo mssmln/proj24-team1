@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li><a href="">dashboard</a></li>
-            <li><a href="">flats</a></li>
+            <li><a href="{{Route('flat.index')}}">flats</a></li>
             <li><a href="">messagges</a></li>
             <li><a href="">ads</a></li>
             <li><a href="">settings</a></li>
