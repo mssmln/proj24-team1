@@ -20,9 +20,9 @@ class FlatController extends Controller
      */
     public function index()
     {
-        // dd(Auth::id()); it worked seamlessly
+
         $data = [ 
-            'flats' => Flat::where('user_id' , Auth::id())
+            'flats' => Flat::all()->where('user_id', Auth::id())
         ]; 
 
         return view('admin.flat.index',$data); 
@@ -52,7 +52,6 @@ class FlatController extends Controller
     {
         $data = $request->all();
         // dd($data); it worked smoothly
-
         $newFlat = new Flat();
         $newFlat->user_id = Auth::id();
         $newFlat->slug = Str::slug($data['title']);
@@ -60,7 +59,8 @@ class FlatController extends Controller
         $newFlat->flat_img = $data['flat_img'];
         $newFlat->fill($data);
         $newFlat->save();
-        return redirect()->route('flat.show');
+
+        return redirect()->route('flat.index');
     }
 
     /**
@@ -69,9 +69,13 @@ class FlatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Flat $flat)
     {
-        //
+        $data = [
+            'flat' => $flat
+        ];
+
+        return view('admin.flat.show', $data);
     }
 
     /**
@@ -80,9 +84,13 @@ class FlatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Flat $flat)
     {
-        //
+        $data = [
+            'flats' => $flat,
+            'services' => Service::all()
+        ];
+        return view('admin.flat.edit', $data);
     }
 
     /**
