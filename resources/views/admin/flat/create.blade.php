@@ -56,7 +56,7 @@ questa è la create
         @foreach($services as $service)
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input"  name="services[]" value="{{$service->id}}">
-            <label class="form-check-label" >{{$service->name}}</label>
+            <label class="form-check-label">{{$service->name}}</label>
         </div>
         @endforeach
         <!-- / area dei servizi  -->
