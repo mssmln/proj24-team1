@@ -37,15 +37,15 @@
                         <td>{{ $flat->sqm }}</td>
                         <td>{{ $flat->visibility }}</td>
                         <td>{{ $flat->views }}</td>
-                        <td><img class="w-25" src="{{asset('storage/'.$flat->flat_img)}}" alt="{{$flat->title}}"></td>
+                        <td><img class="w-25" src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}"></td>
                         <td class="text-right">
-                            {{-- <a class="btn btn-info" href="{{ Route('post.index') }}">Back</a>
-                            <a class="btn btn-warning" href="{{ Route('post.edit',  $flat->id) }}">Edit</a> --}}
-                            {{-- <form class="d-inline-block" method="post" action="{{ Route('post.destroy', $post->id) }}">
+                            <a class="btn btn-info" href="{{ Route('flat.index') }}">Back</a>
+                            <a class="btn btn-warning" href="{{ Route('flat.edit',  $flat->id) }}">Edit</a>
+                            <form class="d-inline-block" method="post" action="{{ Route('flat.destroy', $flat->id) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">Delete</button>
-                            </form> --}}
+                            </form>
                         </td>
                     </tr>
                 </tbody>

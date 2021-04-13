@@ -60,6 +60,11 @@ class FlatController extends Controller
         $newFlat->fill($data);
         $newFlat->save();
 
+        //Se la chiave esiste allora compili la pivot
+        if(array_key_exists('services', $data)){
+            $newFlat->services()->sync($data['services']);
+        }
+
         return redirect()->route('flat.index');
     }
 
@@ -71,6 +76,7 @@ class FlatController extends Controller
      */
     public function show(Flat $flat)
     {
+
         $data = [
             'flat' => $flat
         ];
@@ -90,6 +96,7 @@ class FlatController extends Controller
             'flats' => $flat,
             'services' => Service::all()
         ];
+
         return view('admin.flat.edit', $data);
     }
 
@@ -100,9 +107,28 @@ class FlatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Flat $flat)
     {
-        //
+        $data = $request->all();
+
+        // Controllo if per update slug solo se cambia il title
+        if($data['title'] != $flat->title){
+            $data['slug'] = Str::slug($data['title']);
+        }
+
+        // Controllo if per evitare l'errore del undefined index image
+        if(array_key_exists('image',$data)){
+            $data['flat_img'] = Storage::put('post_covers', $data['image']); 
+        }
+
+        // Aggiorna i servizi modificati
+        if(array_key_exists('services',$data)){
+            $flat->services()->sync($data['services']);
+        }
+        
+        $flat->update($data);
+
+        return redirect()->route('flat.show', $flat);
     }
 
     /**
@@ -111,8 +137,11 @@ class FlatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Flat $flat)
     {
-        //
+        $flat->services()->sync([]);
+        $flat->delete();
+
+        return redirect()->route('flat.index');
     }
 }
