@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -55,6 +56,8 @@ class FlatController extends Controller
         $newFlat = new Flat();
         $newFlat->user_id = Auth::id();
         $newFlat->slug = Str::slug($data['title']);
+        $data['flat_img'] = Storage::put('flat_covers', $data['image']);
+        $newFlat->flat_img = $data['flat_img'];
         $newFlat->fill($data);
         $newFlat->save();
         return redirect()->route('flat.show');
