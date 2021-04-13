@@ -27,8 +27,8 @@ questa è la index
         <td>{{ $flat->user->name }}</td>
         <td>{{ $flat->created_at }}</td>
         <td>{{ $flat->updated_at }}</td>
-        <td><button type="button" class="btn btn-info"><a href="{{route('flat.show',$flat->id)}}">view</a></button></td>
-        <td><button type="button" class="btn btn-warning"><a href="{{route('flat.edit',$flat->id)}}">edit</a></button></td>
+        <td><a class="btn btn-info" href="{{route('flat.show',$flat->id)}}">view</a></td>
+        <td><a class="btn btn-warning" href="{{route('flat.edit',$flat->id)}}">edit</a></td>
         <td><form action="{{route('flat.destroy', $flat->id) }}" method="post">
           @csrf
           @method('DELETE')
