@@ -41,7 +41,7 @@
                         <td class="text-right">
                             <a class="btn btn-info" href="{{ Route('flat.index') }}">Back</a>
                             <a class="btn btn-warning" href="{{ Route('flat.edit',  $flat->id) }}">Edit</a>
-                            <form class="d-inline-block" method="post" action="{{ Route('flat.destroy', $flat->id) }}">
+                            <form class="d-inline-block form-delete" method="post" action="{{ Route('flat.destroy', $flat->id) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">Delete</button>

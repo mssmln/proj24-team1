@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!-- Title -->
     <title>@yield('title')</title>
 
     <!-- Scripts -->
@@ -15,16 +14,20 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-                Provadash
+                <i class="fab fa-airbnb"></i>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -56,9 +59,10 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                   <!-- Log Out -->
+                                   <i class="fas fa-sign-out-alt"></i>
+                                   Log out
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -70,48 +74,52 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </header>
       
-    <div class="container-fluid">
-        <div class="row">
+    <div id="dashboard">
+        <nav id="side_bar">
+            <!-- High -->
+            <ul>
+                <li>
+                    <a href="{{ route('home') }}">
+                        <i class="fas fa-house-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{Route('flat.index')}}">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-comments"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-charging-station"></i>
+                    </a>
+                </li>
+            </ul>
 
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{Route('flat.index')}}">
-                                flats
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                messages
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                ads
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                settings
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-      
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                @yield('content')
-            </main>
-
-        </div>
+            <!-- Low -->
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <section id="content">
+            @yield('content')
+        </section>
     </div>
 </body>
 </html>
