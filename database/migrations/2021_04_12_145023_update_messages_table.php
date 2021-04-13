@@ -14,7 +14,7 @@ class UpdateMessagesTable extends Migration
     public function up()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->foreignId('flat_id')->after('id')->nullable()->constrained(); 
+            $table->foreignId('flat_id')->after('id')->constrained(); 
         });
     }
 

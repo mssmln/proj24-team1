@@ -1,9 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Flat;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use App\Flat;
+use App\Service;
+
 
 class FlatController extends Controller
 {
@@ -14,7 +19,12 @@ class FlatController extends Controller
      */
     public function index()
     {
-        //
+        // dd(Auth::id()); it worked seamlessly
+        $data = [ 
+            'flats' => Flat::where('user_id' , Auth::id())
+        ]; 
+
+        return view('admin.flat.index',$data); 
     }
 
     /**
@@ -24,7 +34,11 @@ class FlatController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'services' => Service::all()
+        ];
+        return view('admin.flat.create', $data);
+        
     }
 
     /**
@@ -35,16 +49,24 @@ class FlatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        // dd($data); it worked smoothly
+
+        $newFlat = new Flat();
+        $newFlat->user_id = Auth::id();
+        $newFlat->slug = Str::slug($data['title']);
+        $newFlat->fill($data);
+        $newFlat->save();
+        return redirect()->route('flat.show');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Flat  $flat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Flat $flat)
+    public function show($id)
     {
         //
     }
@@ -52,10 +74,10 @@ class FlatController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Flat  $flat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Flat $flat)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +86,10 @@ class FlatController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Flat  $flat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Flat $flat)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +97,10 @@ class FlatController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Flat  $flat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Flat $flat)
+    public function destroy($id)
     {
         //
     }
