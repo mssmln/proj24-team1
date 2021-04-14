@@ -4,7 +4,7 @@
 
 
 @section('content')
-questa è la statistics view 
+questa è la statistics view
 
 
 @endsection
