@@ -5,6 +5,7 @@
 
 @section('content')
 questa è la statistics view di guest
+si
 
 
 @endsection

@@ -25,7 +25,11 @@
             <td>{{ $flat->title }}</td>
             <td>{{ $flat->created_at }}</td>
             <td>{{ $flat->updated_at }}</td>
-            <td><a class="text-info" href="{{route('statistics',$flat->id)}}"><i class="fas fa-ad"></i></a></td>
+            <td>
+              <a class="text-info" href="{{route('statistics',$flat->id)}}">
+                <i class="fas fa-ad"></i>
+              </a>
+            </td>
             <td><a class="text-info" href="{{route('sponsor',$flat->id)}}"><i class="fas fa-ad"></i></a></td>
             <td><a class="text-info" href="{{route('flat.show',$flat->id)}}"><i class="fas fa-info-circle"></i></a></td>
             <td><a class="text-warning" href="{{route('flat.edit',$flat->id)}}"><i class="fas fa-edit"></i></a></td>
