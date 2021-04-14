@@ -6,6 +6,18 @@
 questa è la edit
 
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+
+
     <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('PUT')
@@ -53,9 +65,15 @@ questa è la edit
             <input type="file" class="form-control-file" id="flat_img" name="image">
         </div>
 
+    
         <!-- Visibility -->
-        <label for="visibility">Click to Hide</label>
-        <input type="checkbox" id="visibility" name="visibility" value="{{$flats->visibility}}" {{!$flats->visibility ? 'checked=checked' : ''}}>
+        @if($flats->visibility)
+            <label for="visibility">Click to Hide</label>
+            <input type="checkbox" id="visibility" name="visibility" value="{{$flats->visibility = 0}}">
+        @else
+            <label for="visibility">Click to show</label>
+            <input type="checkbox" id="visibility" name="visibility" value="{{$flats->visibility = 1}}">
+        @endif
 
         <!-- Area dei servizi  -->
         @foreach($services as $service)
