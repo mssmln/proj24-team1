@@ -14,10 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/search', 'HomeController@search')->name('search');
+Route::get('/flat', 'HomeController@flat')->name('flat');
+Route::get('/send-message', 'HomeController@message')->name('message');
+
+
+
 
 Auth::routes();
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
     Route::get('/','HomeController@index')->name('home');
     Route::resource('/flat','FlatController');
+    Route::get('/flat/sponsor-flat/{id_flat}','HomeController@sponsor')->name('sponsor');
+    Route::get('/flat/statistics-flat/{id_flat}','HomeController@statistics')->name('statistics');
 }); 
