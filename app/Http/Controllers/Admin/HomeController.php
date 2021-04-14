@@ -28,6 +28,7 @@ class HomeController extends Controller
             'flat' => $flatId
         ];
         // dd($data); // it worked seamlessly
+        // Ritorna la view statistiche
         return view('admin.statistics', $data);
     }
 }
