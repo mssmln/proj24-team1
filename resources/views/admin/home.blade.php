@@ -1,23 +1,26 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+<div>
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
         </div>
-    </div>
+    @endif
+
+    <h1>DASHBOARD</h1>
+
+    <section class="charts">
+        <!-- some charts with some data -->
+    </section>
+
+    <section class="messages">
+        <!-- Last 3 Messages received -->
+    </section>
+
+    <section class="flats">
+        <!-- Last 3 Flats created -->
+    </section>
+    
 </div>
 @endsection
