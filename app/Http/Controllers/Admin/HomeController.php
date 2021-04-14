@@ -21,4 +21,14 @@ class HomeController extends Controller
         // dd($data); // it worked seamlessly
         return view('admin.sponsor', $data);
     }
+
+    public function statistics($id_flat){
+        $flatId = Flat::where('id', $id_flat)->first();
+        $data = [
+            'flat' => $flatId
+        ];
+        // dd($data); // it worked seamlessly
+        // Ritorna la view statistiche
+        return view('admin.statistics', $data);
+    }
 }
