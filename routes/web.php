@@ -21,4 +21,6 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function (
     Route::get('/','HomeController@index')->name('home');
     Route::resource('/flat','FlatController');
     Route::get('/flat/sponsor-flat/{id_flat}','HomeController@sponsor')->name('sponsor');
+    Route::get('/flat/statistics-flat/{id_flat}','HomeController@statistics')->name('statistics');
+
 }); 
