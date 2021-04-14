@@ -4,6 +4,6 @@
 
 
 @section('content')
-
+questa è la view search
 
 @endsection
