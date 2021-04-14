@@ -12602,6 +12602,14 @@ button {
   overflow-y: auto;
 }
 
+#dashboard #side_bar ul {
+  padding: 0px;
+}
+
+#dashboard #side_bar ul li {
+  padding-bottom: 15px;
+}
+
 #dashboard #side_bar a i {
   font-size: 2rem;
 }
