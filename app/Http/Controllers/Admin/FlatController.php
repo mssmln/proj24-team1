@@ -18,6 +18,35 @@ class FlatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+    // validations
+    public function validate(Request $request){
+        $request->validate([
+            // flat
+            'title' => 'required',
+            'overview' => 'nullable',
+            'price' => 'required',
+            'rooms' => 'required',
+            'beds' => 'required',
+            'baths' => 'required',
+            'sqm' => 'required',
+            'address' => 'required',
+            'flat_img' => 'required',
+            'visibility' => 'required',
+            // / flat
+        ]);
+    }
+
+
+
+
+
+
+
+
+
     public function index()
     {
 
