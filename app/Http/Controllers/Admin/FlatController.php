@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -22,19 +24,20 @@ class FlatController extends Controller
 
 
     // validations
-    public function validate(Request $request){
-        $request->validate([
+    public function valida(Request $request){
+        $request->validate(
+        [
             // flat
-            'title' => 'required',
+            'title' => 'required|unique:flats',
             'overview' => 'nullable',
-            'price' => 'required',
-            'rooms' => 'required',
-            'beds' => 'required',
-            'baths' => 'required',
-            'sqm' => 'required',
-            'address' => 'required',
-            'flat_img' => 'required',
-            'visibility' => 'required',
+            'price' => 'required|numeric|min:1',
+            'rooms' => 'required|numeric|min:1',
+            'beds' => 'required|numeric|min:1',
+            'baths' => 'required|numeric|min:1',
+            'sqm' => 'required|numeric|min:1',
+            'address' => 'required|string',
+            'flat_img' => 'mimes:png,jpg,gif',
+            'visibility' => 'boolean',
             // / flat
         ]);
     }
@@ -79,8 +82,10 @@ class FlatController extends Controller
      */
     public function store(Request $request)
     {
+        $this->valida($request);
         $data = $request->all();
         // dd($data); it worked smoothly
+
         $newFlat = new Flat();
         $newFlat->user_id = Auth::id();
         $newFlat->slug = Str::slug($data['title']);
@@ -139,6 +144,22 @@ class FlatController extends Controller
     public function update(Request $request, Flat $flat)
     {
         $data = $request->all();
+        $request->validate(
+            [
+                // flat
+                'title' => ['required',Rule::unique("flats")->ignore($flat)], // ignora il title se viene salvato con lo stesso nome del precedente
+                'overview' => 'nullable',
+                'price' => 'required|numeric|min:1',
+                'rooms' => 'required|numeric|min:1',
+                'beds' => 'required|numeric|min:1',
+                'baths' => 'required|numeric|min:1',
+                'sqm' => 'required|numeric|min:1',
+                'address' => 'required|string',
+                'flat_img' => 'mimes:png,jpg,gif',
+                'visibility' => 'boolean',
+                // / flat
+            ]);
+        
 
         // Controllo if per update slug solo se cambia il title
         if($data['title'] != $flat->title){
