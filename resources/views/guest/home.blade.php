@@ -64,6 +64,22 @@
         </style>
     </head>
     <body>
+        <!-- guest -->
+        <div class="">
+            <div class="top-left links">
+                <a href="{{route('search')}}">search</a>
+            </div>
+        </div>
+        <div class="">
+            <div class="top-left links">
+                <a href="{{route('flat')}}">flat</a>
+            </div>
+        </div>
+        <!-- / guest -->
+
+
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
