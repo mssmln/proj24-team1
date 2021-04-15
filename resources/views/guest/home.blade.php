@@ -64,7 +64,7 @@
         </style>
     </head>
     <body>
-        <!-- guest -->
+        <!-- guest
         <div class="">
             <div class="top-left links">
                 <a href="{{route('search')}}">search</a>
@@ -75,7 +75,7 @@
                 <a href="{{route('flat')}}">flat</a>
             </div>
         </div>
-        <!-- / guest -->
+         guest -->
 
 
 
@@ -97,18 +97,19 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    AIR Vigorsol
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="{{route('search')}}">Ricerca</a>
+                    <a href="{{route('flat')}}">Appartamenti</a>
+                    {{-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                 </div>
             </div>
         </div>
