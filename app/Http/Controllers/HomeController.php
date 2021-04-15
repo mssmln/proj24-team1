@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Message;
+use App\Flat;
 
 class HomeController extends Controller
 {
@@ -38,4 +40,19 @@ class HomeController extends Controller
     public function message(){
         return view('guest.message');
     }
+
+    public function send_message(Request $request, Flat $flat){
+        $data = $request->all();
+        // dd($data); it worked smoothly
+        $newMessage = new Message();
+        $newMessage->flat_id = $flat->id;
+        $newMessage->fill($data);
+        dd($flat);
+        $newMessage->save();
+        
+
+        return redirect()->route('message');
+    }
+
+
 }
