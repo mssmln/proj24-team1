@@ -33,7 +33,7 @@ class HomeController extends Controller
     }
 
     public function flat(){
-
+        
         return view('guest.flat.index');
     }
 
@@ -41,13 +41,18 @@ class HomeController extends Controller
         return view('guest.message');
     }
 
-    public function send_message(Request $request, Flat $flat){
-        $data = $request->all();
+    public function send_message(Request $request){
+
+
+        $request->validate([
+            'email' => 'required|email:rfc,dns',
+            'message' => 'required|min:1|max:1000'
+        ]);
+
         // dd($data); it worked smoothly
         $newMessage = new Message();
-        $newMessage->flat_id = $flat->id;
-        $newMessage->fill($data);
-        dd($flat);
+        // $newMessage->flat_id = $flat->id;
+        $newMessage->fill($request->all());
         $newMessage->save();
         
 
