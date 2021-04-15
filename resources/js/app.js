@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 
+import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 
 let forms = document.getElementsByClassName("form-delete");
@@ -59,4 +60,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data: {
+        flats: [],
+        query: '',
+
+    },
+    created(){
+            axios
+            .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+            .then((result) =>{
+                this.flats.push(...result.data.response.flat);
+                // this.flats = result.data.response.flat; the same as above
+                // console.log(this.flats); it worked perfectly 
+            })
+            .catch((error) => alert('this API (flat) does not work'));
+    }
+    
 });
