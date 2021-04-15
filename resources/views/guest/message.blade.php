@@ -6,4 +6,6 @@
 @section('content')
 questa è la view message
 
+
+
 @endsection
