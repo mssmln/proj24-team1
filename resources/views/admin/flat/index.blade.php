@@ -27,7 +27,7 @@
             <td>{{ $flat->updated_at }}</td>
             <td>
               <a class="text-info" href="{{route('statistics',$flat->id)}}">
-                <i class="fas fa-ad"></i>
+                <i class="fas fa-chart-line"></i>
               </a>
             </td>
             <td><a class="text-info" href="{{route('sponsor',$flat->id)}}"><i class="fas fa-ad"></i></a></td>
