@@ -54885,7 +54885,21 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2/src/sweetalert2.js */ "./node_modules/sweetalert2/src/sweetalert2.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2/src/sweetalert2.js */ "./node_modules/sweetalert2/src/sweetalert2.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -54894,13 +54908,14 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
+
 var forms = document.getElementsByClassName("form-delete");
 console.log(forms);
 
 var _loop = function _loop(i) {
   forms[i].addEventListener('submit', function (e) {
     e.preventDefault();
-    sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__["default"].fire({
+    sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
       icon: 'warning',
@@ -54910,7 +54925,7 @@ var _loop = function _loop(i) {
       confirmButtonText: 'Yes, delete it!'
     }).then(function (result) {
       if (result.isConfirmed) {
-        sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__["default"].fire('Deleted!', 'Your file has been deleted.' // 'success'
+        sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire('Deleted!', 'Your file has been deleted.' // 'success'
         );
         forms[i].submit();
       }
@@ -54942,7 +54957,24 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    flats: [],
+    query: ''
+  },
+  created: function created() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://127.0.0.1:8000/api/boolbnb-flats-api").then(function (result) {
+      var _this$flats;
+
+      (_this$flats = _this.flats).push.apply(_this$flats, _toConsumableArray(result.data.response.flat)); // this.flats = result.data.response.flat; the same as above
+      // console.log(this.flats); it worked perfectly 
+
+    })["catch"](function (error) {
+      return alert('this API (flat) does not work');
+    });
+  }
 });
 
 /***/ }),
@@ -55079,8 +55111,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
