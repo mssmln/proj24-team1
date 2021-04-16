@@ -168,11 +168,7 @@ class FlatController extends Controller
 
         // Controllo if per evitare l'errore del undefined index image
         if(array_key_exists('image',$data)){
-<<<<<<< HEAD
             $data['flat_img'] = Storage::put('flat_covers', $data['image']);
-=======
-            $data['flat_img'] = Storage::put('flat_covers', $data['image']); 
->>>>>>> main
         }
 
         // Aggiorna i servizi modificati
