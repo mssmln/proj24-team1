@@ -59,12 +59,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 
-
-
-// test google api
-// document.domain = "localhost";
-
-
 const app = new Vue({
     el: '#app',
     data: {
@@ -87,7 +81,7 @@ const app = new Vue({
         googleAdresses(){
             // api di google
             axios
-            .get("http://maps.googleapis.com/maps/api/geocode/json?address=" + this.address +"&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+            .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
             .then((result) =>{
                 this.googleApiResults.push(...result.data.response.googleApiResults);
                 console.log(this.googleApiResults); 

@@ -54,7 +54,7 @@
         </div>
         <div class="input-group">
             <label for="address">Indirizzo</label>
-            <input v-model="address" @keyup="googleAdresses" type="text" id="address" name="address" class="form-control" value="{{old('address')}}">
+            <input v-model="address" type="text" id="address" name="address" class="form-control" value="{{old('address')}}" @keyup="googleAdresses">
         </div>
         
         <!-- Upload an img file  -->
