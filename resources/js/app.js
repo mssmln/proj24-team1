@@ -58,22 +58,43 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+
+
+// test google api
+// document.domain = "localhost";
+
+
 const app = new Vue({
     el: '#app',
     data: {
         flats: [],
         query: '',
-
+        googleApiResults: [],
+        address: ''
     },
     created(){
+        axios
+        .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+        .then((result) =>{
+            this.flats.push(...result.data.response.flat);
+            // this.flats = result.data.response.flat; the same as above
+            // console.log(this.flats); it worked perfectly 
+        })
+        .catch((error) => alert('this API (flat) does not work'));
+    },
+    methods: {
+        googleAdresses(){
+            // api di google
             axios
-            .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+            .get("http://maps.googleapis.com/maps/api/geocode/json?address=" + this.address +"&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
             .then((result) =>{
-                this.flats.push(...result.data.response.flat);
-                // this.flats = result.data.response.flat; the same as above
-                // console.log(this.flats); it worked perfectly 
+                this.googleApiResults.push(...result.data.response.googleApiResults);
+                console.log(this.googleApiResults); 
             })
-            .catch((error) => alert('this API (flat) does not work'));
+            .catch((error) => alert('this API (Google) does not work'));
+            
+        }
     }
     
 });
