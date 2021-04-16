@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
@@ -53,11 +53,11 @@ class FlatController extends Controller
     public function index()
     {
 
-        $data = [ 
+        $data = [
             'flats' => Flat::all()->where('user_id', Auth::id())
-        ]; 
+        ];
 
-        return view('admin.flat.index',$data); 
+        return view('admin.flat.index',$data);
     }
 
     /**
@@ -71,7 +71,7 @@ class FlatController extends Controller
             'services' => Service::all()
         ];
         return view('admin.flat.create', $data);
-        
+
     }
 
     /**
@@ -159,7 +159,7 @@ class FlatController extends Controller
                 'visibility' => 'boolean',
                 // / flat
             ]);
-        
+
 
         // Controllo if per update slug solo se cambia il title
         if($data['title'] != $flat->title){
@@ -168,14 +168,14 @@ class FlatController extends Controller
 
         // Controllo if per evitare l'errore del undefined index image
         if(array_key_exists('image',$data)){
-            $data['flat_img'] = Storage::put('flat_covers', $data['image']); 
+            $data['flat_img'] = Storage::put('flat_covers', $data['image']);
         }
 
         // Aggiorna i servizi modificati
         if(array_key_exists('services',$data)){
             $flat->services()->sync($data['services']);
         }
-        
+
         $flat->update($data);
 
         return redirect()->route('flat.show', $flat);
