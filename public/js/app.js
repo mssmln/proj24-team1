@@ -54945,12 +54945,16 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+// test google api
+// document.domain = "localhost";
 
 var app = new Vue({
   el: '#app',
   data: {
     flats: [],
-    query: ''
+    query: '',
+    googleApiResults: [],
+    address: ''
   },
   created: function created() {
     var _this = this;
@@ -54964,6 +54968,22 @@ var app = new Vue({
     })["catch"](function (error) {
       return alert('this API (flat) does not work');
     });
+  },
+  methods: {
+    googleAdresses: function googleAdresses() {
+      var _this2 = this;
+
+      // api di google
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc").then(function (result) {
+        var _this2$googleApiResul;
+
+        (_this2$googleApiResul = _this2.googleApiResults).push.apply(_this2$googleApiResul, _toConsumableArray(result.data.response.googleApiResults));
+
+        console.log(_this2.googleApiResults);
+      })["catch"](function (error) {
+        return alert('this API (Google) does not work');
+      });
+    }
   }
 });
 
