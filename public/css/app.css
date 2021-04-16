@@ -12582,6 +12582,14 @@ button {
   padding: 0;
 }
 
+.show_item {
+  display: block;
+}
+
+.hidden_item {
+  display: none;
+}
+
 #dashboard {
   width: 100%;
   height: 100vh;
