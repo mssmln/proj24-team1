@@ -12590,6 +12590,15 @@ button {
   display: none;
 }
 
+footer {
+  height: 200px;
+}
+
+footer #footer_main {
+  display: flex;
+  justify-content: space-between;
+}
+
 #dashboard {
   width: 100%;
   height: 100vh;

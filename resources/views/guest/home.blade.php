@@ -66,3 +66,5 @@
 
 
 @endsection
+
+@extends('guest.partials.footer')

@@ -1,9 +1,9 @@
 <!-- codice html -->
 
 <footer>
-    <section class="footer-main">
-        <div class="footer-main-item">
-            <h3 class="footer-title">
+    <section id="footer_main">
+        <div class="footer_main_item">
+            <h3 class="footer_title">
                 informazioni
             </h3>
             <ul>
@@ -19,10 +19,10 @@
                 <li><a href="#">Lettera dei fondatori</a></li>
             </ul>
         </div>
-        {{-- / FOOTER MAIN ITEM --}}
+        {{-- FOOTER MAIN ITEM --}}
 
-        <div class="footer-main-item">
-            <h3 class="footer-title">
+        <div class="footer_main_item">
+            <h3 class="footer_title">
                 community
             </h3>
             <ul>
@@ -34,10 +34,10 @@
                 <li><a href="#">Airbnb.org</a></li>
             </ul>
         </div>
-        {{-- / FOOTER MAIN ITEM --}}
+        {{-- FOOTER MAIN ITEM --}}
 
-        <div class="footer-main-item">
-            <h3 class="footer-title">
+        <div class="footer_main_item">
+            <h3 class="footer_title">
                 ospita
             </h3>
             <ul>
@@ -49,10 +49,10 @@
                 <li><a href="#">Community Center</a></li>
             </ul>
         </div>
-        {{-- / FOOTER MAIN ITEM --}}
+        {{-- FOOTER MAIN ITEM --}}
 
-        <div class="footer-main-item">
-            <h3 class="footer-title">
+        <div class="footer_main_item">
+            <h3 class="footer_title">
                 assistenza
             </h3>
             <ul>
@@ -68,8 +68,8 @@
     </section>
     {{-- / FOOTER MAIN --}}
 
-    <section class="footer-bottom">
-        <div class="footer-bottom-item">
+    <section id="footer_bottom">
+        <div class="footer_bottom_item">
             <ul>
                 <li><i class="far fa-copyright"></i> 2021 Airbnb, Inc</li>
                 <li><a href="#">Privacy</a></li>
@@ -79,15 +79,21 @@
             </ul>
         </div>
         {{-- / FOOTER BOTTOM ITEM --}}
-        <div class="footer-bottom-item">
+        <div class="footer_bottom_item">
             <ul>
-                
+                <li>
+                    <i class="fas fa-globe"></i> <a href="#">Italiano</a>
+                </li>
+                <li>
+                    <i class="fas fa-euro-sign"></i><a href="#">Euro</a>
+                </li>
+                <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fab fa-instagram-square"></i></a></li>
             </ul>
         </div>
         {{-- / FOOTER BOTTOM ITEM --}}
     </section>
     {{-- / FOOTER BOTTOM --}}
-
-
 
 </footer>
