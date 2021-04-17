@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -20,8 +19,7 @@ class FlatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
+    
 
     // validations
     public function valida(Request $request){
@@ -38,17 +36,8 @@ class FlatController extends Controller
             'address' => 'required|string',
             'flat_img' => 'mimes:png,jpg,gif',
             'visibility' => 'boolean',
-            // / flat
         ]);
     }
-
-
-
-
-
-
-
-
 
     public function index()
     {
