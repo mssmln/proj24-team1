@@ -54955,8 +54955,6 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-// test google api
-// document.domain = "localhost";
 
 var app = new Vue({
   el: '#app',
@@ -54964,6 +54962,7 @@ var app = new Vue({
     flats: [],
     query: '',
     googleApiResults: [],
+    tomtomApiResults: [],
     address: ''
   },
   created: function created() {
@@ -54980,18 +54979,26 @@ var app = new Vue({
     });
   },
   methods: {
-    googleAdresses: function googleAdresses() {
+    // googleAdresses(){ it worked perfectly, we just use tomtom's one
+    //     // api di google
+    //     axios
+    //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+    //     .then((result) =>{
+    //         this.googleApiResults = result.data.results;
+    //         console.log(this.googleApiResults); 
+    //     })
+    //     .catch((error) => console.log('this API (Google) does not work',error));
+    // },
+    tomtomAdresses: function tomtomAdresses() {
       var _this2 = this;
 
-      // api di google
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc").then(function (result) {
-        var _this2$googleApiResul;
+      // api di Tomtom
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
+        _this2.tomtomApiResults = result.data.results; // console.log(result); 
 
-        (_this2$googleApiResul = _this2.googleApiResults).push.apply(_this2$googleApiResul, _toConsumableArray(result.data.response.googleApiResults));
-
-        console.log(_this2.googleApiResults);
+        console.log(_this2.tomtomApiResults);
       })["catch"](function (error) {
-        return alert('this API (Google) does not work');
+        return alert('this API (Tomtom) does not work', error);
       });
     }
   }
