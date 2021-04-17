@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);.swal2-popup.swal2-toast {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+.swal2-popup.swal2-toast {
   flex-direction: row;
   align-items: center;
   width: auto;
@@ -1767,6 +1769,55 @@ button {
 .nav_header .nav_user ul li:hover a::after {
   background-color: #A3A3A3;
 }
+
+input[type=checkbox].switch_1 {
+  font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 3.5em;
+  height: 1.5em;
+  /* Backgroud colore checkbox unckecked */
+  background: #ddd;
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  line-height: 1.5em;
+}
+
+input[type=checkbox].switch_1:checked {
+  /* Colore checkbox-checked */
+  background: #18db49;
+}
+
+input[type=checkbox].switch_1:after {
+  position: absolute;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  /* Colore circle */
+  background: #fff;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type=checkbox].switch_1:checked:after {
+  left: calc(100% - 1.5em);
+}
+
+/* Per quando si sistemerà il form create ed edit:
+    dare al div delle checkbox:
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    dare alla label
+        margin-left 10px
+*/
 
 #dashboard {
   width: 100%;
