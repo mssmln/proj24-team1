@@ -54,7 +54,7 @@
         </div>
         <div class="input-group">
             <label for="address">Indirizzo</label>
-            <input v-model="address" @keyup="googleAdresses" type="text" id="address" name="address" class="form-control" value="{{old('address')}}">
+            <input v-model="address" type="text" id="address" name="address" class="form-control" value="{{old('address')}}" @keyup="googleAdresses">
         </div>
         
         <!-- Upload an img file  -->
@@ -64,13 +64,13 @@
         </div>
 
         <!-- Visibility -->
-        <label for="visibility">Non visibile</label>
-        <input type="checkbox" id="visibility" name="visibility" value="0">
+        <input type="checkbox" class="switch_1" id="visibility" name="visibility" value="0">
+        <label for="visibility">Appartamento Non visibile</label>
 
         <!-- Area dei servizi -->
         @foreach($services as $service)
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input"  name="services[]" value="{{$service->id}}">
+            <input type="checkbox" class="switch_1" name="services[]" value="{{$service->id}}">
             <label class="form-check-label">{{$service->name}}</label>
         </div>
         @endforeach
