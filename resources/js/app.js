@@ -65,6 +65,7 @@ const app = new Vue({
         flats: [],
         query: '',
         googleApiResults: [],
+        tomtomApiResults: [],
         address: ''
     },
     created(){
@@ -76,18 +77,30 @@ const app = new Vue({
             // console.log(this.flats); it worked perfectly 
         })
         .catch((error) => alert('this API (flat) does not work'));
+
     },
     methods: {
-        googleAdresses(){
-            // api di google
-            axios
-            .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
-            .then((result) =>{
-                this.googleApiResults.push(...result.data.response.googleApiResults);
-                console.log(this.googleApiResults); 
-            })
-            .catch((error) => alert('this API (Google) does not work'));
+        // googleAdresses(){ it worked perfectly, we just use tomtom's one
+        //     // api di google
+        //     axios
+        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+        //     .then((result) =>{
+        //         this.googleApiResults = result.data.results;
+        //         console.log(this.googleApiResults); 
+        //     })
+        //     .catch((error) => console.log('this API (Google) does not work',error));
             
+        // },
+        tomtomAdresses(){
+            // api di Tomtom scaricata dal sito ufficiale 
+            axios
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
+            .then((result) =>{
+                this.tomtomApiResults = result.data.results;
+                // console.log(result); 
+                console.log(this.tomtomApiResults);
+            })
+            .catch((error) => alert('this API (Tomtom) does not work',error));
         }
     }
     
