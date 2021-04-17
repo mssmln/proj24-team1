@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="login_page">
+    <div id="particles_balls">
+        <div v-for="i in 30" class="particle"></div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
