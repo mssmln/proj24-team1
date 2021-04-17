@@ -54992,7 +54992,7 @@ var app = new Vue({
     tomtomAdresses: function tomtomAdresses() {
       var _this2 = this;
 
-      // api di Tomtom
+      // api di Tomtom scaricata dal sito ufficiale 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
         _this2.tomtomApiResults = result.data.results; // console.log(result); 
 

@@ -94,7 +94,7 @@ const app = new Vue({
             
         // },
         tomtomAdresses(){
-            // api di Tomtom
+            // api di Tomtom scaricata dal sito ufficiale 
             axios
             .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
