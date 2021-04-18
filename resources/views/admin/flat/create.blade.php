@@ -8,7 +8,7 @@
 
 
 <h1>Aggiungi un Appartamento</h1>
-<div class="container">
+<div>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -19,48 +19,55 @@
         </div>
     @endif
 
-
-
     <form action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('POST')
-        <div class="input-group input-group-sm mb-3 ">
-            <label for="title">Titolo</label>
-            <input name="title" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{old('title')}}">
+
+        <div class="form_create_edit">
+            <input id="title" name="title" type="text" class="form_input" value="{{old('title')}}" placeholder="Titolo" required>
+            <label for="title" class="form_label">Titolo</label>
         </div>
-        <div class="input-group">
-            <label for="content">Descrizione</label>
-            <textarea name="overview" class="form-control" aria-label="With textarea">{{old('overview')}}</textarea>
+
+        <div class="form_create_edit">
+            <input type="number" id="price" name="price" class="form_input" value="{{old('price')}}" placeholder="Prezzo" required>
+            <label for="price" class="form_label">Prezzo</label>
         </div>
-        <div class="input-group">
-            <label for="price">Prezzo</label>
-            <input type="number" id="price" name="price" class="form-control" value="{{old('price')}}">
+
+        <div class="form_create_edit">
+            <input type="number" id="rooms" name="rooms" class="form_input" value="{{old('price')}}" placeholder="Stanze" required>
+            <label for="rooms" class="form_label">Stanze</label>
         </div>
-        <div class="input-group">
-            <label for="rooms">Stanze</label>
-            <input type="number" id="rooms" name="rooms" class="form-control" value="{{old('price')}}">
+
+        <div class="form_create_edit">
+            <input type="number" id="beds" name="beds" class="form_input" value="{{old('beds')}}" placeholder="Letti" required>
+            <label for="beds" class="form_label">Letti</label>
         </div>
-        <div class="input-group">
-            <label for="beds">Letti</label>
-            <input type="number" id="beds" name="beds" class="form-control" value="{{old('beds')}}">
+
+        <div class="form_create_edit">
+            <input type="number" id="baths" name="baths" class="form_input" value="{{old('baths')}}" placeholder="Bagni" required>
+            <label for="baths" class="form_label">Bagni</label>
         </div>
-        <div class="input-group">
-            <label for="baths">Bagni</label>
-            <input type="number" id="baths" name="baths" class="form-control" value="{{old('baths')}}">
+
+        <div class="form_create_edit">
+            <input type="number" id="sqm" name="sqm" class="form_input" value="{{old('sqm')}}" placeholder="Metri quadrati" required>
+            <label for="sqm" class="form_label">Metri quadrati</label>
         </div>
-        <div class="input-group">
-            <label for="sqm">Metri quadrati</label>
-            <input type="number" id="sqm" name="sqm" class="form-control" value="{{old('sqm')}}">
-        </div>
-        <div class="input-group">
-            <label for="address">Indirizzo</label>
-            <input v-model="address" @keyup="tomtomAdresses" type="text" id="address" name="address" class="form-control" value="{{old('address')}}">
+
+        <div class="form_create_edit">
+            <input v-model="address" @keyup="tomtomAdresses" type="text" id="address" name="address" class="form_input" value="{{old('address')}}" placeholder="Indirizzo" required>
+            <label for="address" class="form_label">Indirizzo</label>
         </div>
         
         <!-- Upload an img file  -->
-        <div class="form-group">
-            <label for="flat_img">Carica un'immagine</label>
+        <div class="form_create_edit">
             <input type="file" class="form-control-file" id="flat_img" name="image">
+            <label for="flat_img" class="form_label">Carica Immagine</label>
+        </div>
+
+        <!-- Descrizione  -->
+        <div class="input-group">
+            <label for="overview">Descrizione</label>
+            <textarea name="overview">{{old('overview')}}</textarea>
         </div>
 
         <!-- Visibility -->

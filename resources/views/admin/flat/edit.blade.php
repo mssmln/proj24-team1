@@ -21,9 +21,9 @@ questa è la edit
     <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('PUT')
-        <div class="input-group input-group-sm mb-3 ">
-            <label for="title">new flat</label>
-            <input name="title" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ $flats->title }}">
+        <div class="form_create_edit">
+            <input ind="title" name="title" type="text" class="form_input" value="{{ $flats->title }}">
+            <label for="title" class="form_label">Titolo</label>
         </div>
         <div class="input-group">
             <label for="content">overview</label>
