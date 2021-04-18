@@ -66,7 +66,18 @@ const app = new Vue({
         query: '',
         googleApiResults: [],
         tomtomApiResults: [],
-        address: ''
+        address: '',
+        // Info via
+        lat: '',
+        lng: '',
+        paese: '',
+        provincia: '',
+        regione: '',
+        comune: '',
+        cap: '',
+        via: '',
+        numero: '',
+        indirizzo: ''
     },
     created(){
         axios
@@ -94,10 +105,20 @@ const app = new Vue({
         tomtomAdresses(){
             // api di Tomtom scaricata dal sito ufficiale 
             axios
-            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
                 this.tomtomApiResults = result.data.results;
                 // console.log(result); 
+                this.lat = this.tomtomApiResults[0].position.lat;
+                this.lng = this.tomtomApiResults[0].position.lon;
+                this.paese = this.tomtomApiResults[0].address.country;
+                this.provincia = this.tomtomApiResults[0].address.countrySecondarySubdivision;
+                this.regione = this.tomtomApiResults[0].address.countrySubdivision;
+                this.comune = this.tomtomApiResults[0].address.municipality;
+                this.cap = this.tomtomApiResults[0].address.postalCode;
+                this.via = this.tomtomApiResults[0].address.streetName;
+                this.numero = this.tomtomApiResults[0].address.streetNumber;
+                this.indirizzo = this.tomtomApiResults[0].address.freeformAddress;
                 console.log(this.tomtomApiResults);
             })
             .catch((error) => alert('this API (Tomtom) does not work',error));

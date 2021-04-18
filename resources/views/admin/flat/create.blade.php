@@ -23,51 +23,104 @@
     @csrf 
     @method('POST')
 
-        <div class="form_create_edit">
-            <input id="title" name="title" type="text" class="form_input" value="{{old('title')}}" placeholder="Titolo" required>
-            <label for="title" class="form_label">Titolo</label>
+    
+    <div class="form_create_edit input_bg">
+        <input id="title" name="title" type="text" class="form_input" value="{{old('title')}}" required autocomplete="off" title="Inserisci un titolo">
+        <label for="title" class="form_label">Titolo</label>
+    </div>
+    
+    <div class="box_form">
+
+        <div class="input_bg padding_form">
+
+            <div class="form_create_edit">
+                <input type="text" id="price" name="price" class="form_input" value="{{old('price')}}" autocomplete="off" required>
+                <label for="price" class="form_label">Prezzo</label>
+            </div>
+            
+            <div class="form_create_edit">
+                <input type="text" id="rooms" name="rooms" class="form_input" value="{{old('price')}}" autocomplete="off" required>
+                <label for="rooms" class="form_label">Stanze</label>
+            </div>
+            
+            <div class="form_create_edit">
+                <input type="text" id="beds" name="beds" class="form_input" value="{{old('beds')}}" autocomplete="off" required>
+                <label for="beds" class="form_label">Letti</label>
+            </div>
+            
+            <div class="form_create_edit">
+                <input type="text" id="baths" name="baths" class="form_input" value="{{old('baths')}}" autocomplete="off" required>
+                <label for="baths" class="form_label">Bagni</label>
+            </div>
+
+            <div class="form_create_edit">
+                <input type="text" id="sqm" name="sqm" class="form_input" value="{{old('sqm')}}" autocomplete="off" required title="Inserisci i metri quadrati">
+                <label for="sqm" class="form_label">MQ</label>
+            </div>
+            
         </div>
 
-        <div class="form_create_edit">
-            <input type="number" id="price" name="price" class="form_input" value="{{old('price')}}" placeholder="Prezzo" required>
-            <label for="price" class="form_label">Prezzo</label>
-        </div>
+    </div>
 
+        
         <div class="form_create_edit">
-            <input type="number" id="rooms" name="rooms" class="form_input" value="{{old('price')}}" placeholder="Stanze" required>
-            <label for="rooms" class="form_label">Stanze</label>
-        </div>
-
-        <div class="form_create_edit">
-            <input type="number" id="beds" name="beds" class="form_input" value="{{old('beds')}}" placeholder="Letti" required>
-            <label for="beds" class="form_label">Letti</label>
-        </div>
-
-        <div class="form_create_edit">
-            <input type="number" id="baths" name="baths" class="form_input" value="{{old('baths')}}" placeholder="Bagni" required>
-            <label for="baths" class="form_label">Bagni</label>
-        </div>
-
-        <div class="form_create_edit">
-            <input type="number" id="sqm" name="sqm" class="form_input" value="{{old('sqm')}}" placeholder="Metri quadrati" required>
-            <label for="sqm" class="form_label">Metri quadrati</label>
-        </div>
-
-        <div class="form_create_edit">
-            <input v-model="address" @keyup="tomtomAdresses" type="text" id="address" name="address" class="form_input" value="{{old('address')}}" placeholder="Indirizzo" required>
+            <a href="#" @click="tomtomAdresses">Calcola</a>
+            <input v-model="address"  type="text" id="address" name="address" class="form_input" value="{{old('address')}}" autocomplete="off" required>
             <label for="address" class="form_label">Indirizzo</label>
         </div>
         
+        <div class="form_flex">
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" id="lat" name="lat" class="form_input" v-model="lat">
+                <label for="lat" class="form_label">Lat</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" id="lng" name="lng" class="form_input" v-model="lng">
+                <label for="lng" class="form_label">Long</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="via">
+                <label class="form_label">Via</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="numero">
+                <label class="form_label">N°</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="cap">
+                <label class="form_label">CAP</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="comune">
+                <label class="form_label">Comune</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="provincia">
+                <label class="form_label">Provincia</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="regione">
+                <label class="form_label">Regione</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" class="form_input" v-model="paese">
+                <label class="form_label">Paese</label>
+            </div>
+            <div class="form_create_edit">
+                <input disabled="disabled" readonly="text" type="text" id="address" name="address" class="form_input not" v-model="indirizzo">
+            </div>
+        </div>
+
         <!-- Upload an img file  -->
-        <div class="form_create_edit">
-            <input type="file" class="form-control-file" id="flat_img" name="image">
-            <label for="flat_img" class="form_label">Carica Immagine</label>
+        <div >
+            <label for="flat_img" >Carica Immagine</label>
+            <input type="file" id="flat_img" name="image">
         </div>
 
         <!-- Descrizione  -->
-        <div class="input-group">
-            <label for="overview">Descrizione</label>
-            <textarea name="overview">{{old('overview')}}</textarea>
+        <div class="form_create_edit">
+            <textarea class="form_input" name="overview">{{old('overview')}}</textarea>
+            <label class="form_label" for="overview">Descrizione</label>
         </div>
 
         <!-- Visibility -->

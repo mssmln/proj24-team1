@@ -1,49 +1,49 @@
-$primary_form_create_edit:#11998e;
+$primary_form_create_edit:#ff3e58;
 $secondary_form_create_edit: #38ef7d;
 $white_form_create_edit: #fff;
+$white_label: #f8f8f8;
 $gray_form_create_edit: #9b9b9b;
+
+.box_form{
+  width: 50%;
+}
+
+.padding_form {
+  padding: 20px 0;
+}
+
+.input_bg {
+    background-color: #2f3438;
+    border-radius: 50px;
+    margin: 10px 0;
+}
 
 .form_create_edit {
   position: relative;
-  padding: 15px 0 0;
+  padding: 10px 0;
   width: 50%;
 
     .form_input {
         width: 100%;
         border: 0;
-        border-bottom: 2px solid $gray_form_create_edit;
         font-size: 1.3rem;
         color: $white_form_create_edit;
-        padding: 7px 0;
+        padding: 7px 20px 7px 120px;
         transition: border-color 0.2s;
-      
-        &::placeholder {
-        color: transparent;
-        }
-  
-        &:placeholder-shown ~ .form_label {
-        font-size: 1.3rem;
-        cursor: text;
-        top: 20px;
+
+        &.not {
+          padding: 7px 0;
+          font-size: 1rem;
         }
 
         &:focus {
 
             ~ .form_label {
-              position: absolute;
-              top: 0;
               display: block;
               transition: 0.2s;
-              font-size: 1rem;
               color: $primary_form_create_edit;
               font-weight:700;    
             }
-
-            padding-bottom: 6px;  
-            font-weight: 700;
-            border-width: 3px;
-            border-image: linear-gradient(to right, $primary_form_create_edit,$secondary_form_create_edit);
-            border-image-slice: 1;
         }
 
         /* Reset input error */
@@ -52,10 +52,18 @@ $gray_form_create_edit: #9b9b9b;
     
     .form_label {
       position: absolute;
-      top: 0;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
       display: block;
       transition: 0.2s;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: $gray_form_create_edit;
     }
+}
+
+.form_flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 37%;
 }

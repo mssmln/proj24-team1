@@ -54963,7 +54963,18 @@ var app = new Vue({
     query: '',
     googleApiResults: [],
     tomtomApiResults: [],
-    address: ''
+    address: '',
+    // Info via
+    lat: '',
+    lng: '',
+    paese: '',
+    provincia: '',
+    regione: '',
+    comune: '',
+    cap: '',
+    via: '',
+    numero: '',
+    indirizzo: ''
   },
   created: function created() {
     var _this = this;
@@ -54993,9 +55004,19 @@ var app = new Vue({
       var _this2 = this;
 
       // api di Tomtom scaricata dal sito ufficiale 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
         _this2.tomtomApiResults = result.data.results; // console.log(result); 
 
+        _this2.lat = _this2.tomtomApiResults[0].position.lat;
+        _this2.lng = _this2.tomtomApiResults[0].position.lon;
+        _this2.paese = _this2.tomtomApiResults[0].address.country;
+        _this2.provincia = _this2.tomtomApiResults[0].address.countrySecondarySubdivision;
+        _this2.regione = _this2.tomtomApiResults[0].address.countrySubdivision;
+        _this2.comune = _this2.tomtomApiResults[0].address.municipality;
+        _this2.cap = _this2.tomtomApiResults[0].address.postalCode;
+        _this2.via = _this2.tomtomApiResults[0].address.streetName;
+        _this2.numero = _this2.tomtomApiResults[0].address.streetNumber;
+        _this2.indirizzo = _this2.tomtomApiResults[0].address.freeformAddress;
         console.log(_this2.tomtomApiResults);
       })["catch"](function (error) {
         return alert('this API (Tomtom) does not work', error);
