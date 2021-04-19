@@ -1632,6 +1632,11 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   padding: 0;
 }
 
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
 ul li {
   list-style: none;
 }
@@ -2621,6 +2626,24 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -6s;
   transform: translate3d(68vw, 68vh, 29px);
   background: #cd26d9;
+}
+
+footer {
+  height: 200px;
+}
+
+footer .container #footer_main {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container #footer_bottom {
+  display: flex;
+}
+
+footer .container #footer_bottom ul {
+  display: flex;
+  flex-direction: row;
 }
 
 #dashboard {
