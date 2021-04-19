@@ -111,7 +111,6 @@
             @yield('content')
         </section>
     </div>
-
     
 </body>
 </html>
