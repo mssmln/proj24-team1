@@ -23,6 +23,7 @@ button {
     color: #757575;
 	border: none;
 	margin: 0;
+	padding: 0;
     cursor: pointer;
     &:hover {
         color: #db4c51;
@@ -50,7 +51,7 @@ input[type="checkbox"].switch_1{
   
 input[type="checkbox"].switch_1:checked{
     /* Colore checkbox-checked */
-	background: #18db49;
+	background: #db4c51;
 }
   
 input[type="checkbox"].switch_1:after{

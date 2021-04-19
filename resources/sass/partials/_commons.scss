@@ -10,6 +10,10 @@ body {
 }
 
 
+input { border-style: none; background: transparent; outline: none; }
+
+
+
 
 ul li {
     list-style: none;
@@ -26,20 +30,6 @@ canvas {
     margin: 20px;
     padding: 20px;
 }
-
-input,
-textarea {
-    background-color: #121212;
-    caret-color: #db4c51;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    margin: 20px;
-    // padding: 10px;
-    outline: 0;
-}
-
-
 
 table{
     * {
