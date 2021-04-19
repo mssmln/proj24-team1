@@ -38,12 +38,25 @@ table{
     }
 }
 
+.input-services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 .show_item{
     display: block;
 }
 .hidden_item{
     display: none;
 }
+
+.not-usable {
+    cursor: not-allowed;
+}
+
+
 
 .rotate-item {animation: rotate 7.5s linear infinite;}
 @keyframes rotate {

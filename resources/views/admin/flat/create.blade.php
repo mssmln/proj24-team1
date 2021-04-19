@@ -1,13 +1,10 @@
-
-
 @extends('layouts.dashboard')
 
 @section('title', 'Admin | New Flat')
 
 @section('content') 
 
-
-<h1>Aggiungi un Appartamento</h1>
+<h1>&#127968; Aggiungi un Appartamento</h1>
 <div>
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,116 +16,142 @@
         </div>
     @endif
 
-    <form action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
+    <form class="admin-form" action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('POST')
 
-    
-        <div class="form_create_edit input_bg">
-            <input id="title" name="title" type="text" class="form_input" value="{{old('title')}}" required autocomplete="off" title="Inserisci un titolo">
-            <label for="title" class="form_label">Titolo</label>
+        <!-- Title -->
+        <div class="admin-form-inputs">
+            <label for="title">Titolo</label>
+            <input type="text" id="title" name="title" value="{{old('title')}}" autocomplete="off" required>
         </div>
 
-        <div class="form_create_edit">
-            <input type="text" id="price" name="price" class="form_input" value="{{old('price')}}" autocomplete="off" required>
-            <label for="price" class="form_label">Prezzo</label>
+        <!-- Price for night -->
+        <div class="admin-form-inputs">
+            <label for="price">Prezzo</label>
+            <input type="number" id="price" name="price" value="{{old('price')}}" autocomplete="off" required>
         </div>
         
-        <div class="form_create_edit">
-            <input type="text" id="rooms" name="rooms" class="form_input" value="{{old('price')}}" autocomplete="off" required>
-            <label for="rooms" class="form_label">Stanze</label>
+        <!-- Rooms N° -->
+        <div class="admin-form-inputs">
+            <label for="rooms">Stanze</label>
+            <input type="number" id="rooms" name="rooms" value="{{old('rooms')}}" autocomplete="off" required>
         </div>
         
-        <div class="form_create_edit">
-            <input type="text" id="beds" name="beds" class="form_input" value="{{old('beds')}}" autocomplete="off" required>
-            <label for="beds" class="form_label">Letti</label>
+        <!-- Beds N° -->
+        <div class="admin-form-inputs">
+            <label for="beds">Letti</label>
+            <input type="number" id="beds" name="beds" value="{{old('beds')}}" autocomplete="off" required>
         </div>
         
-        <div class="form_create_edit">
-            <input type="text" id="baths" name="baths" class="form_input" value="{{old('baths')}}" autocomplete="off" required>
-            <label for="baths" class="form_label">Bagni</label>
+        <!-- Bats N° -->
+        <div class="admin-form-inputs">
+            <label for="baths">Bagni</label>
+            <input type="number" id="baths" name="baths" value="{{old('baths')}}" autocomplete="off" required>
         </div>
 
-        <div class="form_create_edit">
-            <input type="text" id="sqm" name="sqm" class="form_input" value="{{old('sqm')}}" autocomplete="off" required title="Inserisci i metri quadrati">
-            <label for="sqm" class="form_label">MQ</label>
+        <!-- SQM -->
+        <div class="admin-form-inputs">
+            <label for="sqm">&#13217;</label>
+            <input type="number" id="sqm" name="sqm" value="{{old('sqm')}}" autocomplete="off">
         </div>
 
-        
-        <div class="form_create_edit">
-            <input v-model="address"  type="text" id="address" class="form_input" value="{{old('address')}}" autocomplete="off" required>
-            <label for="address" class="form_label">Indirizzo</label>
-            <a href="#" @click="tomtomAdresses"><i class="fas fa-sync-alt"></i></a>
+        <!-- Address (to generate all data) -->
+        <div class="admin-form-inputs">
+            <label for="address">Indirizzo <i @click="tomtomAdresses" class="fas fa-sync-alt"></i></label>
+            <input v-model="address" type="text" id="address" value="{{old('address')}}" autocomplete="off" required>
         </div>
         
-        <div class="form_create_edit">
-            <input readonly="text" name="lat" class="form_input" v-model="lat">
-            <label class="form_label">Lat</label>
-        </div>
-        <div class="form_create_edit">
-            <input readonly="text" name="lng" class="form_input" v-model="lng">
-            <label class="form_label">Long</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="via">
-            <label class="form_label">Via</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="numero">
-            <label class="form_label">N°</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="cap">
-            <label class="form_label">CAP</label>
-        </div>
-        <div class="form_create_edit">
-            <input readonly="text" name="city" class="form_input" v-model="comune">
-            <label class="form_label">Comune</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="provincia">
-            <label class="form_label">Provincia</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="regione">
-            <label class="form_label">Regione</label>
-        </div>
-        <div class="form_create_edit">
-            <input disabled="disabled" readonly="text" class="form_input" v-model="paese">
-            <label class="form_label">Paese</label>
-        </div>
-        <div class="form_create_edit">
-            <input readonly="text" type="text" id="address" name="address" class="form_input not" v-model="indirizzo">
-            <label class="form_label">Indirizzo</label>
+        <!-- Latitude -->
+        <div class="admin-form-inputs">
+            <label>LAT</label>
+            <input readonly="text" name="lat" v-model="lat" class="not-usable">
         </div>
 
-        <!-- Upload an img file  -->
-        <div >
+        <!-- Longitude -->
+        <div class="admin-form-inputs">
+            <label>LNG</label>
+            <input readonly="text" name="lng" v-model="lng" class="not-usable">
+        </div>
+
+        <!-- Address Name -->
+        <div class="admin-form-inputs">
+            <label>Via</label>
+            <input disabled="disabled" readonly="text" v-model="via" class="not-usable">
+        </div>
+
+        <!-- Address N° -->
+        <div class="admin-form-inputs">
+            <label>N°</label>
+            <input disabled="disabled" readonly="text" v-model="numero" class="not-usable">
+        </div>
+
+        <!-- CAP -->
+        <div class="admin-form-inputs">
+            <label>CAP</label>
+            <input disabled="disabled" readonly="text" v-model="cap" class="not-usable">
+        </div>
+
+        <!-- Municipality -->
+        <div class="admin-form-inputs">
+            <label>Comune</label>
+            <input readonly="text" name="city" v-model="comune" class="not-usable">
+        </div>
+
+        <!-- Province -->
+        <div class="admin-form-inputs">
+            <label>Provincia</label>
+            <input disabled="disabled" readonly="text" v-model="provincia" class="not-usable">
+        </div>
+
+        <!-- Region -->
+        <div class="admin-form-inputs">
+            <label>Regione</label>
+            <input disabled="disabled" readonly="text" v-model="regione" class="not-usable">
+        </div>
+
+        <!-- Country -->
+        <div class="admin-form-inputs">
+            <label>Paese</label>
+            <input disabled="disabled" readonly="text" v-model="paese" class="not-usable">
+        </div>
+        
+        <!-- Address generated -->
+        <div class="admin-form-inputs">
+            <label>Indirizzo</label>
+            <input readonly="text" type="text" id="address" name="address" v-model="indirizzo" class="not-usable">
+        </div>
+
+        <!-- Upload an image file  -->
+        <div class="admin-form-inputs">
+            <label for="flat_img" >Image</label>
             <input type="file" id="flat_img" class="input-file" name="image">
-            <label for="flat_img" ><i class="fas fa-upload"></i> Image</label>
         </div>
 
-        <!-- Descrizione  -->
-        <div class="form_create_edit">
-            <textarea class="form_input" name="overview">{{old('overview')}}</textarea>
-            <label class="form_label" for="overview">Descrizione</label>
+        <!-- Overview  -->
+        <div class="admin-form-inputs">
+            <label for="overview">Descrizione</label>
+            <textarea name="overview">{{old('overview')}}</textarea>
         </div>
 
-        <!-- Visibility -->
-        <input type="checkbox" class="switch_1" id="visibility" name="visibility" value="0">
-        <label for="visibility">Appartamento Non visibile</label>
-
-        <!-- Area dei servizi -->
-        @foreach($services as $service)
-        <div class="form-group form-check">
-            <input type="checkbox" class="switch_1" name="services[]" value="{{$service->id}}">
-            <label class="form-check-label">{{$service->name}}</label>
+        <div class="form-inputs switch">
+            <!-- Services -->
+            @foreach($services as $service)
+            <div class="admin-form-inputs switch">
+                <input type="checkbox" class="switch_1" name="services[]" value="{{$service->id}}">
+                <label>{{$service->name}}</label>
+            </div>
+            @endforeach
+            
+            <!-- Visibility -->
+            <input type="checkbox" class="switch_1" id="visibility" name="visibility" value="0">
+            <label for="visibility">Non visibile <em>(modificabile in seguito)</em></label>
         </div>
-        @endforeach
 
-        <button type="submit" class="btn btn-success">Crea</button>
+        <!-- Submit -->
+        <button type="submit"><i class="fas fa-plus-circle"></i></button>
     </form>
-</div>
 
+</div>
 
 @endsection
