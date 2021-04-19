@@ -23,22 +23,30 @@
         {{-- inizio nav-user --}}
         <div class="nav_user">
             <ul>
-                <li><a href="#">diventa un host</a></li>
+                <li><a href="#">Diventa un host</a></li>
                 <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                <li>
+                <li class="user_action">
 
                     <span>
                         <a href="#"><i class="fas fa-bars"></i></a>
-                    </span>
-
-                    <span>
                         <a href="#">
                             {{-- icona vuota --}}
-                            <i class="far fa-user-circle"></i>
+                            {{-- <i class="far fa-user-circle"></i> --}}
 
                             {{-- icona piena --}}
-                            {{-- <i class="fas fa-user-circle"></i> --}}
+                            <i class="fas fa-user-circle"></i>
                         </a>
+
+                        <div class="user_log">
+                            <ul>
+                                <li><a href="#">Registrati</a></li>
+                                <li><a href="#">Accedi</a></li>
+                                <li><a href="#">Diventa un Host</a></li>
+                                <li><a href="#">Proponi un'esperienza</a></li>
+                                <li><a href="#">Assistenza</a></li>
+                            </ul>
+
+                        </div>
                     </span>
                 </li>
             </ul>
