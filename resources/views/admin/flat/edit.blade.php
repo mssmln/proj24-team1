@@ -51,8 +51,8 @@ questa è la edit
 
         
         <div class="form_create_edit">
-            <a href="#" @click="tomtomAdresses">Ricalcola</a>
             <input v-model="address" ype="text" id="address" class="form_input" autocomplete="off">
+            <a href="#" @click="tomtomAdresses"><i class="fas fa-sync-alt"></i></a>
             <label for="address" class="form_label">Indirizzo</label>
         </div>
         
@@ -110,8 +110,8 @@ questa è la edit
 
         <!-- Update Img -->
         <div class="form-group">
-            <label for="flat_img">Update Image</label>
             <input type="file" class="form-control-file" id="flat_img" name="image">
+            <label for="flat_img"><i class="fas fa-upload"></i> Image</label>
         </div>
 
         <!-- Visibility -->

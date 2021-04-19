@@ -21,7 +21,7 @@
     </section> -->
 
     <!-- Last two or four messages received -->
-    <section class="messages">
+    <section class="messages fade-in">
 
         <div class="message">
             <a href=""><i class="far fa-envelope"></i></a>
