@@ -13,9 +13,28 @@ footer{
 
         #footer_bottom{
             display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .footer_bottom_item{
+            flex-basis: calc(100% / 2);
             ul{
                 display: flex;
-                flex-direction: row;
+                justify-content: flex-start;
+                li{
+                    padding: 0px 5px;
+                }
+            }
+        }
+
+        .footer_bottom_icon{
+            flex-basis: calc(100% / 2);
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                li{
+                    padding: 0px 5px;
+                }
             }
         }
     }
