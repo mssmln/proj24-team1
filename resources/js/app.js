@@ -58,22 +58,50 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 const app = new Vue({
     el: '#app',
     data: {
         flats: [],
         query: '',
-
+        googleApiResults: [],
+        tomtomApiResults: [],
+        address: ''
     },
     created(){
+        axios
+        .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+        .then((result) =>{
+            this.flats.push(...result.data.response.flat);
+            // this.flats = result.data.response.flat; the same as above
+            // console.log(this.flats); it worked perfectly 
+        })
+        .catch((error) => alert('this API (flat) does not work'));
+
+    },
+    methods: {
+        // googleAdresses(){ it worked perfectly, we just use tomtom's one
+        //     // api di google
+        //     axios
+        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+        //     .then((result) =>{
+        //         this.googleApiResults = result.data.results;
+        //         console.log(this.googleApiResults); 
+        //     })
+        //     .catch((error) => console.log('this API (Google) does not work',error));
+            
+        // },
+        tomtomAdresses(){
+            // api di Tomtom scaricata dal sito ufficiale 
             axios
-            .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
-                this.flats.push(...result.data.response.flat);
-                // this.flats = result.data.response.flat; the same as above
-                // console.log(this.flats); it worked perfectly 
+                this.tomtomApiResults = result.data.results;
+                // console.log(result); 
+                console.log(this.tomtomApiResults);
             })
-            .catch((error) => alert('this API (flat) does not work'));
+            .catch((error) => alert('this API (Tomtom) does not work',error));
+        }
     }
     
 });
