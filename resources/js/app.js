@@ -48,38 +48,38 @@ for( let i = 0; i < forms.length; i++ ) {
     });
 };
 
-// ! ********** HTML NOT SEE IT, WHY? (base chart) **********
-var ctx = document.getElementById('line').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Flat 1', 'Flat 2', 'Flat 3'],
-        datasets: [{
-            label: 'Views',
-            data: [98252, 10980, 32684],
-            backgroundColor: [
-                'rgba(247, 147, 26, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(133, 187, 101, 0.2)'
-            ],
-            borderColor: [
-                'rgba(247, 147, 26, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(133, 187, 101, 1)'
-            ],
-            borderWidth: 1,
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+// // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
+// var ctx = document.getElementById('line').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: {
+//         labels: ['Flat 1', 'Flat 2', 'Flat 3'],
+//         datasets: [{
+//             label: 'Views',
+//             data: [98252, 10980, 32684],
+//             backgroundColor: [
+//                 'rgba(247, 147, 26, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(133, 187, 101, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(247, 147, 26, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(133, 187, 101, 1)'
+//             ],
+//             borderWidth: 1,
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 window.Vue = require('vue');
 
