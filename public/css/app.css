@@ -1869,12 +1869,6 @@ main .login_page {
 
 /* Regola generale da disattivare se non si testano input non formattati*/
 
-input {
-  border-style: none;
-  background: transparent;
-  outline: none;
-}
-
 /* INPUT - CHECKBOX*/
 
 /* Per quando si sistemerà il form create ed edit:
