@@ -49,6 +49,7 @@
                     color: #ffffff;
                     font-size: 16px;
                     position: relative;
+                    text-decoration: none;
 
                     &::after {
                         position: absolute;
@@ -121,7 +122,7 @@
             margin: 0px;
             justify-content: flex-end;
 
-            li {
+            li:not(:last-child) {
                 padding: 0px 10px;
                 align-items: flex-end;
 
@@ -129,23 +130,87 @@
                     color: #ffffff;
                     font-size: 16px;
                     position: relative;
-                }
+                    text-decoration: none;
+                    // background-color: coral;
+                    padding: 10px 10px;
+                    border-radius: 50px;
 
-
-
-                &:hover {
-                    a {
-                        color: #A3A3A3;
-                        text-decoration: none;
+                    &:hover {
+                        background-color: #222222;
                         transition: 0.3s;
                     }
+                }
+            }//li
 
-                    a::after {
-                        background-color: #A3A3A3;
+            li.user_action {
+
+                position: relative;
+
+
+
+                span {
+                    padding: 10px 10px;
+                    border-radius: 50px;
+                    background-color: #fff;
+
+
+                    a {
+                        padding: 0px 5px;
+                    }//a
+
+                    &:hover {
+                        .user_log {
+                            display: block;
+                        }
                     }
 
-                }//li:hover
-            }//li
+
+                    .user_log {
+                        display: none;
+                        width: 200px;
+                        position: absolute;
+                        top: 40px;
+                        right: 0;
+                        border-radius: 10px;
+                        background-color: #fff;
+
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 7px 0px;
+
+                            li {
+                                padding: 10px 10px;
+
+                                &:hover {
+                                    background-color: #d3d3d3;
+
+                                }//li:hover
+
+                                a{
+                                    color: black;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                        background-color: #d3d3d3;
+                                    }//a:hover
+                                }//a
+                            }//li
+
+                            li:nth-child(2) {
+                                border-bottom: 1px solid #A3A3A3;
+                            }
+                        }//ul
+
+                    }//div.user_log
+
+                    //CLASSE DA ASSEGNARE AL CLICK DELLA ZONA BIANCA, PER FAR USCIRE LA LISTA
+                    .show_log_input {
+                        display: block;
+                    }
+                }//span
+            }//li.user_action
 
         }
     }
