@@ -8,7 +8,7 @@
     <div class="nav_header">
         {{-- box logo --}}
         <div class="box_logo">
-            <img src="" alt="logo">
+            <a href=""><img src="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" width="35rem" alt="logo"></a>
         </div>
 
         {{-- inizio nav-list --}}

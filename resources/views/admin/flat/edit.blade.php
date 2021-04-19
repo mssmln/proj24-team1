@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Modifica Appartamento')
+@section('title', 'Admin | Edit Flat')
 
 @section('content') 
 questa è la edit

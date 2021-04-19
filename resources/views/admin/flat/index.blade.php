@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Your flats')
+@section('title', 'Admin | Flats')
 
 @section('content')
 
@@ -21,15 +21,11 @@
         @foreach($flats as $flat)
         <tr>
             <th scope="row">{{ $flat->id }}</th>
-            <td>{{ $flat->user->name }}</td>
+            <td>{{ $flat->user->name }} {{ $flat->user->surname }}</td>
             <td>{{ $flat->title }}</td>
             <td>{{ $flat->created_at }}</td>
             <td>{{ $flat->updated_at }}</td>
-            <td>
-              <a class="text-info" href="{{route('statistics',$flat->id)}}">
-                <i class="fas fa-chart-line"></i>
-              </a>
-            </td>
+            <td><a class="text-info" href="{{route('statistics',$flat->id)}}"><i class="fas fa-chart-line"></i></a></td>
             <td><a class="text-info" href="{{route('sponsor',$flat->id)}}"><i class="fas fa-ad"></i></a></td>
             <td><a class="text-info" href="{{route('flat.show',$flat->id)}}"><i class="fas fa-info-circle"></i></a></td>
             <td><a class="text-warning" href="{{route('flat.edit',$flat->id)}}"><i class="fas fa-edit"></i></a></td>
@@ -37,7 +33,7 @@
               <form action="{{route('flat.destroy', $flat->id) }}" method="post" class="form-delete">
               @csrf
               @method('DELETE')
-                <button type="sumbit" class="text-danger"><i class="fas fa-trash-alt"></i></button>
+                <button type="sumbit" class="btn text-danger"><a href=""><i class="fas fa-trash-alt"></i></a></button>
               </form>
             </td>
         </tr>
