@@ -17,7 +17,7 @@ function time() {
     var m = d.getMinutes();
     var h = d.getHours();
     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-    liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+    liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
 }
 setInterval(time, 1000);
 
@@ -121,7 +121,9 @@ const app = new Vue({
         cap: '',
         via: '',
         numero: '',
-        indirizzo: ''
+        indirizzo: '',
+        // Navbar Header
+        classNavbarClick: 'hidden_item'
     },
     created(){
 
@@ -138,7 +140,7 @@ const app = new Vue({
         // googleAdresses(){ it worked perfectly, we just use tomtom's one
         //     // api di google
         //     axios
-        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
         //         this.googleApiResults = result.data.results;
         //         console.log(this.googleApiResults); 
@@ -166,6 +168,13 @@ const app = new Vue({
                 console.log(this.tomtomApiResults);
             })
             .catch((error) => alert('this API (Tomtom) does not work',error));
+        },
+        headerNavProfile() {
+            if (this.classNavbarClick == 'hidden_item') {
+                this.classNavbarClick = 'show_item';
+            } else {
+                this.classNavbarClick = 'hidden_item';
+            }
         }
     }
     

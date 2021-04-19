@@ -1,23 +1,6 @@
 @extends('layouts.app')
 
-
-@include('guest.partials.header')
-
 @section('content')
-<div class="flex-center position-ref full-height">
-@if (Route::has('login'))
-    <div class="top-right links">
-        @auth
-            <a href="{{ Route('home') }}">Dashboard</a>
-        @else
-            <a href="{{ route('login') }}">Login</a>
-
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}">Register</a>
-            @endif
-        @endauth
-    </div>
-@endif
 
 <div class="content">
     <div class="title m-b-md">
@@ -39,8 +22,8 @@
 
 <!-- flats -->
 <div class="container">
-    <div class="flat" :class="(query != '') ? 'show_item' : 'hidden_item'" v-if="flat.title.toLowerCase().includes(query.toLowerCase())" v-for="flat in flats">
-        <h2> @{{ flat.title }}</h2>
+    <div class="flat" :class="(query != '') ? 'show_item' : 'hidden_item'" v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="flat in flats">
+        <h2> @{{ flat.address }}</h2>
         <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
     </div>
 </div>

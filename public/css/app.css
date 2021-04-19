@@ -1642,6 +1642,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+
 ul li {
   list-style: none;
 }
@@ -1654,17 +1660,6 @@ canvas {
   max-width: 500px;
   margin: 20px;
   padding: 20px;
-}
-
-input,
-textarea {
-  background-color: #121212;
-  caret-color: #db4c51;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  margin: 20px;
-  outline: 0;
 }
 
 table * {
@@ -1921,81 +1916,68 @@ table tbody tr td {
   justify-content: flex-end;
 }
 
-.nav_header .nav_user ul li:not(:last-child) {
+.nav_header .nav_user ul li {
   padding: 0px 10px;
   align-items: flex-end;
 }
 
-.nav_header .nav_user ul li:not(:last-child) a {
+.nav_header .nav_user ul li a {
   color: #ffffff;
   font-size: 16px;
   position: relative;
   text-decoration: none;
-  padding: 10px 10px;
   border-radius: 50px;
-}
-
-.nav_header .nav_user ul li:not(:last-child) a:hover {
-  background-color: #222222;
-  transition: 0.3s;
 }
 
 .nav_header .nav_user ul li.user_action {
   position: relative;
 }
 
-.nav_header .nav_user ul li.user_action span {
+.nav_header .nav_user ul li.user_action div.profile_menu {
   padding: 10px 10px;
   border-radius: 50px;
   background-color: #fff;
+  display: inline;
 }
 
-.nav_header .nav_user ul li.user_action span a {
-  padding: 0px 5px;
+.nav_header .nav_user ul li.user_action div.profile_menu:hover {
+  cursor: pointer;
 }
 
-.nav_header .nav_user ul li.user_action span:hover .user_log {
-  display: block;
-}
-
-.nav_header .nav_user ul li.user_action span .user_log {
-  display: none;
+.nav_header .nav_user ul li.user_action div.profile_menu .user_log {
+  padding: 10px;
   width: 200px;
   position: absolute;
   top: 40px;
   right: 0;
   border-radius: 10px;
   background-color: #fff;
+  box-shadow: 2px 2px 4px #757575;
 }
 
-.nav_header .nav_user ul li.user_action span .user_log ul {
+.nav_header .nav_user ul li.user_action div.profile_menu .user_log ul {
   display: flex;
   flex-direction: column;
   padding: 7px 0px;
 }
 
-.nav_header .nav_user ul li.user_action span .user_log ul li {
-  padding: 10px 10px;
-}
-
-.nav_header .nav_user ul li.user_action span .user_log ul li:hover {
+.nav_header .nav_user ul li.user_action div.profile_menu .user_log ul li:hover {
   background-color: #d3d3d3;
 }
 
-.nav_header .nav_user ul li.user_action span .user_log ul li a {
+.nav_header .nav_user ul li.user_action div.profile_menu .user_log ul li a {
+  padding: 10px;
+  display: block;
+  width: 100%;
   color: black;
   text-decoration: none;
 }
 
-.nav_header .nav_user ul li.user_action span .user_log ul li a:hover {
-  background-color: #d3d3d3;
-}
-
-.nav_header .nav_user ul li.user_action span .user_log ul li:nth-child(2) {
+.nav_header .nav_user ul li.user_action div.profile_menu .user_log ul li:nth-child(2) {
   border-bottom: 1px solid #A3A3A3;
 }
 
-.nav_header .nav_user ul li.user_action span .show_log_input {
+.nav_header .nav_user ul li.user_action div.profile_menu .show_log_input {
   display: block;
 }
 
@@ -2075,6 +2057,7 @@ button {
   color: #757575;
   border: none;
   margin: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -2101,7 +2084,7 @@ input[type=checkbox].switch_1 {
 
 input[type=checkbox].switch_1:checked {
   /* Colore checkbox-checked */
-  background: #18db49;
+  background: #db4c51;
 }
 
 input[type=checkbox].switch_1:after {
