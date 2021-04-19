@@ -55018,7 +55018,9 @@ var app = new Vue({
     cap: '',
     via: '',
     numero: '',
-    indirizzo: ''
+    indirizzo: '',
+    // Navbar Header
+    classNavbarClick: 'hidden_item'
   },
   created: function created() {
     var _this = this;
@@ -55064,6 +55066,13 @@ var app = new Vue({
       })["catch"](function (error) {
         return alert('this API (Tomtom) does not work', error);
       });
+    },
+    headerNavProfile: function headerNavProfile() {
+      if (this.classNavbarClick == 'hidden_item') {
+        this.classNavbarClick = 'show_item';
+      } else {
+        this.classNavbarClick = 'hidden_item';
+      }
     }
   }
 });
