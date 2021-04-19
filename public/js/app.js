@@ -37630,7 +37630,7 @@ Object.keys(_instanceMethods_js__WEBPACK_IMPORTED_MODULE_3__).forEach(key => {
 
 SweetAlert.DismissReason = _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_1__["DismissReason"]
 
-SweetAlert.version = '10.16.2'
+SweetAlert.version = '10.16.0'
 
 /* harmony default export */ __webpack_exports__["default"] = (SweetAlert);
 
@@ -37846,19 +37846,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_main", function() { return _main; });
 /* harmony import */ var _utils_params_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/params.js */ "./node_modules/sweetalert2/src/utils/params.js");
 /* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_Timer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/Timer.js */ "./node_modules/sweetalert2/src/utils/Timer.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _utils_setParameters_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/setParameters.js */ "./node_modules/sweetalert2/src/utils/setParameters.js");
-/* harmony import */ var _utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/getTemplateParams.js */ "./node_modules/sweetalert2/src/utils/getTemplateParams.js");
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _utils_openPopup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/openPopup.js */ "./node_modules/sweetalert2/src/utils/openPopup.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
-/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
-/* harmony import */ var _buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./buttons-handlers.js */ "./node_modules/sweetalert2/src/instanceMethods/buttons-handlers.js");
-/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./keydown-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/keydown-handler.js");
-/* harmony import */ var _popup_click_handler_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./popup-click-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/popup-click-handler.js");
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
+/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
+/* harmony import */ var _utils_Timer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/Timer.js */ "./node_modules/sweetalert2/src/utils/Timer.js");
+/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
+/* harmony import */ var _utils_setParameters_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/setParameters.js */ "./node_modules/sweetalert2/src/utils/setParameters.js");
+/* harmony import */ var _utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/getTemplateParams.js */ "./node_modules/sweetalert2/src/utils/getTemplateParams.js");
+/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
+/* harmony import */ var _utils_openPopup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/openPopup.js */ "./node_modules/sweetalert2/src/utils/openPopup.js");
+/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
+/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
+/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
+/* harmony import */ var _buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./buttons-handlers.js */ "./node_modules/sweetalert2/src/instanceMethods/buttons-handlers.js");
+/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./keydown-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/keydown-handler.js");
+/* harmony import */ var _popup_click_handler_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./popup-click-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/popup-click-handler.js");
+/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
+
 
 
 
@@ -37878,35 +37880,35 @@ __webpack_require__.r(__webpack_exports__);
 function _main (userParams, mixinParams = {}) {
   Object(_utils_params_js__WEBPACK_IMPORTED_MODULE_0__["showWarningsForParams"])(Object.assign({}, mixinParams, userParams))
 
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance._destroy()
+  if (_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance) {
+    _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance._destroy()
   }
-  _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance = this
+  _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance = this
 
   const innerParams = prepareParams(userParams, mixinParams)
-  Object(_utils_setParameters_js__WEBPACK_IMPORTED_MODULE_4__["default"])(innerParams)
+  Object(_utils_setParameters_js__WEBPACK_IMPORTED_MODULE_5__["default"])(innerParams)
   Object.freeze(innerParams)
 
   // clear the previous timer
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout.stop()
-    delete _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout
+  if (_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout) {
+    _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout.stop()
+    delete _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout
   }
 
   // clear the restore focus timeout
-  clearTimeout(_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].restoreFocusTimeout)
+  clearTimeout(_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].restoreFocusTimeout)
 
   const domCache = populateDomCache(this)
 
   _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["render"](this, innerParams)
 
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_8__["default"].innerParams.set(this, innerParams)
+  _privateProps_js__WEBPACK_IMPORTED_MODULE_9__["default"].innerParams.set(this, innerParams)
 
   return swalPromise(this, domCache, innerParams)
 }
 
 const prepareParams = (userParams, mixinParams) => {
-  const templateParams = Object(_utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_5__["getTemplateParams"])(userParams)
+  const templateParams = Object(_utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_6__["getTemplateParams"])(userParams)
   const showClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"].showClass, mixinParams.showClass, templateParams.showClass, userParams.showClass)
   const hideClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"].hideClass, mixinParams.hideClass, templateParams.hideClass, userParams.hideClass)
   const params = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"], mixinParams, templateParams, userParams) // precedence is described in #2131
@@ -37930,23 +37932,29 @@ const swalPromise = (instance, domCache, innerParams) => {
       instance.closePopup({ isDismissed: true, dismiss })
     }
 
-    _privateMethods_js__WEBPACK_IMPORTED_MODULE_9__["default"].swalPromiseResolve.set(instance, resolve)
+    _privateMethods_js__WEBPACK_IMPORTED_MODULE_10__["default"].swalPromiseResolve.set(instance, resolve)
 
-    domCache.confirmButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleConfirmButtonClick"])(instance, innerParams)
-    domCache.denyButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleDenyButtonClick"])(instance, innerParams)
-    domCache.cancelButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleCancelButtonClick"])(instance, dismissWith)
+    domCache.confirmButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleConfirmButtonClick"])(instance, innerParams)
+    domCache.denyButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleDenyButtonClick"])(instance, innerParams)
+    domCache.cancelButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleCancelButtonClick"])(instance, dismissWith)
 
-    domCache.closeButton.onclick = () => dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_14__["DismissReason"].close)
+    domCache.closeButton.onclick = () => dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_15__["DismissReason"].close)
 
-    Object(_popup_click_handler_js__WEBPACK_IMPORTED_MODULE_13__["handlePopupClick"])(instance, domCache, dismissWith)
+    Object(_popup_click_handler_js__WEBPACK_IMPORTED_MODULE_14__["handlePopupClick"])(instance, domCache, dismissWith)
 
-    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__["addKeydownHandler"])(instance, _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"], innerParams, dismissWith)
+    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__["addKeydownHandler"])(instance, _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"], innerParams, dismissWith)
 
-    Object(_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_10__["handleInputOptionsAndValue"])(instance, innerParams)
+    if (innerParams.toast && (innerParams.input || innerParams.footer || innerParams.showCloseButton)) {
+      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["addClass"](document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__["swalClasses"]['toast-column'])
+    } else {
+      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["removeClass"](document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__["swalClasses"]['toast-column'])
+    }
 
-    Object(_utils_openPopup_js__WEBPACK_IMPORTED_MODULE_7__["openPopup"])(innerParams)
+    Object(_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_11__["handleInputOptionsAndValue"])(instance, innerParams)
 
-    setupTimer(_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"], innerParams, dismissWith)
+    Object(_utils_openPopup_js__WEBPACK_IMPORTED_MODULE_8__["openPopup"])(innerParams)
+
+    setupTimer(_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"], innerParams, dismissWith)
 
     initFocus(domCache, innerParams)
 
@@ -37971,7 +37979,7 @@ const populateDomCache = (instance) => {
     validationMessage: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getValidationMessage"](),
     progressSteps: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getProgressSteps"]()
   }
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_8__["default"].domCache.set(instance, domCache)
+  _privateProps_js__WEBPACK_IMPORTED_MODULE_9__["default"].domCache.set(instance, domCache)
 
   return domCache
 }
@@ -37980,7 +37988,7 @@ const setupTimer = (globalState, innerParams, dismissWith) => {
   const timerProgressBar = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getTimerProgressBar"]()
   _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["hide"](timerProgressBar)
   if (innerParams.timer) {
-    globalState.timeout = new _utils_Timer_js__WEBPACK_IMPORTED_MODULE_2__["default"](() => {
+    globalState.timeout = new _utils_Timer_js__WEBPACK_IMPORTED_MODULE_3__["default"](() => {
       dismissWith('timer')
       delete globalState.timeout
     }, innerParams.timer)
@@ -38000,12 +38008,12 @@ const initFocus = (domCache, innerParams) => {
     return
   }
 
-  if (!Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_3__["callIfFunction"])(innerParams.allowEnterKey)) {
+  if (!Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_4__["callIfFunction"])(innerParams.allowEnterKey)) {
     return blurActiveElement()
   }
 
   if (!focusButton(domCache, innerParams)) {
-    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__["setFocus"])(innerParams, -1, 1)
+    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__["setFocus"])(innerParams, -1, 1)
   }
 }
 
@@ -38238,6 +38246,7 @@ function removeBodyClasses () {
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['height-auto'],
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['no-backdrop'],
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['toast-shown'],
+      _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['toast-column']
     ]
   )
 }
@@ -39666,6 +39675,7 @@ const swalClasses = prefix([
   'no-transition',
   'toast',
   'toast-shown',
+  'toast-column',
   'show',
   'hide',
   'close',
@@ -54939,31 +54949,39 @@ for (var i = 0; i < forms.length; i++) {
   _loop(i);
 }
 
-; // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
+; // // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
+// var ctx = document.getElementById('line').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: {
+//         labels: ['Flat 1', 'Flat 2', 'Flat 3'],
+//         datasets: [{
+//             label: 'Views',
+//             data: [98252, 10980, 32684],
+//             backgroundColor: [
+//                 'rgba(247, 147, 26, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(133, 187, 101, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(247, 147, 26, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(133, 187, 101, 1)'
+//             ],
+//             borderWidth: 1,
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
-var ctx = document.getElementById('line').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Flat 1', 'Flat 2', 'Flat 3'],
-    datasets: [{
-      label: 'Views',
-      data: [98252, 10980, 32684],
-      backgroundColor: ['rgba(247, 147, 26, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(133, 187, 101, 0.2)'],
-      borderColor: ['rgba(247, 147, 26, 1)', 'rgba(54, 162, 235, 1)', 'rgba(133, 187, 101, 1)'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -54989,7 +55007,18 @@ var app = new Vue({
     query: '',
     googleApiResults: [],
     tomtomApiResults: [],
-    address: ''
+    address: '',
+    // Info via
+    lat: '',
+    lng: '',
+    paese: '',
+    provincia: '',
+    regione: '',
+    comune: '',
+    cap: '',
+    via: '',
+    numero: '',
+    indirizzo: ''
   },
   created: function created() {
     var _this = this;
@@ -55018,11 +55047,22 @@ var app = new Vue({
       var _this2 = this;
 
       // TomTom APIs
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
-        _this2.tomtomApiResults = result.data.results;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
+        _this2.tomtomApiResults = result.data.results; // console.log(result); 
+
+        _this2.lat = _this2.tomtomApiResults[0].position.lat;
+        _this2.lng = _this2.tomtomApiResults[0].position.lon;
+        _this2.paese = _this2.tomtomApiResults[0].address.country;
+        _this2.provincia = _this2.tomtomApiResults[0].address.countrySecondarySubdivision;
+        _this2.regione = _this2.tomtomApiResults[0].address.countrySubdivision;
+        _this2.comune = _this2.tomtomApiResults[0].address.municipality;
+        _this2.cap = _this2.tomtomApiResults[0].address.postalCode;
+        _this2.via = _this2.tomtomApiResults[0].address.streetName;
+        _this2.numero = _this2.tomtomApiResults[0].address.streetNumber;
+        _this2.indirizzo = _this2.tomtomApiResults[0].address.freeformAddress;
         console.log(_this2.tomtomApiResults);
       })["catch"](function (error) {
-        return alert('Sorry, API (TomTom) does not work...', error);
+        return alert('this API (Tomtom) does not work', error);
       });
     }
   }
@@ -55162,8 +55202,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
