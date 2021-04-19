@@ -54909,8 +54909,20 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+var liveclock = document.getElementById('clock');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+
+  liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+}
+
+setInterval(time, 1000); // Confirm button by sweetalert2
+
 var forms = document.getElementsByClassName("form-delete");
-console.log(forms);
 
 var _loop = function _loop(i) {
   forms[i].addEventListener('submit', function (e) {
@@ -54937,7 +54949,31 @@ for (var i = 0; i < forms.length; i++) {
   _loop(i);
 }
 
-;
+; // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
+
+var ctx = document.getElementById('line').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Flat 1', 'Flat 2', 'Flat 3'],
+    datasets: [{
+      label: 'Views',
+      data: [98252, 10980, 32684],
+      backgroundColor: ['rgba(247, 147, 26, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(133, 187, 101, 0.2)'],
+      borderColor: ['rgba(247, 147, 26, 1)', 'rgba(54, 162, 235, 1)', 'rgba(133, 187, 101, 1)'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -54971,11 +55007,10 @@ var app = new Vue({
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://127.0.0.1:8000/api/boolbnb-flats-api").then(function (result) {
       var _this$flats;
 
-      (_this$flats = _this.flats).push.apply(_this$flats, _toConsumableArray(result.data.response.flat)); // this.flats = result.data.response.flat; the same as above
-      // console.log(this.flats); it worked perfectly 
+      (_this$flats = _this.flats).push.apply(_this$flats, _toConsumableArray(result.data.response.flat)); // this.flats = result.data.response.flat; //? The same as above
 
     })["catch"](function (error) {
-      return alert('this API (flat) does not work');
+      return alert('Sorry, API (Flats) does not work...');
     });
   },
   methods: {
@@ -54992,13 +55027,12 @@ var app = new Vue({
     tomtomAdresses: function tomtomAdresses() {
       var _this2 = this;
 
-      // api di Tomtom scaricata dal sito ufficiale 
+      // TomTom APIs
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?typeahead=true&limit=3&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
-        _this2.tomtomApiResults = result.data.results; // console.log(result); 
-
+        _this2.tomtomApiResults = result.data.results;
         console.log(_this2.tomtomApiResults);
       })["catch"](function (error) {
-        return alert('this API (Tomtom) does not work', error);
+        return alert('Sorry, API (TomTom) does not work...', error);
       });
     }
   }
@@ -55138,8 +55172,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

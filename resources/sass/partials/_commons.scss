@@ -2,27 +2,78 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.5s;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 
 ul li {
     list-style: none;
 }
 
+
+
 a {
-    color: #555555;
+    color: #757575;
 }
 
 button {
     background-color: transparent;
     border: none;
     padding: 0;
+    margin: 0;
 }
+
+#reply-btn {
+    color: #757575;
+    cursor: pointer;
+    &:hover {
+        color: #db4c51;
+    }
+}
+
+
+
+canvas {
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+
+table{
+    * {
+        padding: 10px;
+    }
+    thead tr th {
+        border-bottom: 1px solid #db4c51;
+    }
+    tbody tr td {
+        font-size: 0.7rem;
+    }
+}
+
 
 
 .show_item{
     display: block;
 }
-
 .hidden_item{
     display: none;
+}
+
+
+
+.rotate-item {animation: rotate 7.5s linear infinite;}
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(90deg);}
+    50%  {transform: rotate(180deg);}
+    75%  {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
 }

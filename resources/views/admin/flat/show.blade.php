@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Informazioni Appartamento')
+@section('title', 'Admin | Info Flat')
 
 @section('content') 
 
