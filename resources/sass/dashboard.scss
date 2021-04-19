@@ -5,17 +5,6 @@
     background-color: #121212;
     color: #fff;
     overflow: hidden;
-    // input:not([type="checkbox"]),
-    // textarea {
-    //     background-color: #121212;
-    //     caret-color: #db4c51;
-    //     color: #fff;
-    //     border: none;
-    //     border-radius: 20px;
-    //     margin: 20px;
-    //     padding: 10px;
-    //     outline: 0;
-    // }
     #side_bar {
         width: 80px;
         height: 100%;
@@ -57,42 +46,6 @@
         overflow-y: auto;
         h1 {
             text-align: center;
-        }
-        .admin-form {
-            font-size: 0.8rem;
-            .admin-form-inputs {
-                display: flex;
-                flex-direction: column;
-                margin: auto;
-                input:not([type="checkbox"]),
-                textarea {
-                    background-color: #121212;
-                    color: #fff;
-                    caret-color: #db4c51;
-                    margin: 20px 0;
-                    padding: 20px;
-                    border: none;
-                    border-radius: 20px;
-                    -webkit-appearance: none;
-                    &:hover:not(.not-usable),
-                    &:active:not(.not-usable),
-                    &:focus:not(.not-usable) {
-                        box-shadow: 0 -1px 8px rgba(219, 76, 81, 0.2);
-                    }
-                }
-                textarea {
-                    height: 200px;
-                }
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button,
-                input[type=number] {
-                    -moz-appearance: textfield;
-                    -webkit-appearance: none;
-                }
-                ::-webkit-file-upload-button {
-                    display: none;
-                }
-            }
         }
         .messages {
             display: flex;

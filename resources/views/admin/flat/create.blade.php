@@ -1,5 +1,3 @@
-
-
 @extends('layouts.dashboard')
 
 @section('title', 'Admin | New Flat')
@@ -153,6 +151,7 @@
         <!-- Submit -->
         <button type="submit"><i class="fas fa-plus-circle"></i></button>
     </form>
+
 </div>
 
 @endsection
