@@ -43,7 +43,7 @@
 <!-- flats -->
 <div class="container">
     <div class="flat" :class="(query != '') ? 'show_item' : 'hidden_item'" v-if="flat.title.toLowerCase().includes(query.toLowerCase())" v-for="flat in flats">
-    @php //la @ serve per stampare vue data con blade  @endphp
+        @php //la @ serve per stampare vue data con blade  @endphp
         <h2> @{{ flat.title }}</h2>
         <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
     </div>
