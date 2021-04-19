@@ -10,7 +10,7 @@ body {
 }
 
 
-input { border-style: none; background: transparent; outline: none; }
+input, textarea { border-style: none; background: transparent; outline: none; }
 
 
 
@@ -43,6 +43,11 @@ table{
     }
 }
 
+.input-services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 .show_item{
@@ -50,6 +55,10 @@ table{
 }
 .hidden_item{
     display: none;
+}
+
+.not-usable {
+    cursor: not-allowed;
 }
 
 

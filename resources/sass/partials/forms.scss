@@ -1,0 +1,140 @@
+// Admin
+.admin-form {
+    font-size: 0.8rem;
+    .admin-form-inputs {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        input:not([type="checkbox"]),
+        textarea {
+            background-color: #121212;
+            caret-color: #db4c51;
+            color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+	        appearance: none;
+            &:hover:not(.not-usable),
+            &:active:not(.not-usable),
+            &:focus:not(.not-usable) {
+                box-shadow: 0 -1px 8px rgba(219, 76, 81, 0.2);
+            }
+        }
+        textarea {
+            height: 200px;
+        }
+        // Remove ugly arrows from input type number
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button,
+        input[type=number] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+        }
+        // Remove ugly button from input type file
+        ::-webkit-file-upload-button {
+            display: none;
+        }
+        img {
+            height: 150px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+
+// Switch toggle
+input[type="checkbox"].switch_1{
+	font-size: 15px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+    /* Backgroud colore checkbox unckecked */
+	background: #757575;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+    line-height: 1.5em;
+	margin: 10px 0;
+}
+  
+input[type="checkbox"].switch_1:checked{
+    /* Colore checkbox-checked */
+	background: #db4c51;
+}
+  
+input[type="checkbox"].switch_1:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+    /* Colore circle */
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+  
+input[type="checkbox"].switch_1:checked:after{
+	left: calc(100% - 1.5em);
+}
+
+/* INPUT - TEXT - DASHBOARD */
+// colors
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+// gradient animation
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow_style_input {
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto 15px;
+	border-radius: 2px;
+	padding: 0.7rem 1.2rem;
+	background: $input-background;
+  	&:after {
+		content: "";
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: 10;
+		height: 2px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		background-position: 0% 0%;
+		background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+		background-size: 500% auto;
+		animation: gradient 3s linear infinite;
+  	}
+}
+
+.webflow_style_input input {
+	color: $input-text-active;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	&::-webkit-input-placeholder {
+		color: $input-text-inactive;
+	}
+}
