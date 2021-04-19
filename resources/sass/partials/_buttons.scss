@@ -11,6 +11,26 @@
         margin-left 10px
 */
 
+button {
+    background-color: transparent;
+	color: #db4c51;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#reply-btn {
+    color: #757575;
+	border: none;
+	margin: 0;
+	padding: 0;
+    cursor: pointer;
+    &:hover {
+        color: #db4c51;
+    }
+}
+
+
 input[type="checkbox"].switch_1{
 	font-size: 15px;
 	-webkit-appearance: none;
@@ -31,7 +51,7 @@ input[type="checkbox"].switch_1{
   
 input[type="checkbox"].switch_1:checked{
     /* Colore checkbox-checked */
-	background: #18db49;
+	background: #db4c51;
 }
   
 input[type="checkbox"].switch_1:after{

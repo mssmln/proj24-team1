@@ -56,9 +56,9 @@
 
         
         <div class="form_create_edit">
-            <a href="#" @click="tomtomAdresses">Calcola</a>
             <input v-model="address"  type="text" id="address" class="form_input" value="{{old('address')}}" autocomplete="off" required>
             <label for="address" class="form_label">Indirizzo</label>
+            <a href="#" @click="tomtomAdresses"><i class="fas fa-sync-alt"></i></a>
         </div>
         
         <div class="form_create_edit">
@@ -104,8 +104,8 @@
 
         <!-- Upload an img file  -->
         <div >
-            <label for="flat_img" >Carica Immagine</label>
-            <input type="file" id="flat_img" name="image">
+            <input type="file" id="flat_img" class="input-file" name="image">
+            <label for="flat_img" ><i class="fas fa-upload"></i> Image</label>
         </div>
 
         <!-- Descrizione  -->
