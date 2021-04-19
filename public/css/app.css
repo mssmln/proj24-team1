@@ -2003,11 +2003,34 @@ footer .container #footer_main {
 
 footer .container #footer_bottom {
   display: flex;
+  align-items: center;
+  padding-top: 10px;
 }
 
-footer .container #footer_bottom ul {
+footer .container .footer_bottom_item {
+  flex-basis: calc(100% / 2);
+}
+
+footer .container .footer_bottom_item ul {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
+}
+
+footer .container .footer_bottom_item ul li {
+  padding: 0px 5px;
+}
+
+footer .container .footer_bottom_icon {
+  flex-basis: calc(100% / 2);
+}
+
+footer .container .footer_bottom_icon ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .container .footer_bottom_icon ul li {
+  padding: 0px 5px;
 }
 
 /* Regola generale da disattivare se non si testano input non formattati*/
