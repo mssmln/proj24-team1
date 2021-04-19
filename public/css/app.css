@@ -1642,6 +1642,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+
 ul li {
   list-style: none;
 }
@@ -1654,17 +1660,6 @@ canvas {
   max-width: 500px;
   margin: 20px;
   padding: 20px;
-}
-
-input,
-textarea {
-  background-color: #121212;
-  caret-color: #db4c51;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  margin: 20px;
-  outline: 0;
 }
 
 table * {
@@ -2040,6 +2035,7 @@ button {
   color: #757575;
   border: none;
   margin: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -2066,7 +2062,7 @@ input[type=checkbox].switch_1 {
 
 input[type=checkbox].switch_1:checked {
   /* Colore checkbox-checked */
-  background: #18db49;
+  background: #db4c51;
 }
 
 input[type=checkbox].switch_1:after {
@@ -2153,19 +2149,36 @@ input[type=checkbox].switch_1:checked:after {
 
 @-webkit-keyframes particle-animation-1 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(76vw, 89vh, 83px);
+=======
     transform: translate3d(8vw, 4vh, 9px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-1 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(76vw, 89vh, 83px);
+=======
     transform: translate3d(8vw, 4vh, 9px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(1) {
   -webkit-animation: particle-animation-1 60s infinite;
           animation: particle-animation-1 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.19;
+  height: 6px;
+  width: 6px;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  transform: translate3d(71vw, 17vh, 33px);
+  background: #d96226;
+=======
   opacity: 0.46;
   height: 33px;
   width: 33px;
@@ -2173,23 +2186,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -0.2s;
   transform: translate3d(87vw, 62vh, 43px);
   background: #d9d926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-2 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(59vw, 88vh, 40px);
+=======
     transform: translate3d(69vw, 45vh, 31px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-2 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(59vw, 88vh, 40px);
+=======
     transform: translate3d(69vw, 45vh, 31px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(2) {
   -webkit-animation: particle-animation-2 60s infinite;
           animation: particle-animation-2 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.08;
+  height: 19px;
+  width: 19px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  transform: translate3d(21vw, 74vh, 10px);
+  background: #ac26d9;
+=======
   opacity: 0.38;
   height: 29px;
   width: 29px;
@@ -2197,23 +2228,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -0.4s;
   transform: translate3d(26vw, 11vh, 91px);
   background: #d926a3;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-3 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(34vw, 70vh, 69px);
+=======
     transform: translate3d(11vw, 79vh, 62px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-3 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(34vw, 70vh, 69px);
+=======
     transform: translate3d(11vw, 79vh, 62px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(3) {
   -webkit-animation: particle-animation-3 60s infinite;
           animation: particle-animation-3 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.4;
+  height: 29px;
+  width: 29px;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  transform: translate3d(3vw, 87vh, 32px);
+  background: #d92680;
+=======
   opacity: 0.62;
   height: 14px;
   width: 14px;
@@ -2221,23 +2270,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -0.6s;
   transform: translate3d(1vw, 14vh, 65px);
   background: #d926cd;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-4 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(47vw, 79vh, 88px);
+=======
     transform: translate3d(44vw, 74vh, 97px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-4 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(47vw, 79vh, 88px);
+=======
     transform: translate3d(44vw, 74vh, 97px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(4) {
   -webkit-animation: particle-animation-4 60s infinite;
           animation: particle-animation-4 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.38;
+  height: 7px;
+  width: 7px;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+  transform: translate3d(80vw, 63vh, 84px);
+  background: #26d947;
+=======
   opacity: 0.28;
   height: 26px;
   width: 26px;
@@ -2245,23 +2312,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -0.8s;
   transform: translate3d(5vw, 66vh, 49px);
   background: #9dd926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-5 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(44vw, 34vh, 10px);
+=======
     transform: translate3d(31vw, 77vh, 11px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-5 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(44vw, 34vh, 10px);
+=======
     transform: translate3d(31vw, 77vh, 11px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(5) {
   -webkit-animation: particle-animation-5 60s infinite;
           animation: particle-animation-5 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.06;
+  height: 16px;
+  width: 16px;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  transform: translate3d(58vw, 78vh, 55px);
+  background: #26d92f;
+=======
   opacity: 0.01;
   height: 6px;
   width: 6px;
@@ -2269,23 +2354,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -1s;
   transform: translate3d(66vw, 11vh, 30px);
   background: #d92626;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-6 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(26vw, 47vh, 65px);
+=======
     transform: translate3d(13vw, 37vh, 4px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-6 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(26vw, 47vh, 65px);
+=======
     transform: translate3d(13vw, 37vh, 4px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(6) {
   -webkit-animation: particle-animation-6 60s infinite;
           animation: particle-animation-6 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.07;
+  height: 16px;
+  width: 16px;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+  transform: translate3d(34vw, 74vh, 18px);
+  background: #26d932;
+=======
   opacity: 0.56;
   height: 34px;
   width: 34px;
@@ -2293,23 +2396,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -1.2s;
   transform: translate3d(18vw, 76vh, 83px);
   background: #26d985;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-7 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(59vw, 16vh, 51px);
+=======
     transform: translate3d(51vw, 60vh, 64px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-7 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(59vw, 16vh, 51px);
+=======
     transform: translate3d(51vw, 60vh, 64px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(7) {
   -webkit-animation: particle-animation-7 60s infinite;
           animation: particle-animation-7 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.67;
+  height: 30px;
+  width: 30px;
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
+  transform: translate3d(3vw, 85vh, 20px);
+  background: #26d997;
+=======
   opacity: 0.16;
   height: 21px;
   width: 21px;
@@ -2317,23 +2438,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -1.4s;
   transform: translate3d(24vw, 70vh, 11px);
   background: #d926af;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-8 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(93vw, 14vh, 69px);
+=======
     transform: translate3d(32vw, 5vh, 92px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-8 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(93vw, 14vh, 69px);
+=======
     transform: translate3d(32vw, 5vh, 92px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(8) {
   -webkit-animation: particle-animation-8 60s infinite;
           animation: particle-animation-8 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.5;
+  height: 12px;
+  width: 12px;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+  transform: translate3d(54vw, 61vh, 80px);
+  background: #d94726;
+=======
   opacity: 0.24;
   height: 14px;
   width: 14px;
@@ -2341,23 +2480,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -1.6s;
   transform: translate3d(45vw, 55vh, 97px);
   background: #35d926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-9 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(53vw, 63vh, 81px);
+=======
     transform: translate3d(47vw, 41vh, 26px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-9 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(53vw, 63vh, 81px);
+=======
     transform: translate3d(47vw, 41vh, 26px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(9) {
   -webkit-animation: particle-animation-9 60s infinite;
           animation: particle-animation-9 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.57;
+  height: 27px;
+  width: 27px;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
+  transform: translate3d(20vw, 82vh, 49px);
+  background: #9dd926;
+=======
   opacity: 0.46;
   height: 17px;
   width: 17px;
@@ -2365,23 +2522,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -1.8s;
   transform: translate3d(48vw, 47vh, 32px);
   background: #d9c426;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-10 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(42vw, 19vh, 31px);
+=======
     transform: translate3d(2vw, 71vh, 73px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-10 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(42vw, 19vh, 31px);
+=======
     transform: translate3d(2vw, 71vh, 73px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(10) {
   -webkit-animation: particle-animation-10 60s infinite;
           animation: particle-animation-10 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.23;
+  height: 22px;
+  width: 22px;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  transform: translate3d(37vw, 33vh, 54px);
+  background: #d96e26;
+=======
   opacity: 0.05;
   height: 28px;
   width: 28px;
@@ -2389,23 +2564,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -2s;
   transform: translate3d(74vw, 75vh, 25px);
   background: #26c7d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-11 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(52vw, 82vh, 44px);
+=======
     transform: translate3d(89vw, 41vh, 20px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-11 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(52vw, 82vh, 44px);
+=======
     transform: translate3d(89vw, 41vh, 20px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(11) {
   -webkit-animation: particle-animation-11 60s infinite;
           animation: particle-animation-11 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.2;
+  height: 8px;
+  width: 8px;
+  -webkit-animation-delay: -2.2s;
+          animation-delay: -2.2s;
+  transform: translate3d(62vw, 82vh, 85px);
+  background: #d9d026;
+=======
   opacity: 0.11;
   height: 27px;
   width: 27px;
@@ -2413,23 +2606,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -2.2s;
   transform: translate3d(69vw, 52vh, 7px);
   background: #47d926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-12 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(57vw, 50vh, 20px);
+=======
     transform: translate3d(59vw, 42vh, 55px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-12 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(57vw, 50vh, 20px);
+=======
     transform: translate3d(59vw, 42vh, 55px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(12) {
   -webkit-animation: particle-animation-12 60s infinite;
           animation: particle-animation-12 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.2;
+  height: 23px;
+  width: 23px;
+  -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+  transform: translate3d(27vw, 52vh, 90px);
+  background: #d96b26;
+=======
   opacity: 0.15;
   height: 34px;
   width: 34px;
@@ -2437,23 +2648,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -2.4s;
   transform: translate3d(26vw, 1vh, 98px);
   background: #d92697;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-13 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(52vw, 46vh, 74px);
+=======
     transform: translate3d(2vw, 77vh, 35px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-13 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(52vw, 46vh, 74px);
+=======
     transform: translate3d(2vw, 77vh, 35px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(13) {
   -webkit-animation: particle-animation-13 60s infinite;
           animation: particle-animation-13 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.21;
+  height: 28px;
+  width: 28px;
+  -webkit-animation-delay: -2.6s;
+          animation-delay: -2.6s;
+  transform: translate3d(48vw, 67vh, 71px);
+  background: #6e26d9;
+=======
   opacity: 0.18;
   height: 31px;
   width: 31px;
@@ -2461,23 +2690,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -2.6s;
   transform: translate3d(44vw, 2vh, 40px);
   background: #d3d926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-14 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(4vw, 72vh, 34px);
+=======
     transform: translate3d(49vw, 47vh, 43px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-14 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(4vw, 72vh, 34px);
+=======
     transform: translate3d(49vw, 47vh, 43px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(14) {
   -webkit-animation: particle-animation-14 60s infinite;
           animation: particle-animation-14 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.5;
+  height: 22px;
+  width: 22px;
+  -webkit-animation-delay: -2.8s;
+          animation-delay: -2.8s;
+  transform: translate3d(7vw, 35vh, 23px);
+  background: #d9263e;
+=======
   opacity: 0.19;
   height: 30px;
   width: 30px;
@@ -2485,23 +2732,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -2.8s;
   transform: translate3d(86vw, 25vh, 17px);
   background: #26d98b;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-15 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(60vw, 47vh, 48px);
+=======
     transform: translate3d(8vw, 45vh, 49px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-15 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(60vw, 47vh, 48px);
+=======
     transform: translate3d(8vw, 45vh, 49px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(15) {
   -webkit-animation: particle-animation-15 60s infinite;
           animation: particle-animation-15 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.68;
+  height: 28px;
+  width: 28px;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  transform: translate3d(14vw, 10vh, 2px);
+  background: #d97a26;
+=======
   opacity: 0.26;
   height: 7px;
   width: 7px;
@@ -2509,23 +2774,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -3s;
   transform: translate3d(6vw, 22vh, 51px);
   background: #3e26d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-16 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(71vw, 45vh, 2px);
+=======
     transform: translate3d(15vw, 62vh, 51px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-16 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(71vw, 45vh, 2px);
+=======
     transform: translate3d(15vw, 62vh, 51px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(16) {
   -webkit-animation: particle-animation-16 60s infinite;
           animation: particle-animation-16 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.58;
+  height: 11px;
+  width: 11px;
+  -webkit-animation-delay: -3.2s;
+          animation-delay: -3.2s;
+  transform: translate3d(50vw, 10vh, 67px);
+  background: #26d953;
+=======
   opacity: 0.31;
   height: 10px;
   width: 10px;
@@ -2533,23 +2816,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -3.2s;
   transform: translate3d(84vw, 14vh, 90px);
   background: #26d3d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-17 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(26vw, 45vh, 42px);
+=======
     transform: translate3d(65vw, 38vh, 68px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-17 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(26vw, 45vh, 42px);
+=======
     transform: translate3d(65vw, 38vh, 68px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(17) {
   -webkit-animation: particle-animation-17 60s infinite;
           animation: particle-animation-17 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.48;
+  height: 26px;
+  width: 26px;
+  -webkit-animation-delay: -3.4s;
+          animation-delay: -3.4s;
+  transform: translate3d(31vw, 57vh, 19px);
+  background: #3826d9;
+=======
   opacity: 0.5;
   height: 22px;
   width: 22px;
@@ -2557,23 +2858,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -3.4s;
   transform: translate3d(57vw, 45vh, 70px);
   background: #26b5d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-18 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(72vw, 56vh, 7px);
+=======
     transform: translate3d(82vw, 71vh, 49px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-18 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(72vw, 56vh, 7px);
+=======
     transform: translate3d(82vw, 71vh, 49px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(18) {
   -webkit-animation: particle-animation-18 60s infinite;
           animation: particle-animation-18 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.68;
+  height: 18px;
+  width: 18px;
+  -webkit-animation-delay: -3.6s;
+          animation-delay: -3.6s;
+  transform: translate3d(38vw, 74vh, 55px);
+  background: #d9ac26;
+=======
   opacity: 0.45;
   height: 16px;
   width: 16px;
@@ -2581,23 +2900,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -3.6s;
   transform: translate3d(66vw, 38vh, 74px);
   background: #d92629;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-19 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(94vw, 13vh, 27px);
+=======
     transform: translate3d(27vw, 67vh, 49px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-19 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(94vw, 13vh, 27px);
+=======
     transform: translate3d(27vw, 67vh, 49px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(19) {
   -webkit-animation: particle-animation-19 60s infinite;
           animation: particle-animation-19 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.53;
+  height: 18px;
+  width: 18px;
+  -webkit-animation-delay: -3.8s;
+          animation-delay: -3.8s;
+  transform: translate3d(88vw, 46vh, 97px);
+  background: #26d93e;
+=======
   opacity: 0.1;
   height: 20px;
   width: 20px;
@@ -2605,23 +2942,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -3.8s;
   transform: translate3d(75vw, 72vh, 19px);
   background: #d97426;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-20 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(25vw, 71vh, 98px);
+=======
     transform: translate3d(5vw, 37vh, 72px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-20 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(25vw, 71vh, 98px);
+=======
     transform: translate3d(5vw, 37vh, 72px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(20) {
   -webkit-animation: particle-animation-20 60s infinite;
           animation: particle-animation-20 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.61;
+  height: 19px;
+  width: 19px;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  transform: translate3d(55vw, 18vh, 68px);
+  background: #d926c4;
+=======
   opacity: 0.48;
   height: 31px;
   width: 31px;
@@ -2629,23 +2984,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -4s;
   transform: translate3d(54vw, 76vh, 66px);
   background: #266ed9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-21 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(45vw, 36vh, 44px);
+=======
     transform: translate3d(2vw, 11vh, 16px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-21 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(45vw, 36vh, 44px);
+=======
     transform: translate3d(2vw, 11vh, 16px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(21) {
   -webkit-animation: particle-animation-21 60s infinite;
           animation: particle-animation-21 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.1;
+  height: 21px;
+  width: 21px;
+  -webkit-animation-delay: -4.2s;
+          animation-delay: -4.2s;
+  transform: translate3d(38vw, 31vh, 52px);
+  background: #26d959;
+=======
   opacity: 0.39;
   height: 20px;
   width: 20px;
@@ -2653,23 +3026,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -4.2s;
   transform: translate3d(54vw, 78vh, 57px);
   background: #d92641;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-22 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(77vw, 74vh, 49px);
+=======
     transform: translate3d(66vw, 77vh, 81px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-22 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(77vw, 74vh, 49px);
+=======
     transform: translate3d(66vw, 77vh, 81px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(22) {
   -webkit-animation: particle-animation-22 60s infinite;
           animation: particle-animation-22 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.49;
+  height: 31px;
+  width: 31px;
+  -webkit-animation-delay: -4.4s;
+          animation-delay: -4.4s;
+  transform: translate3d(14vw, 89vh, 33px);
+  background: #26d9cd;
+=======
   opacity: 0.64;
   height: 10px;
   width: 10px;
@@ -2677,23 +3068,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -4.4s;
   transform: translate3d(89vw, 69vh, 59px);
   background: #8526d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-23 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(34vw, 63vh, 71px);
+=======
     transform: translate3d(88vw, 46vh, 9px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-23 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(34vw, 63vh, 71px);
+=======
     transform: translate3d(88vw, 46vh, 9px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(23) {
   -webkit-animation: particle-animation-23 60s infinite;
           animation: particle-animation-23 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.34;
+  height: 11px;
+  width: 11px;
+  -webkit-animation-delay: -4.6s;
+          animation-delay: -4.6s;
+  transform: translate3d(47vw, 26vh, 20px);
+  background: #26a6d9;
+=======
   opacity: 0.48;
   height: 10px;
   width: 10px;
@@ -2701,23 +3110,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -4.6s;
   transform: translate3d(27vw, 50vh, 32px);
   background: #4dd926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-24 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(6vw, 7vh, 78px);
+=======
     transform: translate3d(81vw, 77vh, 3px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-24 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(6vw, 7vh, 78px);
+=======
     transform: translate3d(81vw, 77vh, 3px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(24) {
   -webkit-animation: particle-animation-24 60s infinite;
           animation: particle-animation-24 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.28;
+  height: 17px;
+  width: 17px;
+  -webkit-animation-delay: -4.8s;
+          animation-delay: -4.8s;
+  transform: translate3d(46vw, 36vh, 18px);
+  background: #26d9c1;
+=======
   opacity: 0.03;
   height: 18px;
   width: 18px;
@@ -2725,47 +3152,82 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -4.8s;
   transform: translate3d(52vw, 21vh, 40px);
   background: #8226d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-25 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(87vw, 34vh, 77px);
+=======
     transform: translate3d(11vw, 52vh, 80px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-25 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(87vw, 34vh, 77px);
+=======
     transform: translate3d(11vw, 52vh, 80px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(25) {
   -webkit-animation: particle-animation-25 60s infinite;
           animation: particle-animation-25 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.26;
+=======
   opacity: 0.04;
+>>>>>>> main
   height: 14px;
   width: 14px;
   -webkit-animation-delay: -5s;
           animation-delay: -5s;
+<<<<<<< HEAD
+  transform: translate3d(8vw, 6vh, 67px);
+  background: #26d9a6;
+=======
   transform: translate3d(48vw, 2vh, 89px);
   background: #bed926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-26 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(39vw, 21vh, 43px);
+=======
     transform: translate3d(72vw, 10vh, 58px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-26 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(39vw, 21vh, 43px);
+=======
     transform: translate3d(72vw, 10vh, 58px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(26) {
   -webkit-animation: particle-animation-26 60s infinite;
           animation: particle-animation-26 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.57;
+  height: 23px;
+  width: 23px;
+  -webkit-animation-delay: -5.2s;
+          animation-delay: -5.2s;
+  transform: translate3d(83vw, 3vh, 25px);
+  background: #268ed9;
+=======
   opacity: 0.29;
   height: 12px;
   width: 12px;
@@ -2773,23 +3235,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -5.2s;
   transform: translate3d(60vw, 71vh, 1px);
   background: #6b26d9;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-27 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(77vw, 27vh, 87px);
+=======
     transform: translate3d(75vw, 64vh, 59px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-27 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(77vw, 27vh, 87px);
+=======
     transform: translate3d(75vw, 64vh, 59px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(27) {
   -webkit-animation: particle-animation-27 60s infinite;
           animation: particle-animation-27 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.18;
+  height: 15px;
+  width: 15px;
+  -webkit-animation-delay: -5.4s;
+          animation-delay: -5.4s;
+  transform: translate3d(49vw, 79vh, 78px);
+  background: #5fd926;
+=======
   opacity: 0.26;
   height: 17px;
   width: 17px;
@@ -2797,23 +3277,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -5.4s;
   transform: translate3d(14vw, 58vh, 88px);
   background: #d926d3;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-28 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(82vw, 13vh, 70px);
+=======
     transform: translate3d(23vw, 32vh, 42px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-28 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(82vw, 13vh, 70px);
+=======
     transform: translate3d(23vw, 32vh, 42px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(28) {
   -webkit-animation: particle-animation-28 60s infinite;
           animation: particle-animation-28 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.6;
+  height: 9px;
+  width: 9px;
+  -webkit-animation-delay: -5.6s;
+          animation-delay: -5.6s;
+  transform: translate3d(84vw, 70vh, 99px);
+  background: #7426d9;
+=======
   opacity: 0.63;
   height: 33px;
   width: 33px;
@@ -2821,23 +3319,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -5.6s;
   transform: translate3d(5vw, 39vh, 68px);
   background: #26d956;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-29 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(21vw, 19vh, 86px);
+=======
     transform: translate3d(82vw, 76vh, 33px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-29 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(21vw, 19vh, 86px);
+=======
     transform: translate3d(82vw, 76vh, 33px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(29) {
   -webkit-animation: particle-animation-29 60s infinite;
           animation: particle-animation-29 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.1;
+  height: 20px;
+  width: 20px;
+  -webkit-animation-delay: -5.8s;
+          animation-delay: -5.8s;
+  transform: translate3d(89vw, 56vh, 2px);
+  background: #26afd9;
+=======
   opacity: 0.36;
   height: 8px;
   width: 8px;
@@ -2845,23 +3361,41 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -5.8s;
   transform: translate3d(45vw, 79vh, 44px);
   background: #80d926;
+>>>>>>> main
 }
 
 @-webkit-keyframes particle-animation-30 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(58vw, 25vh, 7px);
+=======
     transform: translate3d(11vw, 10vh, 38px);
+>>>>>>> main
   }
 }
 
 @keyframes particle-animation-30 {
   100% {
+<<<<<<< HEAD
+    transform: translate3d(58vw, 25vh, 7px);
+=======
     transform: translate3d(11vw, 10vh, 38px);
+>>>>>>> main
   }
 }
 
 .particle:nth-child(30) {
   -webkit-animation: particle-animation-30 60s infinite;
           animation: particle-animation-30 60s infinite;
+<<<<<<< HEAD
+  opacity: 0.43;
+  height: 26px;
+  width: 26px;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+  transform: translate3d(4vw, 52vh, 6px);
+  background: #2665d9;
+=======
   opacity: 0.38;
   height: 17px;
   width: 17px;
@@ -2869,6 +3403,7 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -6s;
   transform: translate3d(37vw, 1vh, 20px);
   background: #266bd9;
+>>>>>>> main
 }
 
 #dashboard {
