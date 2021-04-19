@@ -17,6 +17,7 @@ class Flat extends Model
         'baths',
         'sqm',
         'address',
+        'city',
         'lat',
         'lng',
         'flat_img',
