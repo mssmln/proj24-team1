@@ -69,16 +69,16 @@ questa è la edit
         <!-- Visibility -->
         @if($flats->visibility)
             <label for="visibility">Click to Hide</label>
-            <input type="checkbox" id="visibility" name="visibility" value="{{$flats->visibility = 0}}">
+            <input type="checkbox" class="switch_1" id="visibility" name="visibility" value="{{$flats->visibility = 0}}">
         @else
             <label for="visibility">Click to show</label>
-            <input type="checkbox" id="visibility" name="visibility" value="{{$flats->visibility = 1}}">
+            <input type="checkbox" class="switch_1" id="visibility" name="visibility" value="{{$flats->visibility = 1}}">
         @endif
 
         <!-- Area dei servizi  -->
         @foreach($services as $service)
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input"  name="services[]" value="{{$service->id}}" {{$flats->services->contains($service->id) ? 'checked=checked' : ''}}>
+            <input type="checkbox" class="switch_1"  name="services[]" value="{{$service->id}}" {{$flats->services->contains($service->id) ? 'checked=checked' : ''}}>
             <label class="form-check-label" >{{$service->name}}</label>
         </div>
         @endforeach

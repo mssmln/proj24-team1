@@ -117,7 +117,7 @@
             </ul>
         </nav>
     
-        <section id="content">
+        <section id="app">
             @yield('content')
         </section>
     </div>
