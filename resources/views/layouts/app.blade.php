@@ -79,6 +79,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        @include('guest.partials.footer')
     </div>
 </body>
 </html>

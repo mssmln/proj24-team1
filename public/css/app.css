@@ -1637,6 +1637,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
 ul li {
   list-style: none;
 }
@@ -2703,6 +2708,24 @@ input[type=checkbox].switch_1:checked:after {
           animation-delay: -6s;
   transform: translate3d(4vw, 11vh, 58px);
   background: #d9c726;
+}
+
+footer {
+  height: 200px;
+}
+
+footer .container #footer_main {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container #footer_bottom {
+  display: flex;
+}
+
+footer .container #footer_bottom ul {
+  display: flex;
+  flex-direction: row;
 }
 
 #dashboard {
