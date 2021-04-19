@@ -138,7 +138,7 @@ const app = new Vue({
         // googleAdresses(){ it worked perfectly, we just use tomtom's one
         //     // api di google
         //     axios
-        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
         //         this.googleApiResults = result.data.results;
         //         console.log(this.googleApiResults); 

@@ -81,7 +81,9 @@
             @yield('content')
         </main>
 
-        @include('guest.partials.footer')
+        @unless (Route::currentRouteName() === 'login' || 'register')
+            @include('guest.partials.footer')
+        @endunless
     </div>
 </body>
 </html>
