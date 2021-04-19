@@ -1,3 +1,4 @@
+@extends('layouts.dashboard')
 
 @section('title', "statistiche dell'appartamento")
 
