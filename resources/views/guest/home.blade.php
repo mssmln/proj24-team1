@@ -17,7 +17,7 @@
     <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-sm">Ricerca</span>
     </div>
-    <input v-model="query" type="text" class="form-control">
+    <input v-model="query" type="text" class="form-control" @keyup="searchWithinRadius">
 </div>
 
 <!-- flats -->
@@ -26,6 +26,8 @@
         <h2> @{{ flat.address }}</h2>
         <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
     </div>
+
+    
 </div>
 
 @endsection
