@@ -8,7 +8,7 @@
     <div class="nav_header">
         {{-- box logo --}}
         <div class="box_logo">
-            <a href=""><img src="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" width="35rem" alt="logo"></a>
+            <a href="{{ url('/') }}"><img src="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" width="35rem" alt="logo"></a>
         </div>
 
         {{-- inizio nav-list --}}
@@ -23,31 +23,54 @@
         {{-- inizio nav-user --}}
         <div class="nav_user">
             <ul>
-                <li><a href="#">Diventa un host</a></li>
+                @auth
+                <li><a href="{{ Route('home') }}">Dashboard</a></li>
+                @else
+                <li><a href="{{ route('register') }}">Diventa un host</a></li>
+                @endauth
                 <li><a href="#"><i class="fas fa-globe"></i></a></li>
+
                 <li class="user_action">
 
-                    <span>
-                        <a href="#"><i class="fas fa-bars"></i></a>
-                        <a href="#">
-                            {{-- icona vuota --}}
-                            {{-- <i class="far fa-user-circle"></i> --}}
+                    <div class="profile_menu" @click="headerNavProfile">
+                        <i class="fas fa-bars"></i>
+                        {{-- Icona Profilo piena --}}
+                        <i class="fas fa-user-circle"></i>
 
-                            {{-- icona piena --}}
-                            <i class="fas fa-user-circle"></i>
-                        </a>
-
-                        <div class="user_log">
+                        <div class="user_log" :class="classNavbarClick">
                             <ul>
-                                <li><a href="#">Registrati</a></li>
-                                <li><a href="#">Accedi</a></li>
-                                <li><a href="#">Diventa un Host</a></li>
-                                <li><a href="#">Proponi un'esperienza</a></li>
+                                @guest
+                                <li>
+                                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                                    @if (Route::has('register'))
+                                    <li>
+                                        <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                    @endif
+                                @else
+                                    <li>
+                                        <a href="#" role="button" data-toggle="dropdown">
+                                            Hi {{ Auth::user()->name }}!
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                @endguest
                                 <li><a href="#">Assistenza</a></li>
                             </ul>
 
                         </div>
-                    </span>
+                    </div>
                 </li>
             </ul>
         </div>

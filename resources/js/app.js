@@ -121,7 +121,9 @@ const app = new Vue({
         cap: '',
         via: '',
         numero: '',
-        indirizzo: ''
+        indirizzo: '',
+        // Navbar Header
+        classNavbarClick: 'hidden_item'
     },
     created(){
 
@@ -166,6 +168,13 @@ const app = new Vue({
                 console.log(this.tomtomApiResults);
             })
             .catch((error) => alert('this API (Tomtom) does not work',error));
+        },
+        headerNavProfile() {
+            if (this.classNavbarClick == 'hidden_item') {
+                this.classNavbarClick = 'show_item';
+            } else {
+                this.classNavbarClick = 'hidden_item';
+            }
         }
     }
     
