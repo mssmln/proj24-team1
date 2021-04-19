@@ -2,7 +2,7 @@
 
 @extends('layouts.dashboard')
 
-@section('title', 'Inserisci un appartamento')
+@section('title', 'Admin | New Flat')
 
 @section('content') 
 

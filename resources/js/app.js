@@ -9,10 +9,21 @@ require('./bootstrap');
 import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 
+
+var liveclock = document.getElementById('clock');
+function time() {
+    var d = new Date();
+    var s = d.getSeconds();
+    var m = d.getMinutes();
+    var h = d.getHours();
+    // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+    liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+}
+setInterval(time, 1000);
+
+
+// Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
-
-console.log(forms);
-
 for( let i = 0; i < forms.length; i++ ) {
     forms[i].addEventListener('submit',function(e) {
         e.preventDefault();
@@ -36,6 +47,39 @@ for( let i = 0; i < forms.length; i++ ) {
         })
     });
 };
+
+// ! ********** HTML NOT SEE IT, WHY? (base chart) **********
+var ctx = document.getElementById('line').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Flat 1', 'Flat 2', 'Flat 3'],
+        datasets: [{
+            label: 'Views',
+            data: [98252, 10980, 32684],
+            backgroundColor: [
+                'rgba(247, 147, 26, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(133, 187, 101, 0.2)'
+            ],
+            borderColor: [
+                'rgba(247, 147, 26, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(133, 187, 101, 1)'
+            ],
+            borderWidth: 1,
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
 window.Vue = require('vue');
 
@@ -80,14 +124,14 @@ const app = new Vue({
         indirizzo: ''
     },
     created(){
+
         axios
-        .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
-        .then((result) =>{
-            this.flats.push(...result.data.response.flat);
-            // this.flats = result.data.response.flat; the same as above
-            // console.log(this.flats); it worked perfectly 
-        })
-        .catch((error) => alert('this API (flat) does not work'));
+            .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
+            .then((result) =>{
+                this.flats.push(...result.data.response.flat);
+                // this.flats = result.data.response.flat; //? The same as above
+            })
+            .catch((error) => alert('Sorry, API (Flats) does not work...'));
 
     },
     methods: {
@@ -103,7 +147,7 @@ const app = new Vue({
             
         // },
         tomtomAdresses(){
-            // api di Tomtom scaricata dal sito ufficiale 
+            // TomTom APIs
             axios
             .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
