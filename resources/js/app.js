@@ -17,7 +17,7 @@ function time() {
     var m = d.getMinutes();
     var h = d.getHours();
     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-    liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+    liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
 }
 setInterval(time, 1000);
 
