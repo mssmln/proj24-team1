@@ -80,7 +80,7 @@
                 </ul>
             </div>
             {{-- / FOOTER BOTTOM ITEM --}}
-            <div class="footer_bottom_item">
+            <div class="footer_bottom_icon">
                 <ul>
                     <li>
                         <i class="fas fa-globe"></i> <a href="#">Italiano</a>

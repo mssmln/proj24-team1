@@ -123,7 +123,13 @@ const app = new Vue({
         numero: '',
         indirizzo: '',
         // Navbar Header
-        classNavbarClick: 'hidden_item'
+        classNavbarClick: 'hidden_item',
+        // lat e lng per il raggio di 20km , metodo searchWithinRadius
+        latitude: '',
+        longitude: '',
+        radius: 20000, // 20km
+        filteredFlats: [],
+        arrayResults: []
     },
     created(){
 
@@ -140,7 +146,7 @@ const app = new Vue({
         // googleAdresses(){ it worked perfectly, we just use tomtom's one
         //     // api di google
         //     axios
-        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+        //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
         //         this.googleApiResults = result.data.results;
         //         console.log(this.googleApiResults); 
@@ -175,6 +181,41 @@ const app = new Vue({
             } else {
                 this.classNavbarClick = 'hidden_item';
             }
+        },
+        searchWithinRadius(){
+            axios
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
+            .then((result) =>{
+                this.arrayResults = result.data.results;
+                this.latitude = this.arrayResults[0].position.lat;
+                this.longitude = this.arrayResults[0].position.lon;
+            })
+            // .catch((error) => alert('this API (Tomtom nested) does not work',error));
+
+
+
+            axios
+            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=50&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
+            .then((result) => {
+                this.filteredFlats = result.data.results;
+                // console.log(this.filteredFlats);
+
+                let location = [];
+                this.filteredFlats.forEach(item => {
+                    location.push(item.address.freeformAddress);
+                });
+
+                this.arrayResults = []; // lo svuotiamo
+                this.flats.forEach((item,index) => {
+                    if(item.address.includes(this.filteredFlats)){
+                        this.arrayResults.push(item);
+                        console.log('bo' , this.arrayResults);
+                    }
+                });
+
+                
+            })
+            .catch((error) => console.log('this API (filteredFlat) does not work',error));
         }
     }
     

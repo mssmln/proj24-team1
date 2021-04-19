@@ -112,7 +112,7 @@
             margin: 0px;
             justify-content: flex-end;
 
-            li:not(:last-child) {
+            li {
                 padding: 0px 10px;
                 align-items: flex-end;
 
@@ -155,13 +155,14 @@
                             padding: 7px 0px;
 
                             li {
-                                padding: 10px 10px;
-
                                 &:hover {
                                     background-color: #d3d3d3;
                                 }//li:hover
 
                                 a{
+                                    padding: 10px;
+                                    display: block;
+                                    width: 100%;
                                     color: black;
                                     text-decoration: none;
                                 }//a
