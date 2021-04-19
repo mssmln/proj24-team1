@@ -54917,7 +54917,7 @@ function time() {
   var m = d.getMinutes();
   var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
 
-  liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+  liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
 }
 
 setInterval(time, 1000); // Confirm button by sweetalert2
@@ -55018,7 +55018,9 @@ var app = new Vue({
     cap: '',
     via: '',
     numero: '',
-    indirizzo: ''
+    indirizzo: '',
+    // Navbar Header
+    classNavbarClick: 'hidden_item'
   },
   created: function created() {
     var _this = this;
@@ -55036,7 +55038,7 @@ var app = new Vue({
     // googleAdresses(){ it worked perfectly, we just use tomtom's one
     //     // api di google
     //     axios
-    //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=AIzaSyBPI9z1Z6lK5DCUc_TjbqmKRoRRI9L1Oqc")
+    //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
     //     .then((result) =>{
     //         this.googleApiResults = result.data.results;
     //         console.log(this.googleApiResults); 
@@ -55064,6 +55066,13 @@ var app = new Vue({
       })["catch"](function (error) {
         return alert('this API (Tomtom) does not work', error);
       });
+    },
+    headerNavProfile: function headerNavProfile() {
+      if (this.classNavbarClick == 'hidden_item') {
+        this.classNavbarClick = 'show_item';
+      } else {
+        this.classNavbarClick = 'hidden_item';
+      }
     }
   }
 });
@@ -55202,8 +55211,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
