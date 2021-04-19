@@ -1,11 +1,26 @@
 // css del footer
+
+
+
 footer{
     height: 200px;
 
-    #footer_main{
-        display: flex;
-        justify-content: space-between;
+    .container{
+        #footer_main{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #footer_bottom{
+            display: flex;
+            ul{
+                display: flex;
+                flex-direction: row;
+            }
+        }
     }
+
+
 }
 
 

@@ -12568,6 +12568,11 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   font-size: 1em;
 }
 
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
 ul li {
   list-style: none;
 }
@@ -12594,9 +12599,18 @@ footer {
   height: 200px;
 }
 
-footer #footer_main {
+footer .container #footer_main {
   display: flex;
   justify-content: space-between;
+}
+
+footer .container #footer_bottom {
+  display: flex;
+}
+
+footer .container #footer_bottom ul {
+  display: flex;
+  flex-direction: row;
 }
 
 #dashboard {
