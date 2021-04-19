@@ -9,20 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 input { border-style: none; background: transparent; outline: none; }
-
-
-
 
 ul li {
     list-style: none;
 }
 
-
-
 a {
     color: #757575;
+    text-decoration: none;
 }
 
 canvas {
@@ -43,16 +38,12 @@ table{
     }
 }
 
-
-
 .show_item{
     display: block;
 }
 .hidden_item{
     display: none;
 }
-
-
 
 .rotate-item {animation: rotate 7.5s linear infinite;}
 @keyframes rotate {
