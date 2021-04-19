@@ -117,7 +117,7 @@
             </ul>
         </nav>
     
-        <section id="app" class="vision">
+        <section id="app">
             @yield('content')
         </section>
     </div>
