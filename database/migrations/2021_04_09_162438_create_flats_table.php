@@ -24,6 +24,7 @@ class CreateFlatsTable extends Migration
             $table->tinyInteger('baths')->default(1);
             $table->smallInteger('sqm');
             $table->string('address');
+            $table->string('city')->nullable();
             $table->double('lat', 12, 9);
             $table->double('lng', 13, 9);
             $table->string('flat_img');

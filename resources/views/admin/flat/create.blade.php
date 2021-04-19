@@ -8,7 +8,7 @@
 
 
 <h1>Aggiungi un Appartamento</h1>
-<div class="container">
+<div>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -19,48 +19,99 @@
         </div>
     @endif
 
-
-
     <form action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('POST')
-        <div class="input-group input-group-sm mb-3 ">
-            <label for="title">Titolo</label>
-            <input name="title" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{old('title')}}">
+
+    
+        <div class="form_create_edit input_bg">
+            <input id="title" name="title" type="text" class="form_input" value="{{old('title')}}" required autocomplete="off" title="Inserisci un titolo">
+            <label for="title" class="form_label">Titolo</label>
         </div>
-        <div class="input-group">
-            <label for="content">Descrizione</label>
-            <textarea name="overview" class="form-control" aria-label="With textarea">{{old('overview')}}</textarea>
-        </div>
-        <div class="input-group">
-            <label for="price">Prezzo</label>
-            <input type="number" id="price" name="price" class="form-control" value="{{old('price')}}">
-        </div>
-        <div class="input-group">
-            <label for="rooms">Stanze</label>
-            <input type="number" id="rooms" name="rooms" class="form-control" value="{{old('price')}}">
-        </div>
-        <div class="input-group">
-            <label for="beds">Letti</label>
-            <input type="number" id="beds" name="beds" class="form-control" value="{{old('beds')}}">
-        </div>
-        <div class="input-group">
-            <label for="baths">Bagni</label>
-            <input type="number" id="baths" name="baths" class="form-control" value="{{old('baths')}}">
-        </div>
-        <div class="input-group">
-            <label for="sqm">Metri quadrati</label>
-            <input type="number" id="sqm" name="sqm" class="form-control" value="{{old('sqm')}}">
-        </div>
-        <div class="input-group">
-            <label for="address">Indirizzo</label>
-            <input v-model="address" @keyup="tomtomAdresses" type="text" id="address" name="address" class="form-control" value="{{old('address')}}">
+
+        <div class="form_create_edit">
+            <input type="text" id="price" name="price" class="form_input" value="{{old('price')}}" autocomplete="off" required>
+            <label for="price" class="form_label">Prezzo</label>
         </div>
         
+        <div class="form_create_edit">
+            <input type="text" id="rooms" name="rooms" class="form_input" value="{{old('price')}}" autocomplete="off" required>
+            <label for="rooms" class="form_label">Stanze</label>
+        </div>
+        
+        <div class="form_create_edit">
+            <input type="text" id="beds" name="beds" class="form_input" value="{{old('beds')}}" autocomplete="off" required>
+            <label for="beds" class="form_label">Letti</label>
+        </div>
+        
+        <div class="form_create_edit">
+            <input type="text" id="baths" name="baths" class="form_input" value="{{old('baths')}}" autocomplete="off" required>
+            <label for="baths" class="form_label">Bagni</label>
+        </div>
+
+        <div class="form_create_edit">
+            <input type="text" id="sqm" name="sqm" class="form_input" value="{{old('sqm')}}" autocomplete="off" required title="Inserisci i metri quadrati">
+            <label for="sqm" class="form_label">MQ</label>
+        </div>
+
+        
+        <div class="form_create_edit">
+            <input v-model="address"  type="text" id="address" class="form_input" value="{{old('address')}}" autocomplete="off" required>
+            <label for="address" class="form_label">Indirizzo</label>
+            <a href="#" @click="tomtomAdresses"><i class="fas fa-sync-alt"></i></a>
+        </div>
+        
+        <div class="form_create_edit">
+            <input readonly="text" name="lat" class="form_input" v-model="lat">
+            <label class="form_label">Lat</label>
+        </div>
+        <div class="form_create_edit">
+            <input readonly="text" name="lng" class="form_input" v-model="lng">
+            <label class="form_label">Long</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="via">
+            <label class="form_label">Via</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="numero">
+            <label class="form_label">N°</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="cap">
+            <label class="form_label">CAP</label>
+        </div>
+        <div class="form_create_edit">
+            <input readonly="text" name="city" class="form_input" v-model="comune">
+            <label class="form_label">Comune</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="provincia">
+            <label class="form_label">Provincia</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="regione">
+            <label class="form_label">Regione</label>
+        </div>
+        <div class="form_create_edit">
+            <input disabled="disabled" readonly="text" class="form_input" v-model="paese">
+            <label class="form_label">Paese</label>
+        </div>
+        <div class="form_create_edit">
+            <input readonly="text" type="text" id="address" name="address" class="form_input not" v-model="indirizzo">
+            <label class="form_label">Indirizzo</label>
+        </div>
+
         <!-- Upload an img file  -->
-        <div class="form-group">
-            <label for="flat_img">Carica un'immagine</label>
-            <input type="file" class="form-control-file" id="flat_img" name="image">
+        <div >
+            <input type="file" id="flat_img" class="input-file" name="image">
+            <label for="flat_img" ><i class="fas fa-upload"></i> Image</label>
+        </div>
+
+        <!-- Descrizione  -->
+        <div class="form_create_edit">
+            <textarea class="form_input" name="overview">{{old('overview')}}</textarea>
+            <label class="form_label" for="overview">Descrizione</label>
         </div>
 
         <!-- Visibility -->
