@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .swal2-popup.swal2-toast {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   width: auto;
-  padding: 0.625em;
+  padding: 1.25em;
   overflow-y: hidden;
   background: #19191a;
   box-shadow: 0 0 0.625em #d9d9d9;
@@ -18,7 +18,21 @@
 .swal2-popup.swal2-toast .swal2-title {
   flex-grow: 1;
   justify-content: flex-start;
-  margin: 0 0.6em;
+  margin: 0 0.625em;
+  font-size: 1em;
+}
+
+.swal2-popup.swal2-toast .swal2-loading {
+  justify-content: center;
+}
+
+.swal2-popup.swal2-toast .swal2-input {
+  height: 2em;
+  margin: 0.3125em auto;
+  font-size: 1em;
+}
+
+.swal2-popup.swal2-toast .swal2-validation-message {
   font-size: 1em;
 }
 
@@ -37,15 +51,25 @@
 
 .swal2-popup.swal2-toast .swal2-content {
   justify-content: flex-start;
+  margin: 0 0.625em;
   padding: 0;
   font-size: 1em;
+  text-align: initial;
+}
+
+.swal2-popup.swal2-toast .swal2-html-container {
+  padding: 0.625em 0 0;
+}
+
+.swal2-popup.swal2-toast .swal2-html-container:empty {
+  padding: 0;
 }
 
 .swal2-popup.swal2-toast .swal2-icon {
   width: 2em;
   min-width: 2em;
   height: 2em;
-  margin: 0;
+  margin: 0 0.5em 0 0;
 }
 
 .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
@@ -80,10 +104,14 @@
 }
 
 .swal2-popup.swal2-toast .swal2-actions {
+  flex: 1;
   flex-basis: auto !important;
+  align-self: stretch;
   width: auto;
+  height: 2.2em;
   height: auto;
   margin: 0 0.3125em;
+  margin-top: 0.3125em;
   padding: 0;
 }
 
@@ -1600,32 +1628,6 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   left: auto;
 }
 
-body.swal2-toast-column .swal2-toast {
-  flex-direction: column;
-  align-items: stretch;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-actions {
-  flex: 1;
-  align-self: stretch;
-  height: 2.2em;
-  margin-top: 0.3125em;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-loading {
-  justify-content: center;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-input {
-  height: 2em;
-  margin: 0.3125em auto;
-  font-size: 1em;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-validation-message {
-  font-size: 1em;
-}
-
 .container {
   width: 1500px;
   margin: 0 auto;
@@ -1642,8 +1644,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-input,
-textarea {
+input {
   border-style: none;
   background: transparent;
   outline: none;
@@ -2240,1260 +2241,1262 @@ button {
 
 @-webkit-keyframes particle-animation-1 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(39vw, 49vh, 34px);
+<<<<<<< Updated upstream
+    transform: translate3d(33vw, 32vh, 80px);
 =======
-    transform: translate3d(90vw, 11vh, 74px);
->>>>>>> AlexBranch
+    transform: translate3d(46vw, 43vh, 36px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-1 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(39vw, 49vh, 34px);
+<<<<<<< Updated upstream
+    transform: translate3d(33vw, 32vh, 80px);
 =======
-    transform: translate3d(90vw, 11vh, 74px);
->>>>>>> AlexBranch
+    transform: translate3d(46vw, 43vh, 36px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(1) {
   -webkit-animation: particle-animation-1 60s infinite;
           animation: particle-animation-1 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.42;
-  height: 19px;
-  width: 19px;
+<<<<<<< Updated upstream
+  opacity: 0.4;
+  height: 22px;
+  width: 22px;
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
-  transform: translate3d(71vw, 33vh, 61px);
-  background: #26d938;
+  transform: translate3d(8vw, 70vh, 30px);
+  background: #5326d9;
 =======
-  opacity: 0.7;
-  height: 13px;
-  width: 13px;
+  opacity: 0.1;
+  height: 17px;
+  width: 17px;
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
-  transform: translate3d(56vw, 13vh, 10px);
-  background: #26b2d9;
->>>>>>> AlexBranch
+  transform: translate3d(40vw, 22vh, 38px);
+  background: #3ed926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-2 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(87vw, 23vh, 44px);
+<<<<<<< Updated upstream
+    transform: translate3d(43vw, 35vh, 78px);
 =======
-    transform: translate3d(69vw, 50vh, 7px);
->>>>>>> AlexBranch
+    transform: translate3d(66vw, 65vh, 17px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-2 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(87vw, 23vh, 44px);
+<<<<<<< Updated upstream
+    transform: translate3d(43vw, 35vh, 78px);
 =======
-    transform: translate3d(69vw, 50vh, 7px);
->>>>>>> AlexBranch
+    transform: translate3d(66vw, 65vh, 17px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(2) {
   -webkit-animation: particle-animation-2 60s infinite;
           animation: particle-animation-2 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.5;
-  height: 10px;
-  width: 10px;
+<<<<<<< Updated upstream
+  opacity: 0.39;
+  height: 32px;
+  width: 32px;
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
-  transform: translate3d(89vw, 21vh, 36px);
-  background: #88d926;
+  transform: translate3d(6vw, 8vh, 72px);
+  background: #26d982;
 =======
-  opacity: 0.02;
-  height: 15px;
-  width: 15px;
+  opacity: 0.55;
+  height: 24px;
+  width: 24px;
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
-  transform: translate3d(76vw, 75vh, 94px);
-  background: #269ad9;
->>>>>>> AlexBranch
+  transform: translate3d(22vw, 23vh, 59px);
+  background: #68d926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-3 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(70vw, 24vh, 57px);
+<<<<<<< Updated upstream
+    transform: translate3d(2vw, 14vh, 8px);
 =======
-    transform: translate3d(41vw, 28vh, 54px);
->>>>>>> AlexBranch
+    transform: translate3d(50vw, 2vh, 44px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-3 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(70vw, 24vh, 57px);
+<<<<<<< Updated upstream
+    transform: translate3d(2vw, 14vh, 8px);
 =======
-    transform: translate3d(41vw, 28vh, 54px);
->>>>>>> AlexBranch
+    transform: translate3d(50vw, 2vh, 44px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(3) {
   -webkit-animation: particle-animation-3 60s infinite;
           animation: particle-animation-3 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.03;
-  height: 9px;
-  width: 9px;
+<<<<<<< Updated upstream
+  opacity: 0.38;
+  height: 13px;
+  width: 13px;
   -webkit-animation-delay: -0.6s;
           animation-delay: -0.6s;
-  transform: translate3d(14vw, 49vh, 97px);
-  background: #26d929;
+  transform: translate3d(24vw, 29vh, 32px);
+  background: #26d3d9;
 =======
-  opacity: 0.26;
-  height: 29px;
-  width: 29px;
+  opacity: 0.37;
+  height: 6px;
+  width: 6px;
   -webkit-animation-delay: -0.6s;
           animation-delay: -0.6s;
-  transform: translate3d(75vw, 58vh, 33px);
-  background: #74d926;
->>>>>>> AlexBranch
+  transform: translate3d(21vw, 41vh, 78px);
+  background: #65d926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-4 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(87vw, 4vh, 62px);
+<<<<<<< Updated upstream
+    transform: translate3d(83vw, 65vh, 32px);
 =======
-    transform: translate3d(23vw, 21vh, 40px);
->>>>>>> AlexBranch
+    transform: translate3d(46vw, 66vh, 5px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-4 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(87vw, 4vh, 62px);
+<<<<<<< Updated upstream
+    transform: translate3d(83vw, 65vh, 32px);
 =======
-    transform: translate3d(23vw, 21vh, 40px);
->>>>>>> AlexBranch
+    transform: translate3d(46vw, 66vh, 5px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(4) {
   -webkit-animation: particle-animation-4 60s infinite;
           animation: particle-animation-4 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.25;
-  height: 17px;
-  width: 17px;
+<<<<<<< Updated upstream
+  opacity: 0.17;
+  height: 21px;
+  width: 21px;
   -webkit-animation-delay: -0.8s;
           animation-delay: -0.8s;
-  transform: translate3d(72vw, 38vh, 47px);
-  background: #d9265f;
+  transform: translate3d(53vw, 35vh, 19px);
+  background: #d92653;
 =======
-  opacity: 0.29;
-  height: 7px;
-  width: 7px;
+  opacity: 0.03;
+  height: 19px;
+  width: 19px;
   -webkit-animation-delay: -0.8s;
           animation-delay: -0.8s;
-  transform: translate3d(50vw, 4vh, 87px);
-  background: #d926c1;
->>>>>>> AlexBranch
+  transform: translate3d(89vw, 12vh, 64px);
+  background: #26acd9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-5 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(55vw, 13vh, 55px);
+<<<<<<< Updated upstream
+    transform: translate3d(33vw, 21vh, 55px);
 =======
-    transform: translate3d(72vw, 4vh, 27px);
->>>>>>> AlexBranch
+    transform: translate3d(16vw, 23vh, 71px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-5 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(55vw, 13vh, 55px);
+<<<<<<< Updated upstream
+    transform: translate3d(33vw, 21vh, 55px);
 =======
-    transform: translate3d(72vw, 4vh, 27px);
->>>>>>> AlexBranch
+    transform: translate3d(16vw, 23vh, 71px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(5) {
   -webkit-animation: particle-animation-5 60s infinite;
           animation: particle-animation-5 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.33;
-  height: 21px;
-  width: 21px;
+<<<<<<< Updated upstream
+  opacity: 0.61;
+  height: 30px;
+  width: 30px;
   -webkit-animation-delay: -1s;
           animation-delay: -1s;
-  transform: translate3d(11vw, 5vh, 14px);
-  background: #26d96e;
+  transform: translate3d(16vw, 17vh, 77px);
+  background: #d94426;
 =======
-  opacity: 0.28;
-  height: 9px;
-  width: 9px;
+  opacity: 0.55;
+  height: 22px;
+  width: 22px;
   -webkit-animation-delay: -1s;
           animation-delay: -1s;
-  transform: translate3d(36vw, 42vh, 77px);
-  background: #d926c7;
->>>>>>> AlexBranch
+  transform: translate3d(1vw, 30vh, 39px);
+  background: #d9265f;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-6 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(13vw, 49vh, 86px);
+<<<<<<< Updated upstream
+    transform: translate3d(78vw, 68vh, 59px);
 =======
-    transform: translate3d(21vw, 73vh, 79px);
->>>>>>> AlexBranch
+    transform: translate3d(38vw, 40vh, 66px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-6 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(13vw, 49vh, 86px);
+<<<<<<< Updated upstream
+    transform: translate3d(78vw, 68vh, 59px);
 =======
-    transform: translate3d(21vw, 73vh, 79px);
->>>>>>> AlexBranch
+    transform: translate3d(38vw, 40vh, 66px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(6) {
   -webkit-animation: particle-animation-6 60s infinite;
           animation: particle-animation-6 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.39;
-  height: 35px;
-  width: 35px;
+<<<<<<< Updated upstream
+  opacity: 0.41;
+  height: 24px;
+  width: 24px;
   -webkit-animation-delay: -1.2s;
           animation-delay: -1.2s;
-  transform: translate3d(7vw, 25vh, 57px);
-  background: #2691d9;
+  transform: translate3d(71vw, 32vh, 50px);
+  background: #26d9b5;
 =======
-  opacity: 0.33;
-  height: 6px;
-  width: 6px;
+  opacity: 0.37;
+  height: 16px;
+  width: 16px;
   -webkit-animation-delay: -1.2s;
           animation-delay: -1.2s;
-  transform: translate3d(42vw, 80vh, 28px);
-  background: #d9b826;
->>>>>>> AlexBranch
+  transform: translate3d(86vw, 60vh, 66px);
+  background: #d9a326;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-7 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(89vw, 26vh, 9px);
+<<<<<<< Updated upstream
+    transform: translate3d(85vw, 58vh, 77px);
 =======
-    transform: translate3d(7vw, 71vh, 80px);
->>>>>>> AlexBranch
+    transform: translate3d(27vw, 15vh, 72px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-7 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(89vw, 26vh, 9px);
+<<<<<<< Updated upstream
+    transform: translate3d(85vw, 58vh, 77px);
 =======
-    transform: translate3d(7vw, 71vh, 80px);
->>>>>>> AlexBranch
+    transform: translate3d(27vw, 15vh, 72px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(7) {
   -webkit-animation: particle-animation-7 60s infinite;
           animation: particle-animation-7 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.25;
-  height: 9px;
-  width: 9px;
+<<<<<<< Updated upstream
+  opacity: 0.69;
+  height: 16px;
+  width: 16px;
   -webkit-animation-delay: -1.4s;
           animation-delay: -1.4s;
-  transform: translate3d(87vw, 77vh, 36px);
-  background: #6826d9;
+  transform: translate3d(41vw, 57vh, 48px);
+  background: #2677d9;
 =======
-  opacity: 0.36;
-  height: 23px;
-  width: 23px;
+  opacity: 0.32;
+  height: 30px;
+  width: 30px;
   -webkit-animation-delay: -1.4s;
           animation-delay: -1.4s;
-  transform: translate3d(33vw, 32vh, 13px);
-  background: #d99a26;
->>>>>>> AlexBranch
+  transform: translate3d(49vw, 24vh, 30px);
+  background: #d92629;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-8 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(80vw, 17vh, 84px);
+<<<<<<< Updated upstream
+    transform: translate3d(11vw, 2vh, 1px);
 =======
-    transform: translate3d(67vw, 23vh, 83px);
->>>>>>> AlexBranch
+    transform: translate3d(39vw, 39vh, 13px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-8 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(80vw, 17vh, 84px);
+<<<<<<< Updated upstream
+    transform: translate3d(11vw, 2vh, 1px);
 =======
-    transform: translate3d(67vw, 23vh, 83px);
->>>>>>> AlexBranch
+    transform: translate3d(39vw, 39vh, 13px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(8) {
   -webkit-animation: particle-animation-8 60s infinite;
           animation: particle-animation-8 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.42;
-  height: 27px;
-  width: 27px;
+<<<<<<< Updated upstream
+  opacity: 0.38;
+  height: 20px;
+  width: 20px;
   -webkit-animation-delay: -1.6s;
           animation-delay: -1.6s;
-  transform: translate3d(49vw, 7vh, 99px);
-  background: #c426d9;
+  transform: translate3d(7vw, 70vh, 58px);
+  background: #d99a26;
 =======
-  opacity: 0.25;
-  height: 33px;
-  width: 33px;
+  opacity: 0.39;
+  height: 13px;
+  width: 13px;
   -webkit-animation-delay: -1.6s;
           animation-delay: -1.6s;
-  transform: translate3d(44vw, 71vh, 41px);
-  background: #3ed926;
->>>>>>> AlexBranch
+  transform: translate3d(87vw, 11vh, 33px);
+  background: #d9269d;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-9 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(82vw, 54vh, 56px);
+<<<<<<< Updated upstream
+    transform: translate3d(14vw, 16vh, 30px);
 =======
-    transform: translate3d(36vw, 42vh, 20px);
->>>>>>> AlexBranch
+    transform: translate3d(60vw, 40vh, 77px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-9 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(82vw, 54vh, 56px);
+<<<<<<< Updated upstream
+    transform: translate3d(14vw, 16vh, 30px);
 =======
-    transform: translate3d(36vw, 42vh, 20px);
->>>>>>> AlexBranch
+    transform: translate3d(60vw, 40vh, 77px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(9) {
   -webkit-animation: particle-animation-9 60s infinite;
           animation: particle-animation-9 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.25;
-  height: 10px;
-  width: 10px;
+<<<<<<< Updated upstream
+  opacity: 0.37;
+  height: 14px;
+  width: 14px;
   -webkit-animation-delay: -1.8s;
           animation-delay: -1.8s;
-  transform: translate3d(19vw, 80vh, 2px);
-  background: #2653d9;
+  transform: translate3d(46vw, 23vh, 9px);
+  background: #d926a3;
 =======
-  opacity: 0.08;
-  height: 35px;
-  width: 35px;
+  opacity: 0.25;
+  height: 19px;
+  width: 19px;
   -webkit-animation-delay: -1.8s;
           animation-delay: -1.8s;
-  transform: translate3d(80vw, 46vh, 9px);
-  background: #a9d926;
->>>>>>> AlexBranch
+  transform: translate3d(25vw, 2vh, 36px);
+  background: #d9b826;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-10 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(88vw, 35vh, 1px);
+<<<<<<< Updated upstream
+    transform: translate3d(6vw, 29vh, 56px);
 =======
-    transform: translate3d(89vw, 56vh, 6px);
->>>>>>> AlexBranch
+    transform: translate3d(24vw, 61vh, 16px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-10 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(88vw, 35vh, 1px);
+<<<<<<< Updated upstream
+    transform: translate3d(6vw, 29vh, 56px);
 =======
-    transform: translate3d(89vw, 56vh, 6px);
->>>>>>> AlexBranch
+    transform: translate3d(24vw, 61vh, 16px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(10) {
   -webkit-animation: particle-animation-10 60s infinite;
           animation: particle-animation-10 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.31;
-  height: 11px;
-  width: 11px;
+<<<<<<< Updated upstream
+  opacity: 0.65;
+  height: 10px;
+  width: 10px;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
-  transform: translate3d(19vw, 71vh, 60px);
-  background: #d96b26;
+  transform: translate3d(15vw, 49vh, 27px);
+  background: #26d9d9;
 =======
-  opacity: 0.45;
-  height: 6px;
-  width: 6px;
+  opacity: 0.35;
+  height: 8px;
+  width: 8px;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
-  transform: translate3d(26vw, 23vh, 48px);
-  background: #26d95c;
->>>>>>> AlexBranch
+  transform: translate3d(64vw, 60vh, 30px);
+  background: #263bd9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-11 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(64vw, 1vh, 18px);
+<<<<<<< Updated upstream
+    transform: translate3d(2vw, 5vh, 42px);
 =======
-    transform: translate3d(76vw, 12vh, 17px);
->>>>>>> AlexBranch
+    transform: translate3d(59vw, 60vh, 25px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-11 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(64vw, 1vh, 18px);
+<<<<<<< Updated upstream
+    transform: translate3d(2vw, 5vh, 42px);
 =======
-    transform: translate3d(76vw, 12vh, 17px);
->>>>>>> AlexBranch
+    transform: translate3d(59vw, 60vh, 25px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(11) {
   -webkit-animation: particle-animation-11 60s infinite;
           animation: particle-animation-11 60s infinite;
-  opacity: 0.07;
-<<<<<<< HEAD
-  height: 16px;
-  width: 16px;
+<<<<<<< Updated upstream
+  opacity: 0.65;
+  height: 32px;
+  width: 32px;
   -webkit-animation-delay: -2.2s;
           animation-delay: -2.2s;
-  transform: translate3d(62vw, 28vh, 86px);
-  background: #264dd9;
+  transform: translate3d(88vw, 60vh, 24px);
+  background: #26d941;
 =======
-  height: 18px;
-  width: 18px;
+  opacity: 0.57;
+  height: 21px;
+  width: 21px;
   -webkit-animation-delay: -2.2s;
           animation-delay: -2.2s;
-  transform: translate3d(34vw, 14vh, 77px);
-  background: #59d926;
->>>>>>> AlexBranch
+  transform: translate3d(55vw, 36vh, 65px);
+  background: #3bd926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-12 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(63vw, 4vh, 90px);
+<<<<<<< Updated upstream
+    transform: translate3d(8vw, 48vh, 41px);
 =======
-    transform: translate3d(75vw, 79vh, 49px);
->>>>>>> AlexBranch
+    transform: translate3d(22vw, 2vh, 36px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-12 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(63vw, 4vh, 90px);
+<<<<<<< Updated upstream
+    transform: translate3d(8vw, 48vh, 41px);
 =======
-    transform: translate3d(75vw, 79vh, 49px);
->>>>>>> AlexBranch
+    transform: translate3d(22vw, 2vh, 36px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(12) {
   -webkit-animation: particle-animation-12 60s infinite;
           animation: particle-animation-12 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.22;
-  height: 16px;
-  width: 16px;
+<<<<<<< Updated upstream
+  opacity: 0.04;
+  height: 29px;
+  width: 29px;
   -webkit-animation-delay: -2.4s;
           animation-delay: -2.4s;
-  transform: translate3d(60vw, 13vh, 11px);
-  background: #26c4d9;
+  transform: translate3d(73vw, 27vh, 8px);
+  background: #d9a326;
 =======
-  opacity: 0.53;
-  height: 22px;
-  width: 22px;
+  opacity: 0.21;
+  height: 14px;
+  width: 14px;
   -webkit-animation-delay: -2.4s;
           animation-delay: -2.4s;
-  transform: translate3d(22vw, 55vh, 46px);
-  background: #d94726;
->>>>>>> AlexBranch
+  transform: translate3d(40vw, 70vh, 36px);
+  background: #d97a26;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-13 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(64vw, 22vh, 29px);
+<<<<<<< Updated upstream
+    transform: translate3d(44vw, 13vh, 38px);
 =======
-    transform: translate3d(63vw, 9vh, 45px);
->>>>>>> AlexBranch
+    transform: translate3d(7vw, 11vh, 6px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-13 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(64vw, 22vh, 29px);
+<<<<<<< Updated upstream
+    transform: translate3d(44vw, 13vh, 38px);
 =======
-    transform: translate3d(63vw, 9vh, 45px);
->>>>>>> AlexBranch
+    transform: translate3d(7vw, 11vh, 6px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(13) {
   -webkit-animation: particle-animation-13 60s infinite;
           animation: particle-animation-13 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.55;
+<<<<<<< Updated upstream
+  opacity: 0.08;
+  height: 30px;
+  width: 30px;
+  -webkit-animation-delay: -2.6s;
+          animation-delay: -2.6s;
+  transform: translate3d(5vw, 42vh, 25px);
+  background: #26d929;
+=======
+  opacity: 0.26;
   height: 29px;
   width: 29px;
   -webkit-animation-delay: -2.6s;
           animation-delay: -2.6s;
-  transform: translate3d(41vw, 60vh, 44px);
-  background: #2665d9;
-=======
-  opacity: 0.01;
-  height: 23px;
-  width: 23px;
-  -webkit-animation-delay: -2.6s;
-          animation-delay: -2.6s;
-  transform: translate3d(31vw, 63vh, 90px);
-  background: #26d9af;
->>>>>>> AlexBranch
+  transform: translate3d(32vw, 33vh, 30px);
+  background: #26d93b;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-14 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(76vw, 1vh, 32px);
+<<<<<<< Updated upstream
+    transform: translate3d(16vw, 60vh, 43px);
 =======
-    transform: translate3d(87vw, 18vh, 16px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 31vh, 52px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-14 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(76vw, 1vh, 32px);
+<<<<<<< Updated upstream
+    transform: translate3d(16vw, 60vh, 43px);
 =======
-    transform: translate3d(87vw, 18vh, 16px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 31vh, 52px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(14) {
   -webkit-animation: particle-animation-14 60s infinite;
           animation: particle-animation-14 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.35;
-  height: 19px;
-  width: 19px;
+<<<<<<< Updated upstream
+  opacity: 0.27;
+  height: 16px;
+  width: 16px;
   -webkit-animation-delay: -2.8s;
           animation-delay: -2.8s;
-  transform: translate3d(72vw, 21vh, 45px);
-  background: #2629d9;
+  transform: translate3d(37vw, 5vh, 76px);
+  background: #d9be26;
 =======
-  opacity: 0.62;
-  height: 23px;
-  width: 23px;
+  opacity: 0.38;
+  height: 35px;
+  width: 35px;
   -webkit-animation-delay: -2.8s;
           animation-delay: -2.8s;
-  transform: translate3d(46vw, 26vh, 24px);
-  background: #266bd9;
->>>>>>> AlexBranch
+  transform: translate3d(40vw, 38vh, 68px);
+  background: #88d926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-15 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(56vw, 44vh, 69px);
+<<<<<<< Updated upstream
+    transform: translate3d(26vw, 61vh, 8px);
 =======
-    transform: translate3d(54vw, 45vh, 77px);
->>>>>>> AlexBranch
+    transform: translate3d(76vw, 19vh, 28px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-15 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(56vw, 44vh, 69px);
+<<<<<<< Updated upstream
+    transform: translate3d(26vw, 61vh, 8px);
 =======
-    transform: translate3d(54vw, 45vh, 77px);
->>>>>>> AlexBranch
+    transform: translate3d(76vw, 19vh, 28px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(15) {
   -webkit-animation: particle-animation-15 60s infinite;
           animation: particle-animation-15 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.64;
-  height: 6px;
-  width: 6px;
+<<<<<<< Updated upstream
+  opacity: 0.4;
+  height: 24px;
+  width: 24px;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
-  transform: translate3d(81vw, 70vh, 79px);
-  background: #2fd926;
+  transform: translate3d(83vw, 42vh, 26px);
+  background: #b526d9;
 =======
-  opacity: 0.56;
-  height: 32px;
-  width: 32px;
+  opacity: 0.49;
+  height: 19px;
+  width: 19px;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
-  transform: translate3d(38vw, 55vh, 11px);
-  background: #267dd9;
->>>>>>> AlexBranch
+  transform: translate3d(65vw, 27vh, 16px);
+  background: #269dd9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-16 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(90vw, 51vh, 48px);
+<<<<<<< Updated upstream
+    transform: translate3d(4vw, 12vh, 68px);
 =======
-    transform: translate3d(37vw, 80vh, 1px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 63vh, 62px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-16 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(90vw, 51vh, 48px);
+<<<<<<< Updated upstream
+    transform: translate3d(4vw, 12vh, 68px);
 =======
-    transform: translate3d(37vw, 80vh, 1px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 63vh, 62px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(16) {
   -webkit-animation: particle-animation-16 60s infinite;
           animation: particle-animation-16 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.61;
-  height: 23px;
-  width: 23px;
+<<<<<<< Updated upstream
+  opacity: 0.28;
+  height: 26px;
+  width: 26px;
   -webkit-animation-delay: -3.2s;
           animation-delay: -3.2s;
-  transform: translate3d(2vw, 76vh, 63px);
-  background: #32d926;
+  transform: translate3d(59vw, 26vh, 37px);
+  background: #26d6d9;
 =======
-  opacity: 0.66;
-  height: 12px;
-  width: 12px;
+  opacity: 0.04;
+  height: 7px;
+  width: 7px;
   -webkit-animation-delay: -3.2s;
           animation-delay: -3.2s;
-  transform: translate3d(63vw, 51vh, 13px);
-  background: #88d926;
->>>>>>> AlexBranch
+  transform: translate3d(73vw, 67vh, 13px);
+  background: #d9265f;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-17 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(34vw, 28vh, 24px);
+<<<<<<< Updated upstream
+    transform: translate3d(64vw, 70vh, 15px);
 =======
-    transform: translate3d(82vw, 22vh, 52px);
->>>>>>> AlexBranch
+    transform: translate3d(68vw, 21vh, 75px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-17 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(34vw, 28vh, 24px);
+<<<<<<< Updated upstream
+    transform: translate3d(64vw, 70vh, 15px);
 =======
-    transform: translate3d(82vw, 22vh, 52px);
->>>>>>> AlexBranch
+    transform: translate3d(68vw, 21vh, 75px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(17) {
   -webkit-animation: particle-animation-17 60s infinite;
           animation: particle-animation-17 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.5;
-  height: 24px;
-  width: 24px;
+<<<<<<< Updated upstream
+  opacity: 0.06;
+  height: 26px;
+  width: 26px;
   -webkit-animation-delay: -3.4s;
           animation-delay: -3.4s;
-  transform: translate3d(29vw, 13vh, 94px);
-  background: #b826d9;
+  transform: translate3d(63vw, 27vh, 47px);
+  background: #8026d9;
 =======
-  opacity: 0.27;
-  height: 35px;
-  width: 35px;
+  opacity: 0.1;
+  height: 33px;
+  width: 33px;
   -webkit-animation-delay: -3.4s;
           animation-delay: -3.4s;
-  transform: translate3d(12vw, 32vh, 39px);
-  background: #d9268b;
->>>>>>> AlexBranch
+  transform: translate3d(40vw, 57vh, 69px);
+  background: #ac26d9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-18 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(66vw, 55vh, 77px);
+<<<<<<< Updated upstream
+    transform: translate3d(23vw, 4vh, 23px);
 =======
-    transform: translate3d(14vw, 42vh, 10px);
->>>>>>> AlexBranch
+    transform: translate3d(15vw, 60vh, 9px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-18 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(66vw, 55vh, 77px);
+<<<<<<< Updated upstream
+    transform: translate3d(23vw, 4vh, 23px);
 =======
-    transform: translate3d(14vw, 42vh, 10px);
->>>>>>> AlexBranch
+    transform: translate3d(15vw, 60vh, 9px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(18) {
   -webkit-animation: particle-animation-18 60s infinite;
           animation: particle-animation-18 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.47;
-  height: 22px;
-  width: 22px;
+<<<<<<< Updated upstream
+  opacity: 0.59;
+  height: 18px;
+  width: 18px;
   -webkit-animation-delay: -3.6s;
           animation-delay: -3.6s;
-  transform: translate3d(31vw, 21vh, 96px);
-  background: #26b8d9;
+  transform: translate3d(42vw, 8vh, 67px);
+  background: #9dd926;
 =======
-  opacity: 0.36;
-  height: 26px;
-  width: 26px;
+  opacity: 0.1;
+  height: 12px;
+  width: 12px;
   -webkit-animation-delay: -3.6s;
           animation-delay: -3.6s;
-  transform: translate3d(10vw, 17vh, 12px);
-  background: #d93b26;
->>>>>>> AlexBranch
+  transform: translate3d(24vw, 69vh, 34px);
+  background: #26d9a3;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-19 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(42vw, 58vh, 70px);
+<<<<<<< Updated upstream
+    transform: translate3d(9vw, 15vh, 39px);
 =======
-    transform: translate3d(78vw, 75vh, 79px);
->>>>>>> AlexBranch
+    transform: translate3d(27vw, 31vh, 76px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-19 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(42vw, 58vh, 70px);
+<<<<<<< Updated upstream
+    transform: translate3d(9vw, 15vh, 39px);
 =======
-    transform: translate3d(78vw, 75vh, 79px);
->>>>>>> AlexBranch
+    transform: translate3d(27vw, 31vh, 76px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(19) {
   -webkit-animation: particle-animation-19 60s infinite;
           animation: particle-animation-19 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.48;
-  height: 21px;
-  width: 21px;
+<<<<<<< Updated upstream
+  opacity: 0.22;
+  height: 10px;
+  width: 10px;
   -webkit-animation-delay: -3.8s;
           animation-delay: -3.8s;
-  transform: translate3d(34vw, 18vh, 29px);
-  background: #26d9cd;
+  transform: translate3d(19vw, 20vh, 30px);
+  background: #26d9d3;
 =======
-  opacity: 0.52;
-  height: 16px;
-  width: 16px;
+  opacity: 0.44;
+  height: 24px;
+  width: 24px;
   -webkit-animation-delay: -3.8s;
           animation-delay: -3.8s;
-  transform: translate3d(58vw, 44vh, 49px);
-  background: #b5d926;
->>>>>>> AlexBranch
+  transform: translate3d(21vw, 24vh, 71px);
+  background: #26cdd9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-20 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(10vw, 59vh, 80px);
+<<<<<<< Updated upstream
+    transform: translate3d(18vw, 58vh, 16px);
 =======
-    transform: translate3d(51vw, 19vh, 57px);
->>>>>>> AlexBranch
+    transform: translate3d(15vw, 9vh, 8px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-20 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(10vw, 59vh, 80px);
+<<<<<<< Updated upstream
+    transform: translate3d(18vw, 58vh, 16px);
 =======
-    transform: translate3d(51vw, 19vh, 57px);
->>>>>>> AlexBranch
+    transform: translate3d(15vw, 9vh, 8px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(20) {
   -webkit-animation: particle-animation-20 60s infinite;
           animation: particle-animation-20 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.64;
-  height: 17px;
-  width: 17px;
+<<<<<<< Updated upstream
+  opacity: 0.41;
+  height: 28px;
+  width: 28px;
   -webkit-animation-delay: -4s;
           animation-delay: -4s;
-  transform: translate3d(33vw, 74vh, 84px);
-  background: #2635d9;
+  transform: translate3d(76vw, 56vh, 26px);
+  background: #d98526;
 =======
-  opacity: 0.44;
-  height: 7px;
-  width: 7px;
+  opacity: 0.51;
+  height: 19px;
+  width: 19px;
   -webkit-animation-delay: -4s;
           animation-delay: -4s;
-  transform: translate3d(22vw, 23vh, 5px);
-  background: #d99d26;
->>>>>>> AlexBranch
+  transform: translate3d(34vw, 53vh, 80px);
+  background: #9ad926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-21 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(34vw, 31vh, 60px);
+<<<<<<< Updated upstream
+    transform: translate3d(34vw, 9vh, 14px);
 =======
-    transform: translate3d(89vw, 71vh, 55px);
->>>>>>> AlexBranch
+    transform: translate3d(7vw, 11vh, 59px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-21 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(34vw, 31vh, 60px);
+<<<<<<< Updated upstream
+    transform: translate3d(34vw, 9vh, 14px);
 =======
-    transform: translate3d(89vw, 71vh, 55px);
->>>>>>> AlexBranch
+    transform: translate3d(7vw, 11vh, 59px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(21) {
   -webkit-animation: particle-animation-21 60s infinite;
           animation: particle-animation-21 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.27;
-  height: 9px;
-  width: 9px;
+<<<<<<< Updated upstream
+  opacity: 0.02;
+  height: 34px;
+  width: 34px;
   -webkit-animation-delay: -4.2s;
           animation-delay: -4.2s;
-  transform: translate3d(50vw, 66vh, 40px);
-  background: #26d95c;
+  transform: translate3d(34vw, 13vh, 45px);
+  background: #d92644;
 =======
-  opacity: 0.43;
-  height: 15px;
-  width: 15px;
+  opacity: 0.01;
+  height: 11px;
+  width: 11px;
   -webkit-animation-delay: -4.2s;
           animation-delay: -4.2s;
-  transform: translate3d(21vw, 72vh, 15px);
-  background: #2682d9;
->>>>>>> AlexBranch
+  transform: translate3d(6vw, 54vh, 28px);
+  background: #afd926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-22 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(54vw, 4vh, 81px);
+<<<<<<< Updated upstream
+    transform: translate3d(25vw, 3vh, 28px);
 =======
-    transform: translate3d(87vw, 57vh, 76px);
->>>>>>> AlexBranch
+    transform: translate3d(56vw, 23vh, 41px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-22 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(54vw, 4vh, 81px);
+<<<<<<< Updated upstream
+    transform: translate3d(25vw, 3vh, 28px);
 =======
-    transform: translate3d(87vw, 57vh, 76px);
->>>>>>> AlexBranch
+    transform: translate3d(56vw, 23vh, 41px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(22) {
   -webkit-animation: particle-animation-22 60s infinite;
           animation: particle-animation-22 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.37;
+<<<<<<< Updated upstream
+  opacity: 0.36;
   height: 24px;
   width: 24px;
   -webkit-animation-delay: -4.4s;
           animation-delay: -4.4s;
-  transform: translate3d(49vw, 24vh, 57px);
-  background: #94d926;
+  transform: translate3d(7vw, 44vh, 10px);
+  background: #2674d9;
 =======
-  opacity: 0.53;
-  height: 17px;
-  width: 17px;
+  opacity: 0.26;
+  height: 15px;
+  width: 15px;
   -webkit-animation-delay: -4.4s;
           animation-delay: -4.4s;
-  transform: translate3d(10vw, 17vh, 99px);
-  background: #d9c126;
->>>>>>> AlexBranch
+  transform: translate3d(21vw, 62vh, 21px);
+  background: #d98e26;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-23 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(5vw, 42vh, 36px);
+<<<<<<< Updated upstream
+    transform: translate3d(47vw, 25vh, 35px);
 =======
-    transform: translate3d(10vw, 53vh, 96px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 60vh, 10px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-23 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(5vw, 42vh, 36px);
+<<<<<<< Updated upstream
+    transform: translate3d(47vw, 25vh, 35px);
 =======
-    transform: translate3d(10vw, 53vh, 96px);
->>>>>>> AlexBranch
+    transform: translate3d(29vw, 60vh, 10px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(23) {
   -webkit-animation: particle-animation-23 60s infinite;
           animation: particle-animation-23 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.41;
-  height: 27px;
-  width: 27px;
+<<<<<<< Updated upstream
+  opacity: 0.26;
+  height: 21px;
+  width: 21px;
   -webkit-animation-delay: -4.6s;
           animation-delay: -4.6s;
-  transform: translate3d(68vw, 55vh, 18px);
-  background: #d92659;
+  transform: translate3d(27vw, 30vh, 25px);
+  background: #4dd926;
 =======
-  opacity: 0.36;
-  height: 23px;
-  width: 23px;
+  opacity: 0.34;
+  height: 17px;
+  width: 17px;
   -webkit-animation-delay: -4.6s;
           animation-delay: -4.6s;
-  transform: translate3d(46vw, 30vh, 47px);
-  background: #cd26d9;
->>>>>>> AlexBranch
+  transform: translate3d(34vw, 22vh, 59px);
+  background: #9426d9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-24 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(82vw, 69vh, 28px);
+<<<<<<< Updated upstream
+    transform: translate3d(71vw, 21vh, 25px);
 =======
-    transform: translate3d(52vw, 14vh, 51px);
->>>>>>> AlexBranch
+    transform: translate3d(72vw, 34vh, 35px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-24 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(82vw, 69vh, 28px);
+<<<<<<< Updated upstream
+    transform: translate3d(71vw, 21vh, 25px);
 =======
-    transform: translate3d(52vw, 14vh, 51px);
->>>>>>> AlexBranch
+    transform: translate3d(72vw, 34vh, 35px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(24) {
   -webkit-animation: particle-animation-24 60s infinite;
           animation: particle-animation-24 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.5;
-  height: 30px;
-  width: 30px;
+<<<<<<< Updated upstream
+  opacity: 0.13;
+  height: 14px;
+  width: 14px;
   -webkit-animation-delay: -4.8s;
           animation-delay: -4.8s;
-  transform: translate3d(77vw, 53vh, 72px);
-  background: #53d926;
+  transform: translate3d(49vw, 8vh, 30px);
+  background: #29d926;
 =======
-  opacity: 0.48;
-  height: 34px;
-  width: 34px;
+  opacity: 0.7;
+  height: 8px;
+  width: 8px;
   -webkit-animation-delay: -4.8s;
           animation-delay: -4.8s;
-  transform: translate3d(49vw, 68vh, 66px);
-  background: #d98b26;
->>>>>>> AlexBranch
+  transform: translate3d(77vw, 53vh, 34px);
+  background: #a326d9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-25 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(74vw, 17vh, 67px);
+<<<<<<< Updated upstream
+    transform: translate3d(30vw, 54vh, 59px);
 =======
-    transform: translate3d(34vw, 25vh, 20px);
->>>>>>> AlexBranch
+    transform: translate3d(40vw, 42vh, 51px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-25 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(74vw, 17vh, 67px);
+<<<<<<< Updated upstream
+    transform: translate3d(30vw, 54vh, 59px);
 =======
-    transform: translate3d(34vw, 25vh, 20px);
->>>>>>> AlexBranch
+    transform: translate3d(40vw, 42vh, 51px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(25) {
   -webkit-animation: particle-animation-25 60s infinite;
           animation: particle-animation-25 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.56;
-  height: 11px;
-  width: 11px;
+<<<<<<< Updated upstream
+  opacity: 0.01;
+  height: 10px;
+  width: 10px;
   -webkit-animation-delay: -5s;
           animation-delay: -5s;
-  transform: translate3d(43vw, 61vh, 3px);
-  background: #a3d926;
+  transform: translate3d(66vw, 34vh, 9px);
+  background: #26d99a;
 =======
-  opacity: 0.29;
-  height: 12px;
-  width: 12px;
+  opacity: 0.31;
+  height: 14px;
+  width: 14px;
   -webkit-animation-delay: -5s;
           animation-delay: -5s;
-  transform: translate3d(42vw, 5vh, 16px);
-  background: #7a26d9;
->>>>>>> AlexBranch
+  transform: translate3d(57vw, 6vh, 25px);
+  background: #d93526;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-26 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(52vw, 80vh, 20px);
+<<<<<<< Updated upstream
+    transform: translate3d(63vw, 20vh, 62px);
 =======
-    transform: translate3d(78vw, 55vh, 45px);
->>>>>>> AlexBranch
+    transform: translate3d(50vw, 65vh, 79px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-26 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(52vw, 80vh, 20px);
+<<<<<<< Updated upstream
+    transform: translate3d(63vw, 20vh, 62px);
 =======
-    transform: translate3d(78vw, 55vh, 45px);
->>>>>>> AlexBranch
+    transform: translate3d(50vw, 65vh, 79px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(26) {
   -webkit-animation: particle-animation-26 60s infinite;
           animation: particle-animation-26 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.67;
-  height: 35px;
-  width: 35px;
+<<<<<<< Updated upstream
+  opacity: 0.57;
+  height: 7px;
+  width: 7px;
   -webkit-animation-delay: -5.2s;
           animation-delay: -5.2s;
-  transform: translate3d(18vw, 19vh, 64px);
-  background: #d9d926;
+  transform: translate3d(62vw, 39vh, 54px);
+  background: #d95c26;
 =======
-  opacity: 0.54;
-  height: 28px;
-  width: 28px;
+  opacity: 0.1;
+  height: 8px;
+  width: 8px;
   -webkit-animation-delay: -5.2s;
           animation-delay: -5.2s;
-  transform: translate3d(54vw, 4vh, 24px);
-  background: #7126d9;
->>>>>>> AlexBranch
+  transform: translate3d(41vw, 38vh, 27px);
+  background: #71d926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-27 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(60vw, 34vh, 47px);
+<<<<<<< Updated upstream
+    transform: translate3d(44vw, 17vh, 9px);
 =======
-    transform: translate3d(47vw, 59vh, 16px);
->>>>>>> AlexBranch
+    transform: translate3d(49vw, 66vh, 15px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-27 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(60vw, 34vh, 47px);
+<<<<<<< Updated upstream
+    transform: translate3d(44vw, 17vh, 9px);
 =======
-    transform: translate3d(47vw, 59vh, 16px);
->>>>>>> AlexBranch
+    transform: translate3d(49vw, 66vh, 15px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(27) {
   -webkit-animation: particle-animation-27 60s infinite;
           animation: particle-animation-27 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.22;
-  height: 34px;
-  width: 34px;
+<<<<<<< Updated upstream
+  opacity: 0.42;
+  height: 11px;
+  width: 11px;
   -webkit-animation-delay: -5.4s;
           animation-delay: -5.4s;
-  transform: translate3d(66vw, 11vh, 73px);
-  background: #4ad926;
+  transform: translate3d(19vw, 58vh, 52px);
+  background: #c4d926;
 =======
-  opacity: 0.07;
-  height: 9px;
-  width: 9px;
+  opacity: 0.57;
+  height: 26px;
+  width: 26px;
   -webkit-animation-delay: -5.4s;
           animation-delay: -5.4s;
-  transform: translate3d(60vw, 66vh, 24px);
-  background: #265fd9;
->>>>>>> AlexBranch
+  transform: translate3d(30vw, 30vh, 9px);
+  background: #2cd926;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-28 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(23vw, 66vh, 35px);
+<<<<<<< Updated upstream
+    transform: translate3d(37vw, 66vh, 29px);
 =======
-    transform: translate3d(53vw, 43vh, 100px);
->>>>>>> AlexBranch
+    transform: translate3d(60vw, 51vh, 4px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-28 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(23vw, 66vh, 35px);
+<<<<<<< Updated upstream
+    transform: translate3d(37vw, 66vh, 29px);
 =======
-    transform: translate3d(53vw, 43vh, 100px);
->>>>>>> AlexBranch
+    transform: translate3d(60vw, 51vh, 4px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(28) {
   -webkit-animation: particle-animation-28 60s infinite;
           animation: particle-animation-28 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.55;
-  height: 30px;
-  width: 30px;
+<<<<<<< Updated upstream
+  opacity: 0.13;
+  height: 9px;
+  width: 9px;
   -webkit-animation-delay: -5.6s;
           animation-delay: -5.6s;
-  transform: translate3d(27vw, 64vh, 52px);
-  background: #2694d9;
+  transform: translate3d(40vw, 61vh, 21px);
+  background: #d92c26;
 =======
-  opacity: 0.66;
-  height: 6px;
-  width: 6px;
+  opacity: 0.69;
+  height: 15px;
+  width: 15px;
   -webkit-animation-delay: -5.6s;
           animation-delay: -5.6s;
-  transform: translate3d(14vw, 55vh, 44px);
-  background: #d6d926;
->>>>>>> AlexBranch
+  transform: translate3d(43vw, 58vh, 38px);
+  background: #2665d9;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-29 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(74vw, 22vh, 76px);
+<<<<<<< Updated upstream
+    transform: translate3d(66vw, 18vh, 10px);
 =======
-    transform: translate3d(48vw, 64vh, 13px);
->>>>>>> AlexBranch
+    transform: translate3d(89vw, 24vh, 60px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-29 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(74vw, 22vh, 76px);
+<<<<<<< Updated upstream
+    transform: translate3d(66vw, 18vh, 10px);
 =======
-    transform: translate3d(48vw, 64vh, 13px);
->>>>>>> AlexBranch
+    transform: translate3d(89vw, 24vh, 60px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(29) {
   -webkit-animation: particle-animation-29 60s infinite;
           animation: particle-animation-29 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.47;
-  height: 22px;
-  width: 22px;
-  -webkit-animation-delay: -5.8s;
-          animation-delay: -5.8s;
-  transform: translate3d(75vw, 13vh, 84px);
-  background: #94d926;
-=======
-  opacity: 0.41;
+<<<<<<< Updated upstream
+  opacity: 0.21;
   height: 30px;
   width: 30px;
   -webkit-animation-delay: -5.8s;
           animation-delay: -5.8s;
-  transform: translate3d(44vw, 72vh, 96px);
-  background: #9d26d9;
->>>>>>> AlexBranch
+  transform: translate3d(87vw, 46vh, 73px);
+  background: #26d94d;
+=======
+  opacity: 0.69;
+  height: 9px;
+  width: 9px;
+  -webkit-animation-delay: -5.8s;
+          animation-delay: -5.8s;
+  transform: translate3d(86vw, 64vh, 71px);
+  background: #d926b5;
+>>>>>>> Stashed changes
 }
 
 @-webkit-keyframes particle-animation-30 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(38vw, 37vh, 95px);
+<<<<<<< Updated upstream
+    transform: translate3d(7vw, 19vh, 30px);
 =======
-    transform: translate3d(63vw, 67vh, 64px);
->>>>>>> AlexBranch
+    transform: translate3d(88vw, 28vh, 42px);
+>>>>>>> Stashed changes
   }
 }
 
 @keyframes particle-animation-30 {
   100% {
-<<<<<<< HEAD
-    transform: translate3d(38vw, 37vh, 95px);
+<<<<<<< Updated upstream
+    transform: translate3d(7vw, 19vh, 30px);
 =======
-    transform: translate3d(63vw, 67vh, 64px);
->>>>>>> AlexBranch
+    transform: translate3d(88vw, 28vh, 42px);
+>>>>>>> Stashed changes
   }
 }
 
 .particle:nth-child(30) {
   -webkit-animation: particle-animation-30 60s infinite;
           animation: particle-animation-30 60s infinite;
-<<<<<<< HEAD
-  opacity: 0.1;
+<<<<<<< Updated upstream
+  opacity: 0.54;
   height: 24px;
   width: 24px;
   -webkit-animation-delay: -6s;
           animation-delay: -6s;
-  transform: translate3d(37vw, 56vh, 67px);
-  background: #2659d9;
+  transform: translate3d(66vw, 39vh, 22px);
+  background: #d92629;
 =======
-  opacity: 0.31;
-  height: 6px;
-  width: 6px;
+  opacity: 0.14;
+  height: 33px;
+  width: 33px;
   -webkit-animation-delay: -6s;
           animation-delay: -6s;
-  transform: translate3d(38vw, 62vh, 93px);
-  background: #2626d9;
+  transform: translate3d(90vw, 43vh, 24px);
+  background: #d326d9;
+>>>>>>> Stashed changes
 }
 
 .admin-form {
@@ -3647,7 +3650,6 @@ input[type=checkbox].switch_1:checked:after {
 
 .webflow_style_input input::-webkit-input-placeholder {
   color: #7881A1;
->>>>>>> AlexBranch
 }
 
 #dashboard {
