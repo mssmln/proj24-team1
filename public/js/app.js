@@ -55102,8 +55102,6 @@ var app = new Vue({
         _this3.arrayResults = []; // lo svuotiamo
 
         _this3.flats.forEach(function (item, index) {
-          console.log(index);
-
           if (item.address.includes(_this3.filteredFlats)) {
             _this3.arrayResults.push(item);
 
@@ -55251,13 +55249,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
->>>>>>> AlexBranch
+__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

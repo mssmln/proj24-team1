@@ -9,20 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-input, textarea { border-style: none; background: transparent; outline: none; }
-
-
-
+input { border-style: none; background: transparent; outline: none; }
 
 ul li {
     list-style: none;
 }
 
-
-
 a {
     color: #757575;
+    text-decoration: none;
 }
 
 canvas {

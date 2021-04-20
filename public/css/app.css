@@ -1627,7 +1627,7 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
 }
 
 .container {
-  width: 1400px;
+  width: 1500px;
   margin: 0 auto;
 }
 
@@ -1655,6 +1655,7 @@ ul li {
 
 a {
   color: #757575;
+  text-decoration: none;
 }
 
 canvas {
@@ -1850,11 +1851,20 @@ table tbody tr td {
 }
 
 .nav_header {
+  z-index: 99;
   height: 80px;
   padding: 0px 80px;
   background-color: black;
   display: flex;
   align-items: center;
+}
+
+.nav_header .box_logo a svg {
+  color: #e0565b;
+  width: 102px;
+  height: 32px;
+  fill: currentcolor;
+  display: block;
 }
 
 .nav_header div {
@@ -1918,6 +1928,10 @@ table tbody tr td {
 
 .nav_header .nav_list ul .active:hover a::after {
   background-color: #ffffff;
+}
+
+.nav_header .nav_user {
+  z-index: 99;
 }
 
 .nav_header .nav_user ul {
@@ -1991,14 +2005,158 @@ table tbody tr td {
   display: block;
 }
 
+main .login_page,
 main .register_page {
   /* Bg temporaneo */
   background-color: #222430;
+  padding-top: 50px;
+  height: calc(100vh - 130px);
 }
 
-main .login_page {
-  /* Bg temporaneo */
-  background-color: #222430;
+main .login_page .checkbox_login,
+main .register_page .checkbox_login {
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 400px;
+  margin: 30px auto;
+  justify-content: space-between;
+}
+
+main .login_page .checkbox_login .fix_flex,
+main .register_page .checkbox_login .fix_flex {
+  display: flex;
+  align-items: center;
+}
+
+main .login_page .checkbox_login label,
+main .register_page .checkbox_login label {
+  margin-left: 15px;
+}
+
+main .login_page .checkbox_login .login_button,
+main .register_page .checkbox_login .login_button {
+  color: white;
+  font-size: 25px;
+  background-color: #db4c51;
+  padding: 5px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main .login_page .checkbox_register,
+main .register_page .checkbox_register {
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 400px;
+  margin: 30px auto;
+  justify-content: flex-end;
+}
+
+main .login_page .checkbox_register .login_button,
+main .register_page .checkbox_register .login_button {
+  color: white;
+  font-size: 25px;
+  background-color: #db4c51;
+  padding: 5px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main .home_guest .border_input {
+  height: 20px;
+  background-color: black;
+}
+
+main .home_guest .jumbotron {
+  height: 700px;
+  position: relative;
+  background-color: black;
+}
+
+main .home_guest .jumbotron .container {
+  height: 100%;
+}
+
+main .home_guest .jumbotron .container .home_title {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+main .home_guest .jumbotron .container .bg_jumbotron {
+  height: 85%;
+  background-image: url(/images/jumbo_bg.webp?fda584768ab66d78b0bbfd5a1cd78124);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+main .home_guest .jumbotron .container .input_search_home {
+  background-color: white;
+  width: 35%;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main .home_guest .jumbotron .container .input_search_home input.search_home_guest {
+  z-index: 10;
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+main .home_guest .jumbotron .container .input_search_home input.search_home_guest::-moz-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.3;
+}
+
+main .home_guest .jumbotron .container .input_search_home input.search_home_guest:-ms-input-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.3;
+}
+
+main .home_guest .jumbotron .container .input_search_home input.search_home_guest::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.3;
+}
+
+main .home_guest .jumbotron .container .flat_list {
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 50px 30px 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+}
+
+main .home_guest .jumbotron .container .flat_list .flat {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  color: black;
+}
+
+main .home_guest .jumbotron .container .flat_list .flat h4 {
+  padding-bottom: 10px;
+}
+
+main .home_guest .jumbotron .container .flat_list .flat img {
+  height: 90px;
+  max-width: 130px;
+  border-radius: 20px;
+  margin-right: 50px;
 }
 
 footer {
