@@ -4,17 +4,39 @@
 
 footer{
     height: 200px;
+    
 
     .container{
         #footer_main{
             display: flex;
             justify-content: space-between;
+            padding-top: 10px;
+            
+            ul{
+                li{
+                    padding: 5px 0px;
+                    a{
+                        color:black;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            h4{
+                text-transform: uppercase;
+                font-size: 15px;
+                padding-bottom: 10px;
+            }
         }
 
         #footer_bottom{
             display: flex;
             align-items: center;
             padding-top: 10px;
+            a{
+                color:black;
+            }
         }
         .footer_bottom_item{
             flex-basis: calc(100% / 2);

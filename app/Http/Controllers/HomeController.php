@@ -23,8 +23,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Flat $flat)
     {
+        $data = [
+            'flat' => $flat->all()->toArray()
+        ];
+        // dd($data[0]['slug']); it worked perfectly
         return view('guest.home');
     }
 
@@ -32,9 +36,14 @@ class HomeController extends Controller
         return view('guest.search');
     }
 
-    public function flat(){
+    public function flat($slug){
+        $flatSlug = Flat::where('slug', $slug)->first();
+        $data = [
+            'flat' => $flatSlug
+        ];
+        dd($data);
         
-        return view('guest.flat.index');
+        return view('guest.flat.index' , $data);
     }
 
     public function message(){
