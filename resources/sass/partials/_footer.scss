@@ -9,6 +9,20 @@ footer{
         #footer_main{
             display: flex;
             justify-content: space-between;
+            padding-top: 10px;
+            ul{
+                li{
+                    padding: 5px 0px;
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            h4{
+                text-transform: uppercase;
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
         }
 
         #footer_bottom{
