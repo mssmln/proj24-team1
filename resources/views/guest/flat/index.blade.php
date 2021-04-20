@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'cerca un appartamento')
+@section('title', 'flat in details')
 
 
 @section('content')
-questa è la view index di guest 
+view flat in details
 @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -14,6 +14,9 @@ questa è la view index di guest
             </ul>
         </div>
     @endif
+
+
+    <!-- @dd($flat); it worked smoothly , slug -->
 
 
 <form action="{{ route('send_message') }}" method="post">
