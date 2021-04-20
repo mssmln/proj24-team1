@@ -2167,12 +2167,35 @@ footer {
 footer .container #footer_main {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
+}
+
+footer .container #footer_main ul li {
+  padding: 5px 0px;
+}
+
+footer .container #footer_main ul li a {
+  color: black;
+}
+
+footer .container #footer_main ul li:hover {
+  text-decoration: underline;
+}
+
+footer .container #footer_main h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  padding-bottom: 10px;
 }
 
 footer .container #footer_bottom {
   display: flex;
   align-items: center;
   padding-top: 10px;
+}
+
+footer .container #footer_bottom a {
+  color: black;
 }
 
 footer .container .footer_bottom_item {
