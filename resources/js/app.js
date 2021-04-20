@@ -10,16 +10,16 @@ import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 
 
-var liveclock = document.getElementById('clock');
-function time() {
-    var d = new Date();
-    var s = d.getSeconds();
-    var m = d.getMinutes();
-    var h = d.getHours();
-    // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-    liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-}
-setInterval(time, 1000);
+// var liveclock = document.getElementById('clock');
+// function time() {
+//     var d = new Date();
+//     var s = d.getSeconds();
+//     var m = d.getMinutes();
+//     var h = d.getHours();
+//     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+//     liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+// }
+// setInterval(time, 1000);
 
 
 // Confirm button by sweetalert2
@@ -141,6 +141,7 @@ const app = new Vue({
             })
             .catch((error) => alert('Sorry, API (Flats) does not work...'));
 
+
     },
     methods: {
         // googleAdresses(){ it worked perfectly, we just use tomtom's one
@@ -182,36 +183,46 @@ const app = new Vue({
                 this.classNavbarClick = 'hidden_item';
             }
         },
-        searchWithinRadius(){
+        getLanLon(){
             axios
             .get('https://api.tomtom.com/search/2/geocode/' +  this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
+                console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
-
-
+        },
+        searchWithinRadius(){
             axios
-            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=50&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
+            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
             .then((result) => {
+                console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
-                // console.log(this.filteredFlats);
 
                 let location = [];
                 this.filteredFlats.forEach(item => {
-                    location.push(item.address.freeformAddress);
+                    if(!location.includes(item.address.freeformAddress)){
+                        location.push(item.address.freeformAddress);
+                    }
                 });
 
                 this.arrayResults = []; // lo svuotiamo
-                this.flats.forEach((item,index) => {
-                    if(item.address.includes(this.filteredFlats)){
-                        this.arrayResults.push(item);
-                        console.log('bo' , this.arrayResults);
-                    }
+                this.flats.forEach(item => {
+                    location.forEach(element => {
+                        console.log(element);
+                        if(item.address.includes(element)){
+                            if(!this.arrayResults.includes(item)){
+                                this.arrayResults.push(item);
+                            }
+                        }
+                    });
+                    console.log('bo' , item);
                 });
+                console.log(this.arrayResults);
+
 
                 
             })
@@ -220,3 +231,5 @@ const app = new Vue({
     }
     
 });
+
+
