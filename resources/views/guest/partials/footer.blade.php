@@ -4,9 +4,9 @@
     <div class="container">
         <section id="footer_main">
             <div class="footer_main_item">
-                <h3 class="footer_title">
-                    informazioni
-                </h3>
+                <h4 class="footer_title">
+                    Informazioni
+                </h4>
                 <ul>
                     <li><a href="#">Come funzione Airbnb</a></li>
                     <li><a href="#">Newsletter</a></li>
@@ -23,9 +23,9 @@
             {{-- FOOTER MAIN ITEM --}}
     
             <div class="footer_main_item">
-                <h3 class="footer_title">
-                    community
-                </h3>
+                <h4 class="footer_title">
+                    Community
+                </h4>
                 <ul>
                     <li><a href="#">Diversità e appartenenza</a></li>
                     <li><a href="#">Accessibilità</a></li>
@@ -38,9 +38,9 @@
             {{-- FOOTER MAIN ITEM --}}
     
             <div class="footer_main_item">
-                <h3 class="footer_title">
-                    ospita
-                </h3>
+                <h4 class="footer_title">
+                    Ospita
+                </h4>
                 <ul>
                     <li><a href="#">Diventa un host</a></li>
                     <li><a href="#">Offri un'esperienza online</a></li>
@@ -53,9 +53,9 @@
             {{-- FOOTER MAIN ITEM --}}
     
             <div class="footer_main_item">
-                <h3 class="footer_title">
-                    assistenza
-                </h3>
+                <h4 class="footer_title">
+                    Assistenza
+                </h4>
                 <ul>
                     <li><a href="#">La nostra risposta all'emergenza covid-19</a></li>
                     <li><a href="#">Centro Assistenza</a></li>
@@ -86,8 +86,9 @@
                         <i class="fas fa-globe"></i> <a href="#">Italiano</a>
                     </li>
                     <li>
-                        <i class="fas fa-euro-sign"></i><a href="#">Euro</a>
+                        <i class="fas fa-euro-sign"></i>
                     </li>
+                    <li><a href="#">Euro</a></li>
                     <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li> <a href="#"><i class="fab fa-instagram-square"></i></a></li>
