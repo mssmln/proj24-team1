@@ -1,30 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="home_guest">
+    <div class="border_input"></div>
 
-<div class="content">
-    <div class="title m-b-md">
-        <h1>AIRBNB Vigorsol</h1>
-    </div>
+    <div class="jumbotron">
 
-    <div class="links">
-        <a href="{{route('search')}}">Ricerca</a>
-        <a href="{{route('flat')}}">Appartamenti</a>
-    </div>
-</div>
+        
+        {{-- <h1>AIRBNB</h1> --}}
+        
+        <div class="container">
+    
+            {{-- Input Ricerca --}}
+            <div class="input_search_home">
+                <input v-model="query" type="text" class="search_home_guest" @keyup="searchWithinRadius" placeholder="Dove vuoi andare? ">
+                <div class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
+                    {{-- Stampa Ricerca --}}
+                    <a href="#" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="flat in flats"> 
+                        <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
+                        <div>
+                            <h4> @{{ flat.title }}</h4>
+                            <h5> @{{ flat.address }}</h5>
+                        </div>
+                    </a>
 
-<div class="input-group input-group-sm mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-sm">Ricerca</span>
-    </div>
-    <input v-model="query" type="text" class="form-control">
-</div>
+                </div>
+            </div>
 
-<!-- flats -->
-<div class="container">
-    <div class="flat" :class="(query != '') ? 'show_item' : 'hidden_item'" v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="flat in flats">
-        <h2> @{{ flat.address }}</h2>
-        <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
+            <div class="bg_jumbotron"></div>
+       
+            <div class="home_title">
+                <h1>Goditi il soggiorno ogni giorno</h1>
+            </div>
+
+        </div>
+
+
+
+
+
+
     </div>
 </div>
 

@@ -55020,7 +55020,14 @@ var app = new Vue({
     numero: '',
     indirizzo: '',
     // Navbar Header
-    classNavbarClick: 'hidden_item'
+    classNavbarClick: 'hidden_item',
+    // lat e lng per il raggio di 20km , metodo searchWithinRadius
+    latitude: '',
+    longitude: '',
+    radius: 20000,
+    // 20km
+    filteredFlats: [],
+    arrayResults: []
   },
   created: function created() {
     var _this = this;
@@ -55073,6 +55080,37 @@ var app = new Vue({
       } else {
         this.classNavbarClick = 'hidden_item';
       }
+    },
+    searchWithinRadius: function searchWithinRadius() {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
+        _this3.arrayResults = result.data.results;
+        _this3.latitude = _this3.arrayResults[0].position.lat;
+        _this3.longitude = _this3.arrayResults[0].position.lon;
+      }); // .catch((error) => alert('this API (Tomtom nested) does not work',error));
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=50&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN").then(function (result) {
+        _this3.filteredFlats = result.data.results; // console.log(this.filteredFlats);
+
+        var location = [];
+
+        _this3.filteredFlats.forEach(function (item) {
+          location.push(item.address.freeformAddress);
+        });
+
+        _this3.arrayResults = []; // lo svuotiamo
+
+        _this3.flats.forEach(function (item, index) {
+          if (item.address.includes(_this3.filteredFlats)) {
+            _this3.arrayResults.push(item);
+
+            console.log('bo', _this3.arrayResults);
+          }
+        });
+      })["catch"](function (error) {
+        return console.log('this API (filteredFlat) does not work', error);
+      });
     }
   }
 });

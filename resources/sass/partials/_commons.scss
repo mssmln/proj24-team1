@@ -9,20 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 input { border-style: none; background: transparent; outline: none; }
-
-
-
 
 ul li {
     list-style: none;
 }
 
-
-
 a {
     color: #757575;
+    text-decoration: none;
 }
 
 canvas {
@@ -43,6 +38,11 @@ table{
     }
 }
 
+.input-services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 .show_item{
@@ -50,6 +50,10 @@ table{
 }
 .hidden_item{
     display: none;
+}
+
+.not-usable {
+    cursor: not-allowed;
 }
 
 

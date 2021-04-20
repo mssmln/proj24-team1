@@ -1,9 +1,121 @@
+main .login_page,
 main .register_page {
     /* Bg temporaneo */
     background-color: #222430;
+    padding-top: 50px;
+    height: calc(100vh - 130px);
+    .checkbox_login {
+        display: flex;
+        align-items: center;
+        color: white;
+        max-width: 400px;
+        margin: 30px auto;
+        justify-content: space-between;
+        .fix_flex{
+            display: flex;
+            align-items: center;
+        }
+        label {
+            margin-left: 15px;
+        }
+        .login_button {
+            color: white;
+            font-size: 25px;
+            background-color: #db4c51;
+            padding: 5px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
+    .checkbox_register {
+        display: flex;
+        align-items: center;
+        color: white;
+        max-width: 400px;
+        margin: 30px auto;
+        justify-content: flex-end;
+        .login_button {
+            color: white;
+            font-size: 25px;
+            background-color: #db4c51;
+            padding: 5px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
 }
 
-main .login_page {
-    /* Bg temporaneo */
-    background-color: #222430;
+main .home_guest {
+    .border_input {
+        height: 20px;
+        background-color: black;
+    }
+    .jumbotron {
+        height: 700px;
+        
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        .container {
+            height: 100%;
+            .home_title {
+                text-align: center;
+                color: white;
+                margin-top: 30px;
+            }
+            .bg_jumbotron {
+                height: 85%;
+                background-image: url('../../image/jumbo_bg.webp');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 5px;
+            }
+            .input_search_home {
+                background-color: white;
+                width: 35%;
+                height: 40px;
+                border-radius: 20px;
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                input.search_home_guest {
+                    z-index: 10;
+                    padding: 0 30px;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1rem;
+                    &::placeholder {
+                        text-align: center;
+                        font-size: 1.2rem;
+                        opacity: 0.3;
+                    }
+                }
+            }
+            .flat_list {
+                background-color: rgb(247, 247, 247);
+                width: 100%;
+                padding: 50px 30px 0;
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                border-radius: 20px;
+                .flat {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    color: black;
+                    h4 {
+                        padding-bottom: 10px;
+                    }
+                    img {
+                        height: 90px;
+                        max-width: 130px;
+                        border-radius: 20px;
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+    }
 }
