@@ -54908,19 +54908,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-
-var liveclock = document.getElementById('clock');
-
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-
-  liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-}
-
-setInterval(time, 1000); // Confirm button by sweetalert2
+ // var liveclock = document.getElementById('clock');
+// function time() {
+//     var d = new Date();
+//     var s = d.getSeconds();
+//     var m = d.getMinutes();
+//     var h = d.getHours();
+//     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+//     liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+// }
+// setInterval(time, 1000);
+// Confirm button by sweetalert2
 
 var forms = document.getElementsByClassName("form-delete");
 
@@ -55081,33 +55079,46 @@ var app = new Vue({
         this.classNavbarClick = 'hidden_item';
       }
     },
-    searchWithinRadius: function searchWithinRadius() {
+    getLanLon: function getLanLon() {
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
         _this3.arrayResults = result.data.results;
         _this3.latitude = _this3.arrayResults[0].position.lat;
         _this3.longitude = _this3.arrayResults[0].position.lon;
+        console.log('prima api lat e lon', _this3.latitude, _this3.longitude);
       }); // .catch((error) => alert('this API (Tomtom nested) does not work',error));
+    },
+    searchWithinRadius: function searchWithinRadius() {
+      var _this4 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=50&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN").then(function (result) {
-        _this3.filteredFlats = result.data.results; // console.log(this.filteredFlats);
-
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN").then(function (result) {
+        console.log('seconda api', _this4.latitude, _this4.longitude);
+        _this4.filteredFlats = result.data.results;
         var location = [];
 
-        _this3.filteredFlats.forEach(function (item) {
-          location.push(item.address.freeformAddress);
-        });
-
-        _this3.arrayResults = []; // lo svuotiamo
-
-        _this3.flats.forEach(function (item, index) {
-          if (item.address.includes(_this3.filteredFlats)) {
-            _this3.arrayResults.push(item);
-
-            console.log('bo', _this3.arrayResults);
+        _this4.filteredFlats.forEach(function (item) {
+          if (!location.includes(item.address.freeformAddress)) {
+            location.push(item.address.freeformAddress);
           }
         });
+
+        _this4.arrayResults = []; // lo svuotiamo
+
+        _this4.flats.forEach(function (item) {
+          location.forEach(function (element) {
+            console.log(element);
+
+            if (item.address.includes(element)) {
+              if (!_this4.arrayResults.includes(item)) {
+                _this4.arrayResults.push(item);
+              }
+            }
+          });
+          console.log('bo', item);
+        });
+
+        console.log(_this4.arrayResults);
       })["catch"](function (error) {
         return console.log('this API (filteredFlat) does not work', error);
       });
@@ -55249,8 +55260,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
