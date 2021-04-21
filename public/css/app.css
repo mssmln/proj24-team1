@@ -2069,7 +2069,7 @@ main .home_guest .border_input {
 }
 
 main .home_guest .jumbotron {
-  height: 700px;
+  height: 680px;
   position: relative;
   background-color: black;
 }
@@ -2156,6 +2156,47 @@ main .home_guest .jumbotron .container .flat_list .flat img {
   max-width: 130px;
   border-radius: 20px;
   margin-right: 50px;
+}
+
+main .home_guest .become_a_host {
+  margin: 60px 0;
+}
+
+main .home_guest .become_a_host .container {
+  background-image: url(/images/become_a_host.webp?3f7bdebf7569ce73634db343ed7983e2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  background-position: center;
+}
+
+main .home_guest .become_a_host .banner_become {
+  width: 38%;
+  padding: 100px 80px;
+  color: white;
+}
+
+main .home_guest .become_a_host .banner_become h2 {
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+}
+
+main .home_guest .become_a_host .banner_become p {
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+main .home_guest .become_a_host .banner_become a {
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+main .home_guest .become_a_host .banner_become a:hover {
+  background-color: #e0565b;
+  color: white;
 }
 
 footer {
