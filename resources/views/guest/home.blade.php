@@ -11,14 +11,10 @@
             {{-- Input Ricerca --}}
             <div class="input_search_home">
                 <input v-model="query" @keyup="getLanLon" type="text" class="search_home_guest"  placeholder="Dove vuoi andare? ">
-                <button @click="searchWithinRadius">search</button>
                 <div class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
+                    
                     {{-- Stampa Ricerca --}}
-<<<<<<< HEAD
-                    <a href="#" class="flat" v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="(flat,index) in flats"> 
-=======
                     <a :href="'flat/' + flat.slug" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="(flat,index) in flats"> 
->>>>>>> MaxBranch
                         <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
                         <div>
                             <h4> @{{ flat.title }}</h4>

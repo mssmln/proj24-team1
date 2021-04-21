@@ -55263,6 +55263,7 @@ __webpack_require__.r(__webpack_exports__);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 =======
@@ -55281,6 +55282,10 @@ module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp
 =======
 __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> main
+=======
+__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 >>>>>>> main
 
 
