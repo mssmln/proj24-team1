@@ -26,10 +26,10 @@ class HomeController extends Controller
     public function index(Flat $flat)
     {
         $data = [
-            'flat' => $flat->all()->toArray()
+            'flat' => $flat->all()
         ];
         // dd($data[0]['slug']); it worked perfectly
-        return view('guest.home');
+        return view('guest.home', $data);
     }
 
     public function search(){
@@ -37,6 +37,7 @@ class HomeController extends Controller
     }
 
     public function flat($slug){
+
         $flatSlug = Flat::where('slug', $slug)->first();
         $data = [
             'flat' => $flatSlug

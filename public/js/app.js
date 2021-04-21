@@ -55250,6 +55250,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
@@ -55257,6 +55258,15 @@ module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\res
 __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+__webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> main
+>>>>>>> main
 
 
 /***/ })

@@ -14,7 +14,7 @@
         {{-- inizio nav-list --}}
         <div class="nav_list">
             <ul>
-                <li><a href="{{route('flat')}}">Appartamenti</a></li>
+                <li><a href="#">Appartamenti</a></li>
                 <li class="active"><a href="#">Esperienze</a></li>
                 <li><a href="{{route('search')}}">Ricerca Avanzata</a></li>
             </ul>
