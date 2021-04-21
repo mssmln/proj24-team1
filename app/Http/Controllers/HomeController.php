@@ -23,13 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Flat $flat)
+    public function index()
     {
-        $data = [
-            'flat' => $flat->all()
-        ];
-        // dd($data[0]['slug']); it worked perfectly
-        return view('guest.home', $data);
+        return view('guest.home');
     }
 
     public function search(){
