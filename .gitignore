@@ -13,5 +13,5 @@ yarn-error.log
 
 
 
-/public/js
-/public/css
+/public/js/app.js
+/public/css/app.css
