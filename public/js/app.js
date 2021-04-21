@@ -37630,7 +37630,7 @@ Object.keys(_instanceMethods_js__WEBPACK_IMPORTED_MODULE_3__).forEach(key => {
 
 SweetAlert.DismissReason = _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_1__["DismissReason"]
 
-SweetAlert.version = '10.16.0'
+SweetAlert.version = '10.16.2'
 
 /* harmony default export */ __webpack_exports__["default"] = (SweetAlert);
 
@@ -37846,21 +37846,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_main", function() { return _main; });
 /* harmony import */ var _utils_params_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/params.js */ "./node_modules/sweetalert2/src/utils/params.js");
 /* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_Timer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/Timer.js */ "./node_modules/sweetalert2/src/utils/Timer.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _utils_setParameters_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/setParameters.js */ "./node_modules/sweetalert2/src/utils/setParameters.js");
-/* harmony import */ var _utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/getTemplateParams.js */ "./node_modules/sweetalert2/src/utils/getTemplateParams.js");
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _utils_openPopup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/openPopup.js */ "./node_modules/sweetalert2/src/utils/openPopup.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
-/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
-/* harmony import */ var _buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./buttons-handlers.js */ "./node_modules/sweetalert2/src/instanceMethods/buttons-handlers.js");
-/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./keydown-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/keydown-handler.js");
-/* harmony import */ var _popup_click_handler_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./popup-click-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/popup-click-handler.js");
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
-
+/* harmony import */ var _utils_Timer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/Timer.js */ "./node_modules/sweetalert2/src/utils/Timer.js");
+/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
+/* harmony import */ var _utils_setParameters_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/setParameters.js */ "./node_modules/sweetalert2/src/utils/setParameters.js");
+/* harmony import */ var _utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/getTemplateParams.js */ "./node_modules/sweetalert2/src/utils/getTemplateParams.js");
+/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
+/* harmony import */ var _utils_openPopup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/openPopup.js */ "./node_modules/sweetalert2/src/utils/openPopup.js");
+/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
+/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
+/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
+/* harmony import */ var _buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./buttons-handlers.js */ "./node_modules/sweetalert2/src/instanceMethods/buttons-handlers.js");
+/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./keydown-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/keydown-handler.js");
+/* harmony import */ var _popup_click_handler_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./popup-click-handler.js */ "./node_modules/sweetalert2/src/instanceMethods/popup-click-handler.js");
+/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
 
 
 
@@ -37880,35 +37878,35 @@ __webpack_require__.r(__webpack_exports__);
 function _main (userParams, mixinParams = {}) {
   Object(_utils_params_js__WEBPACK_IMPORTED_MODULE_0__["showWarningsForParams"])(Object.assign({}, mixinParams, userParams))
 
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance._destroy()
+  if (_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance) {
+    _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance._destroy()
   }
-  _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].currentInstance = this
+  _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].currentInstance = this
 
   const innerParams = prepareParams(userParams, mixinParams)
-  Object(_utils_setParameters_js__WEBPACK_IMPORTED_MODULE_5__["default"])(innerParams)
+  Object(_utils_setParameters_js__WEBPACK_IMPORTED_MODULE_4__["default"])(innerParams)
   Object.freeze(innerParams)
 
   // clear the previous timer
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout.stop()
-    delete _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].timeout
+  if (_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout) {
+    _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout.stop()
+    delete _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].timeout
   }
 
   // clear the restore focus timeout
-  clearTimeout(_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"].restoreFocusTimeout)
+  clearTimeout(_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"].restoreFocusTimeout)
 
   const domCache = populateDomCache(this)
 
   _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["render"](this, innerParams)
 
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_9__["default"].innerParams.set(this, innerParams)
+  _privateProps_js__WEBPACK_IMPORTED_MODULE_8__["default"].innerParams.set(this, innerParams)
 
   return swalPromise(this, domCache, innerParams)
 }
 
 const prepareParams = (userParams, mixinParams) => {
-  const templateParams = Object(_utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_6__["getTemplateParams"])(userParams)
+  const templateParams = Object(_utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_5__["getTemplateParams"])(userParams)
   const showClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"].showClass, mixinParams.showClass, templateParams.showClass, userParams.showClass)
   const hideClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"].hideClass, mixinParams.hideClass, templateParams.hideClass, userParams.hideClass)
   const params = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_0__["default"], mixinParams, templateParams, userParams) // precedence is described in #2131
@@ -37932,29 +37930,23 @@ const swalPromise = (instance, domCache, innerParams) => {
       instance.closePopup({ isDismissed: true, dismiss })
     }
 
-    _privateMethods_js__WEBPACK_IMPORTED_MODULE_10__["default"].swalPromiseResolve.set(instance, resolve)
+    _privateMethods_js__WEBPACK_IMPORTED_MODULE_9__["default"].swalPromiseResolve.set(instance, resolve)
 
-    domCache.confirmButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleConfirmButtonClick"])(instance, innerParams)
-    domCache.denyButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleDenyButtonClick"])(instance, innerParams)
-    domCache.cancelButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_12__["handleCancelButtonClick"])(instance, dismissWith)
+    domCache.confirmButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleConfirmButtonClick"])(instance, innerParams)
+    domCache.denyButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleDenyButtonClick"])(instance, innerParams)
+    domCache.cancelButton.onclick = () => Object(_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_11__["handleCancelButtonClick"])(instance, dismissWith)
 
-    domCache.closeButton.onclick = () => dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_15__["DismissReason"].close)
+    domCache.closeButton.onclick = () => dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_14__["DismissReason"].close)
 
-    Object(_popup_click_handler_js__WEBPACK_IMPORTED_MODULE_14__["handlePopupClick"])(instance, domCache, dismissWith)
+    Object(_popup_click_handler_js__WEBPACK_IMPORTED_MODULE_13__["handlePopupClick"])(instance, domCache, dismissWith)
 
-    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__["addKeydownHandler"])(instance, _globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"], innerParams, dismissWith)
+    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__["addKeydownHandler"])(instance, _globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"], innerParams, dismissWith)
 
-    if (innerParams.toast && (innerParams.input || innerParams.footer || innerParams.showCloseButton)) {
-      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["addClass"](document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__["swalClasses"]['toast-column'])
-    } else {
-      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["removeClass"](document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__["swalClasses"]['toast-column'])
-    }
+    Object(_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_10__["handleInputOptionsAndValue"])(instance, innerParams)
 
-    Object(_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_11__["handleInputOptionsAndValue"])(instance, innerParams)
+    Object(_utils_openPopup_js__WEBPACK_IMPORTED_MODULE_7__["openPopup"])(innerParams)
 
-    Object(_utils_openPopup_js__WEBPACK_IMPORTED_MODULE_8__["openPopup"])(innerParams)
-
-    setupTimer(_globalState_js__WEBPACK_IMPORTED_MODULE_7__["default"], innerParams, dismissWith)
+    setupTimer(_globalState_js__WEBPACK_IMPORTED_MODULE_6__["default"], innerParams, dismissWith)
 
     initFocus(domCache, innerParams)
 
@@ -37979,7 +37971,7 @@ const populateDomCache = (instance) => {
     validationMessage: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getValidationMessage"](),
     progressSteps: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getProgressSteps"]()
   }
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_9__["default"].domCache.set(instance, domCache)
+  _privateProps_js__WEBPACK_IMPORTED_MODULE_8__["default"].domCache.set(instance, domCache)
 
   return domCache
 }
@@ -37988,7 +37980,7 @@ const setupTimer = (globalState, innerParams, dismissWith) => {
   const timerProgressBar = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["getTimerProgressBar"]()
   _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__["hide"](timerProgressBar)
   if (innerParams.timer) {
-    globalState.timeout = new _utils_Timer_js__WEBPACK_IMPORTED_MODULE_3__["default"](() => {
+    globalState.timeout = new _utils_Timer_js__WEBPACK_IMPORTED_MODULE_2__["default"](() => {
       dismissWith('timer')
       delete globalState.timeout
     }, innerParams.timer)
@@ -38008,12 +38000,12 @@ const initFocus = (domCache, innerParams) => {
     return
   }
 
-  if (!Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_4__["callIfFunction"])(innerParams.allowEnterKey)) {
+  if (!Object(_utils_utils_js__WEBPACK_IMPORTED_MODULE_3__["callIfFunction"])(innerParams.allowEnterKey)) {
     return blurActiveElement()
   }
 
   if (!focusButton(domCache, innerParams)) {
-    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_13__["setFocus"])(innerParams, -1, 1)
+    Object(_keydown_handler_js__WEBPACK_IMPORTED_MODULE_12__["setFocus"])(innerParams, -1, 1)
   }
 }
 
@@ -38246,7 +38238,6 @@ function removeBodyClasses () {
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['height-auto'],
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['no-backdrop'],
       _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['toast-shown'],
-      _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__["swalClasses"]['toast-column']
     ]
   )
 }
@@ -39675,7 +39666,6 @@ const swalClasses = prefix([
   'no-transition',
   'toast',
   'toast-shown',
-  'toast-column',
   'show',
   'hide',
   'close',
@@ -54908,17 +54898,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
- // var liveclock = document.getElementById('clock');
-// function time() {
-//     var d = new Date();
-//     var s = d.getSeconds();
-//     var m = d.getMinutes();
-//     var h = d.getHours();
-//     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-//     liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-// }
-// setInterval(time, 1000);
-// Confirm button by sweetalert2
+ // Live clock
+
+var liveclock = document.getElementById('clock');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+
+  liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+}
+
+setInterval(time, 1000); // Confirm button by sweetalert2
 
 var forms = document.getElementsByClassName("form-delete");
 
@@ -54947,39 +54940,28 @@ for (var i = 0; i < forms.length; i++) {
   _loop(i);
 }
 
-; // // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
-// var ctx = document.getElementById('line').getContext('2d');
-// var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//         labels: ['Flat 1', 'Flat 2', 'Flat 3'],
-//         datasets: [{
-//             label: 'Views',
-//             data: [98252, 10980, 32684],
-//             backgroundColor: [
-//                 'rgba(247, 147, 26, 0.2)',
-//                 'rgba(54, 162, 235, 0.2)',
-//                 'rgba(133, 187, 101, 0.2)'
-//             ],
-//             borderColor: [
-//                 'rgba(247, 147, 26, 1)',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(133, 187, 101, 1)'
-//             ],
-//             borderWidth: 1,
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 }
-//             }]
-//         }
-//     }
-// });
-
+;
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -55260,33 +55242,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-<<<<<<< HEAD
-__webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\boolean\mamp_public\es_consegnare\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> main
->>>>>>> main
-=======
-__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> main
-=======
-__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> main
-=======
-__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> main
+__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
