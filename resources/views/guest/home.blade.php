@@ -6,9 +6,6 @@
 
     <div class="jumbotron">
 
-        
-        {{-- <h1>AIRBNB</h1> --}}
-
         <div class="container">
     
             {{-- Input Ricerca --}}
@@ -32,15 +29,24 @@
             <div class="home_title">
                 <h1>Goditi il soggiorno ogni giorno</h1>
             </div>
+        </div>
+    </div>
+
+
+
+    <div class="become_a_host">
+
+        <div class="container">
+
+            <h2>Diventa host</h2>
+            <p>Condividi il tuo  spazio per guadagnare qualcosa in più e scoprire nuove opportunità</p>
+            <a href="#">Registrati</a>
 
         </div>
-
-
-
-
-
-
+        
     </div>
+
+
 </div>
 
 @endsection
