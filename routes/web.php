@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/search', 'HomeController@search')->name('search');
+Route::get('/advanced-search', 'HomeController@search')->name('search');
 Route::get('/flat/{slug}', 'HomeController@flat')->name('flat');
-Route::get('/send-message', 'HomeController@message')->name('message');
-Route::post('/flat','HomeController@send_message')->name('send_message');
+Route::get('/sent-message', 'HomeController@message')->name('message');
+Route::post('/flat/{slug}','HomeController@send_message')->name('send_message');
 
 
 

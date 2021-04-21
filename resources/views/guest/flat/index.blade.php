@@ -15,20 +15,17 @@ view flat in details
         </div>
     @endif
 
-
-    <!-- @dd($flat); it worked smoothly , slug -->
-
-
-<form action="{{ route('send_message') }}" method="post">
+<!-- send message to the owner -->
+<form action="{{ route('send_message', $flat->slug ) }}" method="post">
     @csrf 
     @method('POST')
         <div class="input-group input-group-sm mb-3 ">
             <label for="email">Email</label>
-            <input name="email" type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{old('email')}}">
+            <input name="email" type="email" value="{{old('email')}}">
         </div>
         <div class="input-group">
             <label for="message">Messaggio</label>
-            <textarea name="message" class="form-control" aria-label="With textarea">{{old('message')}}</textarea>
+            <textarea name="message">{{old('message')}}</textarea>
         </div>
         <button type="submit" class="btn btn-success">Invia messaggio</button>
     </form>

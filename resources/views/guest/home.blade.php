@@ -17,7 +17,7 @@
                 <button @click="searchWithinRadius">search</button>
                 <div class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
                     {{-- Stampa Ricerca --}}
-                    <a href="#" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="(flat,index) in flats"> 
+                    <a :href="'flat/' + flat.slug" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase())" v-for="(flat,index) in flats"> 
                         <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
                         <div>
                             <h4> @{{ flat.title }}</h4>
