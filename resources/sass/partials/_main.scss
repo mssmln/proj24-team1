@@ -56,6 +56,7 @@ main .home_guest {
         position: relative;
         background-color: rgb(0, 0, 0);
         .container {
+            margin: 0 20px;
             height: 100%;
             .home_title {
                 text-align: center;
@@ -121,6 +122,7 @@ main .home_guest {
     .become_a_host{
         margin: 60px 0;
         .container {
+            margin: 0 20px;
             background-image: url('../../image/become_a_host.webp');
             background-repeat: no-repeat;
             background-size: cover;
