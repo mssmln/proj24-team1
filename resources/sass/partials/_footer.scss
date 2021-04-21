@@ -3,8 +3,8 @@
 
 
 footer{
-    height: 200px;
-    
+    margin: 0 20px;
+    padding-bottom: 30px;
 
     .container{
         #footer_main{
@@ -33,7 +33,7 @@ footer{
         #footer_bottom{
             display: flex;
             align-items: center;
-            padding-top: 10px;
+            padding-top: 30px;
             a{
                 color:black;
             }
