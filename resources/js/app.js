@@ -129,7 +129,8 @@ const app = new Vue({
         longitude: '',
         radius: 20000, // 20km
         filteredFlats: [],
-        arrayResults: []
+        arrayResults: [],
+        
     },
     created(){
 
