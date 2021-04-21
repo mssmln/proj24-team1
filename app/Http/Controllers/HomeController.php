@@ -23,16 +23,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Flat $flat)
+    public function index()
     {
+<<<<<<< HEAD
         $data = [
             'flat' => $flat->all()
         ];
         // dd($data[0]['slug']); it worked perfectly
         return view('guest.home', $data);
+=======
+        return view('guest.home');
+>>>>>>> MaxBranch
     }
 
     public function search(){
+        
         return view('guest.search');
     }
 
@@ -42,7 +47,7 @@ class HomeController extends Controller
         $data = [
             'flat' => $flatSlug
         ];
-        dd($data);
+        // dd($data); it worked smoothly
         
         return view('guest.flat.index' , $data);
     }
@@ -51,18 +56,20 @@ class HomeController extends Controller
         return view('guest.message');
     }
 
-    public function send_message(Request $request){
-
+    public function send_message(Request $request, Flat $flat, $slug){
 
         $request->validate([
             'email' => 'required|email:rfc,dns',
             'message' => 'required|min:1|max:1000'
         ]);
 
+        $id = $flat->where('slug' , $slug)->value('id');
         // dd($data); it worked smoothly
         $newMessage = new Message();
-        // $newMessage->flat_id = $flat->id;
         $newMessage->fill($request->all());
+        $newMessage->flat_id = $id;
+
+        // dd($newMessage); it worked seamlessly
         $newMessage->save();
         
 
