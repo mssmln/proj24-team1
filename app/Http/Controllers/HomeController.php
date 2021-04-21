@@ -26,22 +26,24 @@ class HomeController extends Controller
     public function index(Flat $flat)
     {
         $data = [
-            'flat' => $flat->all()->toArray()
+            'flat' => $flat->all()
         ];
         // dd($data[0]['slug']); it worked perfectly
-        return view('guest.home');
+        return view('guest.home', $data);
     }
 
     public function search(){
+        
         return view('guest.search');
     }
 
     public function flat($slug){
+
         $flatSlug = Flat::where('slug', $slug)->first();
         $data = [
             'flat' => $flatSlug
         ];
-        dd($data);
+        // dd($data); it worked smoothly
         
         return view('guest.flat.index' , $data);
     }
@@ -50,18 +52,20 @@ class HomeController extends Controller
         return view('guest.message');
     }
 
-    public function send_message(Request $request){
-
+    public function send_message(Request $request, Flat $flat, $slug){
 
         $request->validate([
             'email' => 'required|email:rfc,dns',
             'message' => 'required|min:1|max:1000'
         ]);
 
+        $id = $flat->where('slug' , $slug)->value('id');
         // dd($data); it worked smoothly
         $newMessage = new Message();
-        // $newMessage->flat_id = $flat->id;
         $newMessage->fill($request->all());
+        $newMessage->flat_id = $id;
+
+        // dd($newMessage); it worked seamlessly
         $newMessage->save();
         
 
