@@ -47,12 +47,12 @@
         h1 {
             text-align: center;
         }
-        .messages {
+        .last-things {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 25px;
-            .message {
+            .thing {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -63,7 +63,7 @@
                 margin: 5px 10px;
                 border-radius: 20px;
                 box-shadow: 0 -2px 10px rgba(192,192,192, 0.05);
-                .message-info {
+                .thing-info {
                     padding: 0 20px;
                     p {
                         display: -webkit-box;

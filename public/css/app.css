@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .swal2-popup.swal2-toast {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   width: auto;
-  padding: 0.625em;
+  padding: 1.25em;
   overflow-y: hidden;
   background: #19191a;
   box-shadow: 0 0 0.625em #d9d9d9;
@@ -18,7 +18,21 @@
 .swal2-popup.swal2-toast .swal2-title {
   flex-grow: 1;
   justify-content: flex-start;
-  margin: 0 0.6em;
+  margin: 0 0.625em;
+  font-size: 1em;
+}
+
+.swal2-popup.swal2-toast .swal2-loading {
+  justify-content: center;
+}
+
+.swal2-popup.swal2-toast .swal2-input {
+  height: 2em;
+  margin: 0.3125em auto;
+  font-size: 1em;
+}
+
+.swal2-popup.swal2-toast .swal2-validation-message {
   font-size: 1em;
 }
 
@@ -37,15 +51,25 @@
 
 .swal2-popup.swal2-toast .swal2-content {
   justify-content: flex-start;
+  margin: 0 0.625em;
   padding: 0;
   font-size: 1em;
+  text-align: initial;
+}
+
+.swal2-popup.swal2-toast .swal2-html-container {
+  padding: 0.625em 0 0;
+}
+
+.swal2-popup.swal2-toast .swal2-html-container:empty {
+  padding: 0;
 }
 
 .swal2-popup.swal2-toast .swal2-icon {
   width: 2em;
   min-width: 2em;
   height: 2em;
-  margin: 0;
+  margin: 0 0.5em 0 0;
 }
 
 .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
@@ -80,10 +104,14 @@
 }
 
 .swal2-popup.swal2-toast .swal2-actions {
+  flex: 1;
   flex-basis: auto !important;
+  align-self: stretch;
   width: auto;
+  height: 2.2em;
   height: auto;
   margin: 0 0.3125em;
+  margin-top: 0.3125em;
   padding: 0;
 }
 
@@ -1600,32 +1628,6 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   left: auto;
 }
 
-body.swal2-toast-column .swal2-toast {
-  flex-direction: column;
-  align-items: stretch;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-actions {
-  flex: 1;
-  align-self: stretch;
-  height: 2.2em;
-  margin-top: 0.3125em;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-loading {
-  justify-content: center;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-input {
-  height: 2em;
-  margin: 0.3125em auto;
-  font-size: 1em;
-}
-
-body.swal2-toast-column .swal2-toast .swal2-validation-message {
-  font-size: 1em;
-}
-
 .container {
   max-width: 1500px;
   margin: 0 auto;
@@ -1658,9 +1660,12 @@ a {
 }
 
 canvas {
-  max-width: 500px;
+  max-width: 400px;
+  max-height: 400px;
   margin: 20px;
   padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #757575;
 }
 
 table * {
@@ -2077,11 +2082,7 @@ main .home_guest .border_input {
 }
 
 main .home_guest .jumbotron {
-<<<<<<< HEAD
-  height: 700px;
-=======
   height: 680px;
->>>>>>> main
   position: relative;
   background-color: black;
 }
@@ -2171,8 +2172,6 @@ main .home_guest .jumbotron .container .flat_list .flat img {
   margin-right: 50px;
 }
 
-<<<<<<< HEAD
-=======
 main .home_guest .become_a_host {
   margin: 60px 20px;
 }
@@ -2214,6 +2213,7 @@ main .home_guest .become_a_host .banner_become a:hover {
   color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 =======
@@ -2362,6 +2362,8 @@ main .index_flat_guest .container .contact_form .form_message button:hover {
 }
 
 >>>>>>> main
+=======
+>>>>>>> AlexBranch
 footer {
   margin: 0 20px;
   padding-bottom: 30px;
@@ -2471,6 +2473,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(32vw, 49vh, 1px);
 =======
     transform: translate3d(17vw, 2vh, 79px);
@@ -2484,6 +2487,9 @@ button {
 =======
     transform: translate3d(70vw, 69vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(46vw, 39vh, 12px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2493,6 +2499,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(32vw, 49vh, 1px);
 =======
     transform: translate3d(17vw, 2vh, 79px);
@@ -2506,12 +2513,16 @@ button {
 =======
     transform: translate3d(70vw, 69vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(46vw, 39vh, 12px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(1) {
   -webkit-animation: particle-animation-1 60s infinite;
           animation: particle-animation-1 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2557,10 +2568,20 @@ button {
   transform: translate3d(57vw, 31vh, 47px);
   background: #d94d26;
 >>>>>>> main
+=======
+  opacity: 0.01;
+  height: 22px;
+  width: 22px;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  transform: translate3d(40vw, 29vh, 51px);
+  background: #4d26d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-2 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2578,6 +2599,9 @@ button {
 =======
     transform: translate3d(56vw, 63vh, 27px);
 >>>>>>> main
+=======
+    transform: translate3d(6vw, 23vh, 16px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2587,6 +2611,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(19vw, 59vh, 9px);
 =======
     transform: translate3d(88vw, 29vh, 58px);
@@ -2600,12 +2625,16 @@ button {
 =======
     transform: translate3d(56vw, 63vh, 27px);
 >>>>>>> main
+=======
+    transform: translate3d(6vw, 23vh, 16px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(2) {
   -webkit-animation: particle-animation-2 60s infinite;
           animation: particle-animation-2 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2653,10 +2682,20 @@ button {
   transform: translate3d(5vw, 45vh, 6px);
   background: #d9267d;
 >>>>>>> main
+=======
+  opacity: 0.5;
+  height: 18px;
+  width: 18px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  transform: translate3d(68vw, 37vh, 31px);
+  background: #26b2d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-3 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2674,6 +2713,9 @@ button {
 =======
     transform: translate3d(62vw, 33vh, 15px);
 >>>>>>> main
+=======
+    transform: translate3d(89vw, 65vh, 76px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2683,6 +2725,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(58vw, 70vh, 65px);
 =======
     transform: translate3d(75vw, 57vh, 68px);
@@ -2696,12 +2739,16 @@ button {
 =======
     transform: translate3d(62vw, 33vh, 15px);
 >>>>>>> main
+=======
+    transform: translate3d(89vw, 65vh, 76px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(3) {
   -webkit-animation: particle-animation-3 60s infinite;
           animation: particle-animation-3 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2749,10 +2796,20 @@ button {
   transform: translate3d(65vw, 43vh, 26px);
   background: #26d9a3;
 >>>>>>> main
+=======
+  opacity: 0.34;
+  height: 24px;
+  width: 24px;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  transform: translate3d(77vw, 10vh, 72px);
+  background: #6526d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-4 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2770,6 +2827,9 @@ button {
 =======
     transform: translate3d(55vw, 1vh, 21px);
 >>>>>>> main
+=======
+    transform: translate3d(32vw, 7vh, 75px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2779,6 +2839,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(26vw, 37vh, 25px);
 =======
     transform: translate3d(63vw, 40vh, 14px);
@@ -2792,6 +2853,9 @@ button {
 =======
     transform: translate3d(55vw, 1vh, 21px);
 >>>>>>> main
+=======
+    transform: translate3d(32vw, 7vh, 75px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2802,11 +2866,16 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   opacity: 0.6;
+=======
+  opacity: 0.55;
+>>>>>>> AlexBranch
   height: 28px;
   width: 28px;
   -webkit-animation-delay: -0.8s;
           animation-delay: -0.8s;
+<<<<<<< HEAD
   transform: translate3d(58vw, 42vh, 78px);
   background: #26d9b2;
 =======
@@ -2845,10 +2914,15 @@ button {
   transform: translate3d(52vw, 56vh, 80px);
   background: #d92926;
 >>>>>>> main
+=======
+  transform: translate3d(60vw, 37vh, 40px);
+  background: #d95f26;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-5 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2866,6 +2940,9 @@ button {
 =======
     transform: translate3d(71vw, 15vh, 53px);
 >>>>>>> main
+=======
+    transform: translate3d(4vw, 12vh, 28px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2875,6 +2952,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(61vw, 38vh, 73px);
 =======
     transform: translate3d(84vw, 7vh, 4px);
@@ -2888,12 +2966,16 @@ button {
 =======
     transform: translate3d(71vw, 15vh, 53px);
 >>>>>>> main
+=======
+    transform: translate3d(4vw, 12vh, 28px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(5) {
   -webkit-animation: particle-animation-5 60s infinite;
           animation: particle-animation-5 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2941,10 +3023,20 @@ button {
   transform: translate3d(34vw, 58vh, 5px);
   background: #26a6d9;
 >>>>>>> main
+=======
+  opacity: 0.26;
+  height: 35px;
+  width: 35px;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  transform: translate3d(71vw, 58vh, 60px);
+  background: #26d9c4;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-6 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2962,6 +3054,9 @@ button {
 =======
     transform: translate3d(36vw, 50vh, 3px);
 >>>>>>> main
+=======
+    transform: translate3d(87vw, 3vh, 8px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -2971,6 +3066,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(54vw, 50vh, 5px);
 =======
     transform: translate3d(39vw, 26vh, 63px);
@@ -2984,12 +3080,16 @@ button {
 =======
     transform: translate3d(36vw, 50vh, 3px);
 >>>>>>> main
+=======
+    transform: translate3d(87vw, 3vh, 8px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(6) {
   -webkit-animation: particle-animation-6 60s infinite;
           animation: particle-animation-6 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3021,10 +3121,14 @@ button {
 >>>>>>> main
 =======
   opacity: 0.26;
+=======
+  opacity: 0.33;
+>>>>>>> AlexBranch
   height: 13px;
   width: 13px;
   -webkit-animation-delay: -1.2s;
           animation-delay: -1.2s;
+<<<<<<< HEAD
   transform: translate3d(11vw, 42vh, 38px);
   background: #2659d9;
 >>>>>>> main
@@ -3037,10 +3141,15 @@ button {
   transform: translate3d(80vw, 46vh, 72px);
   background: #d92653;
 >>>>>>> main
+=======
+  transform: translate3d(27vw, 56vh, 68px);
+  background: #68d926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-7 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3058,6 +3167,9 @@ button {
 =======
     transform: translate3d(22vw, 31vh, 50px);
 >>>>>>> main
+=======
+    transform: translate3d(1vw, 59vh, 78px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3067,6 +3179,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(60vw, 66vh, 12px);
 =======
     transform: translate3d(50vw, 62vh, 53px);
@@ -3080,12 +3193,16 @@ button {
 =======
     transform: translate3d(22vw, 31vh, 50px);
 >>>>>>> main
+=======
+    transform: translate3d(1vw, 59vh, 78px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(7) {
   -webkit-animation: particle-animation-7 60s infinite;
           animation: particle-animation-7 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3133,10 +3250,20 @@ button {
   transform: translate3d(13vw, 56vh, 57px);
   background: #3526d9;
 >>>>>>> main
+=======
+  opacity: 0.21;
+  height: 20px;
+  width: 20px;
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
+  transform: translate3d(19vw, 58vh, 13px);
+  background: #2f26d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-8 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3154,6 +3281,9 @@ button {
 =======
     transform: translate3d(84vw, 34vh, 4px);
 >>>>>>> main
+=======
+    transform: translate3d(40vw, 37vh, 57px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3163,6 +3293,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(17vw, 50vh, 56px);
 =======
     transform: translate3d(77vw, 4vh, 56px);
@@ -3176,12 +3307,16 @@ button {
 =======
     transform: translate3d(84vw, 34vh, 4px);
 >>>>>>> main
+=======
+    transform: translate3d(40vw, 37vh, 57px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(8) {
   -webkit-animation: particle-animation-8 60s infinite;
           animation: particle-animation-8 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3229,10 +3364,20 @@ button {
   transform: translate3d(85vw, 56vh, 3px);
   background: #c1d926;
 >>>>>>> main
+=======
+  opacity: 0.15;
+  height: 28px;
+  width: 28px;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+  transform: translate3d(50vw, 56vh, 43px);
+  background: #6226d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-9 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3250,6 +3395,9 @@ button {
 =======
     transform: translate3d(33vw, 55vh, 72px);
 >>>>>>> main
+=======
+    transform: translate3d(69vw, 45vh, 66px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3259,6 +3407,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(65vw, 60vh, 26px);
 =======
     transform: translate3d(38vw, 31vh, 68px);
@@ -3272,12 +3421,16 @@ button {
 =======
     transform: translate3d(33vw, 55vh, 72px);
 >>>>>>> main
+=======
+    transform: translate3d(69vw, 45vh, 66px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(9) {
   -webkit-animation: particle-animation-9 60s infinite;
           animation: particle-animation-9 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3325,10 +3478,20 @@ button {
   transform: translate3d(1vw, 8vh, 23px);
   background: #2665d9;
 >>>>>>> main
+=======
+  opacity: 0.59;
+  height: 24px;
+  width: 24px;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
+  transform: translate3d(36vw, 65vh, 57px);
+  background: #26d977;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-10 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3346,6 +3509,9 @@ button {
 =======
     transform: translate3d(55vw, 55vh, 32px);
 >>>>>>> main
+=======
+    transform: translate3d(6vw, 30vh, 74px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3355,6 +3521,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(57vw, 51vh, 69px);
 =======
     transform: translate3d(46vw, 11vh, 52px);
@@ -3368,12 +3535,16 @@ button {
 =======
     transform: translate3d(55vw, 55vh, 32px);
 >>>>>>> main
+=======
+    transform: translate3d(6vw, 30vh, 74px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(10) {
   -webkit-animation: particle-animation-10 60s infinite;
           animation: particle-animation-10 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3416,10 +3587,20 @@ button {
   transform: translate3d(5vw, 4vh, 9px);
   background: #35d926;
 >>>>>>> main
+=======
+  opacity: 0.25;
+  height: 22px;
+  width: 22px;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  transform: translate3d(51vw, 21vh, 70px);
+  background: #d9263b;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-11 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3437,6 +3618,9 @@ button {
 =======
     transform: translate3d(85vw, 53vh, 35px);
 >>>>>>> main
+=======
+    transform: translate3d(62vw, 41vh, 14px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3446,6 +3630,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(42vw, 10vh, 73px);
 =======
     transform: translate3d(80vw, 60vh, 64px);
@@ -3459,12 +3644,16 @@ button {
 =======
     transform: translate3d(85vw, 53vh, 35px);
 >>>>>>> main
+=======
+    transform: translate3d(62vw, 41vh, 14px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(11) {
   -webkit-animation: particle-animation-11 60s infinite;
           animation: particle-animation-11 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3511,10 +3700,20 @@ button {
   transform: translate3d(19vw, 56vh, 49px);
   background: #d92668;
 >>>>>>> main
+=======
+  opacity: 0.23;
+  height: 16px;
+  width: 16px;
+  -webkit-animation-delay: -2.2s;
+          animation-delay: -2.2s;
+  transform: translate3d(24vw, 54vh, 67px);
+  background: #267ad9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-12 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3532,6 +3731,9 @@ button {
 =======
     transform: translate3d(1vw, 4vh, 66px);
 >>>>>>> main
+=======
+    transform: translate3d(54vw, 41vh, 17px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3541,6 +3743,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(66vw, 2vh, 21px);
 =======
     transform: translate3d(26vw, 59vh, 51px);
@@ -3554,12 +3757,16 @@ button {
 =======
     transform: translate3d(1vw, 4vh, 66px);
 >>>>>>> main
+=======
+    transform: translate3d(54vw, 41vh, 17px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(12) {
   -webkit-animation: particle-animation-12 60s infinite;
           animation: particle-animation-12 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3607,10 +3814,20 @@ button {
   transform: translate3d(57vw, 64vh, 59px);
   background: #d93e26;
 >>>>>>> main
+=======
+  opacity: 0.7;
+  height: 13px;
+  width: 13px;
+  -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+  transform: translate3d(85vw, 60vh, 42px);
+  background: #2685d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-13 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3628,6 +3845,9 @@ button {
 =======
     transform: translate3d(33vw, 16vh, 26px);
 >>>>>>> main
+=======
+    transform: translate3d(62vw, 28vh, 59px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3637,6 +3857,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(13vw, 5vh, 64px);
 =======
     transform: translate3d(67vw, 48vh, 68px);
@@ -3650,12 +3871,16 @@ button {
 =======
     transform: translate3d(33vw, 16vh, 26px);
 >>>>>>> main
+=======
+    transform: translate3d(62vw, 28vh, 59px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(13) {
   -webkit-animation: particle-animation-13 60s infinite;
           animation: particle-animation-13 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3703,10 +3928,20 @@ button {
   transform: translate3d(87vw, 59vh, 77px);
   background: #d9a026;
 >>>>>>> main
+=======
+  opacity: 0.64;
+  height: 11px;
+  width: 11px;
+  -webkit-animation-delay: -2.6s;
+          animation-delay: -2.6s;
+  transform: translate3d(51vw, 22vh, 67px);
+  background: #26b8d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-14 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3724,6 +3959,9 @@ button {
 =======
     transform: translate3d(79vw, 9vh, 59px);
 >>>>>>> main
+=======
+    transform: translate3d(85vw, 25vh, 19px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3733,6 +3971,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(50vw, 40vh, 38px);
 =======
     transform: translate3d(11vw, 52vh, 27px);
@@ -3746,12 +3985,16 @@ button {
 =======
     transform: translate3d(79vw, 9vh, 59px);
 >>>>>>> main
+=======
+    transform: translate3d(85vw, 25vh, 19px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(14) {
   -webkit-animation: particle-animation-14 60s infinite;
           animation: particle-animation-14 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3799,10 +4042,20 @@ button {
   transform: translate3d(84vw, 10vh, 52px);
   background: #d9d026;
 >>>>>>> main
+=======
+  opacity: 0.07;
+  height: 12px;
+  width: 12px;
+  -webkit-animation-delay: -2.8s;
+          animation-delay: -2.8s;
+  transform: translate3d(79vw, 29vh, 22px);
+  background: #2697d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-15 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3820,6 +4073,9 @@ button {
 =======
     transform: translate3d(14vw, 34vh, 7px);
 >>>>>>> main
+=======
+    transform: translate3d(73vw, 17vh, 43px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3829,6 +4085,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(18vw, 63vh, 64px);
 =======
     transform: translate3d(4vw, 23vh, 50px);
@@ -3842,12 +4099,16 @@ button {
 =======
     transform: translate3d(14vw, 34vh, 7px);
 >>>>>>> main
+=======
+    transform: translate3d(73vw, 17vh, 43px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(15) {
   -webkit-animation: particle-animation-15 60s infinite;
           animation: particle-animation-15 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3895,10 +4156,20 @@ button {
   transform: translate3d(24vw, 67vh, 56px);
   background: #ca26d9;
 >>>>>>> main
+=======
+  opacity: 0.24;
+  height: 32px;
+  width: 32px;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  transform: translate3d(80vw, 49vh, 71px);
+  background: #6bd926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-16 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3916,6 +4187,9 @@ button {
 =======
     transform: translate3d(64vw, 47vh, 55px);
 >>>>>>> main
+=======
+    transform: translate3d(49vw, 15vh, 66px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -3925,6 +4199,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(4vw, 32vh, 78px);
 =======
     transform: translate3d(81vw, 64vh, 52px);
@@ -3938,12 +4213,16 @@ button {
 =======
     transform: translate3d(64vw, 47vh, 55px);
 >>>>>>> main
+=======
+    transform: translate3d(49vw, 15vh, 66px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(16) {
   -webkit-animation: particle-animation-16 60s infinite;
           animation: particle-animation-16 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3957,10 +4236,14 @@ button {
   background: #9ad926;
 =======
   opacity: 0.27;
+=======
+  opacity: 0.47;
+>>>>>>> AlexBranch
   height: 27px;
   width: 27px;
   -webkit-animation-delay: -3.2s;
           animation-delay: -3.2s;
+<<<<<<< HEAD
   transform: translate3d(7vw, 55vh, 71px);
   background: #d9c726;
 >>>>>>> main
@@ -3991,10 +4274,15 @@ button {
   transform: translate3d(43vw, 40vh, 64px);
   background: #2659d9;
 >>>>>>> main
+=======
+  transform: translate3d(54vw, 40vh, 71px);
+  background: #9a26d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-17 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4012,6 +4300,9 @@ button {
 =======
     transform: translate3d(78vw, 13vh, 57px);
 >>>>>>> main
+=======
+    transform: translate3d(56vw, 46vh, 21px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4021,6 +4312,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(73vw, 4vh, 23px);
 =======
     transform: translate3d(20vw, 44vh, 10px);
@@ -4034,12 +4326,16 @@ button {
 =======
     transform: translate3d(78vw, 13vh, 57px);
 >>>>>>> main
+=======
+    transform: translate3d(56vw, 46vh, 21px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(17) {
   -webkit-animation: particle-animation-17 60s infinite;
           animation: particle-animation-17 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4071,10 +4367,14 @@ button {
 >>>>>>> main
 =======
   opacity: 0.42;
+=======
+  opacity: 0.48;
+>>>>>>> AlexBranch
   height: 11px;
   width: 11px;
   -webkit-animation-delay: -3.4s;
           animation-delay: -3.4s;
+<<<<<<< HEAD
   transform: translate3d(15vw, 70vh, 46px);
   background: #26d9d6;
 >>>>>>> main
@@ -4087,10 +4387,15 @@ button {
   transform: translate3d(50vw, 34vh, 56px);
   background: #26d953;
 >>>>>>> main
+=======
+  transform: translate3d(19vw, 65vh, 77px);
+  background: #2638d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-18 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4108,6 +4413,9 @@ button {
 =======
     transform: translate3d(58vw, 24vh, 24px);
 >>>>>>> main
+=======
+    transform: translate3d(54vw, 65vh, 37px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4117,6 +4425,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(41vw, 65vh, 27px);
 =======
     transform: translate3d(12vw, 37vh, 41px);
@@ -4130,12 +4439,16 @@ button {
 =======
     transform: translate3d(58vw, 24vh, 24px);
 >>>>>>> main
+=======
+    transform: translate3d(54vw, 65vh, 37px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(18) {
   -webkit-animation: particle-animation-18 60s infinite;
           animation: particle-animation-18 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4182,10 +4495,20 @@ button {
   transform: translate3d(73vw, 39vh, 31px);
   background: #7426d9;
 >>>>>>> main
+=======
+  opacity: 0.52;
+  height: 26px;
+  width: 26px;
+  -webkit-animation-delay: -3.6s;
+          animation-delay: -3.6s;
+  transform: translate3d(18vw, 46vh, 62px);
+  background: #d92662;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-19 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4203,6 +4526,9 @@ button {
 =======
     transform: translate3d(84vw, 2vh, 26px);
 >>>>>>> main
+=======
+    transform: translate3d(80vw, 26vh, 67px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4212,6 +4538,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(82vw, 30vh, 55px);
 =======
     transform: translate3d(74vw, 69vh, 21px);
@@ -4225,12 +4552,16 @@ button {
 =======
     transform: translate3d(84vw, 2vh, 26px);
 >>>>>>> main
+=======
+    transform: translate3d(80vw, 26vh, 67px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(19) {
   -webkit-animation: particle-animation-19 60s infinite;
           animation: particle-animation-19 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4278,10 +4609,20 @@ button {
   transform: translate3d(52vw, 51vh, 38px);
   background: #d96526;
 >>>>>>> main
+=======
+  opacity: 0.59;
+  height: 13px;
+  width: 13px;
+  -webkit-animation-delay: -3.8s;
+          animation-delay: -3.8s;
+  transform: translate3d(38vw, 11vh, 3px);
+  background: #26d9be;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-20 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4299,6 +4640,9 @@ button {
 =======
     transform: translate3d(58vw, 16vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(56vw, 33vh, 65px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4308,6 +4652,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(73vw, 65vh, 38px);
 =======
     transform: translate3d(33vw, 5vh, 14px);
@@ -4321,12 +4666,16 @@ button {
 =======
     transform: translate3d(58vw, 16vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(56vw, 33vh, 65px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(20) {
   -webkit-animation: particle-animation-20 60s infinite;
           animation: particle-animation-20 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4374,10 +4723,20 @@ button {
   transform: translate3d(62vw, 24vh, 41px);
   background: #26d9d6;
 >>>>>>> main
+=======
+  opacity: 0.47;
+  height: 27px;
+  width: 27px;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  transform: translate3d(39vw, 35vh, 5px);
+  background: #ca26d9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-21 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4395,6 +4754,9 @@ button {
 =======
     transform: translate3d(2vw, 19vh, 38px);
 >>>>>>> main
+=======
+    transform: translate3d(59vw, 66vh, 2px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4404,6 +4766,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(69vw, 9vh, 45px);
 =======
     transform: translate3d(62vw, 2vh, 51px);
@@ -4417,12 +4780,16 @@ button {
 =======
     transform: translate3d(2vw, 19vh, 38px);
 >>>>>>> main
+=======
+    transform: translate3d(59vw, 66vh, 2px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(21) {
   -webkit-animation: particle-animation-21 60s infinite;
           animation: particle-animation-21 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4469,10 +4836,20 @@ button {
   transform: translate3d(36vw, 4vh, 36px);
   background: #bb26d9;
 >>>>>>> main
+=======
+  opacity: 0.56;
+  height: 33px;
+  width: 33px;
+  -webkit-animation-delay: -4.2s;
+          animation-delay: -4.2s;
+  transform: translate3d(34vw, 13vh, 25px);
+  background: #91d926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-22 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4490,6 +4867,9 @@ button {
 =======
     transform: translate3d(16vw, 27vh, 33px);
 >>>>>>> main
+=======
+    transform: translate3d(18vw, 70vh, 50px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4499,6 +4879,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(11vw, 21vh, 62px);
 =======
     transform: translate3d(22vw, 66vh, 30px);
@@ -4512,12 +4893,16 @@ button {
 =======
     transform: translate3d(16vw, 27vh, 33px);
 >>>>>>> main
+=======
+    transform: translate3d(18vw, 70vh, 50px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(22) {
   -webkit-animation: particle-animation-22 60s infinite;
           animation: particle-animation-22 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4540,10 +4925,14 @@ button {
 >>>>>>> main
 =======
   opacity: 0.32;
+=======
+  opacity: 0.23;
+>>>>>>> AlexBranch
   height: 17px;
   width: 17px;
   -webkit-animation-delay: -4.4s;
           animation-delay: -4.4s;
+<<<<<<< HEAD
   transform: translate3d(50vw, 47vh, 2px);
   background: #d9ac26;
 >>>>>>> main
@@ -4565,10 +4954,15 @@ button {
   transform: translate3d(63vw, 26vh, 54px);
   background: #d026d9;
 >>>>>>> main
+=======
+  transform: translate3d(72vw, 53vh, 53px);
+  background: #d92653;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-23 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4586,6 +4980,9 @@ button {
 =======
     transform: translate3d(75vw, 37vh, 10px);
 >>>>>>> main
+=======
+    transform: translate3d(15vw, 14vh, 67px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4595,6 +4992,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(26vw, 32vh, 75px);
 =======
     transform: translate3d(22vw, 8vh, 30px);
@@ -4608,12 +5006,16 @@ button {
 =======
     transform: translate3d(75vw, 37vh, 10px);
 >>>>>>> main
+=======
+    transform: translate3d(15vw, 14vh, 67px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(23) {
   -webkit-animation: particle-animation-23 60s infinite;
           animation: particle-animation-23 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4661,10 +5063,20 @@ button {
   transform: translate3d(53vw, 1vh, 3px);
   background: #4126d9;
 >>>>>>> main
+=======
+  opacity: 0.29;
+  height: 27px;
+  width: 27px;
+  -webkit-animation-delay: -4.6s;
+          animation-delay: -4.6s;
+  transform: translate3d(49vw, 36vh, 79px);
+  background: #d926a0;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-24 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4682,6 +5094,9 @@ button {
 =======
     transform: translate3d(49vw, 33vh, 76px);
 >>>>>>> main
+=======
+    transform: translate3d(13vw, 38vh, 41px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4691,6 +5106,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(10vw, 27vh, 50px);
 =======
     transform: translate3d(68vw, 15vh, 65px);
@@ -4704,12 +5120,16 @@ button {
 =======
     transform: translate3d(49vw, 33vh, 76px);
 >>>>>>> main
+=======
+    transform: translate3d(13vw, 38vh, 41px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(24) {
   -webkit-animation: particle-animation-24 60s infinite;
           animation: particle-animation-24 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4757,10 +5177,20 @@ button {
   transform: translate3d(11vw, 2vh, 7px);
   background: #b5d926;
 >>>>>>> main
+=======
+  opacity: 0.25;
+  height: 30px;
+  width: 30px;
+  -webkit-animation-delay: -4.8s;
+          animation-delay: -4.8s;
+  transform: translate3d(34vw, 9vh, 28px);
+  background: #7ad926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-25 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4778,6 +5208,9 @@ button {
 =======
     transform: translate3d(85vw, 54vh, 28px);
 >>>>>>> main
+=======
+    transform: translate3d(84vw, 10vh, 43px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4787,6 +5220,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(51vw, 69vh, 53px);
 =======
     transform: translate3d(1vw, 15vh, 46px);
@@ -4800,12 +5234,16 @@ button {
 =======
     transform: translate3d(85vw, 54vh, 28px);
 >>>>>>> main
+=======
+    transform: translate3d(84vw, 10vh, 43px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(25) {
   -webkit-animation: particle-animation-25 60s infinite;
           animation: particle-animation-25 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4827,20 +5265,14 @@ button {
   background: #d9af26;
 >>>>>>> main
 =======
-  opacity: 0.18;
-  height: 6px;
-  width: 6px;
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
-  transform: translate3d(80vw, 70vh, 20px);
-  background: #d98526;
->>>>>>> main
 =======
-  opacity: 0.7;
-  height: 25px;
-  width: 25px;
+>>>>>>> AlexBranch
+  opacity: 0.18;
+  height: 12px;
+  width: 12px;
   -webkit-animation-delay: -5s;
           animation-delay: -5s;
+<<<<<<< HEAD
   transform: translate3d(70vw, 44vh, 1px);
   background: #9726d9;
 >>>>>>> main
@@ -4853,10 +5285,15 @@ button {
   transform: translate3d(2vw, 8vh, 64px);
   background: #d92635;
 >>>>>>> main
+=======
+  transform: translate3d(35vw, 58vh, 73px);
+  background: #a0d926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-26 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4874,6 +5311,9 @@ button {
 =======
     transform: translate3d(29vw, 15vh, 24px);
 >>>>>>> main
+=======
+    transform: translate3d(12vw, 7vh, 23px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4883,6 +5323,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(24vw, 44vh, 72px);
 =======
     transform: translate3d(78vw, 1vh, 36px);
@@ -4896,12 +5337,16 @@ button {
 =======
     transform: translate3d(29vw, 15vh, 24px);
 >>>>>>> main
+=======
+    transform: translate3d(12vw, 7vh, 23px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(26) {
   -webkit-animation: particle-animation-26 60s infinite;
           animation: particle-animation-26 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4924,10 +5369,14 @@ button {
 >>>>>>> main
 =======
   opacity: 0.29;
+=======
+  opacity: 0.15;
+>>>>>>> AlexBranch
   height: 29px;
   width: 29px;
   -webkit-animation-delay: -5.2s;
           animation-delay: -5.2s;
+<<<<<<< HEAD
   transform: translate3d(4vw, 15vh, 63px);
   background: #a0d926;
 >>>>>>> main
@@ -4949,10 +5398,15 @@ button {
   transform: translate3d(50vw, 69vh, 58px);
   background: #d95f26;
 >>>>>>> main
+=======
+  transform: translate3d(63vw, 58vh, 41px);
+  background: #d9263e;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-27 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4970,6 +5424,9 @@ button {
 =======
     transform: translate3d(26vw, 56vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(21vw, 2vh, 36px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -4979,6 +5436,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(12vw, 26vh, 38px);
 =======
     transform: translate3d(52vw, 61vh, 78px);
@@ -4992,12 +5450,16 @@ button {
 =======
     transform: translate3d(26vw, 56vh, 34px);
 >>>>>>> main
+=======
+    transform: translate3d(21vw, 2vh, 36px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(27) {
   -webkit-animation: particle-animation-27 60s infinite;
           animation: particle-animation-27 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5044,10 +5506,20 @@ button {
   transform: translate3d(5vw, 21vh, 20px);
   background: #26d982;
 >>>>>>> main
+=======
+  opacity: 0.14;
+  height: 15px;
+  width: 15px;
+  -webkit-animation-delay: -5.4s;
+          animation-delay: -5.4s;
+  transform: translate3d(41vw, 45vh, 78px);
+  background: #b2d926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-28 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5065,6 +5537,9 @@ button {
 =======
     transform: translate3d(43vw, 3vh, 68px);
 >>>>>>> main
+=======
+    transform: translate3d(60vw, 48vh, 41px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -5074,6 +5549,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(4vw, 3vh, 47px);
 =======
     transform: translate3d(30vw, 34vh, 68px);
@@ -5087,12 +5563,16 @@ button {
 =======
     transform: translate3d(43vw, 3vh, 68px);
 >>>>>>> main
+=======
+    transform: translate3d(60vw, 48vh, 41px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(28) {
   -webkit-animation: particle-animation-28 60s infinite;
           animation: particle-animation-28 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5124,10 +5604,14 @@ button {
 >>>>>>> main
 =======
   opacity: 0.61;
+=======
+  opacity: 0.18;
+>>>>>>> AlexBranch
   height: 21px;
   width: 21px;
   -webkit-animation-delay: -5.6s;
           animation-delay: -5.6s;
+<<<<<<< HEAD
   transform: translate3d(85vw, 10vh, 68px);
   background: #d97126;
 >>>>>>> main
@@ -5140,10 +5624,15 @@ button {
   transform: translate3d(30vw, 12vh, 8px);
   background: #35d926;
 >>>>>>> main
+=======
+  transform: translate3d(85vw, 50vh, 78px);
+  background: #29d926;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-29 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5161,6 +5650,9 @@ button {
 =======
     transform: translate3d(88vw, 66vh, 23px);
 >>>>>>> main
+=======
+    transform: translate3d(39vw, 64vh, 28px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -5170,6 +5662,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(36vw, 21vh, 79px);
 =======
     transform: translate3d(87vw, 16vh, 15px);
@@ -5183,12 +5676,16 @@ button {
 =======
     transform: translate3d(88vw, 66vh, 23px);
 >>>>>>> main
+=======
+    transform: translate3d(39vw, 64vh, 28px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(29) {
   -webkit-animation: particle-animation-29 60s infinite;
           animation: particle-animation-29 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5236,10 +5733,20 @@ button {
   transform: translate3d(2vw, 37vh, 38px);
   background: #26d988;
 >>>>>>> main
+=======
+  opacity: 0.46;
+  height: 12px;
+  width: 12px;
+  -webkit-animation-delay: -5.8s;
+          animation-delay: -5.8s;
+  transform: translate3d(26vw, 56vh, 76px);
+  background: #26afd9;
+>>>>>>> AlexBranch
 }
 
 @-webkit-keyframes particle-animation-30 {
   100% {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5257,6 +5764,9 @@ button {
 =======
     transform: translate3d(47vw, 66vh, 74px);
 >>>>>>> main
+=======
+    transform: translate3d(76vw, 35vh, 76px);
+>>>>>>> AlexBranch
   }
 }
 
@@ -5266,6 +5776,7 @@ button {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translate3d(71vw, 61vh, 73px);
 =======
     transform: translate3d(43vw, 3vh, 37px);
@@ -5279,12 +5790,16 @@ button {
 =======
     transform: translate3d(47vw, 66vh, 74px);
 >>>>>>> main
+=======
+    transform: translate3d(76vw, 35vh, 76px);
+>>>>>>> AlexBranch
   }
 }
 
 .particle:nth-child(30) {
   -webkit-animation: particle-animation-30 60s infinite;
           animation: particle-animation-30 60s infinite;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5331,6 +5846,15 @@ button {
   transform: translate3d(53vw, 9vh, 48px);
   background: #264ad9;
 >>>>>>> main
+=======
+  opacity: 0.59;
+  height: 23px;
+  width: 23px;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+  transform: translate3d(83vw, 70vh, 34px);
+  background: #8e26d9;
+>>>>>>> AlexBranch
 }
 
 .admin-form {
@@ -5541,14 +6065,14 @@ input[type=checkbox].switch_1:checked:after {
   text-align: center;
 }
 
-#dashboard .dashboard-content .messages {
+#dashboard .dashboard-content .last-things {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 25px;
 }
 
-#dashboard .dashboard-content .messages .message {
+#dashboard .dashboard-content .last-things .thing {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5561,11 +6085,11 @@ input[type=checkbox].switch_1:checked:after {
   box-shadow: 0 -2px 10px rgba(192, 192, 192, 0.05);
 }
 
-#dashboard .dashboard-content .messages .message .message-info {
+#dashboard .dashboard-content .last-things .thing .thing-info {
   padding: 0 20px;
 }
 
-#dashboard .dashboard-content .messages .message .message-info p {
+#dashboard .dashboard-content .last-things .thing .thing-info p {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -5573,14 +6097,14 @@ input[type=checkbox].switch_1:checked:after {
   word-break: break-all;
 }
 
-#dashboard .dashboard-content .messages .message a {
+#dashboard .dashboard-content .last-things .thing a {
   color: #db4c51;
   padding: 10px;
   border-radius: 7.5px;
   background-color: rgba(219, 76, 81, 0.2);
 }
 
-#dashboard .dashboard-content .messages .message:hover {
+#dashboard .dashboard-content .last-things .thing:hover {
   box-shadow: 0 -1px 8px rgba(219, 76, 81, 0.2);
   transform: scale(1.05, 1.05);
   cursor: default;
