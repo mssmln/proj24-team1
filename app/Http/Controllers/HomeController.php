@@ -29,7 +29,7 @@ class HomeController extends Controller
     }
 
     public function search(){
-        
+
         return view('guest.search');
     }
 
@@ -40,12 +40,22 @@ class HomeController extends Controller
             'flat' => $flatSlug
         ];
         // dd($data); it worked smoothly
-        
+
         return view('guest.flat.index' , $data);
     }
 
     public function message(){
-        return view('guest.message');
+        // $last_message = Message::where(['id'])->latest();
+        $last_message = Message::orderBy('created_at', 'desc')->first();
+
+        $data = [
+            'message' => $last_message
+        ];
+
+        // dd($data);
+
+
+        return view('guest.message', $data);
     }
 
     public function send_message(Request $request, Flat $flat, $slug){
@@ -63,7 +73,7 @@ class HomeController extends Controller
 
         // dd($newMessage); it worked seamlessly
         $newMessage->save();
-        
+
 
         return redirect()->route('message');
     }
