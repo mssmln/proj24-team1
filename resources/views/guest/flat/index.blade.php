@@ -16,9 +16,6 @@ view flat in details
     @endif
 
 
-    <!-- @dd($flat); it worked smoothly , slug -->
-
-
 <form action="{{ route('send_message') }}" method="post">
     @csrf 
     @method('POST')
