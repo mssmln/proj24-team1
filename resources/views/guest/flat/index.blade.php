@@ -15,13 +15,8 @@ view flat in details
         </div>
     @endif
 
-<<<<<<< HEAD
-
-<form action="{{ route('send_message') }}" method="post">
-=======
 <!-- send message to the owner -->
 <form action="{{ route('send_message', $flat->slug ) }}" method="post">
->>>>>>> MaxBranch
     @csrf 
     @method('POST')
         <div class="input-group input-group-sm mb-3 ">
