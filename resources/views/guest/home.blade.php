@@ -32,18 +32,15 @@
         </div>
     </div>
 
-
-
     <div class="become_a_host">
-
         <div class="container">
-
-            <h2>Diventa host</h2>
-            <p>Condividi il tuo  spazio per guadagnare qualcosa in più e scoprire nuove opportunità</p>
-            <a href="#">Registrati</a>
-
+            <div class="banner_become">
+                <h2>Diventa host</h2>
+                <p>Condividi il tuo  spazio per guadagnare qualcosa in più e scoprire nuove opportunità.</p>
+                <a href="{{ route('register') }}">Registrati</a>
+            </div>
         </div>
-        
+    
     </div>
 
 
