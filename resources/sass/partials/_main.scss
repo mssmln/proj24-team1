@@ -47,7 +47,7 @@ main .register_page {
 
 main .home_guest {
     .border_input {
-        height: 20px;
+        height: 25px;
         background-color: black;
     }
     .jumbotron {
@@ -63,6 +63,7 @@ main .home_guest {
                 margin-top: 30px;
             }
             .bg_jumbotron {
+                margin: 0 20px;
                 height: 85%;
                 background-image: url('../../image/jumbo_bg.webp');
                 background-repeat: no-repeat;
@@ -73,7 +74,7 @@ main .home_guest {
             .input_search_home {
                 background-color: white;
                 width: 35%;
-                height: 40px;
+                height: 50px;
                 border-radius: 20px;
                 position: absolute;
                 top: -20px;
@@ -119,7 +120,7 @@ main .home_guest {
         }
     }
     .become_a_host{
-        margin: 60px 0;
+        margin: 60px 20px;
         .container {
             background-image: url('../../image/become_a_host.webp');
             background-repeat: no-repeat;
