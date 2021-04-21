@@ -14,10 +14,6 @@
         {{-- inizio nav-list --}}
         <div class="nav_list">
             <ul>
-<<<<<<< HEAD
-                <li><a href="#">Appartamenti</a></li>
-=======
->>>>>>> MaxBranch
                 <li class="active"><a href="#">Esperienze</a></li>
                 <li><a href="{{route('search')}}">Ricerca Avanzata</a></li>
             </ul>
