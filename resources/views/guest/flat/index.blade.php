@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'flat in details')
+@section('title', 'Airbnb | Dettagli appartamento')
 
 @section('content')
 <div class="index_flat_guest">
@@ -17,7 +17,7 @@
             </div>
         </div>
         
-        <div class="flex">
+        <div class="flex border_button_finish_flat">
             
             <div class="information_flat">
                 
@@ -230,7 +230,7 @@
                 right: [-25, -35]
             }
             var popup = new tt.Popup({offset: popupOffsets}).setHTML("<p><strong>{{$flat->title}}</strong></p><p>{{$flat->address}}</p>");
-            marker.setPopup(popup).togglePopup();
+            marker.setPopup(popup).togglePopup(off);
         </script>
 
     </div>

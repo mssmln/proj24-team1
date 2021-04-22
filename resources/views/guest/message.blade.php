@@ -1,14 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'manda un messaggio')
-
+@section('title', 'Airbnb | Conferma messaggio')
 
 @section('content')
-<section class="message_result container">
-    <div class="message_title">
-        <h2>Il messaggio è stato inviato correttamente</h2>
-        <i class="far fa-check-circle"></i>
-    </div>
+<section class="message_result container fade-in">
 
 
 
@@ -18,9 +13,7 @@
         <p>La tua mail: {{ $message->email }}</p>
         <p>Riferito all'appartamento: </p>
         <div class="text_message">
-            <p>Messaggio:</p>
-            {{ $message->message }}
-
+            <p><i class="far fa-envelope"></i> : {{ $message->message }}</p>
         </div>
 
 
