@@ -21,11 +21,11 @@
     </section> -->
 
     <!-- Last two or four messages received -->
-    <section class="messages fade-in">
+    <section class="last-things fade-in">
 
-        <div class="message">
+        <div class="thing">
             <a href=""><i class="far fa-envelope"></i></a>
-            <div class="message-info">
+            <div class="thing-info">
                 <p><strong>mail@gmail.com</strong></p>
                 <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
             </div>
@@ -35,9 +35,9 @@
             </form>
         </div>
 
-        <div class="message">
+        <div class="thing">
             <a href=""><i class="far fa-envelope"></i></a>
-            <div class="message-info">
+            <div class="thing-info">
                 <p><strong>mail@gmail.com</strong></p>
                 <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
             </div>
@@ -47,9 +47,9 @@
             </form>
         </div>
 
-        <div class="message">
+        <div class="thing">
             <a href=""><i class="far fa-envelope"></i></a>
-            <div class="message-info">
+            <div class="thing-info">
                 <p><strong>mail@gmail.com</strong></p>
                 <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
             </div>
@@ -59,9 +59,9 @@
             </form>
         </div>
 
-        <div class="message">
+        <div class="thing">
             <a href=""><i class="far fa-envelope"></i></a>
-            <div class="message-info">
+            <div class="thing-info">
                 <p><strong>mail@gmail.com</strong></p>
                 <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
             </div>
@@ -71,15 +71,26 @@
             </form>
         </div>
         
+    </section>
+
+    <section class="last-things fade-in">
+        <div class="thing">
+            <a href=""><i class="far fa-eye"></i></a>
+            <div class="thing-info">
+                <p><strong>98355846</strong></p>
+            </div>
+        </div>
     </section>
 
     <section class="flats">
         <!-- Last 3 Flats created -->
     </section>
 
-    <div class="charts">
-        
-    </div>
+    <!-- <div class="charts">
+
+        <canvas id="myChart"></canvas>
+
+    </div> -->
     
 </div>
 @endsection

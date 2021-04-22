@@ -54908,17 +54908,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
- // var liveclock = document.getElementById('clock');
-// function time() {
-//     var d = new Date();
-//     var s = d.getSeconds();
-//     var m = d.getMinutes();
-//     var h = d.getHours();
-//     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-//     liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-// }
-// setInterval(time, 1000);
-// Confirm button by sweetalert2
+ // Live clock
+
+var liveclock = document.getElementById('clock');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+
+  liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+}
+
+setInterval(time, 1000); // Confirm button by sweetalert2
 
 var forms = document.getElementsByClassName("form-delete");
 
@@ -54947,39 +54950,28 @@ for (var i = 0; i < forms.length; i++) {
   _loop(i);
 }
 
-; // // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
-// var ctx = document.getElementById('line').getContext('2d');
-// var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//         labels: ['Flat 1', 'Flat 2', 'Flat 3'],
-//         datasets: [{
-//             label: 'Views',
-//             data: [98252, 10980, 32684],
-//             backgroundColor: [
-//                 'rgba(247, 147, 26, 0.2)',
-//                 'rgba(54, 162, 235, 0.2)',
-//                 'rgba(133, 187, 101, 0.2)'
-//             ],
-//             borderColor: [
-//                 'rgba(247, 147, 26, 1)',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(133, 187, 101, 1)'
-//             ],
-//             borderWidth: 1,
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 }
-//             }]
-//         }
-//     }
-// });
-
+;
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
