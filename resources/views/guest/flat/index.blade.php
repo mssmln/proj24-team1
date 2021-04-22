@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'flat in details')
+@section('title', 'Airbnb | Dettagli appartamento')
 
 @section('content')
 <div class="index_flat_guest">
