@@ -5,13 +5,12 @@
 @section('content')
 <div class="index_flat_guest">
 
-    {{-- <p>{{$flat}}</p> --}}
-
-    
     <div class="container">
         
         {{-- Immagine appartamento --}}
         <div class="flat_overview">
+            <h1>{{$flat->title}}</h1>
+            <span>{{$flat->address}}</span>
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
             </div>
@@ -23,7 +22,7 @@
                 
                 {{-- Titolo e informazioni stanze... --}}
                 <div class="title">
-                    <h1>{{$flat->title}}</h1>
+                    <h2>Appartamento - Host: {{$flat->user->name}}</h2>
                     
                     <div class="info_rooms">
                         @if($flat->beds > 1)
@@ -188,6 +187,11 @@
                         <textarea rows="7" id="message" name="message">{{old('message')}}</textarea>
                     </div>
                     <button type="submit">Invia messaggio</button>
+
+                    {{-- Prezzo --}}
+                    <div class="location_price">
+                        <h2>Prezzo per notte: {{$flat->price}}€</h2>
+                    </div>
                 </form>
 
             </div>
@@ -207,7 +211,10 @@
 
 <div class="map_flat_container">
     <div class="container">
-    
+        
+        <h2>Indirizzo</h2>
+        <span>{{$flat->address}}</span>
+
         <div id="map"></div>
         <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js'></script>
         <script>

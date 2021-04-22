@@ -72,6 +72,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
     data: {
+        // key:'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
+        key: 'zU1OxhGBvNg4ExAgUfwHTQy7R9JLqlIz',
         flats: [],
         query: '',
         googleApiResults: [],
@@ -130,7 +132,7 @@ const app = new Vue({
         tomtomAdresses(){
             // TomTom APIs
             axios
-            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=' + this.key)
             .then((result) =>{
                 this.tomtomApiResults = result.data.results;
                 // console.log(result);
@@ -157,7 +159,7 @@ const app = new Vue({
         },
         getLanLon(){
             axios
-            .get('https://api.tomtom.com/search/2/geocode/' +  this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
+            .get('https://api.tomtom.com/search/2/geocode/' +  this.query + '.json?limit=1&key='  + this.key)
             .then((result) =>{
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
@@ -170,7 +172,7 @@ const app = new Vue({
         searchWithinRadius(){
             this.arrayAdvancedSearch = '';
             axios
-            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
+            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=" + this.key)
             .then((result) => {
                 // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
@@ -231,6 +233,7 @@ const app = new Vue({
         clearSearchHomePage() {
             setTimeout(() => this.query = '', 2000);
         }
+        
     }
 });
 
