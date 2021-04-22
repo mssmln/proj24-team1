@@ -36,7 +36,6 @@
                 <h2>Diventa host</h2>
                 <p>Condividi il tuo  spazio per guadagnare qualcosa in più e scoprire nuove opportunità.</p>
                 <a href="{{ route('register') }}">Registrati</a>
-                <a href="{{ route('register') }}">sssssssss</a>
             </div>
         </div>
     
