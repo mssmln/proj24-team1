@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', 'Airbnb | Alloggi per vacanze, case, hotel, esperienze e altro')</title>
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -23,6 +23,10 @@
     
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" sizes="16x16 24x24 32x32 48x48 64x64 128x128">
+
 
 
     {{-- Map --}}
@@ -38,7 +42,6 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
     </div>
 
     @yield('map')
