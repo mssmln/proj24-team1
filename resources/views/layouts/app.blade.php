@@ -26,7 +26,7 @@
 
 
     {{-- Map --}}
-    {{-- <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css'> --}}
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css'>
     
 </head>
 <body>
@@ -39,10 +39,14 @@
             @yield('content')
         </main>
         
-        @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-        @include('guest.partials.footer')
-        @endunless
     </div>
+
+    @yield('map')
+    
+    @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
+    @include('guest.partials.footer')
+    @endunless
+
     
 </body>
 </html>
