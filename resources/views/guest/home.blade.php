@@ -10,7 +10,7 @@
 
         {{-- Title --}}
         <div class="home_title">
-            <h1>Nella Natura</h1>
+            <h1>Immergiti nella natura</h1>
             <p>Trova il tuo preferito</p>
             <a href="#"></a>
         </div>

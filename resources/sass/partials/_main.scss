@@ -63,6 +63,7 @@ main .home_guest {
             width: 100%;
         }
         .home_title{
+            width: 20%;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -100,6 +101,7 @@ main .home_guest {
             }
             .flat_list {
                 overflow-y: scroll;
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
                 max-height: 600px;
                 background-color: rgb(247, 247, 247);
                 width: 100%;
