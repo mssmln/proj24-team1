@@ -22,6 +22,7 @@
                 <div class="thing-info">
                     <p><strong>{{ $item->email }}</strong></p>
                     <p><small>{{ $item->message }}</small></p>
+                    <p><small><em>{{ $item->created_at }}</em></small></p>
                 </div>
                 <form action="mailto:{{ $item->email }}" method="post" enctype="text/plain">
                     <!-- <input type="submit" value="&#10132;" id="reply-btn"> -->
