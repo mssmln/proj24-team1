@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Flat;
-use App\Service;
+use App\Flat_Service;
 
 
 class FlatController extends Controller
@@ -23,7 +23,7 @@ class FlatController extends Controller
         return response()->json([
             'success' => true,
             'response' => [
-                'service' =>  Service::all()
+                'service' =>  Flat_Service::all()
             ]
         ]);
     }

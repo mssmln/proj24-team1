@@ -135,7 +135,8 @@ const app = new Vue({
         rooms: '',
         beds: '',
         arrayAdvancedSearch: '',
-        checked: false
+        checked: false,
+        flatServices: []
         
     },
     created(){
@@ -203,6 +204,7 @@ const app = new Vue({
 
         },
         searchWithinRadius(){
+            this.arrayAdvancedSearch = '';
             axios
             .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
             .then((result) => {
@@ -241,7 +243,7 @@ const app = new Vue({
                 this.arrayAdvancedSearch = [];
                 this.arrayResults.forEach((item,index) => {
                     console.log('item' , item.rooms);
-                    if(item.rooms == this.rooms){
+                    if(item.rooms >= this.rooms){
                         this.arrayAdvancedSearch.push(item);
                     }
                 });
@@ -252,7 +254,7 @@ const app = new Vue({
             if(this.beds.length){
                 this.arrayAdvancedSearch = [];
                 this.arrayResults.forEach(item => {
-                    if(item.beds == this.beds){
+                    if(item.beds >= this.beds){
                         this.arrayAdvancedSearch.push(item);
                     }
                 });
@@ -260,19 +262,6 @@ const app = new Vue({
 
             }
 
-
-            axios
-            .get('http://127.0.0.1:8000/api/boolbnb-services-api')
-            .then((result) => {
-                console.log(result.data.response.service);
-            })
-            // // filtra per servizi
-            // if(this.checked){
-            //     this.arrayAdvancedSearch = [];
-            //     this.arrayResults.forEach(item => {
-            //         if(item)
-            //     })
-            // }
 
         }
     }
