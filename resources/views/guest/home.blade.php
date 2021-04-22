@@ -6,7 +6,7 @@
 
     <div class="jumbotron">
 
-        <img src=" {{asset('images/bg_secondary_home.webp')}} " alt="ddd">
+        <img class="bg_jumbo" src=" {{asset('images/bg_secondary_home.webp')}} " alt="ddd">
 
 
         <div class="container">
