@@ -96,6 +96,7 @@
                 <!-- <li id="time"></li> -->
             </ul>
         </nav>
+
     
         <section class="dashboard-content">
             @yield('content')

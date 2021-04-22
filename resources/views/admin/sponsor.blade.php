@@ -2,6 +2,7 @@
 
 @section('title', 'Admin | Sponsor your product')
 
+
 @section('content')
 <h1>Sponsorizzazioni disponibili</h1>
 
