@@ -125,14 +125,19 @@ const app = new Vue({
         numero: '',
         indirizzo: '',
         // Navbar Header
-        classNavbarClick: 'hidden_item',
+        classNavbarClick: 'hidden_item', // css class
         // lat e lng per il raggio di 20km , metodo searchWithinRadius
         latitude: '',
         longitude: '',
         radius: 20000, // 20km
         filteredFlats: [],
         arrayResults: [],
-
+        rooms: '',
+        beds: '',
+        arrayAdvancedSearch: '',
+        checked: false,
+        flatServices: []
+        
     },
     created(){
 
@@ -193,16 +198,17 @@ const app = new Vue({
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                console.log('prima api lat e lon' , this.latitude,this.longitude);
+                // console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
         },
         searchWithinRadius(){
+            this.arrayAdvancedSearch = '';
             axios
             .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
             .then((result) => {
-                console.log('seconda api' ,this.latitude,this.longitude);
+                // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
 
                 let location = [];
@@ -215,21 +221,48 @@ const app = new Vue({
                 this.arrayResults = []; // lo svuotiamo
                 this.flats.forEach(item => {
                     location.forEach(element => {
-                        console.log(element);
+                        // console.log(element);
                         if(item.address.includes(element)){
                             if(!this.arrayResults.includes(item)){
                                 this.arrayResults.push(item);
                             }
                         }
                     });
-                    console.log('bo' , item);
                 });
-                console.log(this.arrayResults);
+                console.log('nel raggio di 20km ' , this.arrayResults);
 
 
 
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
+
+
+
+            // filtra per camere
+            if(this.rooms.length){
+                this.arrayAdvancedSearch = [];
+                this.arrayResults.forEach((item,index) => {
+                    console.log('item' , item.rooms);
+                    if(item.rooms >= this.rooms){
+                        this.arrayAdvancedSearch.push(item);
+                    }
+                });
+                console.log(this.arrayAdvancedSearch);
+            }
+
+            // filtra per beds 
+            if(this.beds.length){
+                this.arrayAdvancedSearch = [];
+                this.arrayResults.forEach(item => {
+                    if(item.beds >= this.beds){
+                        this.arrayAdvancedSearch.push(item);
+                    }
+                });
+                console.log(this.arrayAdvancedSearch);
+
+            }
+
+
         }
     }
 
