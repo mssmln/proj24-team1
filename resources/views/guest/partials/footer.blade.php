@@ -1,6 +1,5 @@
-<!-- codice html -->
-
 <footer>
+
     <div class="container">
         <section id="footer_main">
             <div class="footer_main_item">
@@ -8,7 +7,7 @@
                     Informazioni
                 </h4>
                 <ul>
-                    <li><a href="#">Come funzione Airbnb</a></li>
+                    <li><a href="#">Come funziona Airbnb</a></li>
                     <li><a href="#">Newsletter</a></li>
                     <li><a href="#">Investitori</a></li>
                     <li><a href="#">Airbnb Plus</a></li>
@@ -72,22 +71,21 @@
         <section id="footer_bottom">
             <div class="footer_bottom_item">
                 <small>
-                    <i class="far fa-copyright"></i> 2021 Boolbnb, Credits - Alex, Alessandro, Marco, Massimiliano, Yuri
+                    <i class="far fa-copyright"></i> <em>2021 Boolbnb, Credits - Alex &middot; Alessandro &middot; Marco &middot; Massimiliano &middot; Yuri</em>
                 </small>
             </div>
             {{-- / FOOTER BOTTOM ITEM --}}
             <div class="footer_bottom_icon">
                 <ul>
                     <li>
-                        <i class="fas fa-globe"></i> <a href="#">Italiano</a>
+                        <a href="#"><i class="fas fa-globe"></i> ITA</a>
                     </li>
                     <li>
-                        <i class="fas fa-euro-sign"></i>
+                        <a href="#"><i class="fas fa-euro-sign"></i> EUR</a>
                     </li>
-                    <li><a href="#">Euro</a></li>
-                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li> <a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
             {{-- / FOOTER BOTTOM ITEM --}}
@@ -96,5 +94,4 @@
     </div>
     {{-- / CONTAINER --}}
     
-
 </footer>

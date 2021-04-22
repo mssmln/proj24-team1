@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'cerca un appartamento')
-
+@section('title', 'Airbnb | Ricerca Avanzata')
 
 @section('content')
 <div class="container">

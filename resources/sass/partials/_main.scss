@@ -4,7 +4,7 @@ main .register_page {
     /* Bg temporaneo */
     background-color: #222430;
     padding-top: 50px;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 120px);
     .checkbox_login {
         display: flex;
         align-items: center;
@@ -55,11 +55,25 @@ main .home_guest {
         height: 750px;
         position: relative;
         background-color: rgb(0, 0, 0);
-        img {
-            object-position: center 91%;
+        img.bg_jumbo {
+            object-position: center 70%;
+            position: absolute;
             object-fit: cover;
             height:100%;
             width: 100%;
+        }
+        .home_title{
+            width: 20%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10%;
+            h1 {
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
         }
         .container {
             height: 100%;
@@ -68,12 +82,12 @@ main .home_guest {
                 width: 35%;
                 height: 50px;
                 border-radius: 20px;
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
                 position: absolute;
-                top: -25px;
+                top: 7%;
                 left: 50%;
                 transform: translateX(-50%);
                 input.search_home_guest {
-                    z-index: 10;
                     padding: 0 30px;
                     width: 100%;
                     height: 100%;
@@ -81,22 +95,31 @@ main .home_guest {
                     &::placeholder {
                         text-align: center;
                         font-size: 1.2rem;
-                        opacity: 0.3;
+                        opacity: 0.4;
                     }
                 }
             }
             .flat_list {
+                overflow-y: scroll;
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+                max-height: 600px;
                 background-color: rgb(247, 247, 247);
                 width: 100%;
-                padding: 50px 30px 0;
+                margin-top: 60px;
+                padding: 20px 30px 15px;
                 z-index: -1;
                 position: absolute;
                 top: 0;
                 border-radius: 20px;
+                a:hover {
+                    background-color: #93bd7fad;
+                    border-radius: 20px;
+                }
                 .flat {
+                    margin-bottom: 5px;
                     display: flex;
                     align-items: center;
-                    padding-bottom: 10px;
+                    padding: 10px;
                     color: black;
                     h4 {
                         padding-bottom: 10px;
@@ -163,6 +186,8 @@ main .index_flat_guest {
     .container {
 
         .flat_overview {
+            margin-top: 20px;
+            border-radius: 5px;
             overflow: hidden;
             
             .image_overview {

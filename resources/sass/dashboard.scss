@@ -90,5 +90,17 @@
                 }
             }
         }
+        .charts {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            canvas {
+                max-width: 400px;
+                max-height: 400px;
+                margin: 20px;
+            }
+        }
     }
 }
