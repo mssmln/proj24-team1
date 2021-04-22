@@ -3,20 +3,21 @@
 
 
 footer{
-    margin: 0 20px;
-    padding-bottom: 30px;
+    background-color: #f7f7f7;
+    border-top: 1px solid rgb(221, 221, 221);
 
     .container{
         #footer_main{
             display: flex;
             justify-content: space-between;
-            padding-top: 10px;
+            padding: 30px;
             
             ul{
                 li{
-                    padding: 5px 0px;
+                    padding: 7px 0px;
                     a{
                         color:black;
+                        font-size: 0.85rem;
                     }
                     &:hover{
                         text-decoration: underline;
@@ -31,9 +32,11 @@ footer{
         }
 
         #footer_bottom{
+            border-top: 1px solid rgb(221, 221, 221);
             display: flex;
             align-items: center;
-            padding-top: 30px;
+            background-color: #f7f7f7;
+            padding: 30px;
             a{
                 color:black;
             }
