@@ -264,6 +264,7 @@ const app = new Vue({
 
 
         }
+        
     }
 
 });

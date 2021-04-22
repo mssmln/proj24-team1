@@ -106,6 +106,7 @@
                 <!-- <li id="time"></li> -->
             </ul>
         </nav>
+
     
         <section id="app" class="dashboard-content">
             @yield('content')

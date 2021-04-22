@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
-@section('title', '')
+@section('title', 'Pagina di sponsorizzazione di un appartamento')
+
 
 @section('content')
 <h1>Sponsorizzazioni disponibili</h1>
