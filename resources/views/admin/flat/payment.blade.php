@@ -9,28 +9,27 @@
     @csrf
     @method('POST')
 
-    <div class="form-group">
-        <label for="ad">
-          Type sponsorship
-        </label>
-        <select class="form-control" name="ad">
-
-          @foreach ($types_sponsorship as $sponsorship)
-                <option value="{{$sponsorship->name}}"> {{$sponsorship->name}} - {{$sponsorship->price}}</option>
-          @endforeach
+    <div>
+        <label for="ad">Type sponsorship</label>
+        {{-- Salva il nome del piano per recuperarlo --}}
+        <select name="ad">
+        @foreach ($types_sponsorship as $sponsorship)
+            <option value="{{$sponsorship->name}}"> {{$sponsorship->name}} - {{$sponsorship->price}}</option>
+        @endforeach
 
         </select>
     </div>
 
-    <input type="hidden" value="{{$id}}" name="flat_id">
+    {{-- Non toccare form di braintree --}}
 
+    <input type="hidden" value="{{$id}}" name="flat_id">
     <div id="dropin-container"></div>
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
     <input type="submit" />
 
 </form>
 
-{{-- Non toccare --}}
+{{-- Script di braintree --}}
 <script type="text/javascript">
     // call braintree.dropin.create code here
       const form = document.getElementById('payment-form');
