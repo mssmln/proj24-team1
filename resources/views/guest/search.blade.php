@@ -4,15 +4,36 @@
 
 
 @section('content')
-questa è la view search
+<div class="container">
+
+    <h2>Affina la ricerca dell'appartamento</h2>
+
+    <div class="advanced_research">
+
+        <div class="box_research">
+            <label for="address">Indirizzo</label>
+            <input v-model="query" @keyup="getLanLon" type="text" id="address">
+        </div>
 
 
+        <div class="box_research">
+            <label for="camere">Numero camere</label>
+            <input type="number" v-model="rooms" id="camere">
+        </div>
 
-    <input v-model="query" @keyup="getLanLon" type="text" placeholder="search in here">
-    <button @click="searchWithinRadius">per raggio</button>
+        <div class="box_research">
+            <label for="letti">Letti</label>
+            <input type="number" v-model="beds" id="letti">
+        </div>
 
-    <input type="number" v-model="rooms">
-    <input type="number" v-model="beds">
+        {{-- <div class="box_research">
+            <label for="raggio">Raggio</label>
+            <input type="number" v-model="beds" id="raggio">
+        </div> --}}
+
+    </div>
+
+    <button  @click="searchWithinRadius">per raggio</button>
 
 
     <!-- ricerca per raggio 20km -->
@@ -33,5 +54,11 @@ questa è la view search
         </a>
     </div>
 
-    
+</div>
+
+
+
+
+
+
 @endsection

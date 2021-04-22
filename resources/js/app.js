@@ -132,12 +132,12 @@ const app = new Vue({
         radius: 20000, // 20km
         filteredFlats: [],
         arrayResults: [],
-        rooms: '',
-        beds: '',
+        rooms: '',//preso da input ric. avanz
+        beds: '',//preso da input ric. avanz
         arrayAdvancedSearch: '',
         checked: false,
         flatServices: []
-        
+
     },
     created(){
 
@@ -198,7 +198,7 @@ const app = new Vue({
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                // console.log('prima api lat e lon' , this.latitude,this.longitude);
+                console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
@@ -250,7 +250,7 @@ const app = new Vue({
                 console.log(this.arrayAdvancedSearch);
             }
 
-            // filtra per beds 
+            // filtra per beds
             if(this.beds.length){
                 this.arrayAdvancedSearch = [];
                 this.arrayResults.forEach(item => {

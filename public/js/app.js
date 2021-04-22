@@ -55024,7 +55024,9 @@ var app = new Vue({
     filteredFlats: [],
     arrayResults: [],
     rooms: '',
+    //preso da input ric. avanz
     beds: '',
+    //preso da input ric. avanz
     arrayAdvancedSearch: '',
     checked: false,
     flatServices: []
@@ -55048,11 +55050,7 @@ var app = new Vue({
     //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
     //     .then((result) =>{
     //         this.googleApiResults = result.data.results;
-<<<<<<< HEAD
     //         console.log(this.googleApiResults);
-=======
-    //         console.log(this.googleApiResults); 
->>>>>>> main
     //     })
     //     .catch((error) => console.log('this API (Google) does not work',error));
     // },
@@ -55061,11 +55059,7 @@ var app = new Vue({
 
       // TomTom APIs
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
-<<<<<<< HEAD
         _this2.tomtomApiResults = result.data.results; // console.log(result);
-=======
-        _this2.tomtomApiResults = result.data.results; // console.log(result); 
->>>>>>> main
 
         _this2.lat = _this2.tomtomApiResults[0].position.lat;
         _this2.lng = _this2.tomtomApiResults[0].position.lon;
@@ -55095,7 +55089,8 @@ var app = new Vue({
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.query + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
         _this3.arrayResults = result.data.results;
         _this3.latitude = _this3.arrayResults[0].position.lat;
-        _this3.longitude = _this3.arrayResults[0].position.lon; // console.log('prima api lat e lon' , this.latitude,this.longitude);
+        _this3.longitude = _this3.arrayResults[0].position.lon;
+        console.log('prima api lat e lon', _this3.latitude, _this3.longitude);
       }); // .catch((error) => alert('this API (Tomtom nested) does not work',error));
     },
     searchWithinRadius: function searchWithinRadius() {
@@ -55141,7 +55136,7 @@ var app = new Vue({
           }
         });
         console.log(this.arrayAdvancedSearch);
-      } // filtra per beds 
+      } // filtra per beds
 
 
       if (this.beds.length) {
@@ -55291,13 +55286,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
->>>>>>> main
 
 
 /***/ })
