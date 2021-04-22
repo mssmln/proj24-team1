@@ -1,3 +1,4 @@
+
 main .login_page,
 main .register_page {
     /* Bg temporaneo */
@@ -159,7 +160,6 @@ main .home_guest {
 
 main .index_flat_guest {
     margin: 0 20px;
-
     .flex {
         display: flex;
     }
@@ -216,6 +216,7 @@ main .index_flat_guest {
             }
             .flat_services {
                 padding: 20px 0;
+                border-bottom: 1px solid #dddddd;
                 h2 {
                     margin-bottom: 30px;
                 }
@@ -281,5 +282,16 @@ main .index_flat_guest {
             }
         }
 
+    }
+}
+
+.map_flat_container {
+    margin: 20px;
+    #map {
+        height: 550px;
+        .mapboxgl-popup-close-button{
+            margin-right: 5px;
+            font-size: 25px;
+        }
     }
 }
