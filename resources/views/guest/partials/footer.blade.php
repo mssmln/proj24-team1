@@ -71,13 +71,9 @@
     
         <section id="footer_bottom">
             <div class="footer_bottom_item">
-                <ul>
-                    <li><i class="far fa-copyright"></i> 2021 Airbnb, Inc</li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Termini</a></li>
-                    <li><a href="#">Mappa del sito</a></li>
-                    <li><a href="#">Dettagli dell'azienda</a></li>
-                </ul>
+                <small>
+                    <i class="far fa-copyright"></i> 2021 Boolbnb, Credits - Alex, Alessandro, Marco, Massimiliano, Yuri
+                </small>
             </div>
             {{-- / FOOTER BOTTOM ITEM --}}
             <div class="footer_bottom_icon">

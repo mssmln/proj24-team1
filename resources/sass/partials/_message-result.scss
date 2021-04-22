@@ -1,0 +1,39 @@
+.message_result {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .message_title {
+
+        margin: 20px 0px;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin-right: 10px;
+        }//h2
+
+        i {
+            color: green;
+            font-size: 30px;
+        }//i
+    }//message_title
+
+    .message_content {
+        width: 500px;
+        min-height: 200px;
+        background-color: #f0abad;
+        padding: 20px;
+        border-radius: 20px;
+        border: 4px solid #E0565B;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+    }
+
+
+}

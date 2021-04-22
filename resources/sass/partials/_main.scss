@@ -47,7 +47,7 @@ main .register_page {
 
 main .home_guest {
     .border_input {
-        height: 20px;
+        height: 25px;
         background-color: black;
     }
     .jumbotron {
@@ -63,6 +63,7 @@ main .home_guest {
                 margin-top: 30px;
             }
             .bg_jumbotron {
+                margin: 0 20px;
                 height: 85%;
                 background-image: url('../../image/jumbo_bg.webp');
                 background-repeat: no-repeat;
@@ -73,7 +74,7 @@ main .home_guest {
             .input_search_home {
                 background-color: white;
                 width: 35%;
-                height: 40px;
+                height: 50px;
                 border-radius: 20px;
                 position: absolute;
                 top: -20px;
@@ -119,7 +120,7 @@ main .home_guest {
         }
     }
     .become_a_host{
-        margin: 60px 0;
+        margin: 60px 20px;
         .container {
             background-image: url('../../image/become_a_host.webp');
             background-repeat: no-repeat;
@@ -153,5 +154,132 @@ main .home_guest {
             }
             
         }
+    }
+}
+
+main .index_flat_guest {
+    margin: 0 20px;
+
+    .flex {
+        display: flex;
+    }
+
+    .container {
+
+        .flat_overview {
+            overflow: hidden;
+            
+            .image_overview {
+                height: 500px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .information_flat {
+            padding-right: 50px;
+            width: 70%;
+            .title {
+                padding: 20px 0;
+                border-bottom: 1px solid #dddddd;
+                h1 {
+                    padding: 10px 0;
+                }
+                .info_rooms {
+                    color: gray;
+                    font-weight: bold;
+                }
+            }
+            .more_info {
+                padding: 20px 0 0;
+                border-bottom: 1px solid #dddddd;
+                h3 {
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #777777;
+                    margin-bottom: 20px;
+                }
+                .icons_frame {
+                    width: 5%;
+                    text-align: center;
+                    i {
+                        color: #353535;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .description {
+                padding: 20px 0;
+                border-bottom: 1px solid #dddddd;
+            }
+            .flat_services {
+                padding: 20px 0;
+                h2 {
+                    margin-bottom: 30px;
+                }
+                .flat_services_list {
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    .service_info {
+                        margin-bottom: 25px;
+                        display: flex;
+                        width: 50%;
+                        font-size: 1.2rem;
+                        .icon_services {
+                            width: 10%;
+                            text-align: center;
+                            i {
+                                color: #353535;
+                                font-size: 1.6rem;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .contact_form {
+            width: 30%;
+            .form_message {
+                padding: 50px 0;
+                margin: 30px auto;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+                border-radius: 20px;
+                text-align: center;
+                font-weight: bold;
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                input {
+                    width: 70%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.096);
+                    margin-bottom: 30px;
+                }
+                textarea {
+                    width: 70%;
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.096);
+                    margin-bottom: 30px;
+                }
+                button {
+                    background-color: #e0565b;
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: #c43b3f;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
     }
 }
