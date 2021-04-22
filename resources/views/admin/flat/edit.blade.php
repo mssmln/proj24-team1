@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data" class="admin-form">
+    <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data" class="admin-form container">
     @csrf 
     @method('PUT')
 
