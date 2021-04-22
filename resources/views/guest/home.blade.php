@@ -6,6 +6,9 @@
 
     <div class="jumbotron">
 
+        <img src=" {{asset('images/bg_secondary_home.webp')}} " alt="ddd">
+
+
         <div class="container">
     
             {{-- Input Ricerca --}}
@@ -24,11 +27,6 @@
                 </div>
             </div>
 
-            <div class="bg_jumbotron"></div>
-       
-            <div class="home_title">
-                <h1>Goditi il soggiorno ogni giorno</h1>
-            </div>
         </div>
     </div>
 

@@ -16,9 +16,9 @@
             {{-- inizio nav-list --}}
             <div class="nav_list">
                 <ul>
-                    @if (!Route::has('register') || !Route::has('login'))
+                    @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
                     <li class="active"><a href="{{route('search')}}">Ricerca Avanzata</a></li>
-                    @endif
+                    @endunless
                 </ul>
             </div>
     
