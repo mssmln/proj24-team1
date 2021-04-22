@@ -56,7 +56,8 @@ main .home_guest {
         position: relative;
         background-color: rgb(0, 0, 0);
         img {
-            object-position: center 91%;
+            object-position: center 70%;
+            position: absolute;
             object-fit: cover;
             height:100%;
             width: 100%;

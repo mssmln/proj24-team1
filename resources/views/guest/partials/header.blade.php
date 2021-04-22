@@ -17,7 +17,7 @@
             <div class="nav_list">
                 <ul>
                     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-                    <li class="active"><a href="{{route('search')}}">Ricerca Avanzata</a></li>
+                    <li><a href="{{route('search')}}">Ricerca Avanzata</a></li>
                     @endunless
                 </ul>
             </div>
