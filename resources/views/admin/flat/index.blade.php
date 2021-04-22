@@ -11,6 +11,7 @@
         <tr>
           <th scope="col"><i class="fas fa-hashtag"></i></th>
           <th scope="col"><i class="fas fa-user"></i></th>
+          <th scope="col"><i class="far fa-eye"></i></th>
           <th scope="col">TITLE</th>
           <th scope="col">CREATED AT</th>
           <th scope="col">UPDATED AT</th>
@@ -21,6 +22,7 @@
         <tr>
             <th scope="row">{{ $flat->id }}</th>
             <td>{{ $flat->user->name }} {{ $flat->user->surname }}</td>
+            <td>{{ $flat->views }}</td>
             <td>{{ $flat->title }}</td>
             <td>{{ $flat->created_at }}</td>
             <td>{{ $flat->updated_at }}</td>

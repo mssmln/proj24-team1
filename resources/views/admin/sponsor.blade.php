@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Pagina di sponsorizzazione di un appartamento')
+@section('title', 'Admin | Sponsor your product')
 
 
 @section('content')

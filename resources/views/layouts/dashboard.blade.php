@@ -71,16 +71,6 @@
                         <i class="fas fa-chart-line"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <i class="fas fa-comments"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fas fa-charging-station"></i>
-                    </a>
-                </li>
             </ul>
 
             <!-- Low -->
@@ -108,9 +98,13 @@
         </nav>
 
     
-        <section id="app" class="dashboard-content">
+        <section class="dashboard-content">
             @yield('content')
         </section>
+
+        <!-- <section>
+            @yield('charts')
+        </section> -->
     </div>
     
 </body>

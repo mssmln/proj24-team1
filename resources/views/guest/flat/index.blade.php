@@ -1,57 +1,57 @@
 @extends('layouts.app')
 
-@section('title', 'flat in details')
-
+@section('title', 'Airbnb | Dettagli appartamento')
 
 @section('content')
 <div class="index_flat_guest">
 
     {{-- <p>{{$flat}}</p> --}}
 
+    
     <div class="container">
-
+        
         {{-- Immagine appartamento --}}
         <div class="flat_overview">
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
             </div>
         </div>
-
-        <div class="flex">
-
-            <div class="information_flat">
         
+        <div class="flex border_button_finish_flat">
+            
+            <div class="information_flat">
+                
                 {{-- Titolo e informazioni stanze... --}}
                 <div class="title">
                     <h1>{{$flat->title}}</h1>
-        
+                    
                     <div class="info_rooms">
                         @if($flat->beds > 1)
                         <span>{{$flat->rooms}} Camere -</span>
                         @else 
                         <span>{{$flat->rooms}} Camera -</span>
                         @endif
-        
+                        
                         @if($flat->beds > 1)
                         <span>{{$flat->beds}} Letti -</span>
                         @else 
                         <span>{{$flat->beds}} Letto -</span>
                         @endif
-        
+                        
                         @if($flat->baths > 1)
                         <span>{{$flat->baths}} Bagni -</span>
                         @else 
                         <span>{{$flat->baths}} Bagno -</span>
                         @endif
-        
+                        
                         <span>{{$flat->sqm}} m&#178;</span>
                     </div>
-        
+                    
                 </div>
-
+                
                 {{-- Dettagli Fissi appartamenti --}}
                 <div class="more_info">
-
+                    
                     <div class="flex">
                         <div class="icons_frame">
                             <i class="fas fa-air-freshener"></i>
@@ -61,7 +61,7 @@
                             <p>Questo host si impegna a seguire la procedura avanzata di pulizia in 5 fasi di Airbnb.</p>
                         </div>
                     </div>
-
+                    
                     <div class="flex">
                         <div class="icons_frame">
                             <i class="fas fa-dog"></i>
@@ -71,7 +71,7 @@
                             <p>Questo servizio è molto richiesto dagli ospiti.</p>
                         </div>
                     </div>
-
+                    
                     <div class="flex">
                         <div class="icons_frame">
                             <i class="fas fa-book-open"></i>
@@ -81,75 +81,82 @@
                             <p>L'host vieta di fumare.</p>
                         </div>
                     </div>
-
-
+                    
+                    
                 </div>
-        
+                
                 {{-- Descrizione Appartamento / Se Esiste --}}
                 @if ($flat->overview)
                 <div class="description">
                     <p>{{$flat->overview}}</p>
                 </div>
                 @endif
-
+                
                 {{-- Servizi --}}
                 <div class="flat_services">
                     <h2>Servizi</h2>
-
+                    
                     <div class="flat_services_list">
-                        @foreach ($flat->services as $item)
-                            <div class="service_info">
-    
-                                @if($item->id == 1)
-                                <div class="icon_services">
-                                    <i class="fas fa-wifi"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 2)
-                                <div class="icon_services">
-                                    <i class="fas fa-parking"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 3)
-                                <div class="icon_services">
-                                    <i class="fas fa-swimming-pool"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 4)
-                                <div class="icon_services">
-                                    <i class="fas fa-concierge-bell"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 5)
-                                <div class="icon_services">
-                                    <i class="fas fa-hot-tub"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 6)
-                                <div class="icon_services">
-                                    <i class="fas fa-water"></i>
-                                </div>
-                                <span>{{$item->name}}</span>
-                                @endif
-    
-                            </div>
-                        @endforeach
-                    </div>
 
+                        @if(count($flat->services) > 0)
+                        @foreach ($flat->services as $item)
+
+                        <div class="service_info">
+                            
+                            @if($item->id == 1)
+                            <div class="icon_services">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+                            
+                            @elseif($item->id == 2)
+                            <div class="icon_services">
+                                <i class="fas fa-parking"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+                            
+                            @elseif($item->id == 3)
+                            <div class="icon_services">
+                                <i class="fas fa-swimming-pool"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+                            
+                            @elseif($item->id == 4)
+                            <div class="icon_services">
+                                <i class="fas fa-concierge-bell"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+                            
+                            @elseif($item->id == 5)
+                            <div class="icon_services">
+                                <i class="fas fa-hot-tub"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+                            
+                            @elseif($item->id == 6)
+                            <div class="icon_services">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <span>{{$item->name}}</span>
+
+                            @endif
+                            
+                        </div>
+                        @endforeach
+                        @else 
+                            <div class="service_info">
+                                <div class="icon_services">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <span>Nessun servizio aggiuntivo</span>
+                            </div>
+                        @endif
+                    </div>
+                    
                 </div>
-        
+                
             </div>
-    
+            
             {{-- Form Messaggio --}}
             <div class="contact_form">
     
@@ -182,14 +189,45 @@
 
         </div>
 
-
     </div>
 
     
-
-
-
 </div>
 
 
+
+@endsection
+
+@section('map')
+
+<div class="map_flat_container">
+    <div class="container">
+    
+        <div id="map"></div>
+        <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js'></script>
+        <script>
+            var HQ = { lat: {{$flat->lat}}, lng: {{$flat->lng}} };
+            var map = tt.map({
+                key: 'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
+                container: 'map',
+                center: HQ,
+                zoom:15
+            });
+            map.addControl(new tt.FullscreenControl());
+            map.addControl(new tt.NavigationControl());
+            var marker = new tt.Marker().setLngLat(HQ).addTo(map);
+            var popupOffsets = {
+                top: [0, 0],
+                bottom: [0, -45],
+                'bottom-right': [0, -70],
+                'bottom-left': [0, -70],
+                left: [25, -35],
+                right: [-25, -35]
+            }
+            var popup = new tt.Popup({offset: popupOffsets}).setHTML("<p><strong>{{$flat->title}}</strong></p><p>{{$flat->address}}</p>");
+            marker.setPopup(popup).togglePopup(off);
+        </script>
+
+    </div>
+</div>
 @endsection
