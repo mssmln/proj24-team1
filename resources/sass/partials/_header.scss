@@ -27,6 +27,7 @@ header {
             background-color: black;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         
             .box_logo {
                 a {
@@ -40,86 +41,6 @@ header {
                     }
                 }
             }
-        
-            div {
-                flex-basis: calc(100% / 3);
-            }
-        
-            .nav_list {
-        
-                ul {
-                    display: flex;
-                    justify-content: center;
-        
-        
-                    li {
-                        padding: 10px 20px;
-                        align-items: flex-end;
-        
-                        a {
-                            color: #ffffff;
-                            font-size: 16px;
-                            position: relative;
-                            text-decoration: none;
-        
-                            &::after {
-                                position: absolute;
-                                bottom: -10px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                content: '';
-                                display: block;
-                                height: 2px;
-                                width: 5px;
-                                transition: 0.3s;
-                            }
-                        }
-        
-                        &:hover {
-                            a {
-                                color: #A3A3A3;
-                                text-decoration: none;
-                                transition: 0.3s;
-                            }
-        
-                            a::after {
-                                background-color: #A3A3A3;
-                            }
-        
-                        }//li:hover
-                    }//li
-        
-                    //classe active per l'elemento selezionato nella nav centrale dell'header
-                    .active {
-                        a {
-                            &::after {
-                                position: absolute;
-                                bottom: -10px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                content: '';
-                                display: block;
-                                height: 2px;
-                                width: 15px;
-                                // transition: 0.3s;
-                                background-color: #ffffff;
-                            }
-                        }
-        
-                        &:hover {
-                            a {
-                                color: #ffffff;
-                            }
-                            a::after {
-                                background-color: #ffffff;
-                            }
-                        }
-        
-                    }
-        
-        
-                }//ul nav_list
-            }// nav_list
         
             .nav_user {
                 z-index: 99;
