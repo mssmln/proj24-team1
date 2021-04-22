@@ -36,6 +36,7 @@ class HomeController extends Controller
     public function flat($slug){
 
         $flatSlug = Flat::where('slug', $slug)->first();
+
         $data = [
             'flat' => $flatSlug
         ];

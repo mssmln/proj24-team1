@@ -11,7 +11,6 @@ use Illuminate\Support\Str;
 use App\Flat;
 use App\Service;
 
-
 class FlatController extends Controller
 {
     /**
@@ -103,7 +102,7 @@ class FlatController extends Controller
         $data = [
             'flat' => $flat
         ];
-
+        
         return view('admin.flat.show', $data);
     }
 
