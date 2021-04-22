@@ -9,18 +9,17 @@ require('./bootstrap');
 import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 
-
-// var liveclock = document.getElementById('clock');
-// function time() {
-//     var d = new Date();
-//     var s = d.getSeconds();
-//     var m = d.getMinutes();
-//     var h = d.getHours();
-//     // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-//     liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-// }
-// setInterval(time, 1000);
-
+// Live clock
+var liveclock = document.getElementById('clock');
+function time() {
+    var d = new Date();
+    var s = d.getSeconds();
+    var m = d.getMinutes();
+    var h = d.getHours();
+    // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
+    liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
+}
+setInterval(time, 1000);
 
 // Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
@@ -48,38 +47,41 @@ for( let i = 0; i < forms.length; i++ ) {
     });
 };
 
-// // ! ********** HTML NOT SEE IT, WHY? (base chart) **********
-// var ctx = document.getElementById('line').getContext('2d');
-// var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//         labels: ['Flat 1', 'Flat 2', 'Flat 3'],
-//         datasets: [{
-//             label: 'Views',
-//             data: [98252, 10980, 32684],
-//             backgroundColor: [
-//                 'rgba(247, 147, 26, 0.2)',
-//                 'rgba(54, 162, 235, 0.2)',
-//                 'rgba(133, 187, 101, 0.2)'
-//             ],
-//             borderColor: [
-//                 'rgba(247, 147, 26, 1)',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(133, 187, 101, 1)'
-//             ],
-//             borderWidth: 1,
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 }
-//             }]
-//         }
-//     }
-// });
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
 
 window.Vue = require('vue');
 
@@ -123,13 +125,17 @@ const app = new Vue({
         numero: '',
         indirizzo: '',
         // Navbar Header
-        classNavbarClick: 'hidden_item',
+        classNavbarClick: 'hidden_item', // css class
         // lat e lng per il raggio di 20km , metodo searchWithinRadius
         latitude: '',
         longitude: '',
         radius: 20000, // 20km
         filteredFlats: [],
         arrayResults: [],
+        rooms: '',
+        beds: '',
+        arrayAdvancedSearch: '',
+        checked: false
         
     },
     created(){
@@ -191,7 +197,7 @@ const app = new Vue({
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                console.log('prima api lat e lon' , this.latitude,this.longitude);
+                // console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
@@ -200,7 +206,7 @@ const app = new Vue({
             axios
             .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN")
             .then((result) => {
-                console.log('seconda api' ,this.latitude,this.longitude);
+                // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
 
                 let location = [];
@@ -213,24 +219,64 @@ const app = new Vue({
                 this.arrayResults = []; // lo svuotiamo
                 this.flats.forEach(item => {
                     location.forEach(element => {
-                        console.log(element);
+                        // console.log(element);
                         if(item.address.includes(element)){
                             if(!this.arrayResults.includes(item)){
                                 this.arrayResults.push(item);
                             }
                         }
                     });
-                    console.log('bo' , item);
                 });
-                console.log(this.arrayResults);
+                console.log('nel raggio di 20km ' , this.arrayResults);
 
 
                 
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
+
+
+
+            // filtra per camere
+            if(this.rooms.length){
+                this.arrayAdvancedSearch = [];
+                this.arrayResults.forEach((item,index) => {
+                    console.log('item' , item.rooms);
+                    if(item.rooms == this.rooms){
+                        this.arrayAdvancedSearch.push(item);
+                    }
+                });
+                console.log(this.arrayAdvancedSearch);
+            }
+
+            // filtra per beds 
+            if(this.beds.length){
+                this.arrayAdvancedSearch = [];
+                this.arrayResults.forEach(item => {
+                    if(item.beds == this.beds){
+                        this.arrayAdvancedSearch.push(item);
+                    }
+                });
+                console.log(this.arrayAdvancedSearch);
+
+            }
+
+
+            axios
+            .get('http://127.0.0.1:8000/api/boolbnb-services-api')
+            .then((result) => {
+                console.log(result.data.response.service);
+            })
+            // // filtra per servizi
+            // if(this.checked){
+            //     this.arrayAdvancedSearch = [];
+            //     this.arrayResults.forEach(item => {
+            //         if(item)
+            //     })
+            // }
+
         }
     }
-    
+
 });
 
 

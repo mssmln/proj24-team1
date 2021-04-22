@@ -7,20 +7,19 @@
 questa è la view search
 
 
-<div class="container">
 
     <input v-model="query" @keyup="getLanLon" type="text" placeholder="search in here">
-    <!-- filtri -->
-    <select name="" id="">
-    <option value="">entro i 20km</option>
-    <option value="">più di 20km</option>
+    <button @click="searchWithinRadius">per raggio</button>
 
-    
-    
-    </select>
-    <button @click="searchWithinRadius">search</button>
+    <input type="number" v-model="rooms">
+    <input type="number" v-model="beds">
 
+    <div>
 
-</div>
+        <input type="checkbox" name="Wi-Fi" v-model="checked">
+        <label>@{{ checked }}</label>
+        <input type="checkbox" name="Sauna">
+        <input type="checkbox" name="Parking">
 
+    </div>
 @endsection
