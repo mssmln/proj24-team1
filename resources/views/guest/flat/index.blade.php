@@ -8,6 +8,18 @@
 
     {{-- <p>{{$flat}}</p> --}}
 
+    <div id="map"></div>
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js'></script>
+    <script>
+        var HQ = { lat: 45.0548, lng: 8.0856 };
+        var map = tt.map({
+            key: 'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
+            container: 'map',
+        });
+        map.addControl(new tt.FullscreenControl());
+        map.addControl(new tt.NavigationControl());
+    </script>
+
     <div class="container">
 
         {{-- Immagine appartamento --}}
@@ -105,37 +117,32 @@
                                     <i class="fas fa-wifi"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 2)
+
+                                @elseif($item->id == 2)
                                 <div class="icon_services">
                                     <i class="fas fa-parking"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 3)
+
+                                @elseif($item->id == 3)
                                 <div class="icon_services">
                                     <i class="fas fa-swimming-pool"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 4)
+
+                                @elseif($item->id == 4)
                                 <div class="icon_services">
                                     <i class="fas fa-concierge-bell"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
-                                @endif
-    
-                                @if($item->id == 5)
+
+                                @elseif($item->id == 5)
                                 <div class="icon_services">
                                     <i class="fas fa-hot-tub"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
-                                @endif
     
-                                @if($item->id == 6)
+                                @elseif($item->id == 6)
                                 <div class="icon_services">
                                     <i class="fas fa-water"></i>
                                 </div>
@@ -146,8 +153,13 @@
                         @endforeach
                     </div>
 
+                    
+
                 </div>
         
+
+
+
             </div>
     
             {{-- Form Messaggio --}}
@@ -182,14 +194,9 @@
 
         </div>
 
-
     </div>
 
     
-
-
-
 </div>
-
 
 @endsection

@@ -160,6 +160,10 @@ main .home_guest {
 main .index_flat_guest {
     margin: 0 20px;
 
+    #map {
+        height: 500px;
+    }
+
     .flex {
         display: flex;
     }
