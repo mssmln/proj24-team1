@@ -1,26 +1,21 @@
 @extends('layouts.app')
 
-@section('title', 'manda un messaggio')
-
+@section('title', 'Airbnb | Conferma messaggio')
 
 @section('content')
-<section class="message_result container">
-    <div class="message_title">
-        <h2>Il messaggio è stato inviato correttamente</h2>
-        <i class="far fa-check-circle"></i>
-    </div>
+<section class="message_result container fade-in">
+
+        <h1>Il messaggio è stato inviato correttamente <i class="far fa-check-circle"></i></h1>
 
     <div class="message_content">
-        <p>La tua mail: {{ $message->email }}</p>
-        <p>Riferito all'appartamento: </p>
+        <p><strong>{{ $message->email }}</strong></p>
+        <p><i class="fas fa-home"></i> : {{ $message->flat_id }}</p>
         <div class="text_message">
-            <p>Messaggio:</p>
-            {{ $message->message }}
-
+            <p><i class="far fa-envelope"></i> : {{ $message->message }}</p>
         </div>
-
-
+        <p><small><em><i class="fas fa-info-circle"></i> Il proprietario ti risponderà direttamente alla mail fornita sopra.</em></small></p>
     </div>
+
 </section>
 
 @endsection
