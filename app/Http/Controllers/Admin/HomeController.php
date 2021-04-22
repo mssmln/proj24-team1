@@ -5,12 +5,18 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Flat;
+use App\Message;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('admin.home');
+
+        $data = [
+            'message' => Message::orderBy('created_at', 'desc')->first()
+        ];
+
+        return view('admin.home', $data);
     }
 
     public function sponsor($id_flat){
