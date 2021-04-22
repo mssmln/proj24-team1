@@ -23,53 +23,19 @@
     <!-- Last two or four messages received -->
     <section class="last-things fade-in">
 
-        <div class="thing">
+        @foreach ($message as $messages)
+            <div class="thing">
             <a href=""><i class="far fa-envelope"></i></a>
             <div class="thing-info">
-                <p><strong>mail@gmail.com</strong></p>
-                <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
+                <p><strong>{{ $message->email }}</strong></p>
+                <p><small>{{ $message->message }}</small></p>
             </div>
             <form action="mailto:someone@example.com" method="post" enctype="text/plain">
                 <!-- <input type="submit" value="&#10132;" id="reply-btn"> -->
                 <input type="submit" value="&#10140;" id="reply-btn">
             </form>
         </div>
-
-        <div class="thing">
-            <a href=""><i class="far fa-envelope"></i></a>
-            <div class="thing-info">
-                <p><strong>mail@gmail.com</strong></p>
-                <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
-            </div>
-            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                <!-- <input type="submit" value="&#10132;" id="reply-btn"> -->
-                <input type="submit" value="&#10140;" id="reply-btn">
-            </form>
-        </div>
-
-        <div class="thing">
-            <a href=""><i class="far fa-envelope"></i></a>
-            <div class="thing-info">
-                <p><strong>mail@gmail.com</strong></p>
-                <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
-            </div>
-            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                <!-- <input type="submit" value="&#10132;" id="reply-btn"> -->
-                <input type="submit" value="&#10140;" id="reply-btn">
-            </form>
-        </div>
-
-        <div class="thing">
-            <a href=""><i class="far fa-envelope"></i></a>
-            <div class="thing-info">
-                <p><strong>mail@gmail.com</strong></p>
-                <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non rem minima velit vel amet, exercitationem dolore, explicabo beatae dignissimos natus! Perspiciatis aliquid, maiores nulla harum voluptatum exercitationem at libero?</small></p>
-            </div>
-            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                <!-- <input type="submit" value="&#10132;" id="reply-btn"> -->
-                <input type="submit" value="&#10140;" id="reply-btn">
-            </form>
-        </div>
+        @endforeach
         
     </section>
 
