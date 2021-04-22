@@ -265,7 +265,7 @@ const app = new Vue({
 
         },
         clearSearchHomePage() {
-            this.query = '';
+            setTimeout(() => this.query = '', 2000);
         }
     }
 });
