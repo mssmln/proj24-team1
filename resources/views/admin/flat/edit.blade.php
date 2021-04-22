@@ -126,7 +126,7 @@
             <div>
                 <img src="{{asset('storage/'.$flats->flat_img)}}" alt="{{$flats->title}}">
             </div>
-            <input type="file" id="flat_img" class="input-file" name="image">
+            <input accept="image/*" type="file" id="flat_img" class="input-file" name="image">
         </div>
 
         <!-- Overview  -->

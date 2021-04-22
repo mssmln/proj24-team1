@@ -263,9 +263,11 @@ const app = new Vue({
             }
 
 
+        },
+        clearSearchHomePage() {
+            this.query = '';
         }
     }
-
 });
 
 

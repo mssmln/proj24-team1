@@ -125,7 +125,7 @@
         <!-- Upload an image file  -->
         <div class="admin-form-inputs">
             <label for="flat_img" >Image</label>
-            <input type="file" id="flat_img" class="input-file" name="image">
+            <input accept="image/*" type="file" id="flat_img" class="input-file" name="image">
         </div>
 
         <!-- Overview  -->
