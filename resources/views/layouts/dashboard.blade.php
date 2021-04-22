@@ -96,10 +96,15 @@
                 <!-- <li id="time"></li> -->
             </ul>
         </nav>
+
     
-        <section id="app" class="dashboard-content">
+        <section class="dashboard-content">
             @yield('content')
         </section>
+
+        <!-- <section>
+            @yield('charts')
+        </section> -->
     </div>
     
 </body>

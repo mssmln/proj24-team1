@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <form class="admin-form" action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
+    <form class="admin-form container" action="{{ route('flat.store') }}" method="post" enctype="multipart/form-data">
     @csrf 
     @method('POST')
 
