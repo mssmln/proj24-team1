@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/boolbnb-flats-api', 'Api\FlatController@index');
+Route::get('/boolbnb-services-api', 'Api\FlatController@services');
