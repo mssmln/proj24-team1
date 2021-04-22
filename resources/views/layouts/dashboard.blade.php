@@ -29,7 +29,7 @@
     <!-- Favicon -->
     <link rel="icon" href="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" sizes="16x16 24x24 32x32 48x48 64x64 128x128">
 
-
+    <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
 </head>
 <body style="background-color: #121212">
 
@@ -97,15 +97,15 @@
             </ul>
         </nav>
 
-    
-        <section class="dashboard-content">
+        <section id="app" class="dashboard-content">
             @yield('content')
         </section>
 
-        <!-- <section>
-            @yield('charts')
-        </section> -->
+
+        @yield('charts')
+
     </div>
+    
     
 </body>
 </html>
