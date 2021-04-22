@@ -20,33 +20,33 @@
         <div class="flex">
 
             <div class="information_flat">
-        
+
                 {{-- Titolo e informazioni stanze... --}}
                 <div class="title">
                     <h1>{{$flat->title}}</h1>
-        
+
                     <div class="info_rooms">
                         @if($flat->beds > 1)
                         <span>{{$flat->rooms}} Camere -</span>
-                        @else 
+                        @else
                         <span>{{$flat->rooms}} Camera -</span>
                         @endif
-        
+
                         @if($flat->beds > 1)
                         <span>{{$flat->beds}} Letti -</span>
-                        @else 
+                        @else
                         <span>{{$flat->beds}} Letto -</span>
                         @endif
-        
+
                         @if($flat->baths > 1)
                         <span>{{$flat->baths}} Bagni -</span>
-                        @else 
+                        @else
                         <span>{{$flat->baths}} Bagno -</span>
                         @endif
-        
+
                         <span>{{$flat->sqm}} m&#178;</span>
                     </div>
-        
+
                 </div>
 
                 {{-- Dettagli Fissi appartamenti --}}
@@ -84,7 +84,7 @@
 
 
                 </div>
-        
+
                 {{-- Descrizione Appartamento / Se Esiste --}}
                 @if ($flat->overview)
                 <div class="description">
@@ -99,60 +99,60 @@
                     <div class="flat_services_list">
                         @foreach ($flat->services as $item)
                             <div class="service_info">
-    
+
                                 @if($item->id == 1)
                                 <div class="icon_services">
                                     <i class="fas fa-wifi"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                                 @if($item->id == 2)
                                 <div class="icon_services">
                                     <i class="fas fa-parking"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                                 @if($item->id == 3)
                                 <div class="icon_services">
                                     <i class="fas fa-swimming-pool"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                                 @if($item->id == 4)
                                 <div class="icon_services">
                                     <i class="fas fa-concierge-bell"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                                 @if($item->id == 5)
                                 <div class="icon_services">
                                     <i class="fas fa-hot-tub"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                                 @if($item->id == 6)
                                 <div class="icon_services">
                                     <i class="fas fa-water"></i>
                                 </div>
                                 <span>{{$item->name}}</span>
                                 @endif
-    
+
                             </div>
                         @endforeach
                     </div>
 
                 </div>
-        
+
             </div>
-    
+
             {{-- Form Messaggio --}}
             <div class="contact_form">
-    
+
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -162,14 +162,19 @@
                     </ul>
                 </div>
                 @endif
-    
+
                 <!-- Send message to the owner -->
                 <form action="{{ route('send_message', $flat->slug ) }}" method="post" class="form_message">
-                    @csrf 
+                    @csrf
                     @method('POST')
                     <div>
                         <label for="email">Email</label>
+                        @guest
                         <input name="email" id="email" type="email" value="{{old('email')}}">
+
+                        @else
+                        <input name="email" id="email" type="email" value="{{ Auth::user()->email }}">
+                        @endguest
                     </div>
                     <div>
                         <label for="message">Messaggio</label>
@@ -177,7 +182,7 @@
                     </div>
                     <button type="submit">Invia messaggio</button>
                 </form>
-    
+
             </div>
 
         </div>
@@ -185,7 +190,7 @@
 
     </div>
 
-    
+
 
 
 

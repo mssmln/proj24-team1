@@ -47,41 +47,41 @@ for( let i = 0; i < forms.length; i++ ) {
     });
 };
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+// var ctx = document.getElementById('myChart').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: {
+//         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
 
 window.Vue = require('vue');
 
@@ -132,7 +132,7 @@ const app = new Vue({
         radius: 20000, // 20km
         filteredFlats: [],
         arrayResults: [],
-        
+
     },
     created(){
 
@@ -153,10 +153,10 @@ const app = new Vue({
         //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
         //         this.googleApiResults = result.data.results;
-        //         console.log(this.googleApiResults); 
+        //         console.log(this.googleApiResults);
         //     })
         //     .catch((error) => console.log('this API (Google) does not work',error));
-            
+
         // },
         tomtomAdresses(){
             // TomTom APIs
@@ -164,7 +164,7 @@ const app = new Vue({
             .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN')
             .then((result) =>{
                 this.tomtomApiResults = result.data.results;
-                // console.log(result); 
+                // console.log(result);
                 this.lat = this.tomtomApiResults[0].position.lat;
                 this.lng = this.tomtomApiResults[0].position.lon;
                 this.paese = this.tomtomApiResults[0].address.country;
@@ -227,12 +227,12 @@ const app = new Vue({
                 console.log(this.arrayResults);
 
 
-                
+
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
         }
     }
-    
+
 });
 
 
