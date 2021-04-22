@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data" class="admin-form">
+    <form action="{{ route('flat.update', $flats->id) }}" method="post" enctype="multipart/form-data" class="admin-form container">
     @csrf 
     @method('PUT')
 
@@ -126,7 +126,7 @@
             <div>
                 <img src="{{asset('storage/'.$flats->flat_img)}}" alt="{{$flats->title}}">
             </div>
-            <input type="file" id="flat_img" class="input-file" name="image">
+            <input accept="image/*" type="file" id="flat_img" class="input-file" name="image">
         </div>
 
         <!-- Overview  -->
