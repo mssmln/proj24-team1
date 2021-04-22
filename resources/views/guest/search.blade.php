@@ -13,8 +13,8 @@
 
 
     <!-- ricerca per raggio 20km -->
-    <div>
-        <a :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0">
+    <div class="primo div">
+        <a :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0 && rooms == '' ">
             <img v-if="result.title" :src="'storage/' + result.flat_img" alt="result.flat_img">
             <h2>@{{result.title}}</h2>
             <h3 v-if="result.title">@{{result.address}}</h3>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- ricerca per rooms e beds  -->
-    <div>
+    <div class="secondo div">
         <a :href="'flat/' + result.slug" v-for="result in arrayAdvancedSearch">
             <img :src="'storage/' + result.flat_img" alt="result.flat_img">
             <h2>@{{result.title}}</h2>
