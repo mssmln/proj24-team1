@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Flat;
 use App\Message;
 
@@ -13,7 +14,8 @@ class HomeController extends Controller
     {
 
         $data = [
-            'message' => Message::orderBy('created_at', 'desc')->first()
+            // 'flats' => Flat::all()->where('user_id', Auth::id()),
+            'lastmessages' => Message::all()->sortBy('created_at')
         ];
 
         return view('admin.home', $data);

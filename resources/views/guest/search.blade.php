@@ -1,17 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'cerca un appartamento')
-
+@section('title', 'Airbnb | Ricerca Avanzata')
 
 @section('content')
-questa è la view search
-
-
 
     <input v-model="query" @keyup="getLanLon" type="text" placeholder="search in here">
-    <button @click="searchWithinRadius">per raggio</button>
+    <button @click="searchWithinRadius">RAGGIO</button>
 
     <input type="number" v-model="rooms">
+
     <input type="number" v-model="beds">
 
 
@@ -33,5 +30,4 @@ questa è la view search
         </a>
     </div>
 
-    
 @endsection
