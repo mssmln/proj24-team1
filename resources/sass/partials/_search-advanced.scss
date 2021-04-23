@@ -1,0 +1,20 @@
+.advanced_research {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .box_research {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            border: 2px solid #DD585D;
+            border-radius: 20px;
+        }
+    }
+
+
+}
