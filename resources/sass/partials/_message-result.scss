@@ -1,0 +1,30 @@
+.message_result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    h1 {
+        text-align: center;
+        margin: 10px 0;
+        i {
+            color: #00E500;
+        }
+    }
+
+
+    
+
+    .message_content {
+        width: 500px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 -1px 10px lightgrey;
+        p {
+            line-height: 1.6;
+            small {
+                font-size: 0.7rem;
+                color: #757575;
+            }
+        }
+    }
+}
