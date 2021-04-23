@@ -6,26 +6,31 @@
 
     <a href="{{ route('flat.create') }}"><i class="fas fa-plus"></i> New flat</a>
 
-    <table>
+    <table class="fade-in">
       <thead>
         <tr>
           <th scope="col"><i class="fas fa-hashtag"></i></th>
           <th scope="col"><i class="fas fa-user"></i></th>
           <th scope="col"><i class="far fa-eye"></i></th>
-          <th scope="col">TITLE</th>
-          <th scope="col">CREATED AT</th>
-          <th scope="col">UPDATED AT</th>
+          <th scope="col"><i class="fas fa-home"></i></th>
+          <th scope="col"><i class="far fa-clock"></i></th>
         </tr>
       </thead>
       <tbody>
         @foreach($flats as $flat)
         <tr>
-            <th scope="row">{{ $flat->id }}</th>
+            <td scope="row">
+              @if ($flat->visibility == 1)
+              <i class="fas fa-circle visibility-on pulse"></i>
+              @else
+              <i class="fas fa-circle visibility-off pulse"></i>
+              @endif
+              {{ $flat->id }}
+            </td>
             <td>{{ $flat->user->name }} {{ $flat->user->surname }}</td>
             <td>{{ $flat->views }}</td>
             <td>{{ $flat->title }}</td>
             <td>{{ $flat->created_at }}</td>
-            <td>{{ $flat->updated_at }}</td>
             <td><a href="{{route('statistics',$flat->id)}}"><i class="fas fa-chart-line"></i></a></td>
             {{-- <td><a href="{{route('sponsor',$flat->id)}}"><i class="fas fa-ad"></i></a></td> --}}
             <td><a href="{{route('payment.view',$flat->id)}}"><i class="fas fa-ad"></i></a></td>

@@ -2,7 +2,6 @@
 
 @section('content')
 @if ($just == 0)
-@dd($just);
 <form id="payment-form" action="{{route('payment.store', $id)}}" method="post">
     <!-- Putting the empty container you plan to pass to
       `braintree.dropin.create` inside a form will make layout and flow
