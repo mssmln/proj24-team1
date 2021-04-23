@@ -97,10 +97,9 @@
             </ul>
         </nav>
 
-        <section id="app" class="dashboard-content">
+        <section class="dashboard-content">
             @yield('content')
         </section>
-
 
         @yield('charts')
 

@@ -14,8 +14,8 @@ class UpdateAdsTable extends Migration
     public function up()
     {
         Schema::table('ads', function (Blueprint $table) {
-            $table->foreignId('flat_id')->after('id')->constrained();
-            $table->foreignId('plan_id')->after('flat_id')->constrained();
+            $table->foreignId('flat_id')->after('id')->references('id')->on('flats');
+            $table->foreignId('plan_id')->after('flat_id')->references('id')->on('plans');
         });
     }
 
