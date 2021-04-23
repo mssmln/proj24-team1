@@ -132,7 +132,7 @@
             <!-- Overview  -->
             <div class="admin-form-inputs">
                 <label for="overview">Descrizione</label>
-                <textarea id="editor" name="overview">{{old('overview')}}</textarea>
+                <textarea name="overview">{{old('overview')}}</textarea>
             </div>
     
             <div class="form-inputs switch">

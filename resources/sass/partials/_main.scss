@@ -263,6 +263,9 @@ main .index_flat_guest {
                 margin-top: 20px;
                 height: 500px;
                 img {
+                    object-position: center 75%;
+                    object-fit: cover;
+                    height: 100%;
                     width: 100%;
                 }
             }

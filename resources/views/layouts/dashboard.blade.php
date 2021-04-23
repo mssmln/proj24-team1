@@ -31,7 +31,6 @@
 
     <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
 </head>
 <body style="background-color: #121212">
 
@@ -106,14 +105,6 @@
         @yield('charts')
 
     </div>
-    
-    <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-    </script>
     
 </body>
 </html>
