@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Message;
 use Faker\Generator as Faker;
+use App\Message;
 
 class MessageSeeder extends Seeder
 {

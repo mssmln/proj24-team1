@@ -133,7 +133,7 @@
         <!-- Overview  -->
         <div class="admin-form-inputs">
             <label for="overview">Descrizione</label>
-            <textarea name="overview">{{ $flats->overview }}</textarea>
+            <textarea id="editor" name="overview">{{ $flats->overview }}</textarea>
         </div>
     
         <div class="form-inputs switch">

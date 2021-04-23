@@ -27,19 +27,19 @@
                     <div class="info_rooms">
                         @if($flat->beds > 1)
                         <span>{{$flat->rooms}} Camere -</span>
-                        @else 
+                        @else
                         <span>{{$flat->rooms}} Camera -</span>
                         @endif
                         
                         @if($flat->beds > 1)
                         <span>{{$flat->beds}} Letti -</span>
-                        @else 
+                        @else
                         <span>{{$flat->beds}} Letto -</span>
                         @endif
                         
                         @if($flat->baths > 1)
                         <span>{{$flat->baths}} Bagni -</span>
-                        @else 
+                        @else
                         <span>{{$flat->baths}} Bagno -</span>
                         @endif
                         
@@ -158,7 +158,7 @@
             
             {{-- Form Messaggio --}}
             <div class="contact_form">
-    
+
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -168,14 +168,19 @@
                     </ul>
                 </div>
                 @endif
-    
+
                 <!-- Send message to the owner -->
                 <form action="{{ route('send_message', $flat->slug ) }}" method="post" class="form_message">
-                    @csrf 
+                    @csrf
                     @method('POST')
                     <div>
                         <label for="email">Email</label>
+                        @guest
                         <input name="email" id="email" type="email" value="{{old('email')}}">
+
+                        @else
+                        <input name="email" id="email" type="email" value="{{ Auth::user()->email }}">
+                        @endguest
                     </div>
                     <div>
                         <label for="message">Messaggio</label>
@@ -188,7 +193,7 @@
                         <h2>Prezzo per notte: {{$flat->price}}€</h2>
                     </div>
                 </form>
-    
+
             </div>
 
         </div>
