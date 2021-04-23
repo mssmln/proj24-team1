@@ -24,7 +24,7 @@
                 <div class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
                     {{-- Stampa Ricerca --}}
                     <a :href="'flat/' + flat.slug" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase()) && flat.visibility" v-for="(flat,index) in flats"> 
-                        <img :src="'storage/' + flat.flat_img" alt="flat.flat_img">
+                        <img :src="'storage/' + flat.flat_img" alt="img_error">
                         <div>
                             <h4> @{{ flat.title }}</h4>
                             <h5> @{{ flat.address }}</h5>
