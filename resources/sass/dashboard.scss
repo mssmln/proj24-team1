@@ -49,6 +49,7 @@
         }
         .last-things {
             display: flex;
+            flex-direction: row-reverse;
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 25px;
@@ -71,6 +72,10 @@
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         word-break: break-all;
+                        em {
+                            font-size: 0.6rem;
+                            color: #757575;
+                        }
                     }
                 }
                 & a {
