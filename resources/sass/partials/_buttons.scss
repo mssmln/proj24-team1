@@ -29,3 +29,15 @@ button {
         color: #db4c51;
     }
 }
+
+a.button_primary {
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    &:hover {
+        background-color: #e0565b;
+        color: white;
+    }
+}
