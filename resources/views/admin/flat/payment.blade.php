@@ -1,5 +1,7 @@
 @extends('layouts.dashboard')
 
+@section('title', 'Admin | Sponsor your product')
+
 @section('charts')
 
 <form id="payment-form" action="{{route('payment.store', $id)}}" method="post">
