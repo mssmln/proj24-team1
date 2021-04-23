@@ -177,7 +177,7 @@ const app = new Vue({
             this.arrayAdvancedSearch = ''; // lo svuotiamo
             // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
             axios
-            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=" + this.key)
+            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&relatedPois=off&key=" + this.key)
             .then((result) => {
                 // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;

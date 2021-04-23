@@ -17,7 +17,7 @@
       {{-- Salva il nome del piano per recuperarlo --}}
       <select name="ad">
       @foreach ($types_sponsorship as $sponsorship)
-      <option value="{{$sponsorship->name}}">{{$sponsorship->name}} - {{$sponsorship->price}}€</option>
+        <option value="{{$sponsorship->name}}">{{$sponsorship->name}} - {{$sponsorship->price}}€</option>
       @endforeach
       </select>
     </div>
