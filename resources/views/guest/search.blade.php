@@ -3,13 +3,36 @@
 @section('title', 'Airbnb | Ricerca Avanzata')
 
 @section('content')
+<div class="container">
 
-    <input v-model="query" @keyup="getLanLon" type="text" placeholder="search in here">
-    <button @click="searchWithinRadius">RAGGIO</button>
+    <h2>Affina la ricerca dell'appartamento</h2>
 
-    <input type="number" v-model="rooms">
+    <div class="advanced_research">
 
-    <input type="number" v-model="beds">
+        <div class="box_research">
+            <label for="address">Indirizzo</label>
+            <input v-model="query" @keyup="getLanLon" type="text" id="address">
+        </div>
+
+
+        <div class="box_research">
+            <label for="camere">Numero camere</label>
+            <input type="number" v-model="rooms" id="camere">
+        </div>
+
+        <div class="box_research">
+            <label for="letti">Letti</label>
+            <input type="number" v-model="beds" id="letti">
+        </div>
+
+        {{-- <div class="box_research">
+            <label for="raggio">Raggio</label>
+            <input type="number" v-model="beds" id="raggio">
+        </div> --}}
+
+    </div>
+
+    <button  @click="searchWithinRadius">per raggio</button>
 
 
     <!-- ricerca per raggio 20km -->
@@ -29,5 +52,12 @@
             <h3>@{{result.address}}</h3>
         </a>
     </div>
+
+</div>
+
+
+
+
+
 
 @endsection
