@@ -6,7 +6,7 @@
 
     <a href="{{ route('flat.create') }}"><i class="fas fa-plus"></i> New flat</a>
 
-    <table>
+    <table class="fade-in">
       <thead>
         <tr>
           <th scope="col"><i class="fas fa-hashtag"></i></th>
@@ -21,9 +21,9 @@
         <tr>
             <td scope="row">
               @if ($flat->visibility == 1)
-              <i class="fas fa-circle visibility-on"></i>
+              <i class="fas fa-circle visibility-on pulse"></i>
               @else
-              <i class="fas fa-circle visibility-off"></i>
+              <i class="fas fa-circle visibility-off pulse"></i>
               @endif
               {{ $flat->id }}
             </td>
