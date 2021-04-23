@@ -30,6 +30,8 @@
     <link rel="icon" href="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" sizes="16x16 24x24 32x32 48x48 64x64 128x128">
 
     <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
 </head>
 <body style="background-color: #121212">
 
@@ -97,15 +99,21 @@
             </ul>
         </nav>
 
-        <section id="app" class="dashboard-content">
+        <section class="dashboard-content">
             @yield('content')
         </section>
-
 
         @yield('charts')
 
     </div>
     
+    <script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+    </script>
     
 </body>
 </html>

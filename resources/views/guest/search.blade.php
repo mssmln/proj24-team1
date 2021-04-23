@@ -3,18 +3,42 @@
 @section('title', 'Airbnb | Ricerca Avanzata')
 
 @section('content')
+<div class="container">
 
-    <input v-model="query" @keyup="getLanLon" type="text" placeholder="search in here">
-    <button @click="searchWithinRadius">RAGGIO</button>
+    <h2>Affina la ricerca dell'appartamento</h2>
 
     
     <input type="text" v-on:click="radius = 20000" readonly="text" placeholder="20000">
     <input type="text" v-on:click="radius = 10000" readonly="text" placeholder="10000">
     <h2 v-if="radius">raggio in metri: @{{radius}}</h2>
+    <div class="advanced_research">
 
     numero minimo di stanze<input min="1" type="number" v-model="rooms">
+        <div class="box_research">
+            <label for="address">Indirizzo</label>
+            <input v-model="query" @keyup="getLanLon" type="text" id="address">
+        </div>
 
     numero minimo di letti<input min="1" type="number" v-model="beds">
+
+        <div class="box_research">
+            <label for="camere">Numero camere</label>
+            <input type="number" v-model="rooms" id="camere">
+        </div>
+
+        <div class="box_research">
+            <label for="letti">Letti</label>
+            <input type="number" v-model="beds" id="letti">
+        </div>
+
+        {{-- <div class="box_research">
+            <label for="raggio">Raggio</label>
+            <input type="number" v-model="beds" id="raggio">
+        </div> --}}
+
+    </div>
+
+    <button  @click="searchWithinRadius">per raggio</button>
 
 
     <!-- ricerca per raggio 20km -->
@@ -35,8 +59,11 @@
         </a>
     </div>
 
+</div>
 
 
-    
+
+
+
 
 @endsection

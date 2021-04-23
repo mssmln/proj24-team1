@@ -20,7 +20,7 @@
             &:hover:not(.not-usable),
             &:active:not(.not-usable),
             &:focus:not(.not-usable) {
-                box-shadow: 0 -1px 8px rgba(219, 76, 81, 0.2);
+                box-shadow: 0 0px 8px rgba(219, 76, 81, 0.2);
             }
         }
         textarea {
