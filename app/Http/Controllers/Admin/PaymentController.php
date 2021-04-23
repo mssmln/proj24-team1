@@ -97,7 +97,6 @@ class PaymentController extends Controller
                 $end_date = date_add($date_now,date_interval_create_from_date_string("6 days"));
             }
 
-
             // Creo l'istanza per popolare la tabella
             $new_sponsorship = new Ad();
             $new_sponsorship->plan_id =  $sponsorship_choose->id;
