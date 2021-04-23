@@ -3,4 +3,19 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+
+    .message_content {
+        width: 500px;
+        padding: 20px;
+        border-radius: 20px;
+        border: 4px solid #E0565B;
+
+        h2 {
+            margin-right: 10px;
+        }//h2
+
+        i {
+            color: #00E500;
+        }
+    }
 }
