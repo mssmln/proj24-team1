@@ -12,20 +12,20 @@ class UserSeeder extends Seeder
      * @return void
      */
 
-    // public function run(Faker $faker)
-    // {
-    //     for ($i = 0; $i <= 10; $i++) {
+    public function run(Faker $faker)
+    {
+        for ($i = 0; $i <= 10; $i++) {
 
-    //         $newUser = new User();
-           
-    //         $newUser->name = $faker->name();
-    //         $newUser->surname = $faker->lastname();
-    //         $newUser->email = $faker->email();
-    //         $newUser->password = $faker->password();
-    //         $newUser->date_of_birth = $faker->date();
+            $newUser = new User();
 
-    //         $newUser->save();
-    //     }
-    // }
+            $newUser->name = $faker->name();
+            $newUser->surname = $faker->lastname();
+            $newUser->email = $faker->email();
+            $newUser->password = $faker->password();
+            $newUser->date_of_birth = $faker->date();
+
+            $newUser->save();
+        }
+    }
 
 }
