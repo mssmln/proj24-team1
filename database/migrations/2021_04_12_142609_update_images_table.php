@@ -14,7 +14,7 @@ class UpdateImagesTable extends Migration
     public function up()
     {
         Schema::table('images', function (Blueprint $table) {
-            $table->foreignId('flat_id')->after('id')->constrained(); 
+            $table->foreignId('flat_id')->after('id')->references('id')->on('flats');
         });
     }
 
