@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'name' => 'user',
                 'surname' => 'user',
                 'email' => 'user@mail.com',
-                'password' => 'password',
+                'password' => '$2y$10$7D9EUbFDAwBWi1E2kno02.t2AYtgOuTg5ol1Bbe06jY14ng7yH7wa',  //password
             ]
         ];
 
