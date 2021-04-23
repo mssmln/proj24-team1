@@ -21,6 +21,8 @@ function time() {
 }
 setInterval(time, 1000);
 
+
+
 // Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
 for( let i = 0; i < forms.length; i++ ) {

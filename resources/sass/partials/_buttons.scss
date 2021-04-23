@@ -41,3 +41,18 @@ a.button_primary {
         color: white;
     }
 }
+
+#to-top {
+    background-color: $brand-color;
+    color: #fff;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
