@@ -2,7 +2,7 @@
 
 @section('title', 'Admin | Info Flat')
 
-@section('content') 
+@section('content')
 
     <!-- *** TODO: REMOVE *** -->
     <table class="table">
@@ -37,16 +37,17 @@
                 <td>{{ $flat->beds }}</td>
                 <td>{{ $flat->address }}</td>
                 <td>{{ $flat->sqm }}</td>
-                @if ($flat->visibility == 0)
-                <td><i class="fas fa-times"></i></td>
-                @elseif ($flat->visibility == 1)
-                <td><i class="fas fa-check"></i></td>
-                @endif
+                <td scope="row">
+                    @if ($flat->visibility == 1)
+                    <i class="fas fa-circle visibility-on pulse"></i>
+                    @else
+                    <i class="fas fa-circle visibility-off pulse"></i>
+                    @endif
+                </td>
                 <td>{{ $flat->views }}</td>
                 <td>{{ $flat->created_at }}</td>
                 <td>{{ $flat->updated_at }}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ Route('flat.index') }}">Back</a>
                     <a class="btn btn-warning" href="{{ Route('flat.edit',  $flat->id) }}"><i class="fas fa-edit"></i></a>
                     <form class="form-delete" method="post" action="{{ Route('flat.destroy', $flat->id) }}">
                         @csrf

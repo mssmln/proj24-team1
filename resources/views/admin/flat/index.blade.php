@@ -10,10 +10,10 @@
       <thead>
         <tr>
           <th scope="col"><i class="fas fa-hashtag"></i></th>
-          <th scope="col"><i class="fas fa-user"></i></th>
-          <th scope="col"><i class="far fa-eye"></i></th>
-          <th scope="col"><i class="fas fa-home"></i></th>
           <th scope="col"><i class="far fa-clock"></i></th>
+          <th scope="col"><i class="fas fa-user"></i></th>
+          <th scope="col" class="eye"><i class="far fa-eye"></i></th>
+          <th scope="col"><i class="fas fa-home"></i></th>
         </tr>
       </thead>
       <tbody>
@@ -27,12 +27,11 @@
               @endif
               {{ $flat->id }}
             </td>
-            <td>{{ $flat->user->name }} {{ $flat->user->surname }}</td>
+            <td>{{ $flat->created_at }}</td>
+            <td>{{ $flat->user->name }}</td>
             <td>{{ $flat->views }}</td>
             <td>{{ $flat->title }}</td>
-            <td>{{ $flat->created_at }}</td>
             <td><a href="{{route('statistics',$flat->id)}}"><i class="fas fa-chart-line"></i></a></td>
-            {{-- <td><a href="{{route('sponsor',$flat->id)}}"><i class="fas fa-ad"></i></a></td> --}}
             <td><a href="{{route('payment.view',$flat->id)}}"><i class="fas fa-ad"></i></a></td>
             <td><a href="{{route('flat.show',$flat->id)}}"><i class="fas fa-info-circle"></i></a></td>
             <td><a href="{{route('flat.edit',$flat->id)}}"><i class="fas fa-edit"></i></a></td>
