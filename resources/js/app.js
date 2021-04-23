@@ -172,7 +172,7 @@ const app = new Vue({
         searchWithinRadius(){
             this.arrayAdvancedSearch = '';
             axios
-            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=" + this.key)
+            .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&relatedPois=off&key=" + this.key)
             .then((result) => {
                 // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
