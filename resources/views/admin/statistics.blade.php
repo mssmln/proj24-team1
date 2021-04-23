@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', "Admin | Flat's Charts")
+@section('title', 'Admin | Charts')
 
 
 @section('content')

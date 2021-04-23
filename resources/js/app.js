@@ -21,6 +21,8 @@ function time() {
 }
 setInterval(time, 1000);
 
+
+
 // Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
 for( let i = 0; i < forms.length; i++ ) {
@@ -95,7 +97,7 @@ const app = new Vue({
         // lat e lng per il raggio di 20km , metodo searchWithinRadius
         latitude: '',
         longitude: '',
-        radius: 20000, // 20km
+        radius: '', // 20km default or 10km
         filteredFlats: [],
         arrayResults: [],
         rooms: '',//preso da input ric. avanz
@@ -169,21 +171,22 @@ const app = new Vue({
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
         },
+        
         searchWithinRadius(){
-            this.arrayAdvancedSearch = '';
+
+            this.arrayAdvancedSearch = ''; // lo svuotiamo
+            // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
             axios
             .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&relatedPois=off&key=" + this.key)
             .then((result) => {
                 // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
-
                 let location = [];
                 this.filteredFlats.forEach(item => {
                     if(!location.includes(item.address.freeformAddress)){
                         location.push(item.address.freeformAddress);
                     }
                 });
-
                 this.arrayResults = []; // lo svuotiamo
                 this.flats.forEach(item => {
                     location.forEach(element => {
@@ -196,11 +199,13 @@ const app = new Vue({
                     });
                 });
                 console.log('nel raggio di 20km ' , this.arrayResults);
-
-
-
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
+
+            // se non ci sono flats nel raggio di 20km
+            if(this.arrayResults.length == 0){
+                alert('non ci sono risultati');
+            }
 
 
 
@@ -225,9 +230,7 @@ const app = new Vue({
                     }
                 });
                 console.log(this.arrayAdvancedSearch);
-
             }
-
 
         },
         clearSearchHomePage() {
