@@ -56,7 +56,6 @@ class PaymentController extends Controller
 
     public function payment(Request $request){
 
-        dd($request);
         $gateway = $this->getGateway();
         $types_sponsorship = Plan::all();
 

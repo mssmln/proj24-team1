@@ -12,20 +12,43 @@ class UserSeeder extends Seeder
      * @return void
      */
 
-    // public function run(Faker $faker)
-    // {
-    //     for ($i = 0; $i <= 10; $i++) {
+    public function run(Faker $faker)
+    {
 
-    //         $newUser = new User();
+        $user = [
+            [
+                'name' => 'user',
+                'surname' => 'user',
+                'email' => 'user@mail.com',
+                'password' => '$2y$10$7D9EUbFDAwBWi1E2kno02.t2AYtgOuTg5ol1Bbe06jY14ng7yH7wa',  //password
+            ]
+        ];
+
+        foreach ($user as $value) {
+            $newUser = new User();
+            $newUser->name = $value['name'];
+            $newUser->surname = $value['surname'];
+            $newUser->email = $value['email'];
+            $newUser->password = $value['password'];
+            $newUser->save();
+        }
+
+        // for ($i = 0; $i <= 10; $i++) {
+
+        //     $newUser = new User();
            
-    //         $newUser->name = $faker->name();
-    //         $newUser->surname = $faker->lastname();
-    //         $newUser->email = $faker->email();
-    //         $newUser->password = $faker->password();
-    //         $newUser->date_of_birth = $faker->date();
+        //     $newUser->name = $faker->name();
+        //     $newUser->surname = $faker->lastname();
+        //     $newUser->email = $faker->email();
+        //     $newUser->password = $faker->password();
+        //     $newUser->date_of_birth = $faker->date();
 
-    //         $newUser->save();
-    //     }
-    // }
+        //     $newUser->save();
+        // }
+    }
+
+            $newUser->save();
+        }
+    }
 
 }
