@@ -98,12 +98,12 @@ const app = new Vue({
         radius: 20000, // 20km
         filteredFlats: [],
         arrayResults: [],
-        rooms: '',
-        beds: '',
+        rooms: '',//preso da input ric. avanz
+        beds: '',//preso da input ric. avanz
         arrayAdvancedSearch: '',
         checked: false,
         flatServices: []
-        
+
     },
     created(){
 
@@ -124,10 +124,10 @@ const app = new Vue({
         //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
         //         this.googleApiResults = result.data.results;
-        //         console.log(this.googleApiResults); 
+        //         console.log(this.googleApiResults);
         //     })
         //     .catch((error) => console.log('this API (Google) does not work',error));
-            
+
         // },
         tomtomAdresses(){
             // TomTom APIs
@@ -135,7 +135,7 @@ const app = new Vue({
             .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=' + this.key)
             .then((result) =>{
                 this.tomtomApiResults = result.data.results;
-                // console.log(result); 
+                // console.log(result);
                 this.lat = this.tomtomApiResults[0].position.lat;
                 this.lng = this.tomtomApiResults[0].position.lon;
                 this.paese = this.tomtomApiResults[0].address.country;
@@ -164,7 +164,7 @@ const app = new Vue({
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                // console.log('prima api lat e lon' , this.latitude,this.longitude);
+                console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
@@ -198,7 +198,7 @@ const app = new Vue({
                 console.log('nel raggio di 20km ' , this.arrayResults);
 
 
-                
+
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
 
@@ -216,7 +216,7 @@ const app = new Vue({
                 console.log(this.arrayAdvancedSearch);
             }
 
-            // filtra per beds 
+            // filtra per beds
             if(this.beds.length){
                 this.arrayAdvancedSearch = [];
                 this.arrayResults.forEach(item => {

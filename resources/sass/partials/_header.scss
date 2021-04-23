@@ -7,18 +7,24 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         a {
             color: #A3A3A3;
             text-decoration: underline;
             font-size: 13px;
             text-decoration: none;
-    
+
+            @media screen and (max-width: 600px) {
+                & {
+                    font-size: 11px;
+                }
+            }
+
             &:hover {
                 color: #727272;
             }
         }
-    
+
     }
 
     .container {
@@ -29,57 +35,95 @@ header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-        
-            .box_logo {
+
+            .box_logo_big {
                 a {
                     svg {
                         color: #e0565b;
                         width: 102px;
                         height: 32px;
                         fill: currentcolor;
-                        display: block;
                         margin-left: 10px;
                     }
                 }
+
+                @media screen and (max-width: 600px) {
+                    & {
+                        display: none;
+                    }
+                }
             }
-        
+
+            // logo piccolo per versione mobile
+            .box_logo_small {
+                display: none;
+                a {
+                    svg {
+                        color: #e0565b;
+                        width: 30px;
+                        height: 32px;
+                        fill: currentcolor;
+                        margin-left: 10px;
+                    }
+                }
+
+                @media screen and (max-width: 600px) {
+                   & {
+                    display: block;
+                   }
+                }
+            }
+
+
+
+
+
+
             .nav_user {
                 z-index: 99;
                 ul {
                     display: flex;
                     margin: 0px;
                     justify-content: flex-end;
-        
+
                     li {
                         padding-left: 20px;
                         align-items: flex-end;
-        
+
                         a {
                             color: #ffffff;
                             font-size: 16px;
                             position: relative;
                             text-decoration: none;
                             border-radius: 50px;
+
+
                         }
                         &:last-child{
                             margin-right: 10px;
                         }
+
+                        @media screen and (max-width: 450px) {
+                            & .smaller{
+                             font-size: 13px;
+                            }
+                         }
                     }//li
-        
+
                     li.user_action {
-        
+
                         position: relative;
-        
+
                         div.profile_menu {
                             padding: 10px 10px;
                             border-radius: 50px;
                             background-color: #fff;
                             display: inline;
-        
+
                             &:hover {
                                 cursor: pointer;
                             }
-        
+
                             .user_log {
                                 padding: 10px;
                                 width: 200px;
@@ -89,17 +133,17 @@ header {
                                 border-radius: 10px;
                                 background-color: #fff;
                                 box-shadow: 2px 2px 4px #757575;
-        
+
                                 ul {
                                     display: flex;
                                     flex-direction: column;
                                     padding: 7px 0px;
-        
+
                                     li {
                                         &:hover {
                                             background-color: #d3d3d3;
                                         }//li:hover
-        
+
                                         a{
                                             padding: 10px;
                                             display: block;
@@ -108,25 +152,29 @@ header {
                                             text-decoration: none;
                                         }//a
                                     }//li
-        
+
                                     li:nth-child(2) {
                                         border-bottom: 1px solid #A3A3A3;
                                     }
                                 }//ul
-        
+
                             }//div.user_log
-        
+
                             //CLASSE DA ASSEGNARE AL CLICK DELLA ZONA BIANCA, PER FAR USCIRE LA LISTA
                             .show_log_input {
                                 display: block;
                             }
                         }//div
                     }//li.user_action
-        
+
                 }
             }
-        
+
         }// nav_header
     }
-    
+
 }
+
+
+
+
