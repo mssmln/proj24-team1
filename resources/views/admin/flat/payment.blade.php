@@ -1,8 +1,10 @@
 @extends('layouts.dashboard')
 
+@section('title', 'Admin | Sponsor your product')
+
 @section('content')
+
 @if ($just == 0)
-@dd($just);
 <form id="payment-form" action="{{route('payment.store', $id)}}" method="post">
     <!-- Putting the empty container you plan to pass to
       `braintree.dropin.create` inside a form will make layout and flow
@@ -10,15 +12,14 @@
     @csrf
     @method('POST')
 
-    <div>
-        <label for="ad">Type sponsorship</label>
-        {{-- Salva il nome del piano per recuperarlo --}}
-        <select name="ad">
-        @foreach ($types_sponsorship as $sponsorship)
-            <option value="{{$sponsorship->name}}"> {{$sponsorship->name}} - {{$sponsorship->price}}</option>
-        @endforeach
-
-        </select>
+    <div class="select_plan_payment">
+      <label for="ad">Scegli il Piano</label>
+      {{-- Salva il nome del piano per recuperarlo --}}
+      <select name="ad">
+      @foreach ($types_sponsorship as $sponsorship)
+      <option value="{{$sponsorship->name}}">{{$sponsorship->name}} - {{$sponsorship->price}}€</option>
+      @endforeach
+      </select>
     </div>
 
     <input type="hidden" value="{{$id}}" name="flat_id">
@@ -28,8 +29,12 @@
     <input type="submit" />
 
 </form>
+
 @else
-<h1>L'appartamento è già sponsorizzato</h1>
+<div class="payment_page">
+  <h1>L'appartamento è già sponsorizzato!</h1>
+  <a class="button_primary" href="{{ route('flat.index') }}">Ritorna alla lista Appartamenti</a>
+</div>
 @endif
 
 {{-- Script di braintree --}}
