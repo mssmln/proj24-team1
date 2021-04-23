@@ -7,6 +7,8 @@
 
         <h1>Il messaggio è stato inviato correttamente <i class="far fa-check-circle"></i></h1>
 
+
+        
     <div class="message_content">
         <p><strong>{{ $message->email }}</strong></p>
         <p><i class="fas fa-home"></i> : {{ $message->flat_id }}</p>
