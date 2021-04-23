@@ -1,7 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('charts')
-
+@section('content')
+@if ($just == 0)
+@dd($just);
 <form id="payment-form" action="{{route('payment.store', $id)}}" method="post">
     <!-- Putting the empty container you plan to pass to
       `braintree.dropin.create` inside a form will make layout and flow
@@ -20,14 +21,16 @@
         </select>
     </div>
 
-    {{-- Non toccare form di braintree --}}
-
     <input type="hidden" value="{{$id}}" name="flat_id">
+    {{-- Non toccare form di braintree --}}
     <div id="dropin-container"></div>
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
     <input type="submit" />
 
 </form>
+@else
+<h1>L'appartamento è già sponsorizzato</h1>
+@endif
 
 {{-- Script di braintree --}}
 <script type="text/javascript">

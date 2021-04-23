@@ -14,7 +14,7 @@ class UpdateFlatsTable extends Migration
     public function up()
     {
         Schema::table('flats', function (Blueprint $table) {
-            $table->foreignId('user_id')->after('id')->constrained(); 
+            $table->foreignId('user_id')->after('id')->references('id')->on('users');
         });
     }
 
