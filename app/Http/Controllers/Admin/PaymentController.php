@@ -56,6 +56,7 @@ class PaymentController extends Controller
 
     public function payment(Request $request){
 
+        dd($request);
         $gateway = $this->getGateway();
         $types_sponsorship = Plan::all();
 
@@ -96,7 +97,6 @@ class PaymentController extends Controller
             elseif($sponsorship_choose->duration == '144'){
                 $end_date = date_add($date_now,date_interval_create_from_date_string("6 days"));
             }
-
 
             // Creo l'istanza per popolare la tabella
             $new_sponsorship = new Ad();
