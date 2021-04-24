@@ -12,23 +12,23 @@
             @csrf
 
             <div class="webflow_style_input">
-                <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="off" autofocus placeholder="Email">
-
                 @error('email')
                     <div class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </div>
                 @enderror
+
+                <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="off" autofocus placeholder="Email">
             </div>
 
             <div class="webflow_style_input">
-                <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" {{-- required autocomplete="current-password" --}} placeholder="Password">
-
                 @error('password')
                     <div class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </div>
                 @enderror
+
+                <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" {{-- required autocomplete="current-password" --}} placeholder="Password">
             </div>
 
             <div class="checkbox_login">
