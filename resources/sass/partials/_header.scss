@@ -76,10 +76,6 @@ header {
             }
 
 
-
-
-
-
             .nav_user {
                 z-index: 99;
                 ul {
@@ -97,13 +93,7 @@ header {
                             position: relative;
                             text-decoration: none;
                             border-radius: 50px;
-
-
                         }
-                        &:last-child{
-                            margin-right: 10px;
-                        }
-
                         @media screen and (max-width: 450px) {
                             & .smaller{
                              font-size: 13px;
@@ -115,13 +105,13 @@ header {
                     li.user_action {
 
                         position: relative;
+                        margin-right: 10px;
 
                         div.profile_menu {
                             padding: 10px 10px;
                             border-radius: 50px;
                             background-color: #fff;
                             display: inline;
-
                             &:hover {
                                 cursor: pointer;
                             }
