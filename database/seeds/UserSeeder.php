@@ -47,8 +47,4 @@ class UserSeeder extends Seeder
         // }
     }
 
-            $newUser->save();
-        }
-    }
-
 }
