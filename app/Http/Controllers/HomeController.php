@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Message;
 use App\Flat;
+use App\Ad;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('guest.home');
+        return view('guest.home', [ 'ads' => Ad::all()]);
     }
 
     public function search(){
