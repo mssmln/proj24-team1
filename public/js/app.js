@@ -55025,13 +55025,8 @@ var app = new Vue({
       var _this2 = this;
 
       // TomTom APIs
-<<<<<<< HEAD
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?limit=1&key=' + this.key).then(function (result) {
-        _this2.tomtomApiResults = result.data.results; // console.log(result); 
-=======
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.address + '.json?limit=1&key=mGfJKGsowMXK1iso83qv0DUuAL4xlpWN').then(function (result) {
         _this2.tomtomApiResults = result.data.results; // console.log(result);
->>>>>>> 939985b2f10f7f7e408ef2a84840cd22b683be1d
 
         _this2.lat = _this2.tomtomApiResults[0].position.lat;
         _this2.lng = _this2.tomtomApiResults[0].position.lon;
@@ -55071,7 +55066,7 @@ var app = new Vue({
       this.arrayAdvancedSearch = ''; // lo svuotiamo
       // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&language=en-US&relatedPois=off&key=" + this.key).then(function (result) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&relatedPois=off&key=" + this.key).then(function (result) {
         // console.log('seconda api' ,this.latitude,this.longitude);
         _this4.filteredFlats = result.data.results;
         var location = [];
@@ -55272,13 +55267,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\yurig\booleanFinal\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 939985b2f10f7f7e408ef2a84840cd22b683be1d
 
 
 /***/ })

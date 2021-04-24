@@ -24,11 +24,9 @@
                 <ul>
                     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
                     <li><a class="smaller" href="{{route('search')}}">Ricerca Avanzata</a></li>
-
-                    <i class="fas fa-search"></i>
                     @endunless
                     @auth
-                    <li><a class="smaller" href="{{ Route('home') }}">Dashboard</a></li>
+                    <li><a class="smaller" href="{{ Route('home') }}" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
                     @else
                     <li><a class="smaller" href="{{ route('register') }}">Diventa un host</a></li>
                     @endauth
