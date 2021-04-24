@@ -234,7 +234,7 @@ const app = new Vue({
 
         },
         clearSearchHomePage() {
-            setTimeout(() => this.query = '', 2000);
+            setTimeout(() => this.query = '', 900);
         }
         
     }
