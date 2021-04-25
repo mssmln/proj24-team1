@@ -11,7 +11,7 @@
         
     <div class="message_content">
         <p><strong>{{ $message->email }}</strong></p>
-        <p><i class="fas fa-home"></i> : {{ $message->flat_id }}</p>
+        <p><i class="fas fa-home"></i> : {{ $message->flat->title }}</p>
         <div class="text_message">
             <p><i class="far fa-envelope"></i> : {{ $message->message }}</p>
         </div>
