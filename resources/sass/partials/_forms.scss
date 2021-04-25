@@ -109,9 +109,9 @@ $input-text-active: #BFD2FF;
 	position: relative;
 	width: 100%;
 	max-width: 400px;
-	margin: 0 auto 15px;
+	margin: 0 auto 10px;
 	border-radius: 2px;
-	padding: 0.7rem 1.2rem;
+	padding: 0.6rem 1.1rem;
 	background: $input-background;
   	&:after {
 		content: "";
@@ -124,7 +124,7 @@ $input-text-active: #BFD2FF;
 		border-bottom-left-radius: 2px;
 		border-bottom-right-radius: 2px;
 		background-position: 0% 0%;
-		background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+		background: linear-gradient(to right, #B294FF, #db4c51, #FEFFB8, #db4c51, #B294FF, #db4c51);
 		background-size: 500% auto;
 		animation: gradient 3s linear infinite;
   	}

@@ -3,7 +3,7 @@ main .login_page,
 main .register_page {
     /* Bg temporaneo */
     background-color: #222430;
-    padding-top: 50px;
+    padding: 10px 20px 0;
     height: calc(100vh - 120px);
     .checkbox_login {
         display: flex;
@@ -12,9 +12,20 @@ main .register_page {
         max-width: 400px;
         margin: 30px auto;
         justify-content: space-between;
+        @media screen and (max-width: 500px) {
+            &{
+                display: block;
+                text-align: center;
+            }
+        }
         .fix_flex{
             display: flex;
             align-items: center;
+            @media screen and (max-width: 500px) {
+                &{
+                    margin-bottom: 40px;
+                }
+            }
         }
         label {
             margin-left: 15px;
@@ -33,16 +44,24 @@ main .register_page {
         align-items: center;
         color: white;
         max-width: 400px;
-        margin: 30px auto;
+        margin: 10px auto;
         justify-content: flex-end;
+        @media screen and (max-width: 500px) {
+            &{
+                justify-content: center;
+            }
+        }
         .login_button {
             color: white;
-            font-size: 25px;
+            font-size: 20px;
             background-color: #db4c51;
-            padding: 5px 20px;
+            padding: 6px 20px;
             border-radius: 50px;
             cursor: pointer;
         }
+    }
+    #position_form_login {
+        margin-top: 30px;
     }
 }
 
