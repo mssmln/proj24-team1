@@ -27,9 +27,9 @@ class UpdateAdsTable extends Migration
     public function down()
     {
         Schema::table('ads', function (Blueprint $table) {
+            $table->dropForeign(['plan_id']); 
             $table->dropForeign(['flat_id']); 
             $table->dropColumn('flat_id');
-            $table->dropForeign(['plan_id']); 
             $table->dropColumn('plan_id');
         });
     }
