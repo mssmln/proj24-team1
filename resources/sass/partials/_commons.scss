@@ -89,7 +89,7 @@ table{
     color: $brand-color;
 }
 
-[v-cloak] {
+[v-cloak] { // serve a non visualizzare le {{ }} con vue al caricamento della pagina
     display: none;
 }
 
