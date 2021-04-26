@@ -158,23 +158,24 @@
             
             {{-- Form Messaggio --}}
             <div class="contact_form">
-
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
                 <!-- Send message to the owner -->
                 <form action="{{ route('send_message', $flat->slug ) }}" method="post" class="form_message">
                     @csrf
                     @method('POST')
+                    <h3>Invia un messaggio al proprietario</h3>
+
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    
                     <div>
-                        <label for="email">Email</label>
+                        <label for="email">La tua email</label>
                         @guest
                         <input name="email" id="email" type="email" value="{{old('email')}}">
 

@@ -26,7 +26,9 @@
     {{-- Non toccare form di braintree --}}
     <div id="dropin-container"></div>
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
-    <input type="submit" />
+    <div class="send">
+      <input type="submit"/>
+    </div>
 
 </form>
 
