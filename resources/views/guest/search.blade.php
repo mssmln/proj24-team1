@@ -5,24 +5,19 @@
 @section('content')
 <div class="container">
 
-    <!-- sezioni errori se la ricerca non va bene -->
-
-    <h2>Affina la ricerca dell'appartamento</h2>
-
-    <!-- da formattare come una select menu -->
+    <h1>Affina la ricerca dell'appartamento</h1>
+    
+    <!-- Da formattare come una select menu -->
     <ul>
-        <li v-on:click="radius = 20000">20km</li>
-        <li v-on:click="radius = 10000">10km</li>
+        <li v-on:click="radius = 20000">Distanza 20km</li>
+        <li v-on:click="radius = 10000">Distanza 10km</li>
     </ul>
-
-    <!-- validations -->
-    <div :class="missingAddress">hai bisogno di inserire l'indirizzo e selezionare il radius</div>
-    <div :class="missingRadius">first you need to select the radius</div>
-    <div :class="missingResult">nessun risultato coi criteri di ricerca utilizzati</div>
-    <!-- /validations -->
     
-    
-    <h2 v-if="radius" v-cloak>raggio in metri: @{{radius}}</h2>
+    <!-- Sezioni errori se la ricerca non va bene -->
+    <!-- Validations -->
+    <div v-if="ifErrors">@{{ifErrors}}</div>
+ 
+    <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
     <div class="advanced_research">
 
         <div class="box_research">
@@ -36,7 +31,7 @@
         </div>
 
         <div class="box_research">
-            <label for="letti">numero minimo di Letti</label>
+            <label for="letti">Numero minimo di Letti</label>
             <input type="number" v-model="beds" id="letti" min="1">
         </div>
 
@@ -49,7 +44,6 @@
 
     <button  @click="searchWithinRadius">per raggio</button>
 
-
     <!-- ricerca per raggio 20km -->
     <div v-cloak class="primo div">
         <a :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0 && result.visibility">
@@ -59,8 +53,6 @@
         </a>
     </div>
 
-    
-    
     <!-- ricerca per rooms e beds  -->
     <div v-cloak class="secondo div">
         <a :href="'flat/' + result.slug" v-for="result in arrayAdvancedSearch" v-if="result.visibility">
@@ -71,10 +63,5 @@
     </div>
 
 </div>
-
-
-
-
-
 
 @endsection
