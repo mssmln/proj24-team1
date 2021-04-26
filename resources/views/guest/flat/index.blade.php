@@ -10,7 +10,9 @@
         {{-- Immagine appartamento --}}
         <div class="flat_overview">
             <h1>{{$flat->title}}</h1>
-            <span><a href="#to-map"><i class="fas fa-map-marker-alt"></i> {{$flat->address}}</a></span>
+
+            <span> <a href="#to-map"> <i class="fas fa-map-marker-alt"></i> {{$flat->address}}</a></span>
+
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
             </div>
@@ -209,6 +211,7 @@
 @endsection
 
 @section('map')
+<!-- Link to map -->
 <a name="to-map"> </a>
 <div class="map_flat_container">
     <div class="container">
