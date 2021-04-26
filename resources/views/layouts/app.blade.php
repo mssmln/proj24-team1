@@ -46,7 +46,7 @@
 
     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
     <button id="to-top">
-            <i class="fas fa-chevron-up"></i>
+        <a href="#"><i class="fas fa-chevron-up"></i></a>
     </button>
     @endunless
 
