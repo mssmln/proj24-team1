@@ -35,7 +35,6 @@
 </head>
 <body>
     
-    
     <div id="app">
         @include('guest.partials.header')
         
@@ -51,7 +50,7 @@
     @endunless
     
     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-    @include('guest.partials.footer')
+        @include('guest.partials.footer')
     @endunless
 
     

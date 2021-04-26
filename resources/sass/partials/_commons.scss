@@ -1,6 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
+body, * {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -15,6 +15,9 @@ textarea {
     background: transparent;
     outline: none;
 }
+textarea {
+    padding: 10px;
+}
 
 ul li { list-style: none; }
 
@@ -23,28 +26,44 @@ a {
     color: $secondary-color;
 }
 
+.create_flat_dashboard{
+    color: #ffff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: $brand-color;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+
 table{
     box-shadow: 0 0 8px $color-shadow;
     background-color: $bg-color;
     border-radius: 20px;
     max-height: 600px;
+    width: 1500px;
     margin: auto;
     thead tr th,
     tbody tr td {
         margin: 0;
         padding: 20px;
+        font-size: 1.1rem;
         word-break: break-all;
     }
     thead tr th {
         border-bottom: 1px solid $brand-color;
+        font-size: 1.3rem;
     }
     tbody tr td {
-        font-size: 0.7rem;
         a:hover {
             color: $brand-color;
         }
     }
-}
+    }
 
 .visibility-on {
     color: #00ff00;
