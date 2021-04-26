@@ -67,11 +67,6 @@
                         <i class="fas fa-home"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <i class="fas fa-chart-line"></i>
-                    </a>
-                </li>
             </ul>
 
             <!-- Low -->
