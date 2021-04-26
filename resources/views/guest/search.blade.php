@@ -13,9 +13,6 @@
         <li v-on:click="radius = 10000">Distanza 10km</li>
     </ul>
     
-    <!-- Sezioni errori se la ricerca non va bene -->
-    <!-- Validations -->
-    <div v-if="ifErrors">@{{ifErrors}}</div>
  
     <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
     <div class="advanced_research">
