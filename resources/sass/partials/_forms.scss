@@ -25,7 +25,7 @@
 		display: flex;
 		.admin-form-inputs{
 			width: 50%;
-			label {
+			i {
 				margin-left: 20px;
 			}
 			input{
@@ -133,11 +133,14 @@
 
 	.bottom_form{
 		display: flex;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		.image_upload{
 			label {
 				display: block;
 				font-size: 1rem;
+				margin-left: 5px;
+			}
+			img {
 				margin-left: 5px;
 			}
 			@media screen and (max-width: 500px) {
