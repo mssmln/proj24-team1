@@ -106,10 +106,7 @@ const app = new Vue({
         checked: false,
         flatServices: [],
         // missing parameters
-        missingRadius: "hidden_item",
-        missingResult: "hidden_item",
-        missingAddress: "hidden_item"
-
+        ifErrors: ''
     },
     created(){
         axios
@@ -119,9 +116,6 @@ const app = new Vue({
                 // this.flats = result.data.response.flat; //? The same as above
             })
             .catch((error) => alert('Sorry, API (Flats) does not work...'));
-
-
-
     },
     methods: {
         // googleAdresses(){ it worked perfectly, we just use tomtom's one
@@ -173,34 +167,25 @@ const app = new Vue({
                 // console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
-
         },
-        
         searchWithinRadius(){
-            this.missingAddress = 'hidden_item';
-            this.missingResult = 'hidden_item';
-            this.missingRadius = 'hidden_item'; // quando il radius è settato e clicchiamo sul btn 
+            this.arrayResults = [];
+
+            if(!this.query && !this.radius){
+                this.ifErrors = 'Hai bisogno di inserire l\'indirizzo e selezionare la distanza'
+                return;
+            }
 
             if(this.query && !this.radius){
-                this.missingRadius = 'show_item';
-                console.log('1 condizione');
+                this.ifErrors = 'Seleziona la distanza di ricerca';
+                // console.log('1 condizione');
                 return; // interrompe il metodo searchWithinRadius se il radius non è stato selezionato
             }
 
             if(!this.query){
-                this.missingAddress = 'show_item';
+                this.ifErrors = 'Hai bisogno di inserire l\'indirizzo';
                 return;
             }
-
-            // if(this.rooms || this.beds && !this.radius){
-            //     this.missingRadius = 'show_item';
-            //     console.log('2 condizione');
-            //     return;
-            // } else if(this.rooms || this.beds && !this.query){
-            //     this.missingAddress = 'show_item';
-            //     return;
-            // }
-
 
             this.arrayAdvancedSearch = ''; // lo svuotiamo
             // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
@@ -215,13 +200,13 @@ const app = new Vue({
                         location.push(item.address.freeformAddress);
                     }
                 });
-                this.arrayResults = []; // lo svuotiamo
                 this.flats.forEach(item => {
                     // console.log('look here' , item);
                     location.forEach(element => {
                         // console.log(element);
                         if(item.address.includes(element)){
-                            if(!this.arrayResults.includes(item)){
+                            if(!this.arrayResults.includes(item) && item.rooms >= this.rooms && item.beds >= this.beds){
+                                this.ifErrors = '';
                                 this.arrayResults.push(item);
                             }
                         }
@@ -230,15 +215,11 @@ const app = new Vue({
                 });
                 // se non ci sono flats nel raggio selezionato
                 if(this.arrayResults.length == 0){
-                    this.missingResult = 'show_item';
+                    this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
                 }
                 console.log('nel raggio di 20km / 10km ' , this.arrayResults);
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
-
-            
-
-
 
             // filtra per camere
             if(this.rooms.length){
@@ -248,11 +229,11 @@ const app = new Vue({
                     if(item.rooms >= this.rooms){
                         this.arrayAdvancedSearch.push(item);
                     } else if(item.rooms < this.rooms){
-                        this.missingResult = 'show_item';
-                        console.log('n4');
+                        this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+                        // console.log('n4');
                     }
                 });
-                console.log(this.arrayAdvancedSearch);
+                // console.log(this.arrayAdvancedSearch);
             }
 
             // filtra per beds
@@ -262,13 +243,12 @@ const app = new Vue({
                     if(item.beds >= this.beds){
                         this.arrayAdvancedSearch.push(item);
                     } else if(item.beds < this.beds){
-                        this.missingResult = 'show_item';
-                        console.log('n5');
+                        this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+                        // console.log('n5');
                     }
                 });
-                console.log(this.arrayAdvancedSearch);
+                // console.log(this.arrayAdvancedSearch);
             }
-
         },
         clearSearchHomePage() {
             setTimeout(() => this.query = '', 900);
