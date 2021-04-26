@@ -173,17 +173,31 @@ const app = new Vue({
 
             if(!this.query && !this.radius){
                 this.ifErrors = 'Hai bisogno di inserire l\'indirizzo e selezionare la distanza'
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: this.ifErrors,
+                })
                 return;
             }
 
             if(this.query && !this.radius){
                 this.ifErrors = 'Seleziona la distanza di ricerca';
-                // console.log('1 condizione');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: this.ifErrors,
+                })
                 return; // interrompe il metodo searchWithinRadius se il radius non è stato selezionato
             }
 
             if(!this.query){
                 this.ifErrors = 'Hai bisogno di inserire l\'indirizzo';
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: this.ifErrors,
+                })
                 return;
             }
 
@@ -216,6 +230,11 @@ const app = new Vue({
                 // se non ci sono flats nel raggio selezionato
                 if(this.arrayResults.length == 0){
                     this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: this.ifErrors,
+                    })
                 }
                 console.log('nel raggio di 20km / 10km ' , this.arrayResults);
             })
@@ -230,7 +249,11 @@ const app = new Vue({
                         this.arrayAdvancedSearch.push(item);
                     } else if(item.rooms < this.rooms){
                         this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-                        // console.log('n4');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: this.ifErrors,
+                        })
                     }
                 });
                 // console.log(this.arrayAdvancedSearch);
@@ -244,7 +267,11 @@ const app = new Vue({
                         this.arrayAdvancedSearch.push(item);
                     } else if(item.beds < this.beds){
                         this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-                        // console.log('n5');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: this.ifErrors,
+                        })
                     }
                 });
                 // console.log(this.arrayAdvancedSearch);
