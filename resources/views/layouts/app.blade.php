@@ -44,9 +44,12 @@
         </main>
     </div>
 
+    @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
     <button id="to-top">
             <i class="fas fa-chevron-up"></i>
     </button>
+    @endunless
+
 
     @yield('map')
     

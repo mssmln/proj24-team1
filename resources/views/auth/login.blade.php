@@ -8,7 +8,7 @@
     
     <div class="container">
 
-        <form method="POST" action="{{ route('login') }}">
+        <form id="position_form_login" method="POST" action="{{ route('login') }}">
             @csrf
 
             <div class="webflow_style_input">
@@ -28,7 +28,7 @@
                     </div>
                 @enderror
 
-                <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" {{-- required autocomplete="current-password" --}} placeholder="Password">
+                <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="off" placeholder="Password">
             </div>
 
             <div class="checkbox_login">
