@@ -95,17 +95,28 @@
                 }
             }
         }
-        .charts {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            canvas {
-                max-width: 400px;
-                max-height: 400px;
-                margin: 20px;
+        // Route admin.show
+        .admin_flat_show {
+            p {
+                margin: 10px 0;
             }
+            .visibility {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+    .charts {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        canvas {
+            max-width: 400px;
+            max-height: 400px;
+            margin: 20px;
         }
     }
 }

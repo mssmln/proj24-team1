@@ -13,10 +13,11 @@
 
 button {
     background-color: transparent;
-	color: #db4c51;
+	color: $brand-color;
     border: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
     a{
         color: #fff;
     }
@@ -29,19 +30,19 @@ button {
 	padding: 0;
     cursor: pointer;
     &:hover {
-        color: #db4c51;
+        color: $brand-color;
     }
 }
 
 a.button_primary {
-    background-color: white;
+    background-color: #fff;
     color: black;
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: bold;
     &:hover {
-        background-color: #e0565b;
-        color: white;
+        background-color: $brand-color;
+        color: #fff;
     }
 }
 
@@ -58,4 +59,7 @@ a.button_primary {
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+.form-delete {
+    margin: 10px 0;
 }

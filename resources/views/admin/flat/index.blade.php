@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Admin | Flats')
+@section('title', 'Admin | Appartamenti')
 
 @section('content')
 
