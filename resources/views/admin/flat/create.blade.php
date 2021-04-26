@@ -136,7 +136,7 @@
             <!-- Submit -->
             <button class="submit_form_button" type="submit">Crea appartamento</button>
         </form>
-    
+
     </div>
 </div>
 
