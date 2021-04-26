@@ -63,9 +63,9 @@
                                         </li>
                                     @endguest
                                     @auth
-                                        <li><a class="smaller" href="{{ Route('home') }}" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
+                                        <li><a href="{{ Route('home') }}" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
                                         @else
-                                        <li><a class="smaller" href="{{ route('register') }}">Diventa Host</a></li>
+                                        <li><a href="{{ route('register') }}">Diventa Host</a></li>
                                     @endauth
                                 </ul>
 
