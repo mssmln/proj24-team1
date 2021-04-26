@@ -3,10 +3,9 @@
 @section('title', 'Admin | Flats')
 
 @section('content')
+    <a class="create_flat_dashboard" href="{{ route('flat.create') }}"><i class="fas fa-plus"></i></a>
 
-    <a href="{{ route('flat.create') }}"><i class="fas fa-plus"></i> New flat</a>
-
-    <table class="fade-in">
+    <table>
       <thead>
         <tr>
           <th scope="col"><i class="fas fa-hashtag"></i></th>
