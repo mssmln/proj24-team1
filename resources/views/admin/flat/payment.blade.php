@@ -14,6 +14,18 @@
 
     <div class="select_plan_payment">
       <label for="ad">Scegli il Piano</label>
+      <div class="info_sponsor">Il tuo appartamento verrà messo in primo piano nel sito</div>
+
+      <div class="all_plan">
+      @foreach ($types_sponsorship as $sponsorship)
+        <div class="type_sponsor">
+          <p>Piano: <span>{{$sponsorship->name}}</span></p>
+          <p>Prezzo: <span>{{$sponsorship->price}} €</span></p>
+          <p>Durata: <span>{{$sponsorship->duration}} Ore</span></p>
+        </div>
+        @endforeach
+      </div>
+
       {{-- Salva il nome del piano per recuperarlo --}}
       <select name="ad">
       @foreach ($types_sponsorship as $sponsorship)
@@ -26,7 +38,9 @@
     {{-- Non toccare form di braintree --}}
     <div id="dropin-container"></div>
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
-    <input type="submit" />
+    <div class="send">
+      <input type="submit"/>
+    </div>
 
 </form>
 

@@ -36,6 +36,11 @@
                 // text-shadow: 0 0px 8px rgba(219, 76, 81, 0.5);
             }
         }
+        .high_sidebar{
+            li{
+                padding-bottom: 30px;
+            }
+        }
     }
     .dashboard-content {
         width: 100%;
@@ -95,17 +100,29 @@
                 }
             }
         }
-        .charts {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            canvas {
-                max-width: 400px;
-                max-height: 400px;
-                margin: 20px;
+        // Route admin.show
+        .admin_flat_show {
+            p {
+                margin: 10px 0;
             }
+            .visibility {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        // end Route admin.show
+    }
+    .charts {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        canvas {
+            max-width: 400px;
+            max-height: 400px;
+            margin: 20px;
         }
     }
 }

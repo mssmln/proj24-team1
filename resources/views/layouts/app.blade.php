@@ -35,7 +35,6 @@
 </head>
 <body>
     
-    
     <div id="app">
         @include('guest.partials.header')
         
@@ -44,17 +43,14 @@
         </main>
     </div>
 
-    @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-    <button id="to-top">
-            <i class="fas fa-chevron-up"></i>
-    </button>
-    @endunless
-
-
     @yield('map')
     
     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-    @include('guest.partials.footer')
+        <a id="to-top" href="#"><i class="fas fa-chevron-up"></i></a>
+    @endunless
+    
+    @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
+        @include('guest.partials.footer')
     @endunless
 
     

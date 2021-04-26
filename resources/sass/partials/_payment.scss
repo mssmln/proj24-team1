@@ -2,9 +2,10 @@
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    margin: 100px auto 0;
+    margin: 20px auto 0;
 
     label {
+        margin-bottom: 20px;
         display: block;
         @media screen and (max-width: 700px){
             &{
@@ -12,6 +13,11 @@
 
             }
         }
+    }
+    .info_sponsor{
+        font-size: 1.5rem;
+        font-weight: initial;
+        margin: 10px 0 30px;
     }
     select{
         width: 200px;
@@ -25,6 +31,37 @@
         color: white;
         border: none;
     }
+
+    .all_plan{
+        display: flex;
+        margin-bottom: 50px;
+        .type_sponsor{
+            font-size: 1.2rem;
+            flex-basis: calc(100% / 4);
+            background-color: #db4c51c4;
+            box-shadow: 0px 6px 16px rgb(255 255 255 / 12%);
+            border-radius: 20px;
+            margin: 0 auto;
+            padding: 30px;
+            margin-bottom: 10px;
+            p{
+                margin-bottom: 10px;
+            }
+            span {
+                font-weight: initial;
+            }
+        }
+        @media screen and (max-width: 1100px) {
+            &{
+                flex-wrap: wrap;
+                .type_sponsor{
+                    flex-basis: 100%;
+                    margin: 10px 20px;
+                }
+            }
+        }
+    }
+    
 }
 
 #dropin-container {
@@ -43,5 +80,18 @@
     margin: 150px;
     h1 {
         margin-bottom: 200px;
+    }
+}
+
+.send{
+    text-align: center;
+    input{
+        background-color: $brand-color;
+        color: white;
+        border-radius: 20px;
+        cursor:pointer;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 10px 20px;
     }
 }

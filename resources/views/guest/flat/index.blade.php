@@ -10,7 +10,9 @@
         {{-- Immagine appartamento --}}
         <div class="flat_overview">
             <h1>{{$flat->title}}</h1>
-            <span>{{$flat->address}}</span>
+
+            <span> <a href="#to-map"> <i class="fas fa-map-marker-alt"></i> {{$flat->address}}</a></span>
+
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
             </div>
@@ -158,23 +160,24 @@
             
             {{-- Form Messaggio --}}
             <div class="contact_form">
-
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
                 <!-- Send message to the owner -->
                 <form action="{{ route('send_message', $flat->slug ) }}" method="post" class="form_message">
                     @csrf
                     @method('POST')
+                    <h3>Invia un messaggio al proprietario</h3>
+
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    
                     <div>
-                        <label for="email">Email</label>
+                        <label for="email">La tua email</label>
                         @guest
                         <input name="email" id="email" type="email" value="{{old('email')}}">
 
@@ -208,7 +211,8 @@
 @endsection
 
 @section('map')
-
+<!-- Link to map -->
+<a name="to-map"> </a>
 <div class="map_flat_container">
     <div class="container">
         
