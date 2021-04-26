@@ -10,7 +10,7 @@
         {{-- Immagine appartamento --}}
         <div class="flat_overview">
             <h1>{{$flat->title}}</h1>
-            <span>{{$flat->address}}</span>
+            <span><i class="fas fa-map-marker-alt"></i> {{$flat->address}}</span>
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
             </div>
