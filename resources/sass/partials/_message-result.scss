@@ -9,22 +9,46 @@
         i {
             color: #00E500;
         }
+
+        @media screen and (max-width: 600px) {
+            & {
+                font-size: 20px;
+                margin: 0px 15px;
+                margin-bottom: 20px;
+            }
+         }
     }
 
 
-    
+
 
     .message_content {
-        width: 500px;
+        max-width: 500px;
         padding: 20px;
         border-radius: 20px;
         box-shadow: 0 -1px 10px lightgrey;
+
+        .p_margin_b {
+            margin-bottom: 10px;
+        }
+
         p {
             line-height: 1.6;
+
+            .email_message {
+                color: #db4c51;
+            }
+
             small {
                 font-size: 0.7rem;
                 color: #757575;
             }
         }
+
+        @media screen and (max-width: 600px) {
+            & {
+             margin: 0px 15px;
+            }
+         }
     }
 }
