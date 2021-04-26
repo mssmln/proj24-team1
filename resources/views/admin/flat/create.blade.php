@@ -64,7 +64,7 @@
 
                 <!-- Address generated -->
                 <div class="admin-form-inputs">
-                    <input readonly="text" type="text" id="address" name="address" v-model="indirizzo" class="not-usable" placeholder="Indirizzo Finale">
+                    <input readonly="text" type="text" id="address" name="address" v-model="indirizzo" class="not-usable" required placeholder="Indirizzo Finale">
                 </div>
             </div>
             
