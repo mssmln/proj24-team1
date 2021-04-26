@@ -71,18 +71,12 @@
         <section id="footer_bottom">
             <div class="footer_bottom_item">
                 <small>
-                    <i class="far fa-copyright"></i> <em>2021 Boolbnb, Credits - Alex &middot; Alessandro &middot; Marco &middot; Massimiliano &middot; Yuri</em>
+                    <i class="far fa-copyright"></i> <em>2021 Boolbnb, Credits - Alessandro &middot; Alex &middot; Marco &middot; Massimiliano &middot; Yuri</em>
                 </small>
             </div>
             {{-- / FOOTER BOTTOM ITEM --}}
             <div class="footer_bottom_icon">
                 <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-globe"></i> ITA</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-euro-sign"></i> EUR</a>
-                    </li>
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>

@@ -21,7 +21,7 @@
             <div class="input_search_home">
                 <input @blur="clearSearchHomePage" v-model="query" @keyup="getLanLon" type="text" class="search_home_guest"  placeholder="Dove vuoi andare?">
 
-                <div class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
+                <div v-cloak class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
                     {{-- Stampa Ricerca --}}
                     <a :href="'flat/' + flat.slug" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase()) && flat.visibility" v-for="(flat,index) in flats"> 
                         <img :src="'storage/' + flat.flat_img" alt="img_error">
@@ -32,8 +32,34 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <div class="sponsor_flat">
+        <div class="container">
+            <div class="mix_margin">
 
+                <div class="box_sponsor">
+                    @foreach ($ads as $key => $item)
+                    {{-- Ne stampera massimo 8 - quindi da 0 a 7 --}}
+                    @if($key < 8 && $item->flat->visibility)
+
+                    <div class="sigle_box_sponsor">
+                        <a href="{{Route('flat', $item->flat->slug)}}">
+                            <img src="{{ asset('storage/'.$item->flat->flat_img) }}" alt="{{$item->flat->title}}">       
+                            <div class="sponsor_layover">
+                                <span>{{$item->flat->title}}</span>  
+                                <span class="layover_city">{{$item->flat->city}}</span>            
+                                <span class="layover_price">{{$item->flat->price}} &#8364;</span>            
+                            </div>
+                        </a>
+                    </div>
+
+                    @endif
+                    @endforeach
+                </div>
+
+            </div>
         </div>
     </div>
 
