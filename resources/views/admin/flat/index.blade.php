@@ -5,6 +5,8 @@
 @section('content')
     <a class="create_flat_dashboard" href="{{ route('flat.create') }}"><i class="fas fa-plus"></i></a>
 
+    <h1 class="create_flat_dashboard_title">I tuoi appartamenti</h1>
+
     <table>
       <thead>
         <tr>
