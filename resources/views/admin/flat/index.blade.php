@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Admin | Flats')
+@section('title', 'Admin | Appartamenti')
 
 @section('content')
     <a class="create_flat_dashboard" href="{{ route('flat.create') }}"><i class="fas fa-plus"></i></a>

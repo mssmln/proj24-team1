@@ -51,7 +51,7 @@
     <div id="dashboard">
         <nav id="side_bar">
             <!-- High -->
-            <ul>
+            <ul class="high_sidebar">
                 <li>
                     <a href="{{ url('/') }}" target="_blank" rel="noopener noreferrer">
                         <img src="https://seeklogo.com/images/A/airbnb-logo-1D03C48906-seeklogo.com.png" width="35rem" alt="">
