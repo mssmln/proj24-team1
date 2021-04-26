@@ -175,7 +175,7 @@
                     @endif
                     
                     <div>
-                        <label for="email">Email</label>
+                        <label for="email">La tua email</label>
                         @guest
                         <input name="email" id="email" type="email" value="{{old('email')}}">
 
