@@ -54996,7 +54996,9 @@ var app = new Vue({
     //preso da input ric. avanz
     arrayAdvancedSearch: '',
     checked: false,
-    flatServices: []
+    flatServices: [],
+    // missing parameters
+    ifErrors: ''
   },
   created: function created() {
     var _this = this;
@@ -55056,12 +55058,43 @@ var app = new Vue({
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/geocode/' + this.query + '.json?limit=1&key=' + this.key).then(function (result) {
         _this3.arrayResults = result.data.results;
         _this3.latitude = _this3.arrayResults[0].position.lat;
-        _this3.longitude = _this3.arrayResults[0].position.lon;
-        console.log('prima api lat e lon', _this3.latitude, _this3.longitude);
+        _this3.longitude = _this3.arrayResults[0].position.lon; // console.log('prima api lat e lon' , this.latitude,this.longitude);
       }); // .catch((error) => alert('this API (Tomtom nested) does not work',error));
     },
     searchWithinRadius: function searchWithinRadius() {
       var _this4 = this;
+
+      this.arrayResults = [];
+
+      if (!this.query && !this.radius) {
+        this.ifErrors = 'Hai bisogno di inserire l\'indirizzo e selezionare la distanza';
+        sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: this.ifErrors
+        });
+        return;
+      }
+
+      if (this.query && !this.radius) {
+        this.ifErrors = 'Seleziona la distanza di ricerca';
+        sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: this.ifErrors
+        });
+        return; // interrompe il metodo searchWithinRadius se il radius non è stato selezionato
+      }
+
+      if (!this.query) {
+        this.ifErrors = 'Hai bisogno di inserire l\'indirizzo';
+        sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: this.ifErrors
+        });
+        return;
+      }
 
       this.arrayAdvancedSearch = ''; // lo svuotiamo
       // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
@@ -55077,39 +55110,50 @@ var app = new Vue({
           }
         });
 
-        _this4.arrayResults = []; // lo svuotiamo
-
         _this4.flats.forEach(function (item) {
+          // console.log('look here' , item);
           location.forEach(function (element) {
             // console.log(element);
             if (item.address.includes(element)) {
-              if (!_this4.arrayResults.includes(item)) {
+              if (!_this4.arrayResults.includes(item) && item.rooms >= _this4.rooms && item.beds >= _this4.beds) {
+                _this4.ifErrors = '';
+
                 _this4.arrayResults.push(item);
               }
             }
           });
-        });
+        }); // se non ci sono flats nel raggio selezionato
 
-        console.log('nel raggio di 20km ', _this4.arrayResults);
+
+        if (_this4.arrayResults.length == 0) {
+          _this4.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+          sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: _this4.ifErrors
+          });
+        }
+
+        console.log('nel raggio di 20km / 10km ', _this4.arrayResults);
       })["catch"](function (error) {
         return console.log('this API (filteredFlat) does not work', error);
-      }); // se non ci sono flats nel raggio di 20km
-
-      if (this.arrayResults.length == 0) {
-        alert('non ci sono risultati');
-      } // filtra per camere
-
+      }); // filtra per camere
 
       if (this.rooms.length) {
         this.arrayAdvancedSearch = [];
-        this.arrayResults.forEach(function (item, index) {
-          console.log('item', item.rooms);
-
+        this.arrayResults.forEach(function (item) {
+          // console.log('item' , item.rooms);
           if (item.rooms >= _this4.rooms) {
             _this4.arrayAdvancedSearch.push(item);
+          } else if (item.rooms < _this4.rooms) {
+            _this4.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+            sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: _this4.ifErrors
+            });
           }
-        });
-        console.log(this.arrayAdvancedSearch);
+        }); // console.log(this.arrayAdvancedSearch);
       } // filtra per beds
 
 
@@ -55118,9 +55162,15 @@ var app = new Vue({
         this.arrayResults.forEach(function (item) {
           if (item.beds >= _this4.beds) {
             _this4.arrayAdvancedSearch.push(item);
+          } else if (item.beds < _this4.beds) {
+            _this4.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+            sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: _this4.ifErrors
+            });
           }
-        });
-        console.log(this.arrayAdvancedSearch);
+        }); // console.log(this.arrayAdvancedSearch);
       }
     },
     clearSearchHomePage: function clearSearchHomePage() {
@@ -55267,8 +55317,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alexmikhajlovic/Downloads/coding/boolean/classe24/php/mamp_public/laravel/proj24-team1/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
