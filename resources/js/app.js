@@ -104,11 +104,14 @@ const app = new Vue({
         beds: '',//preso da input ric. avanz
         arrayAdvancedSearch: '',
         checked: false,
-        flatServices: []
+        flatServices: [],
+        // missing parameters
+        missingRadius: "hidden_item",
+        missingResult: "hidden_item",
+        missingAddress: "hidden_item"
 
     },
     created(){
-
         axios
             .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
             .then((result) =>{
@@ -116,6 +119,7 @@ const app = new Vue({
                 // this.flats = result.data.response.flat; //? The same as above
             })
             .catch((error) => alert('Sorry, API (Flats) does not work...'));
+
 
 
     },
@@ -166,13 +170,37 @@ const app = new Vue({
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                console.log('prima api lat e lon' , this.latitude,this.longitude);
+                // console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
 
         },
         
         searchWithinRadius(){
+            this.missingAddress = 'hidden_item';
+            this.missingResult = 'hidden_item';
+            this.missingRadius = 'hidden_item'; // quando il radius è settato e clicchiamo sul btn 
+
+            if(this.query && !this.radius){
+                this.missingRadius = 'show_item';
+                console.log('1 condizione');
+                return; // interrompe il metodo searchWithinRadius se il radius non è stato selezionato
+            }
+
+            if(!this.query){
+                this.missingAddress = 'show_item';
+                return;
+            }
+
+            // if(this.rooms || this.beds && !this.radius){
+            //     this.missingRadius = 'show_item';
+            //     console.log('2 condizione');
+            //     return;
+            // } else if(this.rooms || this.beds && !this.query){
+            //     this.missingAddress = 'show_item';
+            //     return;
+            // }
+
 
             this.arrayAdvancedSearch = ''; // lo svuotiamo
             // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
@@ -189,6 +217,7 @@ const app = new Vue({
                 });
                 this.arrayResults = []; // lo svuotiamo
                 this.flats.forEach(item => {
+                    // console.log('look here' , item);
                     location.forEach(element => {
                         // console.log(element);
                         if(item.address.includes(element)){
@@ -196,26 +225,31 @@ const app = new Vue({
                                 this.arrayResults.push(item);
                             }
                         }
+                        
                     });
                 });
-                console.log('nel raggio di 20km ' , this.arrayResults);
+                // se non ci sono flats nel raggio selezionato
+                if(this.arrayResults.length == 0){
+                    this.missingResult = 'show_item';
+                }
+                console.log('nel raggio di 20km / 10km ' , this.arrayResults);
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
 
-            // se non ci sono flats nel raggio di 20km
-            if(this.arrayResults.length == 0){
-                alert('non ci sono risultati');
-            }
+            
 
 
 
             // filtra per camere
             if(this.rooms.length){
                 this.arrayAdvancedSearch = [];
-                this.arrayResults.forEach((item,index) => {
-                    console.log('item' , item.rooms);
+                this.arrayResults.forEach(item => {
+                    // console.log('item' , item.rooms);
                     if(item.rooms >= this.rooms){
                         this.arrayAdvancedSearch.push(item);
+                    } else if(item.rooms < this.rooms){
+                        this.missingResult = 'show_item';
+                        console.log('n4');
                     }
                 });
                 console.log(this.arrayAdvancedSearch);
@@ -227,6 +261,9 @@ const app = new Vue({
                 this.arrayResults.forEach(item => {
                     if(item.beds >= this.beds){
                         this.arrayAdvancedSearch.push(item);
+                    } else if(item.beds < this.beds){
+                        this.missingResult = 'show_item';
+                        console.log('n5');
                     }
                 });
                 console.log(this.arrayAdvancedSearch);
