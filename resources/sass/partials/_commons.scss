@@ -1,4 +1,4 @@
-* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.5s; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -78,4 +78,17 @@ table{
     color: rgb(148, 148, 148);
     font-size: 0.8rem;
     margin-bottom: 10px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
 }

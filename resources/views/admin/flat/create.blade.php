@@ -59,7 +59,7 @@
                 <!-- Address (to generate all data) -->
                 <div class="admin-form-inputs">
                     <input v-model="address" type="text" id="address" value="{{old('address')}}" autocomplete="off" required placeholder="Indirizzo da calcolare">
-                    <label for="address"><i @click="tomtomAdresses" class="fas fa-sync-alt"></i></label>
+                    <i @click="tomtomAdresses" class="fas fa-sync-alt"></i>
                 </div>
 
                 <!-- Address generated -->
@@ -77,8 +77,8 @@
             <div class="admin-form-inputs">
                 <input readonly="text" type="hidden" name="lng" v-model="lng" class="not-usable" placeholder="Longitudine">
             </div>
+
             <div class="box_input_check">
-                
                 <!-- Address N° -->
                 <div class="admin-form-inputs">
                     <input disabled="disabled" readonly="text" v-model="numero" class="not-usable" placeholder="Numero">
@@ -136,7 +136,7 @@
             <!-- Submit -->
             <button class="submit_form_button" type="submit">Crea appartamento</button>
         </form>
-    
+
     </div>
 </div>
 

@@ -331,6 +331,11 @@ main .index_flat_guest {
 
     .flex {
         display: flex;
+        @media screen and (max-width: 1100px) {
+            &{
+                display: block;
+            }
+        }
     }
 
     .border_button_finish_flat {
@@ -417,23 +422,49 @@ main .index_flat_guest {
                         display: flex;
                         width: 50%;
                         font-size: 1.2rem;
+                        @media screen and (max-width: 750px) {
+                            &{
+                                font-size: 1rem;
+                            }
+                        }
                         .icon_services {
                             width: 10%;
                             text-align: center;
+                            @media screen and (max-width: 750px) {
+                                &{
+                                    width: 30%;
+                                }
+                            }
                             i {
                                 color: #353535;
                                 font-size: 1.6rem;
+                                @media screen and (max-width: 750px) {
+                                    &{
+                                        font-size: 1.4rem;
+                                    }
+                                }
                             }
                         }
 
                     }
                 }
             }
+            @media screen and (max-width: 1100px) {
+                &{
+                    width: 100%;
+                    padding-right: 0px;
+                }
+            }
         }
         .contact_form {
             width: 30%;
+            h3{
+                border-bottom: 1px solid rgb(221, 221, 221);
+                padding: 20px 0;
+                margin-bottom: 20px;
+            }
             .form_message {
-                padding: 50px 0;
+                padding: 30px 15px;
                 margin: 30px auto;
                 background-color: rgb(255, 255, 255);
                 box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
@@ -443,21 +474,23 @@ main .index_flat_guest {
                 label {
                     display: block;
                     margin-bottom: 10px;
+                    font-size: 0.9rem;
                 }
                 input {
-                    width: 70%;
+                    width: 80%;
                     padding: 10px;
                     border-radius: 10px;
                     border: 1px solid rgba(0, 0, 0, 0.096);
                     margin-bottom: 30px;
                 }
                 textarea {
-                    width: 70%;
+                    width: 80%;
                     outline: none;
                     border: 1px solid rgba(0, 0, 0, 0.096);
                     margin-bottom: 30px;
                 }
                 button {
+                    margin-bottom: 20px;
                     background-color: #e0565b;
                     color: white;
                     padding: 15px 20px;
@@ -469,9 +502,15 @@ main .index_flat_guest {
                 }
             }
             .location_price {
+                border-top: 1px solid rgb(221, 221, 221);
                 text-align: center;
                 h2 {
                     margin: 30px 0 0;
+                }
+            }
+            @media screen and (max-width: 1100px) {
+                &{
+                    width: 100%;
                 }
             }
         }

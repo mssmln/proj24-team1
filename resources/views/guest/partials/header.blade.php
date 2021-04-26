@@ -25,12 +25,6 @@
                     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
                     <li><a class="smaller" href="{{route('search')}}">Ricerca Avanzata</a></li>
                     @endunless
-                    @auth
-                    <li><a class="smaller" href="{{ Route('home') }}" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
-                    @else
-                    <li><a class="smaller" href="{{ route('register') }}">Diventa Host</a></li>
-                    @endauth
-
 
                     <li class="user_action">
 
@@ -68,7 +62,11 @@
                                             </form>
                                         </li>
                                     @endguest
-                                    <li><a href="#">Assistenza</a></li>
+                                    @auth
+                                        <li><a href="{{ Route('home') }}" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
+                                        @else
+                                        <li><a href="{{ route('register') }}">Diventa Host</a></li>
+                                    @endauth
                                 </ul>
 
                             </div>
