@@ -24,7 +24,7 @@
                 
                 {{-- Titolo e informazioni stanze... --}}
                 <div class="title">
-                    <h2>Appartamento - Host: {{$flat->user->name}} {{$flat->user->surname}}</h2>
+                    <h2>Appartamento - Host: {{$flat->user->name}}</h2>
                     
                     <div class="info_rooms">
                         @if($flat->beds > 1)
