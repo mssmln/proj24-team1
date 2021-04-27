@@ -103,7 +103,6 @@
                         @foreach ($flat->services as $item)
 
                         <div class="service_info">
-                            
                             @if($item->id == 1)
                             <div class="icon_services">
                                 <i class="fas fa-wifi"></i>
@@ -139,18 +138,19 @@
                                 <i class="fas fa-water"></i>
                             </div>
                             <span>{{$item->name}}</span>
-
                             @endif
-                            
                         </div>
                         @endforeach
+
                         @else 
+
                             <div class="service_info">
                                 <div class="icon_services">
                                     <i class="fas fa-ban"></i>
                                 </div>
                                 <span>Nessun servizio aggiuntivo</span>
                             </div>
+                            
                         @endif
                     </div>
                     
