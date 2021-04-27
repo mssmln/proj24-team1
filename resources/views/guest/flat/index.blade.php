@@ -241,7 +241,7 @@
                 right: [-25, -35]
             }
             var popup = new tt.Popup({offset: popupOffsets}).setHTML("<p><strong>{{$flat->title}}</strong></p><p>{{$flat->address}}</p>");
-            marker.setPopup(popup).togglePopup(off);
+            marker.setPopup(popup);
         </script>
 
     </div>
