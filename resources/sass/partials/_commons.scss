@@ -1,5 +1,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body, * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -87,27 +91,22 @@ table{
     cursor: not-allowed;
 }
 
-.ck-editor {
-    color: $brand-color;
-}
-
 [v-cloak] { // serve a non visualizzare le {{ }} con vue al caricamento della pagina
     display: none;
 }
 
-.invalid-feedback{
+.invalid-feedback {
     color: rgb(148, 148, 148);
     font-size: 0.8rem;
     margin-bottom: 10px;
 }
 
 .alert {
-    padding: 15px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
-
 .alert-danger {
     color: $brand-color;
     background-color: $brand-color-shadow;
