@@ -24,6 +24,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+
+
     public function index()
     {
         return view('guest.home', [ 'ads' => Ad::all()]);
@@ -35,14 +38,13 @@ class HomeController extends Controller
     }
 
     public function flat($slug){
-
         $flatSlug = Flat::where('slug', $slug)->first();
-
+        
+        $flatSlug->incrementViewCount(); // scritta nel model Flat
         $data = [
             'flat' => $flatSlug
         ];
-        // dd($data); it worked smoothly
-
+        
         return view('guest.flat.index' , $data);
     }
 
