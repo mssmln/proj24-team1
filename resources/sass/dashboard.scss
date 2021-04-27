@@ -100,18 +100,6 @@
                 }
             }
         }
-        // Route admin.show
-        .admin_flat_show {
-            p {
-                margin: 10px 0;
-            }
-            .visibility {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-            }
-        }
-        // end Route admin.show
     }
     .charts {
         display: flex;
@@ -123,6 +111,73 @@
             max-width: 400px;
             max-height: 400px;
             margin: 20px;
+        }
+    }
+}
+
+.admin_flat_show{
+    .image_admin_show{
+        width: 50%;
+        margin: 0 auto 30px;
+        @media screen and (max-width: 900px) {
+            &{
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 450px) {
+            &{
+                width: 90%;
+            }
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .admin_show_description{
+        width: 90%;
+        margin: auto;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        p {
+            margin:0 0 20px;
+        }
+    }
+    .admin_show_price{
+        width: 90%;
+        text-align: center;
+        margin: 15px auto 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        i {
+            margin-right: 20px;
+        }
+        p{
+            margin-bottom: 5px;
+        }
+    }
+    .services{
+        display: flex;
+        width: 90%;
+        margin: 20px auto 0;
+        flex-wrap: wrap;
+        .service_info {
+            flex-basis: calc(100% / 6);
+            display: flex;
+            justify-content: center;
+            @media screen and (max-width: 950px) {
+                & {
+                    flex-basis: 100%;
+                }
+            }
+        }
+        .icon_services{
+            margin-bottom: 5px;
+            display: flex;
+            i{
+                margin-right: 12px;
+            }
         }
     }
 }
