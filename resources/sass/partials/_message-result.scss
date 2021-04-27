@@ -28,6 +28,9 @@
         border-radius: 20px;
         box-shadow: 0 -1px 10px lightgrey;
 
+        .text_message {
+            word-break: break-all;
+        }
         .p_margin_b {
             margin-bottom: 10px;
         }

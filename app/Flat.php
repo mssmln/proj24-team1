@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+
 
 class Flat extends Model
 {
@@ -50,4 +52,14 @@ class Flat extends Model
     { 
         return $this->hasMany('App\Ad');
     } 
+
+
+    public function incrementViewCount() { // funzione per evitare che il proprietario del flat incrementi per mano sua le views, la richiamiamo nel guest HomeController
+        // dd($this);
+        if(Auth::id() != $this->user_id){ // il $this si riferisce allo specifico flat
+            $this->views++;
+        }
+        return $this->save();
+    }
+
 }

@@ -153,6 +153,7 @@ const app = new Vue({
         headerNavProfile() {
             if (this.classNavbarClick == 'hidden_item') {
                 this.classNavbarClick = 'show_item';
+                setTimeout(() => this.classNavbarClick = 'hidden_item', 3000);
             } else {
                 this.classNavbarClick = 'hidden_item';
             }
