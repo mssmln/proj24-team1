@@ -126,6 +126,17 @@
             @media screen and (max-width: 850px) {
                 width: 100%;
             }
+            .admin-show-views {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                .animated-eye {
+                    width: 25px;
+                    border-radius: 20px;
+                    margin-right: 5px;
+                }
+            }
             .image_admin_show{
                 width: 60%;
                 margin: 0 auto 40px;

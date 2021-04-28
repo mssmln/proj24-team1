@@ -55126,44 +55126,44 @@ var app = new Vue({
           });
         }
 
-        console.log('nel raggio di 20km / 10km ', _this5.arrayResults);
+        console.log('arrayResults, nel raggio di 20km / 10km ', _this5.arrayResults);
       })["catch"](function (error) {
         return console.log('this API (filteredFlat) does not work', error);
-      }); // filtra per camere
-
-      if (this.rooms.length) {
-        this.arrayAdvancedSearch = [];
-        this.arrayResults.forEach(function (item) {
-          // console.log('item' , item.rooms);
-          if (item.rooms >= _this5.rooms) {
-            _this5.arrayAdvancedSearch.push(item);
-          } else if (item.rooms < _this5.rooms) {
-            _this5.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-            sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: _this5.ifErrors
-            });
-          }
-        }); // console.log(this.arrayAdvancedSearch);
-      } // filtra per beds
-
-
-      if (this.beds.length) {
-        this.arrayAdvancedSearch = [];
-        this.arrayResults.forEach(function (item) {
-          if (item.beds >= _this5.beds) {
-            _this5.arrayAdvancedSearch.push(item);
-          } else if (item.beds < _this5.beds) {
-            _this5.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-            sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: _this5.ifErrors
-            });
-          }
-        }); // console.log(this.arrayAdvancedSearch);
-      }
+      }); // // filtra per camere
+      // if(this.rooms.length){
+      //     this.arrayAdvancedSearch = [];
+      //     this.arrayResults.forEach(item => {
+      //         // console.log('item' , item.rooms);
+      //         if(item.rooms >= this.rooms){
+      //             this.arrayAdvancedSearch.push(item);
+      //         } else if(item.rooms < this.rooms){
+      //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+      //             Swal.fire({
+      //                 icon: 'error',
+      //                 title: 'Oops...',
+      //                 text: this.ifErrors,
+      //             })
+      //         }
+      //     });
+      //     console.log('arrayAdvancedSearch', this.arrayAdvancedSearch);
+      // }
+      // // filtra per beds
+      // if(this.beds.length){
+      //     this.arrayAdvancedSearch = [];
+      //     this.arrayResults.forEach(item => {
+      //         if(item.beds >= this.beds){
+      //             this.arrayAdvancedSearch.push(item);
+      //         } else if(item.beds < this.beds){
+      //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+      //             Swal.fire({
+      //                 icon: 'error',
+      //                 title: 'Oops...',
+      //                 text: this.ifErrors,
+      //             })
+      //         }
+      //     });
+      //     // console.log(this.arrayAdvancedSearch);
+      // }
     },
     clearSearchHomePage: function clearSearchHomePage() {
       var _this6 = this;
