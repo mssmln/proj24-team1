@@ -88,8 +88,18 @@
                 </li>
                 <li>
                     <small id="clock"></small>
+                    <script>
+                        // Live clock
+                        var liveclock = document.getElementById('clock');
+                        function time() {
+                            var d = new Date();
+                            var m = d.getMinutes();
+                            var h = d.getHours();
+                            liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2);
+                        }
+                        setInterval(time, 1000);
+                    </script>
                 </li>
-                <!-- <li id="time"></li> -->
             </ul>
         </nav>
 
