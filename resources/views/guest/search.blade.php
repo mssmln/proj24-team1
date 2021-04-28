@@ -19,7 +19,6 @@
                 <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
                 {{-- fine action_radius per la formattazione flex --}}
             </div>
-        </div>
 
             <div class="advanced_research">
 
