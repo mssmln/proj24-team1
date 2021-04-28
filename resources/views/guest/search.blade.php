@@ -47,7 +47,7 @@
         </div>
         {{-- fine box_search_inputs --}}
 
-        <!-- Ricerca per raggio 20km o 10Km -->
+        <!-- Ricerca per raggio 20km o 10Km - -->
         <div v-cloak class="advance_search_results">
 
             <a class="box_searched_item" :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0 && result.visibility">
