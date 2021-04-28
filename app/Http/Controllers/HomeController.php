@@ -27,25 +27,20 @@ class HomeController extends Controller
 
 
 
-    public function index()
-    {
-        return view('guest.home', [ 'ads' => Ad::all()]);
+    public function index(){ 
+        return view('guest.home', [ 'ads' => Ad::all()->where('expired_date', '>', date('Y-m-d H:i:s'))->sortByDesc('expired_date')->take(8)]);
     }
 
     public function search(){
-
-        return view('guest.search');
+        return view('guest.search', [ 'ads' => Ad::all()->where('expired_date', '>', date('Y-m-d H:i:s'))->sortByDesc('expired_date')->take(30)]);
     }
 
     public function flat($slug){
+
         $flatSlug = Flat::where('slug', $slug)->first();
+        $flatSlug->incrementViewCount(); // Funzione scritta nel model Flat
         
-        $flatSlug->incrementViewCount(); // scritta nel model Flat
-        $data = [
-            'flat' => $flatSlug
-        ];
-        
-        return view('guest.flat.index' , $data);
+        return view('guest.flat.index' , ['flat' => $flatSlug]);
     }
 
     public function message(){
@@ -55,9 +50,6 @@ class HomeController extends Controller
         $data = [
             'message' => $last_message
         ];
-
-        // dd($data);
-
 
         return view('guest.message', $data);
     }
@@ -70,17 +62,13 @@ class HomeController extends Controller
         ]);
 
         $id = $flat->where('slug' , $slug)->value('id');
-        // dd($data); it worked smoothly
+
         $newMessage = new Message();
         $newMessage->fill($request->all());
         $newMessage->flat_id = $id;
 
-        // dd($newMessage); it worked seamlessly
         $newMessage->save();
-
 
         return redirect()->route('message');
     }
-
-
 }

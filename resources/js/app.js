@@ -224,46 +224,46 @@ const app = new Vue({
                         text: this.ifErrors,
                     })
                 }
-                console.log('nel raggio di 20km / 10km ' , this.arrayResults);
+                console.log('arrayResults, nel raggio di 20km / 10km ' , this.arrayResults);
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
 
-            // filtra per camere
-            if(this.rooms.length){
-                this.arrayAdvancedSearch = [];
-                this.arrayResults.forEach(item => {
-                    // console.log('item' , item.rooms);
-                    if(item.rooms >= this.rooms){
-                        this.arrayAdvancedSearch.push(item);
-                    } else if(item.rooms < this.rooms){
-                        this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: this.ifErrors,
-                        })
-                    }
-                });
-                // console.log(this.arrayAdvancedSearch);
-            }
+            // // filtra per camere
+            // if(this.rooms.length){
+            //     this.arrayAdvancedSearch = [];
+            //     this.arrayResults.forEach(item => {
+            //         // console.log('item' , item.rooms);
+            //         if(item.rooms >= this.rooms){
+            //             this.arrayAdvancedSearch.push(item);
+            //         } else if(item.rooms < this.rooms){
+            //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+            //             Swal.fire({
+            //                 icon: 'error',
+            //                 title: 'Oops...',
+            //                 text: this.ifErrors,
+            //             })
+            //         }
+            //     });
+            //     console.log('arrayAdvancedSearch', this.arrayAdvancedSearch);
+            // }
 
-            // filtra per beds
-            if(this.beds.length){
-                this.arrayAdvancedSearch = [];
-                this.arrayResults.forEach(item => {
-                    if(item.beds >= this.beds){
-                        this.arrayAdvancedSearch.push(item);
-                    } else if(item.beds < this.beds){
-                        this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: this.ifErrors,
-                        })
-                    }
-                });
-                // console.log(this.arrayAdvancedSearch);
-            }
+            // // filtra per beds
+            // if(this.beds.length){
+            //     this.arrayAdvancedSearch = [];
+            //     this.arrayResults.forEach(item => {
+            //         if(item.beds >= this.beds){
+            //             this.arrayAdvancedSearch.push(item);
+            //         } else if(item.beds < this.beds){
+            //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
+            //             Swal.fire({
+            //                 icon: 'error',
+            //                 title: 'Oops...',
+            //                 text: this.ifErrors,
+            //             })
+            //         }
+            //     });
+            //     // console.log(this.arrayAdvancedSearch);
+            // }
         },
         clearSearchHomePage() {
             setTimeout(() => this.query = '', 900);
