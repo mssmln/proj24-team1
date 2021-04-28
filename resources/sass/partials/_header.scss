@@ -75,7 +75,6 @@ header {
                 }
             }
 
-
             .nav_user {
                 z-index: 99;
                 ul {
@@ -133,7 +132,8 @@ header {
 
                                     li {
                                         &:hover {
-                                            background-color: #d3d3d3;
+                                            background-color: #db4c5177;
+                                            border-radius: 10px;
                                         }//li:hover
 
                                         a{
@@ -144,10 +144,6 @@ header {
                                             text-decoration: none;
                                         }//a
                                     }//li
-
-                                    li:nth-child(2) {
-                                        border-bottom: 1px solid #A3A3A3;
-                                    }
                                 }//ul
 
                             }//div.user_log
@@ -167,6 +163,48 @@ header {
 
 }
 
+header.white_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    .container{
+        .nav_header{
+            background-color: transparent;
+            .nav_user{
+                a {
+                    color: black;
+                }
+            }
+            .box_logo_big {
+                a {
+                    svg {
+                        color: #000000;
+                        width: 102px;
+                        height: 32px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .box_logo_small {
+                display: none;
+                a {
+                    svg {
+                        color: #000000;
+                        width: 30px;
+                        height: 32px;
+                        margin-left: 10px;
+                    }
+                }
 
-
-
+                @media screen and (max-width: 600px) {
+                   & {
+                    display: block;
+                   }
+                }
+            }
+        }
+    }
+}
