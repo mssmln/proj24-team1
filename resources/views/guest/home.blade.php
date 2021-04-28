@@ -21,7 +21,7 @@
             <div class="input_search_home">
                 <input @blur="clearSearchHomePage" v-model="query" @keyup="getLanLon" type="text" class="search_home_guest"  placeholder="Dove vuoi andare?">
 
-                <div v-cloak class="flat_list" :class="(query != '') ? 'show_item' : 'hidden_item'">
+                <div v-cloak class="flat_list" v-if="flats.length > 0" :class="(query != '') ? 'show_item' : 'hidden_item'">
                     {{-- Stampa Ricerca --}}
                     <a :href="'flat/' + flat.slug" class="flat"  v-if="flat.address.toLowerCase().includes(query.toLowerCase()) && flat.visibility" v-for="(flat,index) in flats"> 
                         <img :src="'storage/' + flat.flat_img" alt="img_error">

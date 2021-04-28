@@ -1,16 +1,3 @@
-/* Regola generale da disattivare se non si testano input non formattati*/
-// input { border-style: none; background: transparent; outline: none; }
-/* INPUT - CHECKBOX*/
-
-/* Per quando si sistemerà il form create ed edit:
-    dare al div delle checkbox:
-        display: flex;
-        align-items: center;
-        margin: 5px;
-    dare alla label
-        margin-left 10px
-*/
-
 button {
     background-color: transparent;
 	color: $brand-color;
@@ -24,7 +11,7 @@ button {
 }
 
 #reply-btn {
-    color: #757575;
+    color: $secondary-color;
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -36,9 +23,9 @@ button {
 
 a.button_primary {
     background-color: #fff;
-    color: black;
-    padding: 15px 20px;
     border-radius: 10px;
+    padding: 15px 20px;
+    color: #000;
     font-weight: bold;
     &:hover {
         background-color: $brand-color;
@@ -47,19 +34,19 @@ a.button_primary {
 }
 
 #to-top {
-    background-color: $brand-color;
-    color: #fff;
-    border-radius: 100%;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     width: 40px;
     height: 40px;
+    border-radius: 100%;
+    background-color: $brand-color;
+    color: #fff;
     cursor: pointer;
-    z-index: 2;
+    z-index: 10;
 }
 
 .form-delete {
