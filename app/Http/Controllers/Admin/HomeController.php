@@ -14,9 +14,11 @@ class HomeController extends Controller
     {
 
         $data = [
-            // 'flats' => Flat::all()->where('user_id', Auth::id()),
+            'flats' => Flat::all()->where('user_id', Auth::id()),
+
             'lastmessages' => Message::all()->sortBy('created_at')
         ];
+        // dd($data);
 
         return view('admin.home', $data);
     }
@@ -32,8 +34,11 @@ class HomeController extends Controller
 
     public function statistics($id_flat){
         $flatId = Flat::where('id', $id_flat)->first();
+
         $data = [
-            'flat' => $flatId
+            'flat' => $flatId,
+
+            'countMessages' => Message::all()->where('flat_id', $id_flat)
         ];
         // dd($data); // it worked seamlessly
         // Ritorna la view statistiche
