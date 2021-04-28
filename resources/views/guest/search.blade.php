@@ -6,43 +6,48 @@
 <div class="container">
 
     <div class="big_box_search">
+        <div class="box_search_inputs">
+            <div class="box_select_radius">
+                <h1>Affina le tue ricerche</h1>
+                <p>È necessario scegliere il raggio e inserire un indirizzo, per migliorare la tua ricerca, applica i filtri desiderati.</p>
+                <div class="action_radius">
+                    <ul class="select_radius">
+                        <li v-on:click="radius = 10000">Distanza 10km</li>
+                        <li v-on:click="radius = 20000">Distanza 20km</li>
+                    </ul>
 
-        <div class="box_select_radius">
-            <h1>Ricerca avanzata</h1>
-            <p>Seleziona il raggio della tua ricerca</p>
-            <div class="action_radius">
-                <ul class="select_radius">
-                    <li v-on:click="radius = 10000">Distanza 10km</li>
-                    <li v-on:click="radius = 20000">Distanza 20km</li>
-                </ul>
 
-
-                <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
+                    <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
+                </div>
+                {{-- fine action_radius per la formattazione flex --}}
             </div>
         </div>
-        
-        {{-- fine box_select_radius --}}
 
-        <div class="advanced_research">
+            <div class="advanced_research">
 
-            <div class="box_research">
-                <label for="address">Indirizzo</label>
-                <input v-model="query" @keyup="getLanLon" type="text" id="address" placeholder="Via e città (o CAP)">
+                <div class="box_research box_bigger">
+                    <label for="address">Indirizzo</label>
+                    <input v-model="query" @keyup="getLanLon" type="text" id="address" placeholder="Via e città (o CAP)">
+                </div>
+
+                <div class="box_research">
+                    <label for="camere">Camere</label>
+                    <input type="number" v-model="rooms" id="camere" min="1" placeholder="Numero minimo">
+                </div>
+
+                <div class="box_research">
+                    <label for="letti">Letti</label>
+                    <input type="number" v-model="beds" id="letti" min="1" placeholder="Numero minimo">
+                </div>
+
             </div>
+            {{-- fine advanced_research --}}
 
-            <div class="box_research">
-                <label for="camere">Numero minimo di camere</label>
-                <input type="number" v-model="rooms" id="camere" min="1">
+            <div class="button_end_box">
+                <button class="search_button" @click="searchWithinRadius">Verifica</button>
             </div>
-
-            <div class="box_research">
-                <label for="letti">Numero minimo di Letti</label>
-                <input type="number" v-model="beds" id="letti" min="1">
-            </div>
-
-            <button class="search_button" @click="searchWithinRadius">Verifica</button>
         </div>
-        {{-- fine advanced_research --}}
+        {{-- fine box_search_inputs --}}
 
         <!-- ricerca per raggio 20km -->
         <div v-cloak class="advance_search_results">
@@ -56,7 +61,7 @@
                         <p>Letti: @{{ result.beds }}</p>
                     </div>
                     <div class="show_price">
-                        <p>@{{ result.price }}</p>
+                        <p>@{{ result.price }} €</p>
                     </div>
                     <div class="sponsor_layover">
                         <span>Mostra</span>

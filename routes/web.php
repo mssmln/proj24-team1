@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('homepage');
 Route::get('/advanced-search', 'HomeController@search')->name('search');
 Route::get('/flat/{slug}', 'HomeController@flat')->name('flat');
 Route::get('/sent-message', 'HomeController@message')->name('message');
