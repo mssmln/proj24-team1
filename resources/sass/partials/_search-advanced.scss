@@ -1,98 +1,154 @@
 .big_box_search {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    .box_select_radius {
-
-        margin: 10px 10px;
-        .action_radius {
-
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-
-            @media screen and (max-width: 640px) {
-                & {
-                    flex-direction: column;
-                }
-            }
-
-            .select_radius {
-                display: flex;
-                margin: 20px 0px;
-
-                li:first-child {
-                    margin-right: 20px;
-                }
-
-                li {
-                    padding: 10px;
-                    background-color: #DD585D;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-            }//select_radius
-
-            h2 {
-                margin-left: 20px;
-
+    .sponsor_title_search_ad{
+        margin: 40px 0 0 45px;
+        font-size: 1.9rem;
+    }
+    .box_search_inputs {
+        background-color: #f7f7f7;//colore del footer
+        padding: 20px;
+        margin: 20px 20px;
+        border-radius: 20px;
+        box-shadow: 0px 6px 16px rgb(0 0 0 / 12%);//per effetto ombra
+        display: flex;
+        flex-direction: column;
+        .box_select_radius {
+            text-align: center;
+            margin: 10px 10px;
+            h1 {
+                margin-bottom: 20px;
                 @media screen and (max-width: 640px) {
                     & {
-                    margin-left: 0px;
+                        font-size: 30px;
+                    }
+                }
+                @media screen and (max-width: 450px) {
+                    & {
+                        font-size: 26px;
+                    }
+                }
+                @media screen and (max-width: 360px) {
+                    & {
+                        font-size: 24px;
                     }
                 }
             }
-        }//action_radius
-    }//box_select_radius
+            h2 {
+                margin-bottom: 20px;
+                @media screen and (max-width: 750px) {
+                    & {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .action_radius {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                @media screen and (max-width: 640px) {
+                    & {
+                        flex-direction: column;
+                    }
+                }
+                .select_radius {
+                    color: white;
+                    display: flex;
+                    margin: 20px 0px;
+                    font-size: 1.1rem;
+                    li:first-child {
+                        margin-right: 20px;
+                    }
+                    li {
+                        padding: 10px;
+                        background-color: #ff0009a8;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        text-align: center;
+                    }
+                }//select_radius
+            }//action_radius
+        }//box_select_radius
 
 
 
 
-    .advanced_research {
+        .advanced_research {
 
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-
-        .box_research {
-            margin: 0px 10px;
-            margin-bottom: 10px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 1100px) {
+                & {
+                    justify-content: space-around;
+                }
+                
+            }
+            @media screen and (max-width: 700px) {
+                & {
+                    flex-wrap: wrap;
+                }
+            }
+            .box_research {
+                margin: 0px 10px;
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                label {
+                    margin: 10px;
+                }
+                input {
+                    // border: 2px solid #DD585D;//per avere il bordo attorno agli input
+                    box-shadow: 0px 6px 16px rgb(0 0 0 / 12%);//per effetto ombra
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                    background-color: #fff;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    &::placeholder {
+                        font-size: 1.2rem;
+                    }
+
+                }
+                @media screen and (max-width: 700px) {
+                    & {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }//box_research
+            .box_bigger {
+                flex-grow: 10;
+                min-width: 50%;
+                input {
+                    width: 100%;
+                }
+            }
+        }//fine advanced_research
+        .button_end_box {
+            margin-top: 20px;
+            display: flex;
             justify-content: center;
             align-items: center;
-
-            input {
-                border: 2px solid #DD585D;
-                border-radius: 20px;
-                padding: 10px 20px;
-            }
         }
-
-
-    }
+    }//fine box_search_inputs
 
     .advance_search_results {
         width: 100%;
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
-
         a.box_searched_item {
-            height: 300px;
+            min-height: 300px;
             box-shadow: 0px 6px 16px rgb(0 0 0 / 12%);
             position: relative;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
             margin: 20px;
             flex-basis: calc(100% / 4 - 40px);
-
             @media screen and (max-width: 1400px){
                 &{
                     flex-basis: calc(100% / 3 - 40px);
@@ -105,46 +161,37 @@
             }
             @media screen and (max-width: 700px){
                 &{
-                    flex-basis: calc(100% - 40px);
+                    flex-basis: 100%;
+                    margin: 20px 0;
                 }
             }
-
             img {
                 object-fit: cover;
-                height: 65%;
+                height: 70%;
                 width: 100%;
                 border-radius: 10px;
             }
+            .info_basic{
+                padding: 0 10px;
 
-            h2{
-                font-size: 16px;
-                padding: 0px 10px;
-                color: black;
+                h2{
+                    font-size: 16px;
+                    margin-bottom: 3px;
+                    color: black;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                h3 {
+                    position: absolute;
+                    bottom: 2%;
+                    left: 10px;
+                    font-size: 14px;
+                    font-weight: initial;
+                    color: black;
+                }
             }
-
-            h3 {
-                font-size: 14px;
-                padding: 0px 10px;
-
-            }
-
-            .more_info {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-                margin-bottom: 10px;
-            }
-
-            .show_price {
-                position: absolute;
-                left: 5px;
-                top: 5px;
-                background-color: #fff;
-                padding: 5px;
-                border-radius: 5px;
-                border: 0.5px solid #DD585D;
-            }
-
             .sponsor_layover {
                 position: absolute;
                 top: 0;
@@ -161,9 +208,22 @@
                     display: block;
                     font-size: 20px;
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    left: 5%;
+                    bottom: 35%;
+                }
+                .show_price {
+                    position: absolute;
+                    right: 5%;
+                    bottom: 35%;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                .more_info {
+                    position: absolute;
+                    left: 5%;
+                    top: 5%;
+                    width: 100%;
+                    margin-bottom: 10px;
                 }
             }
             &:hover .sponsor_layover {

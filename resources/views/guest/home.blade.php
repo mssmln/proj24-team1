@@ -5,6 +5,8 @@
 
     <div class="jumbotron">
 
+        @include('guest.partials.header2')
+
         {{-- Sfondo jumbotron --}}
         <img class="bg_jumbo" src=" {{asset('images/bg_secondary_home.webp')}} " alt="jumbotron background">
 
@@ -38,12 +40,16 @@
     <div class="sponsor_flat">
         <div class="container">
             <div class="mix_margin">
+                
+                @if (count($ads) > 0)
+                <h2 class="homepage_sposnsor_title">Appartamenti in evidenza</h2>
+                @endif
 
                 <div class="box_sponsor">
                     @foreach ($ads as $key => $item)
-                    {{-- Ne stampera massimo 8 - quindi da 0 a 7 --}}
-                    @if($key < 8 && $item->flat->visibility)
-
+                    {{-- Ne stampera massimo 8 data la query del controller --}}
+                    @if($item->flat->visibility)
+                
                     <div class="sigle_box_sponsor">
                         <a href="{{Route('flat', $item->flat->slug)}}">
                             <img src="{{ asset('storage/'.$item->flat->flat_img) }}" alt="{{$item->flat->title}}">       

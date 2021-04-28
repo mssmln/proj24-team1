@@ -8,17 +8,19 @@
 
     <div class="visibility_admin_show">
         @if ($flat->visibility == 1)
-        <i class="fas fa-circle visibility-on pulse"></i>
+        <i class="fas fa-circle visibility-on pulse"></i> <i class="fas fa-hashtag"></i> <strong>{{ $flat->id }}</strong>
         @else
-        <i class="fas fa-circle visibility-off pulse"></i>
+        <i class="fas fa-circle visibility-off pulse"></i> <i class="fas fa-hashtag"></i> <strong>{{ $flat->id }}</strong>
         @endif
-        <p><i class="fas fa-hashtag"></i> <strong>{{ $flat->id }}</strong></p>
     </div>
 
     <div class="flex">
 
         <div class="info_admin_show_flat">
             <h1>{{ $flat->title }}</h1>
+            <div class="admin-show-views">
+                <img class="animated-eye" src="https://cdn.dribbble.com/users/3290108/screenshots/7053367/media/23409aced2eff304bf43f24c9c147739.gif" alt=""> <strong>{{ $flat->views }}</strong>
+            </div>
             <div class="image_admin_show">
                 <img src="{{asset('storage/'.$flat->flat_img)}}" alt="Anteprima appartamento">
             </div>
