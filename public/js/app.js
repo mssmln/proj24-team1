@@ -54898,20 +54898,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
- // Live clock
-
-var liveclock = document.getElementById('clock');
-
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours(); // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-
-  liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-}
-
-setInterval(time, 1000); // Confirm button by sweetalert2
+ // Confirm button by sweetalert2
 
 var forms = document.getElementsByClassName("form-delete");
 
@@ -55084,7 +55071,7 @@ var app = new Vue({
       if (this.query && !this.radius) {
         this.ifErrors = 'Seleziona la distanza di ricerca';
         sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
-          icon: 'error',
+          icon: 'warning',
           title: 'Oops...',
           text: this.ifErrors
         });
@@ -55094,7 +55081,7 @@ var app = new Vue({
       if (!this.query) {
         this.ifErrors = 'Hai bisogno di inserire l\'indirizzo';
         sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_1__["default"].fire({
-          icon: 'error',
+          icon: 'warning',
           title: 'Oops...',
           text: this.ifErrors
         });
@@ -55322,8 +55309,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Boolean\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\boolean\Esercizi del pomeriggio\mamp_public\proj24-team1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
