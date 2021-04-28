@@ -61,7 +61,6 @@ class FlatController extends Controller
             'services' => Service::all()
         ];
         return view('admin.flat.create', $data);
-
     }
 
     /**
@@ -147,7 +146,6 @@ class FlatController extends Controller
                 'address' => 'required|string',
                 'flat_img' => 'mimes:png,jpg,gif',
                 'visibility' => 'boolean',
-                // / flat
             ]);
 
 
