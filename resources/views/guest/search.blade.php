@@ -23,23 +23,21 @@
         </div>
         {{-- fine box_select_radius --}}
 
-        <div class="advanced_research">
 
+
+        <div class="advanced_research">
             <div class="box_research">
                 <label for="address">Indirizzo</label>
                 <input v-model="query" @keyup="getLanLon" type="text" id="address" placeholder="Via e città (o CAP)">
             </div>
-
             <div class="box_research">
                 <label for="camere">Numero minimo di camere</label>
                 <input type="number" v-model="rooms" id="camere" min="1">
             </div>
-
             <div class="box_research">
                 <label for="letti">Numero minimo di Letti</label>
                 <input type="number" v-model="beds" id="letti" min="1">
             </div>
-
             <button class="search_button" @click="searchWithinRadius">Verifica</button>
         </div>
         {{-- fine advanced_research --}}
@@ -67,7 +65,7 @@
                 {{-- proVA PER FORMATTARE --------------------------------------------------------------------------------------- --}}
                 {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
 
-                <a class="box_searched_item" href="#">
+                <!-- <a class="box_searched_item" href="#">
                     <img src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg" alt="#">
                     <h2>Primo appartamento a Valeggio</h2>
                     <h3>Via Monte Napoleone 3, 20121 Milano</h3>
@@ -167,7 +165,7 @@
                         <span>Mostra</span>
 
                     </div>
-                </a>
+                </a> -->
 
                 {{-- proVA PER FORMATTARE -----------------------------------------------------------------------------------------}}
                 {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
