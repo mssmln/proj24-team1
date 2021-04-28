@@ -40,6 +40,10 @@
     <div class="sponsor_flat">
         <div class="container">
             <div class="mix_margin">
+                
+                @if (count($ads) > 0)
+                <h2 class="homepage_sposnsor_title">Appartamenti in evidenza</h2>
+                @endif
 
                 <div class="box_sponsor">
                     @foreach ($ads as $key => $item)
