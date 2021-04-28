@@ -21,7 +21,7 @@
                 </div>
                 {{-- fine action_radius per la formattazione flex --}}
             </div>
-            {{-- fine box_select_radius --}}
+        </div>
 
             <div class="advanced_research">
 
@@ -68,114 +68,6 @@
 
                     </div>
                 </a>
-
-                {{-- proVA PER FORMATTARE --------------------------------------------------------------------------------------- --}}
-                {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
-
-                {{-- <a class="box_searched_item" href="#">
-                    <img src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg" alt="#">
-                    <h2>Primo appartamento a Valeggio</h2>
-                    <h3>Via Monte Napoleone 3, 20121 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 2</p>
-                        <p>Letti: 2</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.berlino.com/wp-content/uploads/sites/13/Appartamenti.jpg" alt="#">
-                    <h2>Appartamento a villafranca di verona</h2>
-                    <h3>Via Scuderlando 4, 37135 Verona</h3>
-                    <div class="more_info">
-                        <p>Camere: 1</p>
-                        <p>Letti: 2</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://lh3.googleusercontent.com/proxy/EWbZnuglJdypvVO6OPRABizylPLaAkTXMXV0eTfGVIXuC8fGRNk8SZrQBWWziKHIIYAlpUjykXmMqTPp3BWY4vUgsnIh_0buvqBthizHmMdS6iepVnUbdgS13gZD0VdQjAs0wB9sr7sGKhWQGXA" alt="#">
-                    <h2>Secondo appartamento a verona</h2>
-                    <h3>Via Alessandro Sala 4, 37067 Valeggio sul Mincio</h3>
-                    <div class="more_info">
-                        <p>Camere: 3</p>
-                        <p>Letti: 6</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://familygo-c02.kxcdn.com/wp-content/uploads/2020/02/living-jesolo-appartamenti-app-30-sala.jpg" alt="#">
-                    <h2>Primo appartamento a Verona</h2>
-                    <h3>Corso Como 3, 20154 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 3</p>
-                        <p>Letti: 4</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.ibizalowcost.com/wp-content/uploads/2018/01/living-appartamento-ikebanab3b-ibiza.jpg" alt="#">
-                    <h2>La villa campione al pari di una reggia vieni ora</h2>
-                    <h3>Via Monte Napoleone 4, 20121 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 2</p>
-                        <p>Letti: 4</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-58.jpg" alt="#">
-                    <h2>Come sentirsi a casa con un appartamento da sogno</h2>
-                    <h3>Via Monte Napoleone 4, 20121 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 1</p>
-                        <p>Letti: 2</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a> --}}
-
-                {{-- proVA PER FORMATTARE -----------------------------------------------------------------------------------------}}
-                {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
 
             </div>
 
