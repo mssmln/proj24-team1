@@ -4,11 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
+// require('./bootstrap');
 import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
-
 
 // Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
@@ -56,7 +54,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
 
 const app = new Vue({
     el: '#app',
@@ -227,47 +224,9 @@ const app = new Vue({
                 console.log('arrayResults, nel raggio di 20km / 10km ' , this.arrayResults);
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
-
-            // // filtra per camere
-            // if(this.rooms.length){
-            //     this.arrayAdvancedSearch = [];
-            //     this.arrayResults.forEach(item => {
-            //         // console.log('item' , item.rooms);
-            //         if(item.rooms >= this.rooms){
-            //             this.arrayAdvancedSearch.push(item);
-            //         } else if(item.rooms < this.rooms){
-            //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-            //             Swal.fire({
-            //                 icon: 'error',
-            //                 title: 'Oops...',
-            //                 text: this.ifErrors,
-            //             })
-            //         }
-            //     });
-            //     console.log('arrayAdvancedSearch', this.arrayAdvancedSearch);
-            // }
-
-            // // filtra per beds
-            // if(this.beds.length){
-            //     this.arrayAdvancedSearch = [];
-            //     this.arrayResults.forEach(item => {
-            //         if(item.beds >= this.beds){
-            //             this.arrayAdvancedSearch.push(item);
-            //         } else if(item.beds < this.beds){
-            //             this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
-            //             Swal.fire({
-            //                 icon: 'error',
-            //                 title: 'Oops...',
-            //                 text: this.ifErrors,
-            //             })
-            //         }
-            //     });
-            //     // console.log(this.arrayAdvancedSearch);
-            // }
         },
         clearSearchHomePage() {
             setTimeout(() => this.query = '', 900);
         }
-        
     }
 });
