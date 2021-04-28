@@ -74,8 +74,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
     data: {
-        // key:'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
-        key: 'zU1OxhGBvNg4ExAgUfwHTQy7R9JLqlIz',
+        key:'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
+        // key: 'zU1OxhGBvNg4ExAgUfwHTQy7R9JLqlIz',
         flats: [],
         query: '',
         googleApiResults: [],
