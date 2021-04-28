@@ -12,13 +12,11 @@
                 <p>È necessario scegliere il raggio e inserire un indirizzo, per migliorare la tua ricerca, applica i filtri desiderati.</p>
                 <div class="action_radius">
                     <ul class="select_radius">
-                        <li v-on:click="radius = 10000">Distanza 10km</li>
-                        <li v-on:click="radius = 20000">Distanza 20km</li>
+                        <li v-on:click="radius = 10000">Nei 10km</li>
+                        <li v-on:click="radius = 20000">Nei 20km</li>
                     </ul>
-
-
-                    <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
                 </div>
+                <h2 v-if="radius" v-cloak>Distanza selezionata - @{{radius / 1000}} Km</h2>
                 {{-- fine action_radius per la formattazione flex --}}
             </div>
             {{-- fine box_select_radius --}}
@@ -32,12 +30,12 @@
 
                 <div class="box_research">
                     <label for="camere">Camere</label>
-                    <input type="number" v-model="rooms" id="camere" min="1" placeholder="Numero minimo">
+                    <input type="number" v-model="rooms" id="camere" min="1" placeholder="Stanze">
                 </div>
 
                 <div class="box_research">
                     <label for="letti">Letti</label>
-                    <input type="number" v-model="beds" id="letti" min="1" placeholder="Numero minimo">
+                    <input type="number" v-model="beds" id="letti" min="1" placeholder="Letti">
                 </div>
 
             </div>
@@ -49,146 +47,55 @@
         </div>
         {{-- fine box_search_inputs --}}
 
-        <!-- ricerca per raggio 20km -->
+        <!-- Ricerca per raggio 20km o 10Km -->
         <div v-cloak class="advance_search_results">
 
-                <a class="box_searched_item" :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0 && result.visibility">
-                    <img v-if="result.title" :src="'storage/' + result.flat_img" alt="result.flat_img">
+            <a class="box_searched_item" :href="'flat/' + result.slug" v-for="result in arrayResults" v-if="arrayAdvancedSearch.length == 0 && result.visibility">
+                <img v-if="result.title" :src="'storage/' + result.flat_img" alt="result.flat_img">
+                <div class="info_basic">
                     <h2>@{{result.title}}</h2>
                     <h3 v-if="result.title">@{{result.address}}</h3>
-                    <div class="more_info">
-                        <p>Camere: @{{ result.rooms }}</p>
-                        <p>Letti: @{{ result.beds }}</p>
-                    </div>
+                </div>
+                <div class="sponsor_layover">
                     <div class="show_price">
                         <p>@{{ result.price }} €</p>
                     </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                {{-- proVA PER FORMATTARE --------------------------------------------------------------------------------------- --}}
-                {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
-
-                {{-- <a class="box_searched_item" href="#">
-                    <img src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg" alt="#">
-                    <h2>Primo appartamento a Valeggio</h2>
-                    <h3>Via Monte Napoleone 3, 20121 Milano</h3>
+                    <span>Vai ai dettagli</span>
                     <div class="more_info">
-                        <p>Camere: 2</p>
-                        <p>Letti: 2</p>
+                        <p>@{{ result.beds }} Letti</p>
+                        <p>@{{ result.rooms }} Camere</p>
                     </div>
+                </div>
+            </a>
+        </div>
+
+        @if (count($ads) > 0)
+        <h2 class="sponsor_title_search_ad">Appartamenti in evidenza</h2>
+        @endif
+        
+        <div class="advance_search_results">
+        @foreach ($ads as $item)
+        @if($item->flat->visibility)
+            <a class="box_searched_item" href="{{Route('flat', $item->flat->slug)}}">
+                <img src="{{ asset('storage/'.$item->flat->flat_img) }}" alt="{{$item->flat->title}}">
+                <div class="info_basic">
+                    <h2>{{$item->flat->title}}</h2>
+                    <h3>{{$item->flat->address}}</h3>
+                </div>
+                <div class="sponsor_layover">
                     <div class="show_price">
-                        <p>35 €</p>
+                        <p>{{$item->flat->price}} €</p>
                     </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.berlino.com/wp-content/uploads/sites/13/Appartamenti.jpg" alt="#">
-                    <h2>Appartamento a villafranca di verona</h2>
-                    <h3>Via Scuderlando 4, 37135 Verona</h3>
+                    <span>Vai ai dettagli</span>
                     <div class="more_info">
-                        <p>Camere: 1</p>
-                        <p>Letti: 2</p>
+                        <p>{{$item->flat->beds}} Letti</p>
+                        <p>{{$item->flat->rooms}} Camere</p>
                     </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://lh3.googleusercontent.com/proxy/EWbZnuglJdypvVO6OPRABizylPLaAkTXMXV0eTfGVIXuC8fGRNk8SZrQBWWziKHIIYAlpUjykXmMqTPp3BWY4vUgsnIh_0buvqBthizHmMdS6iepVnUbdgS13gZD0VdQjAs0wB9sr7sGKhWQGXA" alt="#">
-                    <h2>Secondo appartamento a verona</h2>
-                    <h3>Via Alessandro Sala 4, 37067 Valeggio sul Mincio</h3>
-                    <div class="more_info">
-                        <p>Camere: 3</p>
-                        <p>Letti: 6</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://familygo-c02.kxcdn.com/wp-content/uploads/2020/02/living-jesolo-appartamenti-app-30-sala.jpg" alt="#">
-                    <h2>Primo appartamento a Verona</h2>
-                    <h3>Corso Como 3, 20154 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 3</p>
-                        <p>Letti: 4</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.ibizalowcost.com/wp-content/uploads/2018/01/living-appartamento-ikebanab3b-ibiza.jpg" alt="#">
-                    <h2>La villa campione al pari di una reggia vieni ora</h2>
-                    <h3>Via Monte Napoleone 4, 20121 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 2</p>
-                        <p>Letti: 4</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a>
-
-                <a class="box_searched_item" href="#">
-                    <img src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-58.jpg" alt="#">
-                    <h2>Come sentirsi a casa con un appartamento da sogno</h2>
-                    <h3>Via Monte Napoleone 4, 20121 Milano</h3>
-                    <div class="more_info">
-                        <p>Camere: 1</p>
-                        <p>Letti: 2</p>
-                    </div>
-                    <div class="show_price">
-                        <p>35 €</p>
-                    </div>
-                    <div class="sponsor_layover">
-                        <span>Mostra</span>
-
-                    </div>
-                </a> --}}
-
-                {{-- proVA PER FORMATTARE -----------------------------------------------------------------------------------------}}
-                {{-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DA CANCELLARE=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- --}}
-
-            </div>
-
-                <!-- ricerca per rooms e beds  -->
-            {{-- <div v-cloak class="secondo div">
-                <a :href="'flat/' + result.slug" v-for="result in arrayAdvancedSearch" v-if="result.visibility">
-                    <img :src="'storage/' + result.flat_img" alt="result.flat_img">
-                    <h2>@{{result.title}}</h2>
-                    <h3>@{{result.address}}</h3>
-                </a>
-            </div> --}}
-
-
+                </div>
+            </a>
+        @endif
+        @endforeach
+        </div>
 
     </div>
     {{-- fine big_box_search --}}

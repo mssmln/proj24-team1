@@ -47,7 +47,7 @@
 @else
 <div class="payment_page">
   <h1>L'appartamento è già sponsorizzato!</h1>
-  <a class="button_primary" href="{{ route('flat.index') }}">Ritorna alla lista Appartamenti</a>
+  <a class="button_primary" href="{{ route('flat.index') }}">Vai ai tuoi appartamenti</a>
 </div>
 @endif
 
