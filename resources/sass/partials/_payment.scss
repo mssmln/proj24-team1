@@ -77,9 +77,17 @@
 .payment_page {
     font-size: 2.3rem;
     text-align: center;
-    margin: 150px;
+    margin: 150px auto;
+    @media screen and (max-width: 670px) {
+        font-size: 0.9rem;
+    }
     h1 {
         margin-bottom: 200px;
+    }
+    .button_primary{
+        @media screen and (max-width: 670px) {
+            font-size: 0.9rem;
+        }
     }
 }
 

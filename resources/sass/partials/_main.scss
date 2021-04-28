@@ -185,6 +185,11 @@ main .home_guest {
         .container {
             .mix_margin {
                 margin: 0 20px;
+                .homepage_sposnsor_title{
+                    margin-bottom: 30px;
+                    padding-left: 20px;
+                    font-size: 1.9rem;
+                }
                 .box_sponsor {
                     display: flex;
                     flex-wrap: wrap;

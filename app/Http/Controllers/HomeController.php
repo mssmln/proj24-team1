@@ -32,7 +32,7 @@ class HomeController extends Controller
     }
 
     public function search(){
-        return view('guest.search');
+        return view('guest.search', [ 'ads' => Ad::all()->where('expired_date', '>', date('Y-m-d H:i:s'))->sortByDesc('expired_date')->take(30)]);
     }
 
     public function flat($slug){

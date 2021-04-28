@@ -193,6 +193,9 @@
                 flex-wrap: wrap;
                 min-width: 200px;
                 padding: 10px;
+                @media screen and (max-width:500px) {
+                    padding: 0;
+                }
                 .thing {
                     .flex_center{
                         display: flex;
@@ -235,6 +238,21 @@
                         -ms-transform: scale(1.05, 1.05);
                         transform: scale(1.05, 1.05);
                         cursor: default;
+                    }
+                    @media screen and (max-width:500px) {
+                           &{
+                               flex-direction: column;
+                               padding: 10px 5px;
+                               .flex_center{
+                                   margin-bottom: 10px;
+                                   i{
+                                       display: none;
+                                       .thing-info{
+                                           padding: 10px 7px;
+                                       }
+                                   }
+                               }
+                           } 
                     }
                 }
             }
