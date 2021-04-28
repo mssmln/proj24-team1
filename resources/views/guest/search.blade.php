@@ -31,13 +31,13 @@
                 </div>
 
                 <div class="box_research">
-                    <label for="camere">Numero minimo di camere</label>
-                    <input type="number" v-model="rooms" id="camere" min="1">
+                    <label for="camere">Camere</label>
+                    <input type="number" v-model="rooms" id="camere" min="1" placeholder="Numero minimo">
                 </div>
 
                 <div class="box_research">
-                    <label for="letti">Numero minimo di Letti</label>
-                    <input type="number" v-model="beds" id="letti" min="1">
+                    <label for="letti">Letti</label>
+                    <input type="number" v-model="beds" id="letti" min="1" placeholder="Numero minimo">
                 </div>
 
             </div>
