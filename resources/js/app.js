@@ -9,19 +9,6 @@ require('./bootstrap');
 import axios from 'axios';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 
-// Live clock
-var liveclock = document.getElementById('clock');
-function time() {
-    var d = new Date();
-    var s = d.getSeconds();
-    var m = d.getMinutes();
-    var h = d.getHours();
-    // liveclock.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2); // with seconds
-    liveclock.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2); // without seconds
-}
-setInterval(time, 1000);
-
-
 
 // Confirm button by sweetalert2
 let forms = document.getElementsByClassName("form-delete");
@@ -185,7 +172,7 @@ const app = new Vue({
             if(this.query && !this.radius){
                 this.ifErrors = 'Seleziona la distanza di ricerca';
                 Swal.fire({
-                    icon: 'error',
+                    icon: 'warning',
                     title: 'Oops...',
                     text: this.ifErrors,
                 })
@@ -195,7 +182,7 @@ const app = new Vue({
             if(!this.query){
                 this.ifErrors = 'Hai bisogno di inserire l\'indirizzo';
                 Swal.fire({
-                    icon: 'error',
+                    icon: 'warning',
                     title: 'Oops...',
                     text: this.ifErrors,
                 })
@@ -284,5 +271,3 @@ const app = new Vue({
         
     }
 });
-
-
