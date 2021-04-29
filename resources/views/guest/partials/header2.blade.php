@@ -21,7 +21,7 @@
             <div class="nav_user">
                 <ul>
                     @unless (Route::currentRouteName() === 'login' || Route::currentRouteName() === 'register')
-                    <li><a class="smaller" href="{{route('search')}}"><strong>Ricerca Avanzata</strong></a></li>
+                    <li><a class="smaller hover_search" href="{{route('search')}}"><strong>Ricerca Avanzata</strong></a></li>
                     @endunless
 
                     <li class="user_action">
