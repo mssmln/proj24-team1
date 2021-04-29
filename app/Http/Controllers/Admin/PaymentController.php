@@ -104,9 +104,9 @@ class PaymentController extends Controller
             /* END DATE? */
             $new_sponsorship->expired_date = $end_date; //$end_date
             $new_sponsorship->save();
-
+            
         }
-        return redirect()->route('home');
+        return redirect()->route('flat.index')->with('status', 'Pagamento Effettuato');
     }
 
 }
