@@ -64,6 +64,9 @@
                         <p>@{{ result.beds }} Letti</p>
                         <p>@{{ result.rooms }} Camere</p>
                     </div>
+                    <div class="visual_flat">
+                        <p><i class="far fa-eye"></i>@{{result.views}}</p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -89,6 +92,9 @@
                     <div class="more_info">
                         <p>{{$item->flat->beds}} Letti</p>
                         <p>{{$item->flat->rooms}} Camere</p>
+                    </div>
+                    <div class="visual_flat">
+                        <p><i class="far fa-eye"></i>{{$item->flat->views}}</p>
                     </div>
                 </div>
             </a>

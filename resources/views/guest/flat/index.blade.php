@@ -15,6 +15,7 @@
 
             <div class="image_overview">
                 <img src="{{ asset('storage/'.$flat->flat_img) }}" alt="{{$flat->title}}">
+                <p><i class="far fa-eye"></i>{{$flat->views}}</p>
             </div>
         </div>
         
