@@ -179,7 +179,7 @@
                     <div>
                         <label for="email">La tua email</label>
                         @guest
-                        <input name="email" id="email" type="email" value="{{old('email')}}">
+                        <input name="email" id="email" type="email" value="{{old('email')}}" autocomplete="off">
 
                         @else
                         <input name="email" id="email" type="email" value="{{ Auth::user()->email }}">
