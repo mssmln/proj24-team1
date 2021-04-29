@@ -59,4 +59,8 @@ a.button_primary {
     background-color: #ff0008a8;
     color: #fff;
     border-radius: 10px;
+    outline: none;
+    &:hover{
+        background-color: #ff0008c2;
+    }
 }

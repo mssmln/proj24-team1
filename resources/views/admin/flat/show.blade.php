@@ -6,6 +6,12 @@
 
 <div class="admin_flat_show">
 
+    @if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+    @endif
+
     <div class="visibility_admin_show">
         @if ($flat->visibility == 1)
         <i class="fas fa-circle visibility-on pulse"></i> <i class="fas fa-hashtag"></i> <strong>{{ $flat->id }}</strong>
@@ -89,7 +95,7 @@
             </div>
 
             <section class="last_things_show fade-in">
-            @foreach ($flat->messages as $item)
+                @foreach ($flat->messages as $item)
                 <div class="thing">
                     <div class="flex_center">
                         <i class="far fa-envelope"></i>

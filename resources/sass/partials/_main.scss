@@ -2,7 +2,7 @@
 main .login_page,
 main .register_page {
     /* Bg temporaneo */
-    background-color: #1b1b1b;
+    background-color: #000000;
     padding: 10px 20px 0;
     height: calc(100vh - 120px);
     .checkbox_login {
@@ -132,7 +132,7 @@ main .home_guest {
                     width: 5px;
                 }
                 &::-webkit-scrollbar-thumb {
-                    background:#242424b6;
+                    background:#2424247a;
                     border-radius: 20px;
                 }
                 &::-webkit-scrollbar-track {
@@ -365,6 +365,7 @@ main .index_flat_guest {
             }
 
             .image_overview {
+                position: relative;
                 margin-top: 20px;
                 height: 500px;
                 img {
@@ -372,6 +373,20 @@ main .index_flat_guest {
                     object-fit: cover;
                     height: 100%;
                     width: 100%;
+                }
+                p {
+                    position: absolute;
+                    top: 2%;
+                    right: 0%;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    background-color: rgba(255, 255, 255, 0.479);
+                    padding: 5px 20px 5px 5px;
+                    border-top-left-radius:5px ;
+                    border-bottom-left-radius:5px ;
+                    i {
+                        margin-right: 5px;
+                    }
                 }
             }
         }
