@@ -6,7 +6,13 @@
     <a class="create_flat_dashboard" href="{{ route('flat.create') }}"><i class="fas fa-plus"></i></a>
 
     <h1 class="create_flat_dashboard_title">I tuoi appartamenti</h1>
-
+    
+    @if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+    @endif
+    
     <table>
       <thead>
         <tr>

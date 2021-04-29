@@ -88,7 +88,7 @@ class FlatController extends Controller
             $newFlat->services()->sync($data['services']);
         }
 
-        return redirect()->route('flat.index');
+        return redirect()->route('flat.index')->with('status', 'Appartamento Creato');
     }
 
     /**
@@ -166,7 +166,7 @@ class FlatController extends Controller
 
         $flat->update($data);
 
-        return redirect()->route('flat.show', $flat);
+        return redirect()->route('flat.show', $flat)->with('status', 'Appartamento Modificato');
     }
 
     /**
@@ -180,6 +180,6 @@ class FlatController extends Controller
         $flat->services()->sync([]);
         $flat->delete();
 
-        return redirect()->route('flat.index');
+        return redirect()->route('flat.index')->with('status', 'Appartamento Eliminato');
     }
 }

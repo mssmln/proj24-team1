@@ -68,6 +68,9 @@
                         border-radius: 10px;
                         cursor: pointer;
                         text-align: center;
+                        &:hover{
+                            background-color: #ff0008c2;
+                        }
                     }
                 }//select_radius
             }//action_radius
@@ -113,7 +116,6 @@
                     &::placeholder {
                         font-size: 1.2rem;
                     }
-
                 }
                 @media screen and (max-width: 700px) {
                     & {
@@ -225,6 +227,14 @@
                     top: 5%;
                     width: 100%;
                     margin-bottom: 10px;
+                }
+                .visual_flat{
+                    position: absolute;
+                    right: 5%;
+                    top: 5%;
+                    i {
+                        margin-right: 5px;
+                    }
                 }
             }
             &:hover .sponsor_layover {
