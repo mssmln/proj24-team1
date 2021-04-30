@@ -14,7 +14,6 @@ class UserSeeder extends Seeder
 
     public function run(Faker $faker)
     {
-
         $user = [
             [
                 'name' => 'user',
@@ -24,7 +23,8 @@ class UserSeeder extends Seeder
             ]
         ];
 
-        foreach ($user as $value) {
+        foreach ($user as $value) 
+        {
             $newUser = new User();
             $newUser->name = $value['name'];
             $newUser->surname = $value['surname'];
@@ -34,18 +34,13 @@ class UserSeeder extends Seeder
         }
 
         // for ($i = 0; $i <= 10; $i++) {
-
         //     $newUser = new User();
-           
         //     $newUser->name = $faker->name();
         //     $newUser->surname = $faker->lastname();
         //     $newUser->email = $faker->email();
         //     $newUser->password = $faker->password();
         //     $newUser->date_of_birth = $faker->date();
-
         //     $newUser->save();
         // }
-
     }
-
 }
