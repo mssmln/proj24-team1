@@ -49,11 +49,13 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // Aggiunte validazioni supplemetari
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:80'],
             'surname' => ['string', 'max:80'],
             'email' => ['required', 'string', 'email', 'max:200', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // Accetta solo date antecedenti a quella odierna
             'date_of_birth' => ['before:' . date('Y-m-d')]
         ]);
     }

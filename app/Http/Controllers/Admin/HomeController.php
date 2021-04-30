@@ -12,36 +12,23 @@ class HomeController extends Controller
 {
     public function index()
     {
-
+        // Passo alcuni dati indicativi per mostrare un'anteprima della pagina
         $data = [
             'flats' => Flat::all()->where('user_id', Auth::id()),
-
             'lastmessages' => Message::all()->sortBy('created_at')
         ];
-        // dd($data);
 
         return view('admin.home', $data);
     }
 
-    public function sponsor($id_flat){
-        $flatId = Flat::where('id', $id_flat)->first();
+    public function statistics($id_flat)
+    {
         $data = [
-            'flat' => $flatId
-        ];
-        // dd($data); // it worked seamlessly
-        return view('admin.sponsor', $data);
-    }
-
-    public function statistics($id_flat){
-        $flatId = Flat::where('id', $id_flat)->first();
-
-        $data = [
-            'flat' => $flatId,
-
+            'flat' => Flat::where('id', $id_flat)->first(),
             'countMessages' => Message::all()->where('flat_id', $id_flat)
         ];
-        // dd($data); // it worked seamlessly
-        // Ritorna la view statistiche
+
+        // Ritorna la view statistiche Riferita all'appartamento con le informazioni sui messaggi
         return view('admin.statistics', $data);
     }
 }

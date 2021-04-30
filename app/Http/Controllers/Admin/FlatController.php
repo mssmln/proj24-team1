@@ -21,10 +21,11 @@ class FlatController extends Controller
     
 
     // validations
-    public function valida(Request $request){
+    public function valida(Request $request)
+    {
         $request->validate(
         [
-            // flat
+            // Validazioni input server-side appartamenti
             'title' => 'required|unique:flats',
             'overview' => 'nullable',
             'price' => 'required|numeric|min:1|max:10000',
@@ -34,20 +35,14 @@ class FlatController extends Controller
             'sqm' => 'required|numeric|min:1|max:10000',
             'address' => 'required|string',
             'flat_img' => 'mimes:png,jpg,gif',
-            'visibility' => 'boolean',
+            'visibility' => 'boolean'
         ]);
     }
 
-
-
     public function index()
     {
-
-        $data = [
-            'flats' => Flat::all()->where('user_id', Auth::id())
-        ];
-
-        return view('admin.flat.index',$data);
+        // Prendo tutti gli appartamenti con userID uguale all'ID del utente Autenticato
+        return view('admin.flat.index', [ 'flats' => Flat::all()->where('user_id', Auth::id()) ]);
     }
 
     /**
@@ -57,10 +52,8 @@ class FlatController extends Controller
      */
     public function create()
     {
-        $data = [
-            'services' => Service::all()
-        ];
-        return view('admin.flat.create', $data);
+        // Aggiungo tutti i servizi possibili
+        return view('admin.flat.create', [ 'services' => Service::all() ]);
     }
 
     /**
@@ -71,10 +64,12 @@ class FlatController extends Controller
      */
     public function store(Request $request)
     {
+        // Richiamo la funzione per validare i dati inseriti
         $this->valida($request);
+        // Mi salvo la richiesta in una variabile
         $data = $request->all();
-        // dd($data); it worked smoothly
 
+        // Nuova istanza per creare l'appartamento
         $newFlat = new Flat();
         $newFlat->user_id = Auth::id();
         $newFlat->slug = Str::slug($data['title']);
@@ -83,11 +78,13 @@ class FlatController extends Controller
         $newFlat->fill($data);
         $newFlat->save();
 
-        //Se la chiave esiste allora compili la pivot
-        if(array_key_exists('services', $data)){
+        // Dal form passo un array di servizi, allora gli dico che se la richiesta contiene la chiave services, aggiungi al flat i servizi selezionati
+        if(array_key_exists('services', $data))
+        {
             $newFlat->services()->sync($data['services']);
         }
 
+        // Ritorno alla pagina con un messaggio che indica se tutto è andato a buon fine
         return redirect()->route('flat.index')->with('status', 'Appartamento Creato');
     }
 
@@ -99,12 +96,8 @@ class FlatController extends Controller
      */
     public function show(Flat $flat)
     {
-
-        $data = [
-            'flat' => $flat
-        ];
-        
-        return view('admin.flat.show', $data);
+        // Mostro il singolo appartamento selezionato
+        return view('admin.flat.show', [ 'flat' => $flat ]);
     }
 
     /**
@@ -115,6 +108,7 @@ class FlatController extends Controller
      */
     public function edit(Flat $flat)
     {
+        // Passo i dati dell'appartamento e di tutti i servizi da modificare
         $data = [
             'flats' => $flat,
             'services' => Service::all()
@@ -135,8 +129,8 @@ class FlatController extends Controller
         $data = $request->all();
         $request->validate(
             [
-                // flat
-                'title' => ['required',Rule::unique("flats")->ignore($flat)], // ignora il title se viene salvato con lo stesso nome del precedente
+                // Validazioni input modifica 
+                'title' => ['required', Rule::unique("flats")->ignore($flat)], // La regola Rule::unique, ignora il title unique in modo da non dare errore se rimane invariato
                 'overview' => 'nullable',
                 'price' => 'required|numeric|min:1|max:10000',
                 'rooms' => 'required|numeric|min:1|max:100',
@@ -149,23 +143,28 @@ class FlatController extends Controller
             ]);
 
 
-        // Controllo if per update slug solo se cambia il title
-        if($data['title'] != $flat->title){
+        // Controllo se lo slug della richiesta è cambiato rispetto a quello già salvato, in modo da dirgli di cambiarlo 
+        if($data['title'] != $flat->title)
+        {
             $data['slug'] = Str::slug($data['title']);
         }
 
         // Controllo if per evitare l'errore del undefined index image
-        if(array_key_exists('image',$data)){
+        if(array_key_exists('image',$data))
+        {
             $data['flat_img'] = Storage::put('flat_covers', $data['image']);
         }
 
-        // Aggiorna i servizi modificati
-        if(array_key_exists('services',$data)){
+        // Come per la store controllo l'array che passo, ed aggiorno i servizi modificati
+        if(array_key_exists('services',$data))
+        {
             $flat->services()->sync($data['services']);
         }
 
+        // Salvo le modifiche
         $flat->update($data);
 
+        // Ritorno alla pagina con un messaggio che indica se tutto è andato a buon fine
         return redirect()->route('flat.show', $flat)->with('status', 'Appartamento Modificato');
     }
 
@@ -177,9 +176,12 @@ class FlatController extends Controller
      */
     public function destroy(Flat $flat)
     {
+        // Svuoto l'array dei servizi che ho passato per quell'appartamento, in modo da svuotare la pivot nel DB
         $flat->services()->sync([]);
+        // Cancello i dati
         $flat->delete();
 
+        // Ritorno alla pagina con un messaggio che indica se tutto è andato a buon fine
         return redirect()->route('flat.index')->with('status', 'Appartamento Eliminato');
     }
 }
