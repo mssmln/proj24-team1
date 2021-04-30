@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Api Di tutti gli apaprtamenti nel database
 Route::get('/boolbnb-flats-api', 'Api\FlatController@index');
-Route::get('/boolbnb-services-api', 'Api\FlatController@services');

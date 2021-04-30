@@ -53,13 +53,12 @@ class Flat extends Model
         return $this->hasMany('App\Ad');
     } 
 
-
-    public function incrementViewCount() { // funzione per evitare che il proprietario del flat incrementi per mano sua le views, la richiamiamo nel guest HomeController
-        // dd($this);
-        if(Auth::id() != $this->user_id){ // il $this si riferisce allo specifico flat
+    // Funzione per evitare che il proprietario del flat incrementi per mano sua le views, la richiamiamo nel guest HomeController
+    public function incrementViewCount()
+    {
+        if(Auth::id() != $this->user_id){ // il $this si riferisce allo specifico flat Perchè richiamata nel controller
             $this->views++;
         }
         return $this->save();
     }
-
 }

@@ -17,7 +17,6 @@ class FlatSeeder extends Seeder
 
     public function run(Faker $faker)
     {
-
         $flat_seed = [
             [
                 'user_id' => '1',
@@ -216,8 +215,7 @@ class FlatSeeder extends Seeder
                 'flat_img' => 'flat_covers/esempio.jpg',
                 'visibility' => '1',
                 'views' => '5532',
-            ]
-            
+            ]   
         ];
 
         foreach ($flat_seed as $flat_se) {
@@ -241,12 +239,11 @@ class FlatSeeder extends Seeder
             $newFlat->save();
         }
 
-    //     for ($i = 0; $i <= 10; $i++) {
-    //         $newFlat = new Flat();
-
+            // for ($i = 0; $i <= 10; $i++)
+            // {
+            //         $newFlat = new Flat();
             // $userCount = count(User::all()->toArray());
             // $newFlat->user_id = rand(1, $userCount);
-
             // $newFlat->title = $faker->sentence(6);
             // $newFlat->overview = $faker->text();
             // $slug = Str::slug($newFlat->title);
@@ -273,5 +270,4 @@ class FlatSeeder extends Seeder
             // $newFlat->save();
             // }
     }
-    
 }
