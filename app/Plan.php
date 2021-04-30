@@ -9,6 +9,7 @@ class Plan extends Model
     protected $fillable = [
         'name', 'price', 'duration',
     ];
+    
     public function ads() 
     { 
         return $this->hasMany('App\Ad');
