@@ -58,6 +58,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
     data: {
+        // Chiavi APi Tom Tom Dev
         key:'mGfJKGsowMXK1iso83qv0DUuAL4xlpWN',
         // key: 'zU1OxhGBvNg4ExAgUfwHTQy7R9JLqlIz',
         flats: [],
@@ -76,34 +77,34 @@ const app = new Vue({
         via: '',
         numero: '',
         indirizzo: '',
-        // Navbar Header
-        classNavbarClick: 'hidden_item', // css class
-        // lat e lng per il raggio di 20km , metodo searchWithinRadius
+        // Navbar Header hamburger Menu
+        classNavbarClick: 'hidden_item', // Usata per Add/remove class
+        // Lat e Lng per il raggio di 20km , metodo searchWithinRadius
         latitude: '',
         longitude: '',
-        radius: '', // 20km default or 10km
+        radius: '', // Raggio selezionato con input fuzione
         filteredFlats: [],
         arrayResults: [],
-        rooms: '',//preso da input ric. avanz
-        beds: '',//preso da input ric. avanz
+        rooms: '',// Preso da input ric. avanz
+        beds: '',// Preso da input ric. avanz
         arrayAdvancedSearch: '',
         checked: false,
         flatServices: [],
-        // missing parameters
+        // Se un parametro Ric. Av. Missing parameters
         ifErrors: ''
     },
     created(){
+        // Chiamata che richiama la nostra API per la ricerca degli appartamenti
         axios
             .get("http://127.0.0.1:8000/api/boolbnb-flats-api")
             .then((result) =>{
                 this.flats.push(...result.data.response.flat);
-                // this.flats = result.data.response.flat; //? The same as above
             })
             .catch((error) => alert('Sorry, API (Flats) does not work...'));
     },
     methods: {
-        // googleAdresses(){ it worked perfectly, we just use tomtom's one
-        //     // api di google
+        // Metodo di implementazione chiamata per la ricerca via con API google
+        // googleAdresses(){ // It worked perfectly, we just use tomtom's one
         //     axios
         //     .get("https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address + "&key=")
         //     .then((result) =>{
@@ -111,15 +112,13 @@ const app = new Vue({
         //         console.log(this.googleApiResults);
         //     })
         //     .catch((error) => console.log('this API (Google) does not work',error));
-
         // },
         tomtomAdresses(){
-            // TomTom APIs
+            // TomTom APIs Per calcolare Indirizzo
             axios
             .get('https://api.tomtom.com/search/2/geocode/' +  this.address + '.json?limit=1&key=' + this.key)
             .then((result) =>{
                 this.tomtomApiResults = result.data.results;
-                // console.log(result);
                 this.lat = this.tomtomApiResults[0].position.lat;
                 this.lng = this.tomtomApiResults[0].position.lon;
                 this.paese = this.tomtomApiResults[0].address.country;
@@ -135,7 +134,8 @@ const app = new Vue({
             .catch((error) => alert('this API (Tomtom) does not work',error));
         },
         headerNavProfile() {
-            if (this.classNavbarClick == 'hidden_item') {
+            // Funzione per il menu navbar, aggiunge e rimuove la classe visibile
+            if (this.classNavbarClick == 'hidden_item'){
                 this.classNavbarClick = 'show_item';
                 setTimeout(() => this.classNavbarClick = 'hidden_item', 3000);
             } else {
@@ -143,17 +143,18 @@ const app = new Vue({
             }
         },
         getLanLon(){
+            // Ritorna la latitudine e Longitudine da un indirizzo specifico
             axios
             .get('https://api.tomtom.com/search/2/geocode/' +  this.query + '.json?limit=1&key='  + this.key)
             .then((result) =>{
                 this.arrayResults = result.data.results;
                 this.latitude = this.arrayResults[0].position.lat;
                 this.longitude = this.arrayResults[0].position.lon;
-                // console.log('prima api lat e lon' , this.latitude,this.longitude);
             })
             // .catch((error) => alert('this API (Tomtom nested) does not work',error));
         },
         searchWithinRadius(){
+            // Ricerca avanzata
             this.arrayResults = [];
 
             if(!this.query && !this.radius){
@@ -163,7 +164,7 @@ const app = new Vue({
                     title: 'Oops...',
                     text: this.ifErrors,
                 })
-                return;
+                return; // Interrompe il metodo searchWithinRadius se il radius non è stato selezionato
             }
 
             if(this.query && !this.radius){
@@ -173,7 +174,7 @@ const app = new Vue({
                     title: 'Oops...',
                     text: this.ifErrors,
                 })
-                return; // interrompe il metodo searchWithinRadius se il radius non è stato selezionato
+                return; // Interrompe il metodo searchWithinRadius se il radius non è stato selezionato
             }
 
             if(!this.query){
@@ -183,15 +184,15 @@ const app = new Vue({
                     title: 'Oops...',
                     text: this.ifErrors,
                 })
-                return;
+                return; // Interrompe il metodo searchWithinRadius se il radius non è stato selezionato
             }
 
-            this.arrayAdvancedSearch = ''; // lo svuotiamo
-            // richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
+            this.arrayAdvancedSearch = ''; // Lo svuotiamo
+
+            // Richiamiamo i flats nel raggio di 20km con la lat e lon che abbiamo registrato da getLanLon method
             axios
             .get("https://api.tomtom.com/search/2/nearbySearch/.json?limit=100&lat=" + this.latitude + "&lon=" + this.longitude + "&radius=" + this.radius + "&relatedPois=off&key=" + this.key)
             .then((result) => {
-                // console.log('seconda api' ,this.latitude,this.longitude);
                 this.filteredFlats = result.data.results;
                 let location = [];
                 this.filteredFlats.forEach(item => {
@@ -200,9 +201,7 @@ const app = new Vue({
                     }
                 });
                 this.flats.forEach(item => {
-                    // console.log('look here' , item);
                     location.forEach(element => {
-                        // console.log(element);
                         if(item.address.includes(element)){
                             if(!this.arrayResults.includes(item) && item.rooms >= this.rooms && item.beds >= this.beds){
                                 this.ifErrors = '';
@@ -212,7 +211,7 @@ const app = new Vue({
                         
                     });
                 });
-                // se non ci sono flats nel raggio selezionato
+                // Se non ci sono flats nel raggio selezionato
                 if(this.arrayResults.length == 0){
                     this.ifErrors = 'Nessun risultato con i criteri di ricerca utilizzati';
                     Swal.fire({
@@ -221,11 +220,11 @@ const app = new Vue({
                         text: this.ifErrors,
                     })
                 }
-                console.log('arrayResults, nel raggio di 20km / 10km ' , this.arrayResults);
             })
             .catch((error) => console.log('this API (filteredFlat) does not work',error));
         },
         clearSearchHomePage() {
+            // Funzione per quando l'input non è in focus, cosi da rimuovere i contenuto e fa sparire la ricerca
             setTimeout(() => this.query = '', 900);
         }
     }

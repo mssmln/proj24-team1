@@ -12,6 +12,7 @@ class Ad extends Model
     { 
         return $this->belongsTo('App\Flat');
     } 
+    
     public function plan()
     { 
         return $this->belongsTo('App\Plan');

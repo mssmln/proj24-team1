@@ -32,8 +32,6 @@ class CreateFlatsTable extends Migration
             $table->integer('views')->default(0);
             $table->timestamps();
         });
-
-        
     }
 
     /**
@@ -44,8 +42,5 @@ class CreateFlatsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('flats');
-
-        
-        
     }
 }

@@ -14,7 +14,7 @@ class UpdateMessagesTable extends Migration
     public function up()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->foreignId('flat_id')->after('id')->references('id')->on('flats');
+            $table->foreignId('flat_id')->after('id')->references('id')->on('flats')->onDelete('cascade');
         });
     }
 
